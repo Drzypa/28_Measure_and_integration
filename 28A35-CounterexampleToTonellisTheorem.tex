@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CounterexampleToTonellisTheorem}
+\pmcreated{2013-03-22 18:16:36}
+\pmmodified{2013-03-22 18:16:36}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{counter-example to Tonelli's theorem}
+\pmrecord{4}{40882}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A35}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\begin{document}
+The following observation demonstrates the necessity of the
+$\sigma$-finite assumption in Tonelli's and Fubini's theorem.  Let $X$
+denote the closed unit interval $[0,1]$ equipped with Lebesgue measure
+and $Y$ the same set, but this time equipped with counting measure
+$\nu$.  Let
+\[ f(x,y) = \left\{
+  \begin{array}{cl}
+    1 & \mbox{ if } x=y,\\
+    0 & \mbox{ otherwise}.
+  \end{array}\right.
+\]
+Observe that 
+\[ \int_Y \left( \int_X f(x,y) d\mu(x)\right) d\nu(y) = 0,\]
+while
+\[ \int_X \left( \int_Y f(x,y) d\nu(y)\right) d\mu(x) = 1.\]
+The iterated integrals do not give the same value, this despite the
+fact that the integrand is a non-negative function.  
+
+Also observe that there does not exist a simple function on $X\times
+Y$ that is dominated by $f$.  Hence,
+\[ \int_{X\times Y} f(x,y) d (\mu(x)\times \nu(y) = 0.\]
+Therefore,  the integrand is $L^1$ integrable
+relative to the product measure. However, as we observed above, the
+iterated integrals do not agree.  This observation illustrates the need for the
+$\sigma$-finite assumption for Fubini's theorem.
+
+%%%%%
+%%%%%
+\end{document}

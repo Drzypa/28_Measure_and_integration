@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitSuperiorOfSets}
+\pmcreated{2013-03-22 13:13:22}
+\pmmodified{2013-03-22 13:13:22}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{limit superior of sets}
+\pmrecord{8}{33689}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+\pmclassification{msc}{60A99}
+\pmdefines{limit inferior of sets}
+\pmdefines{infinitely often}
+\pmdefines{i.o.}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $A_1,A_2,\dots$ be a sequence of sets. 
+The limit superior of sets is defined by
+\[\limsup A_n = \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty A_k.\]
+
+It is easy to see that $x\in \limsup A_n$ if and only if $x\in A_n$ for infinitely many values of $n$.
+Because of this, in probability theory the notation $[A_n \operatorname{i.o.}]$ is often used to refer to $\limsup A_n$, where i.o. stands for \textit{infinitely often}.
+
+The limit inferior of sets is defined by
+
+\[\liminf A_n = \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k,\]
+
+and it can be shown that $x\in \liminf A_n$ if and only if $x$ belongs to $A_n$ for all but finitely many values of $n$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFatouLebesgueTheorem}
+\pmcreated{2013-03-22 15:58:50}
+\pmmodified{2013-03-22 15:58:50}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof of Fatou-Lebesgue theorem}
+\pmrecord{13}{37997}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Since $\displaystyle \left| \int g \, d\mu \right| \le \int |g| \, d\mu \le \int \Phi \, d\mu < \infty$, we have that $\displaystyle \int g \, d\mu > - \infty$.  Similarly, $\displaystyle \int h \, d\mu < \infty$.
+
+The inequality $\displaystyle \liminf_{n \to \infty} \int f_n \, d\mu \le \limsup_{n \to \infty} \int f_n \, d\mu$ is obvious by definition of $\liminf$ and $\limsup$.
+
+Define a sequence of functions $k_n \colon X \to \mathbb{R}$ by $k_n(x)=f_n(x)+\Phi (x)$.  Then each $k_n$ is nonnegative (since $-f_n \le |f_n| \le \Phi$) and integrable (since $k_n \le |f_n|+\Phi \le 2\Phi$), as is $\displaystyle k := \liminf_{n \to \infty} k_n$.  Fatou's lemma yields that $\displaystyle \int k \, d\mu \le \liminf_{n \to \infty} \int k_n \, d\mu$.  Thus:
+
+\begin{center}
+$\begin{array}{ll}
+\displaystyle \int g \, d\mu + \int \Phi \, d\mu & \displaystyle = \int (g+\Phi) \, d\mu \\
+\\
+& \displaystyle = \int k \, d\mu \\
+\\
+& \displaystyle \le \liminf_{n \to \infty} \int k_n \, d\mu \\
+\\
+& \displaystyle = \liminf_{n \to \infty} \int (f_n+\Phi) \, d\mu \\
+\\
+& \displaystyle = \liminf_{n \to \infty} \left( \int f_n \, d\mu + \int \Phi \, d\mu \right) \\
+\\
+& \displaystyle = \liminf_{n \to \infty} \int f_n \, d\mu + \liminf_{n \to \infty} \int \Phi \, d\mu \\
+\\
+& \displaystyle = \liminf_{n \to \infty} \int f_n \, d\mu + \int \Phi \, d\mu \end{array}$
+\end{center}
+
+Since $\displaystyle \int \Phi \, d\mu < \infty$, it follows that $\displaystyle \int g \, d\mu \le \liminf_{n \to \infty} \int f_n \, d\mu$.
+
+Note that $|-f_n|=|f_n| \le \Phi$.  Thus,
+
+\begin{center}
+\begin{tabular}{ll}
+$\displaystyle -\int h \, d\mu$ & $\displaystyle = \int -h \, d\mu$\\
+\\
+& $\displaystyle = \int -\limsup_{n \to \infty} f_n \, d\mu$ \\
+\\
+& $\displaystyle = \int \liminf_{n \to \infty} \left( -f_n \right) \, d\mu$ \\
+\\
+& $\displaystyle \le \liminf_{n \to \infty} \int -f_n \, d\mu$ by a previous \PMlinkescapetext{argument}, \\
+\\
+& $\displaystyle = \liminf_{n \to \infty} \left( -\int f_n \, d\mu \right)$ \\
+\\
+& $\displaystyle = -\limsup_{n \to \infty} \int f_n \, d\mu.$ \end{tabular}
+\end{center}
+
+Hence, $\displaystyle \limsup_{n \to \infty} \int f_n \, d\mu \le \int h \, d\mu$.  It follows that $\displaystyle -\infty < \int g \, d\mu \le \liminf_{n \to \infty} \int f_n \, d\mu \le \limsup_{n \to \infty} \int f_n \, d\mu \le \int h \, d\mu < \infty$.  $\qedsymbol$
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProductsOfCompactPavingsAreCompact}
+\pmcreated{2013-03-22 18:45:09}
+\pmmodified{2013-03-22 18:45:09}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{products of compact pavings are compact}
+\pmrecord{5}{41530}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+%\pmkeywords{compact paving}
+%\pmkeywords{generalized Cartesian product}
+\pmrelated{SumsOfCompactPavingsAreCompact}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{product}
+\PMlinkescapeword{functions}
+\PMlinkescapeword{index set}
+\PMlinkescapeword{subsets}
+\PMlinkescapeword{product paving}
+\PMlinkescapeword{compact}
+\PMlinkescapeword{compact paving}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{subset}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{intersection}
+\PMlinkescapeword{compactness}
+\PMlinkescapeword{equation}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{simple}
+
+Suppose that $(K_i,\mathcal{K}_i)$ is a paved space for each $i$ in index set $I$. The \PMlinkname{product}{GeneralizedCartesianProduct} $\prod_{i\in I} K_i$ is the set of all functions $x\colon I\rightarrow\bigcup_iK_i$ such that $x_i\in K_i$ for each $i$, and the product of subsets $S_i\subseteq K_i$ is
+\begin{equation*}
+\prod_{i\in I}S_i=\left\{x\in\prod_{i\in I}K_i\colon x_i\in S_i\text{ for each }i\in I\right\}.
+\end{equation*}
+Then, the product paving is defined by
+\begin{equation*}
+\prod_{i\in I} \mathcal{K}_i=\left\{\prod_{i\in I}S_i\colon S_i\in\mathcal{K}_i\text{ for each }i\in I\right\}.
+\end{equation*} 
+
+\begin{theorem}\label{thm:1}
+Let $(K_i,\mathcal{K}_i)$ be compact paved spaces for $i\in I$. Then, $\prod_i\mathcal{K}_i$ is a compact paving on $\prod_iK_i$.
+\end{theorem}
+
+Note that this result is a version of Tychonoff's theorem applying to paved spaces and, together with the fact that all compact pavings are closed subsets of a compact space, is easily seen to be equivalent to Tychonoff's theorem.
+
+Theorem \ref{thm:1} is simple to prove directly. Suppose that $\{A_j\colon j\in J\}$ is a subset of $\prod_i \mathcal{K}_i$ satisfying the finite intersection property. Writing $A_j=\prod_{i\in I}S_{ij}$ for $S_{ij}\in\mathcal{K}_i$ gives
+\begin{equation}\label{eq:1}
+\bigcap_{j\in J^\prime}A_j=\prod_{i\in I}\left(\bigcap_{j\in J^\prime}S_{ij}\right)
+\end{equation}
+for any $J^\prime\subseteq J$. By the finite intersection property, this is nonempty whenever $J^\prime$ is finite, so $\bigcap_{j\in J^\prime}S_{ij}\not=\emptyset$. Consequently, $\{S_{ij}\colon j\in J\}\subseteq\mathcal{K}_i$ satisfies the finite intersection property and, by compactness of $\mathcal{K}_i$, the intersection $\bigcap_{j\in J}S_{ij}$ is nonempty. So equation (\ref{eq:1}) shows that $\bigcap_{j\in J}A_j$ is nonempty.
+
+%%%%%
+%%%%%
+\end{document}

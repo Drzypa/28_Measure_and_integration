@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeasureZeroInmathbbRn}
+\pmcreated{2013-03-22 17:57:11}
+\pmmodified{2013-03-22 17:57:11}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{measure zero in $\mathbb{R}^n$}
+\pmrecord{6}{40452}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\subsection{Measure Zero in $\mathbb{R}^n$}
+In $\mathbb{R}^n$ with the Lebesgue measure $m$ there is a \PMlinkescapetext{simple} characterization of the sets that have measure zero.
+
+$\,$
+
+{\bf Theorem -} A subset $X \subseteq \mathbb{R}^n$ has zero Lebesgue measure if and only if for every $\epsilon >0$ there is a sequence of compact rectangles $\{R_i\}_{i \in \mathbb{N}}$ that cover $X$ and such that $\sum_{i} m(R_i) < \epsilon$.
+
+$\,$
+
+\subsection{Measure Zero Avoiding Measure Theory}
+
+In some circumstances one may want to avoid the whole \PMlinkescapetext{theory} of Lebesgue measure and integration and still be interested in having a notion of measure zero, like for example when studying Riemann integrals or constructing the Lebesgue measure from an historical \PMlinkescapetext{point} of view. Another interesting example where sets of measure zero arise and there is no reason to introduce measures or integrals is when studying the \PMlinkescapetext{type }of sets where a function of bounded variation is not differentiable (this sets have always measure zero).
+
+Nevertheless, the notion of measure zero is not lost in this situation. Since the Lebesgue measure of compact rectangles can be easily calculated and defined from the start (see \PMlinkname{Jordan content of an $n$-cell}{JordanContentOfAnNCell} for example), the condition stated in the previous theorem can be taken as the definition of measure zero.
+
+$\,$
+
+{\bf Definition -} A set $X$ in $\mathbb{R}^n$ is said to have \emph{measure zero} if for every $\epsilon >0$ there is a sequence of compact rectangles $\{R_i\}_{i \in \mathbb{N}}$ that cover $X$ and such that $\sum_{i} m(R_i) < \epsilon$, where $m$ is the \PMlinkname{Jordan content}{JordanContentOfAnNCell}.
+
+$\,$
+
+Similarly, the notion of \emph{almost everywhere} remains essentially the same. One just has to work with the previous definition.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClarksonInequality}
+\pmcreated{2013-03-22 16:04:59}
+\pmmodified{2013-03-22 16:04:59}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{Clarkson inequality}
+\pmrecord{13}{38142}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A25}
+%\pmkeywords{L^p space}
+%\pmkeywords{uniformly convex space}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The \emph{Clarkson inequality} says that for all $f,g \in L^p$, for $2\leq p<\infty$  we have:
+\[
+\left\| \frac{f+g}{2} \right\|^p_p +
+\left\| \frac{f-g}{2} \right\|^p_p
+                                     \le
+\frac{1}{2}\left( \|f\|^p_p + \|g\|^p_p\right).
+\]
+\\The inequality can be used to prove that $L^p$ space is uniformly convex for $2\leq p<\infty$.
+
+\textbf{Remark}.
+If $1 < p < 2$, then the Clarkson inequality becomes:
+\[
+\left\| \frac{f+g}{2} \right\|^q_p +
+\left\| \frac{f-g}{2} \right\|^q_p
+                                     \le
+\left(\frac{1}{2} \|f\|^p_p +\frac{1}{2} \|g\|^p_p\right)^\frac{1}{p-1}
+\].
+
+
+
+
+for functions $f,\,g \in L^p$, where $q=\frac{p}{p-1}$.
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HaarIntegral}
+\pmcreated{2013-03-22 13:39:56}
+\pmmodified{2013-03-22 13:39:56}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Haar integral}
+\pmrecord{9}{34324}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28C05}
+\pmdefines{normalized Haar integral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\Gamma$ be a locally compact topological group and $\mathcal{C}$ be the algebra of all continuous real-valued functions on $\Gamma$ with compact support.  In addition we define $\mathcal{C}^{+}$ to be the set of non-negative functions that belong to $\mathcal{C}$.  The \emph{Haar integral} is a real linear map $I$ of $\mathcal{C}$ into the field of the real number for $\Gamma$ if it satisfies:
+\begin{itemize}
+\item $I$ is not the zero map
+\item $I$ only takes non-negative values on $\mathcal{C}^{+}$
+\item $I$ has the following property $I(\gamma\cdot f) = I(f)$ for all elements $f$ of $\mathcal{C}$ and all element $\gamma$ of $\Gamma$.
+\end{itemize}
+The \emph{Haar integral} may be denoted in the following way \textit{(there are also other ways)}:
+\begin{center}
+$\int_{\gamma \in \Gamma} f(\gamma)$ or $\int_\Gamma f$ or $\int_\Gamma f d\gamma$ or $I(f)$
+\end{center}
+The following are necessary and sufficient conditions for the existence of
+a unique Haar integral:
+There is a real-valued function $I^+$
+\begin{enumerate}
+\item \textit{(Linearity)}.$I^+ (\lambda f + \mu g) = \lambda I^+(f) + \mu I^+(g)$ where $f,g \in \mathcal{C}^+$ and $\lambda, \mu \in \mathbb{R}_+$. 
+\item \textit{(Positivity)}.  If $f(\gamma ) \geq 0$ for all $\gamma \in \Gamma$ then $I^+(f(\gamma)) \geq 0$.
+\item \textit{(Translation-Invariance)}.  $I(f(\delta \gamma )) = I(f(\gamma ))$ for any fixed $\delta \in \Gamma$ and every $f$ in $\mathcal{C}^+$.
+\end{enumerate}
+An additional property is if $\Gamma$ is a compact group then the Haar integral  has right translation-invariance:  $\int_{\gamma \in \Gamma} f(\gamma \delta) = \int_{\gamma \in \Gamma} f(\gamma )$ for any fixed $\delta \in \Gamma$.
+In addition we can define \emph{normalized Haar integral} to be $\int_\Gamma 1 = 1$ since $\Gamma$ is compact, it implies that $\int_\Gamma 1$ is finite.\\
+\textit{(The proof for existence and uniqueness of the Haar integral is presented in \cite{2} on page 9.)}\\\\
+\small\textit{(the information of this entry is in part quoted and paraphrased from \cite{1})}
+\begin{thebibliography}{2}
+\bibitem[GSS]{1} Golubsitsky, Martin. Stewart, Ian. Schaeffer, G. David.: Singularities and Groups in Bifurcation Theory \textit{(Volume II)}. Springer-Verlag, New York, 1988.
+\bibitem[HG]{2} Gochschild, G.: The Structure of Lie Groups. Holden-Day, San Francisco, 1965.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

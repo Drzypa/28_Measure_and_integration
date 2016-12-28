@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FubinisTheoremForTheLebesgueIntegral}
+\pmcreated{2013-03-22 14:16:09}
+\pmmodified{2013-03-22 14:16:09}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Fubini's theorem for the Lebesgue integral}
+\pmrecord{9}{35719}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A35}
+\pmsynonym{Fubini's theorem}{FubinisTheoremForTheLebesgueIntegral}
+\pmrelated{FubinisTheorem}
+\pmrelated{TonellisTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+This is the version of the Fubini's Theorem for the Lebesgue integral.  For
+the Riemann integral, see \PMlinkname{the standard calculus version}{FubinisTheorem}.
+
+In the following suppose we will by convention define $\int_X f d\mu := 0$ in case $f$
+is not integrable.  This simplifies notation and does not affect the results since it will turn out that such cases happen on a set of measure 0.
+
+Also if we have a function $f\colon X \times Y \to {\mathbb{F}}$ then define $f_x(y) := f(x,y)$ and $f^y(x) := f(x,y)$.
+
+\begin{thm}[Fubini]
+Suppose $(X,{\mathcal{M}},\mu)$ and $(Y,{\mathcal{N}},\nu)$ are \PMlinkname{$\sigma$-finite}{SigmaFinite}
+measure spaces. If $f \in L^1(X \times Y)$
+then $f_x \in L^1(\nu)$ for $\mu$-almost every $x$ and
+$f^y \in L^1(\mu)$ for $\nu$-almost every $y$.  Further
+the functions
+$x \mapsto \int_Y f_x d\nu$ and $y \mapsto \int_X f^y d\nu$ are
+in $L^1(\mu)$ and $L^1(\nu)$ respectively and
+\begin{equation*}
+\int_{X \times Y} f \, d(\mu \times \nu) =
+\int_X \left[ \int_Y f(x,y) \,d\nu(y) \right] d\mu(x) =
+\int_Y \left[ \int_X f(x,y) \,d\mu(x) \right] d\nu(y) .
+\end{equation*}
+\end{thm}
+
+You can now see the reason for defining the integral even where $f_x$ and
+$f^y$ are not integrable since the functions 
+$x \mapsto \int_Y f_x d\nu$ and $y \mapsto \int_X f^y d\nu$
+are normally only almost everywhere defined, and we'd like to define them everywhere.  Since we have changed the definition only on a set of measure
+zero, this does not change the final result and we can interchange the
+integrals freely without having to worry about where the functions are
+actually defined.
+
+Note the \PMlinkescapetext{difference} of this theorem and Tonelli's theorem for non-negative functions.  Here you actually need to check some integrability before switching
+the integral \PMlinkescapetext{order}.  A \PMlinkescapetext{simple} application of Tonelli's theorem actually shows that you can prove any one of these equations to show that $f \in L^1(X \times Y)$
+\begin{gather*}
+\int_{X \times Y} \lvert f \rvert \, d(\mu \times \nu) < \infty ,
+\\
+\int_X \left[ \int_Y \lvert f(x,y) \rvert \,d\nu(y) \right] d\mu(x) < \infty, \text{ or }
+\\
+\int_Y \left[ \int_X \lvert f(x,y) \rvert \,d\mu(x) \right] d\nu(y) < \infty .
+\end{gather*}
+
+If we take the counting measure on ${\mathbb{N}}$, then one can \PMlinkescapetext{state} the Fubini theorem for sums.
+
+\begin{thm}[Fubini for sums]
+Suppose that $f_{ij}$ is absolutely summable, that is
+$\sum_{i,j \in {\mathbb{N}}} \lvert f_{ij}\rvert < \infty$, then
+\begin{equation*}
+\sum_{i,j \in {\mathbb{N}}} f_{ij}
+=
+\sum_{i=1}^\infty \sum_{j=1}^\infty f_{ij}
+=
+\sum_{j=1}^\infty \sum_{i=1}^\infty f_{ij} .
+\end{equation*}
+\end{thm}
+
+In the above theorem we have used ${\mathbb{N}}$ as our \PMlinkescapetext{index} set for simplicity and familiarity of notation.  Any summable function $f_{ij}$ will have only a countable number of non-zero elements and thus the theorem for arbitrary \PMlinkescapetext{index}
+sets just reduces to the above case.
+
+\begin{thebibliography}{9}
+\bibitem{folland}
+Gerald B.\@ Folland. \emph{\PMlinkescapetext{Real Analysis, Modern Techniques
+and Their Applications}}. John Wiley \& Sons, Inc., New York, New York, 1999
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

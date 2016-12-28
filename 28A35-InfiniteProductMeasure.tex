@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InfiniteProductMeasure}
+\pmcreated{2013-03-22 16:23:14}
+\pmmodified{2013-03-22 16:23:14}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{infinite product measure}
+\pmrecord{13}{38532}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A35}
+\pmclassification{msc}{60A10}
+\pmrelated{ProductSigmaAlgebra}
+\pmdefines{totally finite measure}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $(E_i,\mathcal{B}_i,\mu_i)$ be measure spaces, where $i\in I$ an index set, possibly infinite.  We define the \emph{product} of $(E_i,\mathcal{B}_i,\mu_i)$ as follows:
+\begin{enumerate}
+\item let $E=\prod E_i$, the Cartesian product of $E_i$,
+\item let $\mathcal{B}=\sigma((\mathcal{B}_i)_{i\in I})$, the smallest sigma algebra containing subsets of $E$ of the form $\prod B_i$ where $B_i=E_i$ for all but a finite number of $i\in I$.
+\end{enumerate}
+
+Then $(E,\mathcal{B})$ is a measurable space.  The next task is to define a measure $\mu$ on $(E,\mathcal{B})$ so that $(E,\mathcal{B},\mu)$ becomes in addition a measure space.  Before proceeding to define $\mu$, we make the assumption that \begin{quote} each $\mu_i$ is a \emph{totally finite measure}, that is, $\mu_i(E_i)< \infty$.\end{quote}  In fact, we can now turn each $(E_i,\mathcal{B}_i,\mu_i)$ into a probability space by introducing for each $i\in I$ a new measure: $$\overline{\mu}_i=\frac{\mu_i}{\mu_i(E_i)}.$$
+
+With the assumption that each $(E_i,\mathcal{B}_i,\mu_i)$ is a probability space, it can be shown that there is a \emph{unique} measure $\mu$ defined on $\mathcal{B}$ such that, for any $B\in \mathcal{B}$ expressible as a product of $B_i\in \mathcal{B}_i$ with $B_i=E_i$ for all $i\in I$ except on a finite subset $J$ of $I$:
+$$\mu(B)=\prod_{j\in J} \mu_j(B_j).$$
+
+Then $(E,\mathcal{B},\mu)$ becomes a measure space, and in particular, a probability space.  $\mu$ is sometimes written $\prod \mu_i$.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item If $I$ is infinite, one sees that the total finiteness of $\mu_i$ can not be dropped.  For example, if $I$ is the set of positive integers, assume $\mu_1(E_1)<\infty$ and $\mu_2(E_2)=\infty$.  Then $\mu(B)$ for $$B:=B_1\times \prod_{i>1}E_i = B_1\times E_2 \times \prod_{i>2}E_i \mbox{, where }B_1\in \mathcal{B}_1$$ would not be well-defined (on the one hand, it is $\mu_1(B_1)<\infty$, but on the other it is $\mu_1(B_1)\mu_2(E_2)=\infty$).
+\item The above construction agrees with the result when $I$ is finite (see \PMlinkname{finite product measure}{ProductMeasure}).
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

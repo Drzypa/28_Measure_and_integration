@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FiniteFieldsOfSets}
+\pmcreated{2013-03-22 15:47:49}
+\pmmodified{2013-03-22 15:47:49}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{finite fields of sets}
+\pmrecord{8}{37758}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+\pmclassification{msc}{03E20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $S$ is a finite set then any field of subsets of $S$ (see ``field of 
+sets'' in the entry on rings of sets) can be described as the set of unions 
+of subsets of a partition of $S$.
+
+Note that, if $P$ is a partition of $S$ and $A,B \subset P$, we
+have
+\begin{eqnarray*}
+\overline{\bigcup A} &=& \bigcup (P \setminus A) \\
+(\bigcup A) \cup (\bigcup B) &=& \bigcup (A \cup B) \\
+(\bigcup A) \cap (\bigcup B) &=& \bigcup (A \cap B) \\
+\end{eqnarray*}
+so $\{ \bigcup X \mid X \subset P \}$ is a field of sets.
+
+Now assume that $\mathcal{F}$ is a field of subsets of a finite set
+$S$.  Let us define the set of ``prime elements'' of $\mathcal{F}$ as
+follows:
+ \[P = \{ X \in (\mathcal{F} \setminus {\varnothing}) \mid (Y \subset X)
+ \wedge (Y \in \mathcal{F}) \Rightarrow (Y = \varnothing \vee Y = X) \} \]
+The choice of terminology ``prime element'' is meant to be a suggestive
+mnemonic of how the only divisors of a prime number are 1 and the
+number itself.
+
+We claim that $P$ is a partition.  To justify this claim, we need to
+show that elements of $P$ are pairwise disjoint and that $\bigcup P =
+S$.
+
+Suppose that $A$ and $B$ are prime elements.  Since, by definition, $A
+\in \mathcal{F}$ and $B \in \mathcal{F}$ and $\mathcal{F}$ is a field
+of sets, $A \cap B \in \mathcal{F}$.  Since $A \cap B \subset A$, we
+must either have $A \cap B = \varnothing$ or $A \cap B = A$.  In the
+former case, $A$ and $B$ are disjoint, whilst in the latter case $A =
+B$.
+
+Suppose that $x$ is any element of $S$.  Then we claim that the set
+$X$ defined as 
+ \[ X = \bigcup \{ Y \in \mathcal F \mid x \in Y \} \]
+is a prime element of $\mathcal{F}$.  To begin, note that, since
+$\mathcal{F}$ is finite, a forteriori any subset of $\mathcal{F}$ is
+finite and, since fields of sets are assumed to be closed under
+intersection, it follows that the intersection of a susbet of
+$\mathcal{F}$ is an element of $\mathcal{F}$, in particular $X \in
+\mathcal{F}$.  
+
+Suppose that $Z \subset X$ and $Z \in \mathcal{F}$.  If $x \notin Z$,
+then $x \in \overline{Z}$.  Since $\mathcal{F}$ is a field of sets,
+$\overline{Z} \in \mathcal{F}$.  Hence, by the construction of $X$, it
+is the case that $X \subset \overline{Z}$, hence $X \cap Z =
+\varnothing$.  Together with $Z \subset X$, this implies $Z =
+\varnothing$.  If $x \in Z$, then, by construction, $X \subset Z$,
+which implies $X = Z$.  
+
+Thus, we see that $X$ is a prime set.  Since $x$ was arbitrarily
+chosen, this means that every element of $S$ is contained in a prime
+element of $\mathcal{F}$, so the union of all prime elements is $S$
+itself.  Together with the previously shown fact that prime elements
+are pairwise disjoint, this shows that the prime elements for a
+partition of $S$.
+
+Let $A$ be an arbitrary element of $\mathcal{F}$.  Since $P \subset
+\mathcal{F}$, it is the case that $(\forall X \in P) A \cap X \in
+\mathcal{F}$.  Since $P$ is a partition of $S$,
+ \[ A = \bigcup \{ A \cap X \mid X \in P \} \]
+so every element of $\mathcal{F}$ can be expressed as a union of
+elements of $P$.
+%%%%%
+%%%%%
+\end{document}

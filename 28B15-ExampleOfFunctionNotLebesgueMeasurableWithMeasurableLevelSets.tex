@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfFunctionNotLebesgueMeasurableWithMeasurableLevelSets}
+\pmcreated{2013-03-22 15:51:22}
+\pmmodified{2013-03-22 15:51:22}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{example of function not Lebesgue Measurable with measurable level sets}
+\pmrecord{7}{37841}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28B15}
+\pmrelated{measurableFunctions}
+\pmrelated{VitalisTheorem}
+\pmrelated{MeasurableFunctions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider $V$ as in Vitali's theorem. Define the function $f: [0,1] \to [0,+\infty[$ by:
+
+\begin{displaymath}
+f(x) = 
+\begin{cases}
+x & \text{if}\: x \notin V\\
+2+x & \text{if}\: x \in V
+\end{cases}
+\end{displaymath}
+
+The level sets of $f$ will either be the empty set, or a singleton  and thus measurable.
+
+\begin{displaymath}
+f^{-1} \left( \left\{ x \right\} \right) =
+\begin{cases}
+\{x\}   & \text{if}\: 0 \le x \le 1 \wedge x \notin V\\
+\{2-x\} & \text{if}\: 2 \le x \le 3 \wedge x-2 \in V\\
+\{\}    & \text{otherwise}
+\end{cases}
+\end{displaymath}
+
+$f$ is not a measurable function since $f^{-1}([2,+\infty[) = V$ and $V$ is not a measurable set.
+%%%%%
+%%%%%
+\end{document}

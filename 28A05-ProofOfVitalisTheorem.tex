@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfVitalisTheorem}
+\pmcreated{2013-03-22 13:45:50}
+\pmmodified{2013-03-22 13:45:50}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of Vitali's Theorem}
+\pmrecord{7}{34467}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+\pmrelated{ProofOfPsuedoparadoxInMeasureTheory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+Consider the equivalence relation in $[0,1)$ given by
+\[
+  x\sim y \quad \Leftrightarrow\quad x-y\in\mathbb Q
+\]
+and let $\mathcal F$ be the family of all equivalence classes of $\sim$.
+Let $V$ be a \PMlinkescapetext{section} of $\mathcal F$ i.e. put in $V$ an 
+element for each equivalence class of $\sim$ (notice that we are using the axiom 
+of choice).
+
+Given $q\in\mathbb Q\cap [0,1)$ define 
+\[
+V_q=((V+q)\cap [0,1))\cup((V+q-1)\cap[0,1))
+\]
+that is $V_q$ is obtained translating $V$ by a quantity $q$ to the right and then cutting the piece which goes beyond the point $1$ and putting it on the left, starting from $0$.
+
+Now notice that given $x\in[0,1)$ there exists $y\in V$ such that $x\sim y$ (because $V$ is a section of $\sim$) and hence there exists $q\in \mathbb Q\cap[0,1)$ 
+such that $x\in V_q$. So 
+\[
+\bigcup_{q\in\mathbb Q\cap[0,1)} V_q = [0,1).
+\]
+
+Moreover all the $V_q$ are disjoint. In fact if $x\in V_q\cap V_p$ then $x-q$ (modulus $[0,1)$) and $x-p$ are both in $V$ which is not possible since they differ by a rational quantity $q-p$ (or $q-p+1$).
+
+Now if $V$ is Lebesgue measurable, clearly also $V_q$ are measurable and $\mu(V_q)=\mu(V)$. Moreover by the countable additivity of $\mu$ we have
+\[
+  \mu([0,1)) = \sum_{q\in \mathbb Q\cap[0,1)} \mu(V_q) 
+  = \sum_q \mu(V).
+\]
+So if $\mu(V)=0$ we had $\mu([0,1))=0$ and if $\mu(V)>0$ we had $\mu([0,1))=+\infty$.
+
+So the only possibility is that $V$ is not Lebesgue measurable.
+%%%%%
+%%%%%
+\end{document}

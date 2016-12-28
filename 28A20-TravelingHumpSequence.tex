@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TravelingHumpSequence}
+\pmcreated{2013-03-22 16:14:08}
+\pmmodified{2013-03-22 16:14:08}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{traveling hump sequence}
+\pmrecord{14}{38336}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+\pmrelated{ModesOfConvergenceOfSequencesOfMeasurableFunctions}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+In this entry, $\lfloor \cdot \rfloor$ denotes the floor function and $m$ denotes Lebesgue measure.
+
+For every positive integer $n$, let $\displaystyle A_n=\left[ \frac{n-2^{\left\lfloor \log_2 n \right\rfloor}}{2^{\left\lfloor \log_2 n \right\rfloor}} , \frac{n-2^{\left\lfloor \log_2 n \right\rfloor}+1}{2^{\left\lfloor \log_2 n \right\rfloor}} \right]$.  Then every $A_n$ is a subset of $[0,1]$ (\PMlinkname{click here}{RegardingTheSetsA_nFromTheTravelingHumpSequence} to see a proof) and is Lebesgue measurable (clear from the fact that each of them is \PMlinkname{closed}{Closed}).
+
+For every positive integer $n$, define $f_n \colon [0,1] \to \mathbb{R}$ by $f_n=\chi_{A_n}$, where $\chi_S$ denotes the characteristic function of the set $S$.  The sequence $\{f_n\}$ is called the \emph{traveling hump sequence}.  This colorful name arises from the sequence of the graphs of these functions: A ``hump'' seems to travel from $\displaystyle \left[ 0, \frac{1}{2^k} \right]$ to $\displaystyle \left[ \frac{2^k-1}{2^k}, 1 \right]$, then shrinks by half and starts from the very left again.
+
+The traveling hump sequence is an important sequence for at least two reasons.  It provides a counterexample for the following two statements:
+
+\begin{itemize}
+
+\item Convergence in measure implies convergence almost everywhere with respect to $m$.
+
+\item \PMlinkname{$L^1(m)$ convergence}{L1muConvergence} implies convergence almost everywhere with respect to $m$.
+
+\end{itemize}
+
+Note that $\{f_n\}$ is a sequence of measurable functions that does not \PMlinkname{converge pointwise}{PointwiseConvergence}.  For every $x \in [0,1]$, there exist infinitely many positive integers $a$ such that $f_a(x)=0$, and there exist infinitely many positive integers $b$ such that $f_b(x)=1$.
+
+On the other hand, $\{f_n\}$ converges in measure to $0$ and \PMlinkname{converges in $L^1(m)$}{ConvergesInL1mu} to $0$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfExistenceAndUnicityOfSelfsimilarFractals}
+\pmcreated{2013-03-22 16:05:30}
+\pmmodified{2013-03-22 16:05:30}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of existence and unicity of self-similar fractals}
+\pmrecord{5}{38153}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A80}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+We consider the space $\mathcal K(X)=\{K\subset X\colon K\mathrm{\ compact\ and\ non\ empty}\}$ endowed with the Hausdorff distance $\delta$.
+Since Hausdorff metric inherits completeness, being $X$ complete, $(\mathcal K(X),\delta)$ is complete too. We then consider the mapping $T\colon \mathcal K(X) \to \mathcal K(X)$ defined by
+\[
+  T(A) = \bigcup_{i=1}^N T_i(A).
+\]
+We claim that $T$ is a contraction. In fact, recalling that $\delta(A_1\cup A_2, B_1\cup B_2) \le \max\{\delta(A_1,B_1),\delta(A_2,B_2)\}$ while $\delta(T_i(A),T_i(B))\le \lambda_i \delta(A,B)$ if $T_i$ is $\lambda_i$-Lipschitz, we have
+\begin{align*}
+  \delta(T(A),T(B))
+  &= \delta(\bigcup_i T_i(A), \bigcup_i T_i(B))
+  \le \max_i \delta(T_i(A),T_i(B))\\
+  &\le \max_i \lambda_i \delta(A,B) = \lambda \delta(A,B)
+\end{align*}
+with $\lambda=\max_i \lambda_i <1$. 
+
+So $T$ is a contraction on the complete metric space $\mathcal K(X)$ and hence,
+by Banach Fixed Point Theorem, there exists one and only one $K\in\mathcal K(X)$ such that $T(K)=K$.
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

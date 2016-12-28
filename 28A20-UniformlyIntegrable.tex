@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniformlyIntegrable}
+\pmcreated{2013-03-22 15:22:55}
+\pmmodified{2013-03-22 15:22:55}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{uniformly integrable}
+\pmrecord{23}{37211}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+\pmsynonym{uniform integrability}{UniformlyIntegrable}
+\pmsynonym{uniform absolute continuity}{UniformlyIntegrable}
+\pmrelated{VitaliConvergenceTheorem}
+\pmrelated{ConditionalExpectationsAreUniformlyIntegrable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Le}{\mathbf{L}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+\begin{document}
+Let $\mu$ be a positive measure on a measurable space.
+A collection of functions $\{ f_\alpha \} \subset \Le^1(\mu)$
+is \defnterm{uniformly integrable}, if for every $\epsilon > 0$, there
+exists $\delta > 0$ such that
+\begin{align*}
+\absB{ \int_E f_\alpha \, d\mu } < \epsilon \quad \textrm{whenever $\mu(E) < \delta$, for any $\alpha$.}
+\end{align*}
+
+(The absolute value sign outside of the integral above may appear under the integral sign instead without affecting the definition.)
+
+
+The usefulness of this definition comes from the Vitali convergence theorem,
+which uses it to characterize the convergence of functions
+in $\Le^1(\mu)$.
+
+\subsection*{Definition in probability theory}
+
+In probability \PMlinkescapetext{theory}, a different, and slightly stronger, definition of ``uniform integrability'', is more commonly used:
+
+A collection of functions $\{ f_\alpha \} \subset \Le^1(\mu)$
+is \defnterm{uniformly integrable}, if for every $\epsilon > 0$, there
+exists $t \geq 0$ such that
+%\mathbb{E} \bigl[ \abs{f_\alpha} \, 1_{[\abs{f_\alpha} \geq t]} \bigr] =
+\begin{align*}
+\int_{[\abs{f_\alpha} \geq t]} \abs{f_\alpha}  \, d\mu < \epsilon
+\quad \textrm{for every $\alpha$.}
+\end{align*}
+
+Assuming $\mu$ is a probability measure, this definition is equivalent
+to the previous one together with the condition that $\int \abs{f_\alpha} \, d\mu$ is uniformly bounded for all $\alpha$.
+
+\subsection*{Properties}
+
+\begin{enumerate}
+\item
+If a finite number of collections are uniformly integrable,
+then so is their finite union.
+\item
+A single $f \in \Le^1(\mu)$ is always uniformly integrable.
+
+To see this, observe that $f$ must be almost everywhere non-infinite.
+Thus $f \cdot 1_{[ \abs{f} > k]}$ goes to zero a.e. as $k \to \infty$, and it is bounded
+by $\abs{f}$.
+Then $\int_{[\abs{f} > k]} \abs{f}d\mu \to 0$ by the dominated convergence theorem.
+Choosing $k$ big enough so that $\int_{[\abs{f} > k]} \abs{f}d\mu < \epsilon$, and letting $\delta = \epsilon/k$, we have, when $\mu(E) < \delta$,
+\begin{align*}
+\int_E \abs{f}d\mu= \int_{E \cap [\abs{f} \leq k]} \abs{f}d\mu+ \int_{E \cap [\abs{f} > k]} \abs{f} d\mu
+\leq k \mu(E) + \epsilon = 2\epsilon\,.
+\end{align*}
+\end{enumerate}
+
+\subsection*{Examples}
+\begin{enumerate}
+\item
+If $g$ is an integrable function, then 
+the collection consisting of
+all measurable functions $f$ dominated by $g$ --- that is, $\abs{f} \leq g$ ---
+is uniformly integrable.
+
+\item
+If $X$ is a $\Le^1$ random variable on a probability space $\Omega$,
+then the set of all of its conditional expectations, \[
+\{ \E[X \mid \mathcal{G}] \colon \mathcal{G}\text{ is a $\sigma$-algebra of $\Omega$} \}\,,
+\]
+ is always uniformly integrable.
+
+\item
+If there is an unbounded increasing function $\phi\colon [0, \infty) \to [0, \infty)$ such that 
+\[
+\int \abs{f_\alpha} \phi(\abs{f_\alpha}) \, d\mu
+\]
+is uniformly bounded for all $\alpha$,
+then the collection $\{ f_\alpha \}$ is uniformly integrable.
+
+\end{enumerate}
+
+\begin{thebibliography}{3}
+\bibitem{Chung}
+Kai Lai Chung. {\it A Course in Probability Theory}, third ed. Academic Press, 2001.
+
+\bibitem{Folland}
+Gerald B. Folland. {\it Real Analysis: Modern Techniques and Their Applications}, second ed. Wiley-Interscience, 1999.
+
+\bibitem{Rosenthal}
+Jeffrey S. Rosenthal. {\it A First Look at Rigorous Probability Theory}.
+World Scientific, 2003.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

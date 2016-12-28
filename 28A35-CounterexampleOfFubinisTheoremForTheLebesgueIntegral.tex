@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CounterexampleOfFubinisTheoremForTheLebesgueIntegral}
+\pmcreated{2013-03-22 18:18:15}
+\pmmodified{2013-03-22 18:18:15}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{counter-example of Fubini's theorem for the Lebesgue integral}
+\pmrecord{6}{40924}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A35}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\begin{document}
+The following observation demonstrates the necessity of the
+integrability assumption in Fubini's theorem.  Let \[Q= \{ (x,y)\in
+\mathbb{R}^2: x\geq0, y\geq 0\}\] denote the upper, right quadrant.
+Let $R\subset Q$ be the region in the quadrant bounded by the lines
+$y=x, y=x-1$, and let let $S\subset Q$ be a similar region, but this
+time bounded by the lines $y=x-1,\; y=x-2$.  Let \[f = \chi_{S}-
+\chi_R,\] where $\chi$ denotes a characteristic function.
+
+Observe that the Lebesgue measure of $R$ and of $S$ is infinite.
+Hence, $f$ is not a Lebesgue-integrable function.  However for every
+$x\geq 0$ the function
+\[ g(x) = \int_0^\infty f(x,y)\, dy \]
+is integrable.
+Indeed,
+\[ g(x) = \left\{
+  \begin{array}{cl}
+    -x & \mbox{ for } 0 \leq x \leq 1,\\
+    x-2 & \mbox{ for } 1\leq x \leq 2,\\
+    0 & \mbox{ for } x\geq 2.
+  \end{array} \right.
+\]
+Similarly, for $y\geq 0$, the function
+\[ h(y) = \int_0^\infty f(x,y)\, dx\]
+is integrable.  Indeed, 
+\[ h(y) = 0,\quad y\geq 0.\]
+Hence, the values of the iterated integrals  
+$$ \int_0^\infty g(x) \, dx =   -1,$$
+$$ \int_0^\infty h(y)\, dy =  0,$$
+are finite, but do not agree.  This does not contradict Fubini's
+theorem because the value of the planar Lebesgue integral 
+\[ \int_Q f(x,y)\, d\mu(x,y), \]
+where $\mu(x,y)$ is the planar Lebesgue measure, is not defined.
+%%%%%
+%%%%%
+\end{document}

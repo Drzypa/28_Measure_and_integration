@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{sigmaalgebra}
+\pmcreated{2013-03-22 14:00:04}
+\pmmodified{2013-03-22 14:00:04}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{$\sigma$-algebra}
+\pmrecord{7}{34835}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A60}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Let $X$ be a set. A $\sigma$-algebra is a collection $M$ of subsets of $X$ such that
+\begin{itemize}
+\item $X\in M$
+\item If $A\in M$ then $X-A\in M$.
+\item If $A_1,A_2,A_3,\ldots$ is a countable subcollection of $M$, that is, $A_j\in M$ for $j=1,2,3,\ldots$ (the subcollection can be finite) then the union of all of them is also in $M$:
+\[\bigcup_{j=1}^\infty A_i\in M.\]
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

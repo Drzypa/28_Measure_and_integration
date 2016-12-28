@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TonellisTheorem}
+\pmcreated{2013-03-22 14:15:49}
+\pmmodified{2013-03-22 14:15:49}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Tonelli's theorem}
+\pmrecord{7}{35713}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A35}
+\pmrelated{FubinisTheorem}
+\pmrelated{FubinisTheoremForTheLebesgueIntegral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+Here denote $L^+(X)$ as the space of measurable functions $X \to [0,\infty]$.  Furthermore all integrals are Lebesgue integrals.
+
+\begin{thm}[Tonelli]
+Suppose $(X,{\mathcal{M}},\mu)$ and $(Y,{\mathcal{N}},\nu)$ are \PMlinkname{$\sigma$-finite}{SigmaFinite}
+measure spaces.  If $f \in L^+(X \times Y)$, then the functions
+$x \mapsto \int_Y f(x,y) d\nu(y)$ and
+$y \mapsto \int_X f(x,y) d\mu(x)$ are in $L^+(X)$ and $L^+(Y)$ respectively, and furthermore if we denote by $\mu \times \nu$ the product measure, then
+\begin{equation*}
+\int_{X \times Y} f \, d(\mu \times \nu) =
+\int_X \left[ \int_Y f(x,y) \,d\nu(y) \right] d\mu(x) = 
+\int_Y \left[ \int_X f(x,y) \,d\mu(x) \right] d\nu(y) .
+\end{equation*}
+\end{thm} 
+
+Basically this says that you can switch the \PMlinkescapetext{order} of integrals, or integrate over the product space as long as everything is positive and the spaces are $\sigma$-finite.  Do note that we allow the functions to take on the value of
+infinity with the standard conventions used in Lebesgue integration.  That is, $0 \cdot \infty = 0$, so that if a function is infinite on a set of measure 0, then this does not contribute anything to the value of the integral.
+See the entry on extended real numbers for further discussion.
+
+If we take the counting measure on ${\mathbb{N}}$, then one can \PMlinkescapetext{state} the Tonelli theorem for sums.
+
+\begin{thm}[Tonelli for sums]
+Suppose that $f_{ij} \geq 0$ for all $i,j \in {\mathbb{N}}$, then
+\begin{equation*}
+\sum_{i,j \in {\mathbb{N}}} f_{ij}
+=
+\sum_{i=1}^\infty \sum_{j=1}^\infty f_{ij}
+=
+\sum_{j=1}^\infty \sum_{i=1}^\infty f_{ij} .
+\end{equation*}
+\end{thm}
+
+In the above theorem we have used ${\mathbb{N}}$ as our \PMlinkescapetext{index} set for simplicity and familiarity of notation.  
+If you would have an uncountable number of non-zero elements $f_{ij}$ then
+all the sums would be infinite and the result would be trivial.
+So the theorem for arbitrary \PMlinkescapetext{index}
+sets just reduces to the above case.
+
+\begin{thebibliography}{9}
+\bibitem{folland}
+Gerald B.\@ Folland. \emph{\PMlinkescapetext{Real Analysis, Modern Techniques
+and Their Applications}}. John Wiley \& Sons, Inc., New York, New York, 1999
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

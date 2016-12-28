@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompletionOfAMeasureSpace}
+\pmcreated{2013-03-22 14:06:59}
+\pmmodified{2013-03-22 14:06:59}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{completion of a measure space}
+\pmrecord{9}{35521}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+If the measure space $(X,\mathscr{S},\mu)$ is not complete, then it can be completed in the following way. Let 
+$$\mathscr{Z} = \bigcup_{E\in\mathscr{S}\, ,\mu(E)=0} \mathscr{P}(E),$$
+i.e. the family of all subsets of sets whose $\mu$-measure is zero.
+Define
+$$\overline{\mathscr{S}} = \{A \cup B : A\in \mathscr{S}, \, B\in \mathscr{Z}\}.$$
+We assert that $\overline{\mathscr{S}}$ is a $\sigma$-algebra. In fact, it clearly contains the emptyset, and it is closed under countable unions because both $\mathscr{S}$ and $\mathscr{Z}$ are. We thus need to show that it is closed under complements. Let $A\in \mathscr{S}$, $B\in\mathscr{Z}$ and suppose $E\in\mathscr{S}$ is such that $B\subset E$ and $\mu(E)=0$.
+Then we have $$(A\cup B)^c = A^c\cap B^c = A^c\cap (E-(E-B))^c = A^c\cap (E^c\cup (E-B)) = (A^c\cap E^c) \cup (A^c\cap(E-B)),$$
+where $A^c\cap E^c\in \mathscr{S}$ and  $A^c\cap(E-B)\in\mathscr{Z}$. Hence $(A\cup B)^c \in \overline{\mathscr{S}}$. 
+
+Now we define $\overline{\mu}$ on $\overline{\mathscr{S}}$ by $\overline{\mu}(A\cup B) = \mu(A)$, whenever $A\in \mathscr{S}$ and $B\in\mathscr{Z}$. It is easily verified that this defines in fact a measure, and that $(X,\overline{\mathscr{S}},\overline{\mu})$ is the completion of $(X,\mathscr{S},\mu)$.
+%%%%%
+%%%%%
+\end{document}

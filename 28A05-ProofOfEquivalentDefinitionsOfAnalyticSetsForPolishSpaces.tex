@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfEquivalentDefinitionsOfAnalyticSetsForPolishSpaces}
+\pmcreated{2013-03-22 18:48:48}
+\pmmodified{2013-03-22 18:48:48}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of equivalent definitions of analytic sets for Polish spaces}
+\pmrecord{5}{41615}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+%\pmkeywords{analytic set}
+%\pmkeywords{Polish space}
+%\pmkeywords{Borel measurable}
+%\pmkeywords{paving}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{subset}
+\PMlinkescapeword{projection}
+\PMlinkescapeword{onto}
+\PMlinkescapeword{image}
+\PMlinkescapeword{collection}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{analytic}
+\PMlinkescapeword{subsets}
+\PMlinkescapeword{function}
+\PMlinkescapeword{expression}
+\PMlinkescapeword{closed}
+\PMlinkescapeword{continuous}
+\PMlinkescapeword{isomorphic}
+\PMlinkescapeword{borel isomorphism}
+\PMlinkescapeword{isomorphism}
+\PMlinkescapeword{borel set}
+\PMlinkescapeword{generating}
+\PMlinkescapeword{integers}
+\PMlinkescapeword{radius}
+\PMlinkescapeword{borel sets}
+\PMlinkescapeword{consequence}
+
+Let $A$ be a nonempty subset of a Polish space $X$. Then, letting $\mathcal{N}$ denote Baire space and $Y$ be any uncountable Polish space, we show that the following are equivalent.
+\begin{enumerate}
+\item\label{item:1} $A$ is $\mathcal{F}$-\PMlinkname{analytic}{AnalyticSet2}.
+\item\label{item:2} $A$ is the \PMlinkname{projection}{GeneralizedCartesianProduct} of a closed subset of $X\times\mathcal{N}$ onto $X$.
+\item\label{item:3} $A$ is the \PMlinkname{image}{DirectImage} of a continuous function $f\colon Z\to X$ for some Polish space $Z$.
+\item\label{item:4} $A$ is the image of a continuous function $f\colon \mathcal{N}\to X$.
+\item\label{item:5} $A$ is the image of a Borel measurable function $f\colon Y\to X$.
+\item\label{item:6} $A$ is the projection of a Borel subset of $X\times Y$ onto $X$.
+\end{enumerate}
+
+\noindent\textbf{(\ref{item:1}) implies (\ref{item:2})}:
+Let $\mathcal{F}$ be the paving consisting of closed subsets of $X$. The collection of $\mathcal{K}$-analytic sets contains the Borel $\sigma$-algebra of $X$ (see countable unions and intersections of analytic sets are analytic) and, as the \PMlinkname{analytic sets are given by a closure operator}{AnalyticSetsDefineAClosureOperator} it follows that it contains all analytic subsets of $X$. So, any analytic subset $A$ of $X$ is $\mathcal{F}$-analytic.
+Then, there is a closed $S\subseteq\mathcal{N}$ and a function $\theta\colon\mathbb{N}\to\mathcal{F}$ such that
+\begin{equation*}
+A=\bigcup_{s\in S}\bigcap_{n=1}^\infty\theta(s_n)
+\end{equation*}
+(see proof of equivalent definitions of analytic sets for paved spaces).
+For each $m,n\in\mathbb{N}$ let $K_{m,n}$ denote the closed subset of $s\in\mathcal{N}$ with $s_n=m$. Then, we can rearrange the above expression to get $A=\pi_X(B)$ where $\pi_X\colon X\times\mathcal{N}\to X$ is the projection map and
+\begin{equation*}
+B=(X\times S)\cap \bigcap_{n=1}^\infty\bigcup_{m=1}^\infty\theta(m)\times K_{m,n}.
+\end{equation*}
+It is easily seen that $\bigcup_m\theta(m)\times K_{m,n}$ is a closed subset of $X\times\mathcal{N}$ for each $n$, and therefore $B$ is closed, as required.
+
+
+\noindent\textbf{(\ref{item:2}) implies (\ref{item:3})}:
+Suppose that $A=\pi_X(S)$ for a closed subset $S$ of $X\times \mathcal{N}$, where $\pi_X\colon X\times\mathcal{N}\to X$ is the projection map. As the product of Polish spaces is Polish, and every closed subset of a Polish space is Polish, then $S$ will be a Polish space under the subspace topology. So, we can take $Z=S$ and let $f\colon Z\to X$ be the restriction of $\pi_X$ to $Z$.
+
+\noindent\textbf{(\ref{item:3}) implies (\ref{item:4})}:
+Suppose that $A$ is the image of a continuous function $g\colon Z\to X$, for a Polish space $Z$. As Baire space is universal for Polish spaces, there exists a continuous and \PMlinkname{onto}{Surjective} function $h\colon\mathcal{N}\to Z$. The result follows by taking $f=g\circ h$.
+
+\noindent\textbf{(\ref{item:4}) implies (\ref{item:5})}:
+Suppose that $A$ is the image of a continuous function $g\colon \mathcal{N}\to X$. Since uncountable Polish spaces are all Borel isomorphic (see Polish spaces up to Borel isomorphism), there is a Borel isomorphism $h\colon Y\to\mathcal{N}$. The result follows by taking $f=g\circ h$.
+
+\noindent\textbf{(\ref{item:5}) implies (\ref{item:6})}:
+Suppose that $A$ is the image of a Borel measurable function $f\colon Y\to X$, and let $\Gamma$ be its \PMlinkname{graph}{Graph2}
+\begin{equation*}
+\Gamma\equiv\left\{(f(y),y)\colon y\in Y\right\}\subseteq X\times Y.
+\end{equation*}
+The projection of $\Gamma$ onto $X$ is equal to $f(Y)=A$, so the result will follow once it is shown that $\Gamma$ is a Borel set.
+
+Choose a countable and dense subset $\{x_1,x_2,\ldots\}$ of $X$, and let $d$ be a metric generating the topology on $X$. Then, for integers $m,n\ge 1$, denote the open ball about $x_m$ of radius $1/n$ by $B_{m,n}$. Since the $x_m$ form a dense set, $\bigcup_mB_{m,n}=X$ for each $n$. Let us define
+\begin{equation*}
+\Gamma_n\equiv\bigcup_{m=1}^\infty B_{m,n}\times f^{-1}(B_{m,n})\subseteq X\times Y,
+\end{equation*}
+which contains $\Gamma$. Furthermore, since $f^{-1}(B_{m,n})$ are Borel, $\Gamma_n$ are Borel sets.
+Suppose that $(x,y)\in\bigcap_n\Gamma_n$. Then, for each $n$, there is an $m$ such that $x\in B_{m,n}$ and $y\in f^{-1}(B_{m,n})$. So,
+\begin{equation*}
+d(x,f(y))\le d(x,x_m)+d(x_m,f(y))\le 2/n.
+\end{equation*}
+This holds for all $n$, showing that $y=f(x)$ and so $(x,y)\in \Gamma$. We have shown that $\Gamma=\bigcap_n\Gamma_n$ is Borel, as required.
+
+\noindent\textbf{(\ref{item:6}) implies (\ref{item:1})}:
+This is an immediate consequence of the result that projections of analytic sets are analytic.
+
+%%%%%
+%%%%%
+\end{document}

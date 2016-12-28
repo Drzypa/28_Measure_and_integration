@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HausdorffDimension}
+\pmcreated{2013-05-18 23:14:26}
+\pmmodified{2013-05-18 23:14:26}
+\pmowner{Mathprof}{13753}
+\pmmodifier{unlord}{1}
+\pmtitle{Hausdorff dimension}
+\pmrecord{16}{32981}
+\pmprivacy{1}
+\pmauthor{Mathprof}{1}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A80}
+\pmrelated{Dimension3}
+\pmrelated{HausdorffMeasure}
+\pmdefines{countable r-cover}
+\pmdefines{diameter}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb{R}}
+
+% dissapearing character hack %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+Let $\Theta$ be a bounded subset of $\R^n$
+let $N_{\Theta}(\epsilon)$ be the minimum number of balls of radius $\epsilon$ required to cover $\Theta$.  Then define the \emph{Hausdorff dimension} 
+$d_H$ of $\Theta$ to be 
+\[ d_H (\Theta):= - \lim_{\epsilon \rightarrow 0} \frac{\log N_{\Theta}(\epsilon)}{\log \epsilon}.\]
+
+Hausdorff dimension is easy to calculate for simple objects like the Sierpinski gasket or a Koch curve.  Each of these may be covered with a collection of scaled-down copies of itself.  In fact, in the case of the Sierpinski gasket, one can take the individual triangles in each approximation as balls in the covering.  At stage $n$, there are $3^n$ triangles of radius $\frac{1}{2^n}$, and so the Hausdorff dimension of the Sierpinski triangle is at most $- \frac{n \log 3}{n \log 1/2} = \frac{\log 3}{\log 2}$, and it can be shown that it is equal to $\frac{\log 3}{\log 2}$.
+
+\paragraph{From some notes from Koro} This definition can be extended to a general metric space $X$ with distance function $d$.
+
+Define the \emph{diameter} $|C|$ of a bounded subset $C$ of $X$ to be $\sup_{x,y\in C} d(x,y)$. 
+
+Define a \emph{\PMlinkescapetext{countable} $r$-cover}
+of $X$ to be a collection of subsets $C_i$ of $X$ indexed by some countable set $I$, such that $|C_i| < r$ and $X = \cup_{i\in I} C_i$.
+
+We also define the  function $$H^D_r (X) = \inf \sum_{i\in I} |C_i|^D$$ where the infimum is over all countable $r$-covers of $X$.  
+The \emph{Hausdorff dimension} of $X$ may then be defined as $$d_H (X)=\inf \{ D\mid \lim_{r\rightarrow 0} H^D_r(X)=0 \}.$$
+When $X$ is a subset of $\R^n$ with any \PMlinkescapetext{restricted} norm-induced metric, then this definition reduces to that given above.
+
+%Alternatively, with $N_{\Theta}(\epsilon)$ 
+%as above, the Hausdorff dimension may 
+%be defined as the unique real number 
+%$d$ (if it exists) such that the limit
+%\[ \lim_{\epsilon \rightarrow 0} N(\epsilon) \epsilon^d \]
+%is neither zero nor infinity.  Let $x$ be a 
+%point in $\Theta$, and let $B(x,r)$ be a 
+%ball of radius $r$ cetered at $x$.  Then 
+%the limit
+%$d_H (\Theta; x) \lim_{r\rightarrow 0} d_H (\Theta \cap B(x,r))$ 
+%(when it exists) can be thought of as the 
+%dimension of $\Theta$ at$x$.  Then in this 
+%sense, the dimension of $\Theta$ is a kind 
+%of essential supremum over $\Theta$ of 
+%$d_H (\Theta;x).............
+%%%%%
+%%%%%.
+\end{document}

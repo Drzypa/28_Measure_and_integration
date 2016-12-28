@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AreaFormula}
+\pmcreated{2013-03-22 14:27:36}
+\pmmodified{2013-03-22 14:27:36}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{area formula}
+\pmrecord{12}{35979}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A78}
+\pmrelated{ChangeOfVariablesInIntegralOnMathbbRn}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newcommand{\HH}{\mathcal H}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+Let $\HH^m$ denote the Hausdorff measure. Let $m\le n$ and consider a Lipschitz function $f\colon \R^m \to \R^n$.
+If $A\subset \R^m$ is a Lebesgue measurable set, the equality
+\[
+  \int_A J_f(x) \,dx = \int_{\R^n} \HH^0(f^{-1}(\{y\})\cap A) \, d\HH^m y
+\]
+holds, where 
+\[
+J_f(x) = \sqrt{\det(Df(x)\cdot Df(x)^*)}
+\]
+is the Jacobian determinant of $f$ in the point $x$ and represent the $m$-volume of the image of the unit cube under the linear map $Df(x)$.
+
+If $u\in L^1(\R^m)$ then one has
+\[
+  \int_{\R^m} u(x) J_f(x)\, dx = \int_{\R^n}\sum_{x\in f^{-1}(\{y\})} u(x)\, d\HH^m y.
+\]
+
+Notice that this formula is a generalization of the change of variables in integrals on $\R^n$.
+%%%%%
+%%%%%
+\end{document}

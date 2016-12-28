@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SierpinskiGasket}
+\pmcreated{2013-05-18 22:53:46}
+\pmmodified{2013-05-18 22:53:46}
+\pmowner{mathwizard}{128}
+\pmmodifier{unlord}{1}
+\pmtitle{Sierpi\'nski gasket}
+\pmrecord{41}{33011}
+\pmprivacy{1}
+\pmauthor{mathwizard}{1}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A80}
+\pmsynonym{Sierpinski triangle}{SierpinskiGasket}
+\pmsynonym{Sierpinski gasket}{SierpinskiGasket}
+\pmsynonym{Sierpi\'nski triangle}{SierpinskiGasket}
+\pmrelated{MengerSponge}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $S_0$ be a triangular area, and define $S_{n+1}$ to be obtained from $S_n$ by replacing each triangular area in $S_n$ with three similar and similarly
+oriented triangular areas each intersecting with each of the other two at exactly one vertex, each one half the linear scale of the original in size.  
+The limiting set as
+$n\rightarrow \infty$ (alternately the intersection of all these sets) is a {\emph Sierpi\'nski gasket}, also known as a {\emph Sierpi\'nski triangle}.
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=5cm]{s01.png}
+\includegraphics[width=5cm]{s02.png}
+\caption{Sierpi\'nski gasket stage 0, a single triangle, and at stage 1, three triangles}
+\end{centering}
+\end{figure}
+%\begin{figure}[h]
+%\begin{centering}
+%\includegraphics[width=5cm]{s02.eps}
+%\caption{Stage 1, three triangles}
+%\end{centering}
+%\end{figure}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=5cm]{s03.png}
+\includegraphics[width=5cm]{s04.png}
+\caption{Stage 2, nine triangles, and stage $n$, $3^n$ triangles}
+\end{centering}
+\end{figure}
+%\begin{figure}[h]
+%\begin{centering}
+%\includegraphics[width=5cm]{s04.eps}
+%\caption{Stage $n$, $3^n$ triangles}
+%\end{centering}
+%\end{figure}
+%%%%%
+%%%%%
+% rerender..................
+\end{document}

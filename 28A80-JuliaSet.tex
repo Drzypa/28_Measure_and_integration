@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JuliaSet}
+\pmcreated{2013-03-22 17:15:26}
+\pmmodified{2013-03-22 17:15:26}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Julia set}
+\pmrecord{7}{39593}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A80}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $U$ be an open subset of the complex plane and let $f \colon U \to U$
+be analytic.  Denote the $n$-th iterate of $f$ by $f^n$, i.e. $f^1 = f$ 
+and $f^{n+1} = f \circ f^n$.  Then the \emph{Julia set} of $f$ is the
+subset $J$ of $U$ characterized by the following property: if $z \in J$
+then the restriction of $\{f^n \mid n \in \mathbb{N}\}$ to any neighborhood
+of $z$ is not a normal family.
+
+It can also be shown that the Julia set of $f$ is the closure of the set of
+repelling periodic points of $f$.  (Repelling periodic point means that, for
+some $n$, we have $f^n (z) = z$ and $|f'(z)| > 1$.)
+
+A simple example is afforded by the map $f(z) = z^2$; in this case, the Julia
+set is the unit circle.  In general, however, things are much more complicated
+and the Julia set is a fractal.
+
+From the definition, it follows that the Julia set is closed under $f$ and
+its inverse --- $f(J) = J$ and $f^{-1} (J) = J$.  Topologically, Julia sets
+are perfect and have empty interior.
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,301 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComparisonBetweenLebesgueAndRiemannIntegration}
+\pmcreated{2013-03-22 15:29:14}
+\pmmodified{2013-03-22 15:29:14}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{comparison between Lebesgue and Riemann Integration}
+\pmrecord{7}{37343}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28-00}
+
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{url}
+%\usepackage{fullpage}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[section]
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\mv}[1]{\mathbf{#1}} % matrix or vector
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\mvt}[1]{\mv{#1}^{\mathrm{T}}}
+\newcommand{\mvi}[1]{\mv{#1}^{-1}}
+\newcommand{\mpderiv}[1]{\frac{\partial}{\partial {#1}}}
+\newcommand{\borel}{\mathfrak{B}} \newcommand{\defined}{:=}
+\newcommand{\1}{{{\bf 1}}}
+\begin{document}
+The Riemann and Lebesgue integral are defined in different ways, with
+the latter generally perceived as the more general.  The aim of 
+this article is to clarify this claim by providing a number of,
+hopefully simple and convincing, examples and arguments. We restrict
+this article to a discussion of proper and improper integrals. For
+extensions and even more general definitions of the integral we refer
+to  \url{http://www.math.vanderbilt.edu/~schectex/ccc/gauge/}:
+
+\section{Proper Integrals}
+\label{sec:some-examples}
+
+\subsection*{The Dirichlet Function}
+\label{sec:example-1}
+Our first example shows that functions exists that are Lebesgue
+integrable but not Riemann integrable.
+
+Consider the characteristic function of the rational numbers in
+$[0,1]$, i.e.,
+\begin{equation*}
+  1_{\mathbb{Q}} (x) = 
+  \begin{cases}
+    1, &\quad \text{if $x$ rational}, \\
+0, &\quad \text{elsewhere}.
+  \end{cases}
+\end{equation*}
+This function, known as the Dirichlet function, is not Riemann
+integrable.  To see this, take an arbitrary partition of the interval
+$[0,1]$. The supremum of $1_{\mathbb{Q}}$ on any interval
+(with non-empty interior) is~$1$, whereas its infimum is~$0$.  Hence,
+the upper Riemann sum of $1_{\mathbb{Q}}$ is~$1$ while the
+lower Riemann sum is~$0$.  Clearly, the upper and lower Riemann sums
+converge to~1 and~0, respectively, in the limit of the size of largest
+interval in the partition going to zero.  Obviously, these limits are
+not the same. As a bounded function is Riemann integrable if and only
+if the upper and lower Riemann sums converge to the same number, the
+Riemann integral of $1_{\mathbb{Q}}$ cannot exist.
+
+On the other hand, $1_{\mathbb{Q}}$ turns out to be
+Lebesgue integrable, which we now show. Let us enumerate the rationals
+in $[0,1]$ as $\{q_0, q_1, \ldots \}$. Now cover each $q_i$ with an
+open set $O_i$ of size $\epsilon/2^i$.  Hence, the set
+$\{q_0,q_1,\ldots\}$ is contained in the set $\subset G_\epsilon :=
+\cup_{i=0}^\infty O_i$.  Now it is known that every countable union of
+open sets forms a Lebesgue measurable set. Therefore, $G_\epsilon$ is
+also a Lebesgue measurable set.  Consequently, the Lebesgue integral
+of this set's characteristic function, i.e.,
+\begin{equation*}
+  1_{G_\epsilon}(x) =
+  \begin{cases}
+    1, &\quad\text{if } x \in O, \\
+    0, &\quad\text{elsewhere},
+  \end{cases}
+\end{equation*}
+exists. 
+
+In fact, the integral of $1_{G_\epsilon}$ is less than or equal to
+$\epsilon\sum_{i=0}^\infty 2^{-i} = \epsilon$ as the total length of
+the union of sets $O_i$ is less than or equal to $\epsilon$.  (There
+might be overlaps between the $O_i$.) Now taking the limit
+$\epsilon\to 0$ it follows that for all $\epsilon$,
+\begin{equation*}
+  \int 1_{\mathbb{Q}}\,dx \leq  \int
+  1_{G_\epsilon} \, dx \leq \epsilon
+\end{equation*}
+Since this holds for all $\epsilon >0$, the left hand side must be~0.
+
+\subsection*{A 'Worse' Kind of Dirichlet Function}
+
+The above is, arguably, somewhat simple. The only reason that the
+Dirichlet function is Lebesgue, but not Riemann, integrable, is that
+its spikes occur on the rationals, a set of numbers which is, in
+comparison to the irrational numbers, a very small set.  By modifying
+the Dirichlet function on \emph{a set of measure zero}, that is, by
+removing its spikes, it becomes the zero function, which is evidently
+Riemann integrable.  This reasoning might lead us to conjecture that
+it is possible to turn any Lebesgue integrable function into a Riemann
+integrable function by modifying it on a set of measure zero. This
+conjecture, however, is false as the next example shows.
+
+Interestingly, the function we seek can be obtained in a more or less
+direct way from the previous example. First cover the rationals by
+open sets $O_i$ of length $y_i$, where the sequence of numbers of
+$\{y_i\}_{i=0,\ldots}$ is such that $y_i>0$ for all $i$ but such that
+$\sum_i y_i = 1/2$.  Observe that $G_y:=\cup_i O_i$ is a measurable
+set with measure (length) less than or equal to $1/2$. But this
+implies that the complement $G^c_y$ of $G_y$, which contains only
+irrational numbers, has length at least $1/2$.
+
+Observe that the characteristic function $1_{G_y}$ is
+nowhere continuous on $G^c_y$, as the rationals lie dense in the
+reals. Since, also, $G_y^c$  has measure at least equal
+to $1/2$ it is impossible to remove these discontinuity points by a
+mere modification on a countable number of measure zero sets. 
+
+Now there is a theorem by Lebesgue stating that a bounded function $f$
+is Riemann integrable if and only if $f$ is continuous almost
+everywhere.  Apparently, $1_{G_y}$ is bounded and
+discontinuous on a set with measure larger than $0$. Thus, we may
+conclude that $1_{G_y}$ is not Riemann integrable.  
+
+To prove that $1_{G_y}$ is Lebesgue integrable follows
+easily if we approach the subject of integration from a somewhat more
+abstract point of view. This is the topic of the next section.
+
+\subsection*{Exchanging Limits and Integrals}
+
+Let us first present one further example: the sequence of
+characteristic functions of $\cup_{i=1}^n O_i$, where $O_i, i=1\ldots
+n$ \emph{and } $n<\infty$, are the open sets appearing in the
+definition of the 'worse Dirichlet function'.  Clearly, any such
+function has a finite number of discontinuities, hence is Riemann
+integrable. However, these functions converge point-wise to
+$1_{G_y}$, which is \emph{not} Riemann integrable.
+Apparently, sequences of Riemann integrable functions may converge to
+non-Riemann integrable functions.  Interestingly, the sequence of
+integrals of $1_{\cup_{i=1}^n O_i}$, i.e. a sequence of
+reals, \emph{has} a limit as it is increasing and bounded by $1/2$.
+This somewhat disturbing inconsistency is satisfactory resolved
+by Lebesgue's theory of integration.
+
+As a matter of fact, the advantage of Lebesgue integration is perhaps
+best appreciated by interpreting this example from a more abstract
+(functional analysis) point of view.  Stated a bit differently, we
+might approach the subject not from the bottom up (looking at
+individual functions) but from the top down (looking at classes of
+functions).  In more detail, suppose we are allowed to apply an
+operator $T$ to any function that is an element of some function
+space. It would be nice if this space is closed under taking
+(point-wise) limits.  In other words, besides being allowed to apply
+$T$ to some sequence of functions $f_n$, we are also allowed to apply
+$T$ to the function $f$ obtained as the limit of $f_n$.  It would be
+even nicer if  $\lim_n Tf_n$ is the same as $T \lim_n f_n = Tf$.
+(This is, for instance, useful when it is simple to compute $T f_n$
+for each $n$, but difficult to compute $Tf$, while the latter might be
+what really interests us.)
+
+In the present case, i.e, integration, we perceive the integral of a
+function as a (continuous linear) operator.  The class of Lebesgue
+integrable functions has the desired abstract properties (simple
+conditions to check whether the exchange of integral and limit is
+allowed), whereas the class of Riemann integrable functions does not.
+
+Applying this to the above example, viz. the integration of
+$1_{G_y}$, we use Lebesgue Dominated Convergence Theorem,
+which states that when a sequence $\left\{f_n\right\}$ of Lebesgue
+measurable functions is bounded by a Lebesgue integrable function, the
+function $f$ obtained as the pointwise limit $f_n$ is also Lebesgue
+integrable, and $\int \lim_n f_n = \int f = \lim_n \int f_n$. Since,
+for all $n$, $1_{\cup_i^n O_i}$ is bounded and Lebesgue
+integrable,  $1_{G_y}$ is also Lebesgue integrable,
+and reversing the (pointwise) limit and the integral is allowed.
+
+
+\subsection{Fubini's Theorem}
+\label{sec:fubinis-theorem}
+
+Admittedly the function $1_{G_y}$ is rather artificial. 
+A really powerful example of the consequences of being allowed to
+reverse integral and limit is provided by (the proof of)
+Fubini's theorem applied to the rectangle $Q=[a,b] \times [c,d]$.
+Compare the following two theorems.  See, for instance,
+\cite{apostol69:_calcul} or \cite{lang83:_under_analy} for proofs of
+the first theorem, and \cite{jones00:_lebes_integ_euclid_spaces} for
+the second theorem.
+
+\begin{theorem}
+  \label{thr:3}
+  Riemann Case. Assume $f$ to be Riemann integrable on $Q$. Assume
+  also that the one-dimensional function $x\mapsto f(x,y)$ is Riemann
+  integrable for almost all $y\in[c,d]$. Then the function $y\mapsto
+  \int_a^b f(x,y) \,dx$ is Riemann integrable and $\int_Q f(x,y) \,dx
+  \,dy = \int_c^d \left(\int_a^b f(x,y) \,dx\right) \,dy$.  Note: both
+  conditions are satisfied if $f$ is continuous on $Q$.
+\end{theorem}
+
+\begin{theorem}
+  Lebesgue Case. Assume that $f$ is Lebesgue integrable on $Q$. Then
+  the function $x\mapsto f(x,y)$ is Lebesgue integrable for almost all
+  $y$ on $[c,d]$. As a consequence, the function $y\mapsto \int_a^b
+  f(x,y) \,dx$ is Lebesgue integrable and $\int_Q f(x,y) \,dx \,dy =
+  \int_c^d \left(\int_a^b f(x,y) \,dx\right) \,dy$.
+\end{theorem}
+
+Observe that the second \emph{assumption} in the Riemann case has
+turned into a \emph{consequence} in the Lebesgue case.  The main
+reason behind this difference is precisely that the class of Lebesgue
+measurable functions is closed under taking limits (under a bounded
+condition), whereas the class of Riemann integrable functions is not.
+
+\section{Improper Integrals}
+\label{sec:improper-integrals}
+From the above the reader may conclude that whenever a function is
+Riemann integrable, it is Lebesgue integrable. This is true as long we
+only include \emph{proper} integrals. If, on the other hand, we also
+consider \emph{improper} integrals the statement is no longer valid.
+There exist functions whose improper Riemann integral exists, whereas
+the Lebesgue integral does not.  Concentrating on functions defined on
+subsets of $\mathbb{R}^n$ the situation is as shown by the following
+Venn Diagram:
+\begin{figure}[h]
+  \begin{center}
+  \begin{picture}(6,40)
+    \put(1,10){\circle{50}}
+    \put(20,10){\circle{50}}
+    \put(11,10){\circle{15}}
+    \put(25,6){$RI$}
+    \put(7,6){$R$}
+    \put(-10,6){$L$}
+  \end{picture}
+  \end{center}
+\caption{$R$, $RI$, and $L$, are  the classes of Riemann, improper
+  Riemann, and Lebesgue integrable functions, respectively.}
+\end{figure}
+
+In the previous we already discussed the inclusion  $R\subset L$.
+
+Let us now integrate the function $1/\sqrt x$ over $[0,1]$ to show
+that some functions exist $RI\cup L$ but are not in $R$. As $1/\sqrt
+x$ is not bounded on $[0,1]$ every upper Riemann sum is infinite.  On
+the other hand, both the improper Riemann integral and the Lebesgue
+integral exist, and give the same result.
+
+Secondly, $L$ is not contained in $RI$ as follows from the fact that
+the Dirichlet function is not $RI$. 
+
+Finally, $RI$ is also not a subset of $L$. Define $f:
+[0,\infty)\mapsto [-1,1]$ as $1$ on $[0,1)$, $-1/2$ on $[1,2)$, $1/3$
+on $[2,3)$, $-1/4$ on $[3,4)$, etc.  The Riemann integral and the
+Lebesgue integral of $f$ over $[0,n)$ are both equal to
+$\sum_{k=1}^{n} (-1)^{k+1} 1/k.$ It is well known that this
+alternating sum converges, implying the existence of the improper
+Riemann integral. However, since a function is Lebesgue integrable if
+and only if its absolute value is also Lebesgue integrable, $f$ is not
+in $L$.
+
+\begin{thebibliography}{Apo69}
+
+\bibitem[Apo69]{apostol69:_calcul}
+T.M. Apostol.
+\newblock {\em Calculus}, volume~2.
+\newblock John Wiley \& Sons, 1969.
+
+\bibitem[Jon00]{jones00:_lebes_integ_euclid_spaces}
+F.~Jones.
+\newblock {\em Lebesgue Integration on Euclidean Spaces}.
+\newblock Jones and Bartlett, revised edition edition, 2000.
+
+\bibitem[Lan83]{lang83:_under_analy}
+S.~Lang.
+\newblock {\em Undergraduate Analysis}.
+\newblock Springer-Verlag, 1983.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

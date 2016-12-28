@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PeanoCurve}
+\pmcreated{2013-03-22 16:32:29}
+\pmmodified{2013-03-22 16:32:29}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{Peano curve}
+\pmrecord{13}{38723}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A80}
+\pmsynonym{space-filling curve}{PeanoCurve}
+\pmsynonym{space filling curve}{PeanoCurve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{similar}
+
+A \emph{Peano curve} or \emph{space-filling curve} is a continuous mapping of a closed interval onto a square.  
+
+Such mappings, introduced by Peano in 1890, played an
+important role in the development of topology as a counterexample 
+to the naive ideas of dimension --- while it is
+true that one cannot map a space onto a space of higher dimension using a 
+smooth map, this is no longer true if one only requires continuity as opposed to
+smoothness.  The Peano curve and similar examples led to a rethinking of the foundations
+of topology and analysis, and underscored the importance of formulating 
+topological notions in a rigorous fashion.
+
+However, still, a space-filling curve cannot ever be one-to-one;
+otherwise invariance of dimension would be violated.
+
+Many space-filling curves may be obtained as the limit of a sequence, $\langle \, h_n \mid n \in \mathbb{N} \, \rangle$, of continuous functions $h_n \colon \lbrack 0,1\rbrack \to \lbrack 0,1\rbrack \times \lbrack 0,1\rbrack$. Figure \ref{fig:graph} (\PMlinktofile{source code}{hilbert.cc}), showing the ranges of the first few approximations to Hilbert's space-filling curve, illustrates a common case in which each successive approximation is obtained by applying a recursive procedure to its predecessor.
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.80]{hilbert.eps}
+ \caption{The ranges of the first six approximations to Hilbert's space-filling curve}
+ \label{fig:graph}
+\end{figure}
+
+
+%%%%%
+%%%%%
+\end{document}

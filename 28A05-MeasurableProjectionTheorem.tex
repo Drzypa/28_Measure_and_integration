@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeasurableProjectionTheorem}
+\pmcreated{2013-03-22 18:48:04}
+\pmmodified{2013-03-22 18:48:04}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{measurable projection theorem}
+\pmrecord{8}{41601}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+\pmclassification{msc}{60G07}
+%\pmkeywords{universally measurable}
+%\pmkeywords{jointly measurable}
+\pmrelated{ProjectionsOfAnalyticSetsAreAnalytic}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{projection}
+\PMlinkescapeword{product}
+\PMlinkescapeword{onto}
+\PMlinkescapeword{universally complete}
+\PMlinkescapeword{measure spaces}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{consequence}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{measurable}
+\PMlinkescapeword{analytic sets}
+\PMlinkescapeword{applications}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{topology}
+\PMlinkescapeword{well defined}
+
+The projection of a measurable set from the product $X\times Y$ of two measurable spaces need not itself be measurable. See a Lebesgue measurable but non-Borel set for an example. However, the following result can be shown. The notation $\mathcal{F}\times\mathcal{B}$ refers to the \PMlinkname{product $\sigma$-algebra}{ProductSigmaAlgebra}.
+
+\begin{theorem*}
+Let $(X,\mathcal{F})$ be a measurable space and $Y$ be a Polish space with Borel $\sigma$-algebra $\mathcal{B}$.
+Then the \PMlinkname{projection}{ProjectionMap} of any $S\in\mathcal{F}\times\mathcal{B}$ onto $X$ is universally measurable.
+\end{theorem*}
+
+In particular, if $\mathcal{F}$ is universally complete then the projection of $S$ will be in $\mathcal{F}$, and this applies to all complete \PMlinkname{$\sigma$-finite}{SigmaFinite} measure spaces $(X,\mathcal{F},\mu)$. For example, the projection of any Borel set in $\mathbb{R}^n$ onto $\mathbb{R}$ is Lebesgue measurable.
+
+The theorem is a direct consequence of the properties of \PMlinkname{analytic sets}{AnalyticSet2}, following from the result that projections of analytic sets are analytic and the fact that \PMlinkname{analytic sets are universally measurable}{MeasurabilityOfAnalyticSets}.
+Note, however, that the theorem itself does not refer at all to the concept of analytic sets.
+
+The measurable projection theorem has important applications to the theory of continuous-time stochastic processes. For example, the d\'ebut theorem, which says that the first time at which a progressively measurable stochastic process enters a given measurable set is a stopping time, follows easily. 
+Also, if $(X_t)_{t\in\mathbb{R}_+}$ is a jointly measurable process defined on a measurable space $(\Omega,\mathcal{F})$, then the maximum process $X^*_t=\sup_{s\le t}X_s$ will be universally measurable since,
+\begin{equation*}
+\left\{\omega\in\Omega\colon X^*_t> K\right\}
+=\pi_\Omega\left(\left\{(s,\omega)\colon s\le t,\ X_s> K\right\}\right)
+\end{equation*}
+is universally measurable, where $\pi_\Omega\colon\Omega\times\mathbb{R}_+\to\Omega$ is the projection map.
+Furthermore, this also shows that the topology of ucp convergence is well defined on the space of jointly measurable processes.
+
+%%%%%
+%%%%%
+\end{document}

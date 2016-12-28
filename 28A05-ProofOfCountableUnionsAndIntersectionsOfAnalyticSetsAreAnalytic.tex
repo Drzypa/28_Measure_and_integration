@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCountableUnionsAndIntersectionsOfAnalyticSetsAreAnalytic}
+\pmcreated{2013-03-22 18:46:19}
+\pmmodified{2013-03-22 18:46:19}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of countable unions and intersections of analytic sets are analytic}
+\pmrecord{4}{41564}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+%\pmkeywords{analytic set}
+%\pmkeywords{compact paving}
+%\pmkeywords{product paving}
+%\pmkeywords{direct sum paving}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{analytic}
+\PMlinkescapeword{compact}
+\PMlinkescapeword{direct sum}
+\PMlinkescapeword{subset}
+
+Let $(X,\mathcal{F})$ be a paved space and $(A_n)_{n\in\mathbb{N}}$ be a sequence of $\mathcal{F}$-\PMlinkname{analytic sets}{AnalyticSet2}. We show that their union and intersection is also analytic.
+
+From the definition of $\mathcal{F}$-analytic sets, there exist compact paved spaces $(K_n,\mathcal{K}_n)$ and $S_n\in(\mathcal{F}\times\mathcal{K}_n)_{\sigma\delta}$ such that
+\begin{equation*}
+A_n=\left\{x\in X\colon (x,y)\in S_n\text{ for some }y\in K_n\right\}.
+\end{equation*}
+
+We start by showing that $\bigcap_nA_n$ is analytic. Let $K=\prod_nK_n$ and $\mathcal{K}=\prod_n\mathcal{K}_n$ be the product paving, and $\pi_n\colon K\rightarrow K_n$ be the projection map.
+Then $x\in\bigcap_nA_n$ if and only if for each $n$ there is a $y_n\in K_n$ with $(x,y_n)\in S_n$. Equivalently, setting $y=(y_1,y_2,\cdots)$, then $(x,y)\in \bigcap_n\pi^{-1}_n(S_n)$. However, this is in $(\mathcal{F}\times\mathcal{K}_n)_{\sigma\delta}$ and we can write,
+\begin{equation*}
+\bigcap_nA_n = \pi_X\left(\bigcap_n\pi^{-1}_n(S_n)\right),
+\end{equation*}
+where $\pi_X\colon X\times K\rightarrow X$ is the projection map.
+As products of compact pavings are compact, $(K,\mathcal{K})$ is compact and it follows from the definition that $\bigcap_nA_n$ is $\mathcal{F}$-analytic.
+
+
+We now show that $\bigcup_n A_n$ is analytic. Let $K=\sum_nK_n$ and $\mathcal{K}=\sum_n\mathcal{K}_n$ be the direct sum paving, \PMlinkname{which is compact}{SumsOfCompactPavingsAreCompact}. Also, write $S_n=\bigcap_{m=1}^\infty T_{m,n}$ for $T_{m,n}\in(\mathcal{F}\times\mathcal{K}_n)_\sigma$.
+We identify $K_n$ with a subset of $K$, so that $K$ is the union of the disjoint sets $K_n$.
+Then $x\in\bigcup_nA_n$ if and only if $(x,y)\in S_n$ for some $n$ and some $y\in K$,
+\begin{equation*}
+\bigcup_nA_n=\pi_X\left(\bigcup_nS_n\right).
+\end{equation*}
+However, the fact that $K_{n_1},K_{n_2}$ are disjoint for $n_1\not= n_2$ says that $T_{m,n_1},T_{m,n_2}$ are disjoint and, therefore,
+\begin{equation*}
+\bigcup_nS_n=\bigcup_n\bigcap_mT_{m,n}=\bigcap_m\bigcup_nT_{m,n}\in\left(\mathcal{F}\times\mathcal{K}\right)_{\sigma\delta}.
+\end{equation*}
+So $\bigcup_nA_n$ is $\mathcal{F}$-analytic.
+
+%%%%%
+%%%%%
+\end{document}

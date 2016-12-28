@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnalyticSetsDefineAClosureOperator}
+\pmcreated{2013-03-22 18:46:30}
+\pmmodified{2013-03-22 18:46:30}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{analytic sets define a closure operator}
+\pmrecord{4}{41568}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+%\pmkeywords{analytic set}
+%\pmkeywords{closure operator}
+%\pmkeywords{paving}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{collection}
+\PMlinkescapeword{subsets}
+\PMlinkescapeword{analytic}
+\PMlinkescapeword{analytic sets}
+\PMlinkescapeword{properties}
+
+For a paving $\mathcal{F}$ on a set $X$, we denote the collection of all $\mathcal{F}$-\PMlinkname{analytic sets}{AnalyticSet2} by $a(\mathcal{F})$.
+Then, $\mathcal{F}\mapsto a(\mathcal{F})$ is a closure operator on the subsets of $X$.
+That is,
+\begin{enumerate}
+\item\label{1} $\mathcal{F}\subseteq a(\mathcal{F})$.
+\item\label{2} If $\mathcal{F}\subseteq\mathcal{G}$ then $a(\mathcal{F})\subseteq a(\mathcal{G})$.
+\item\label{3} $a(a(\mathcal{F}))=a(\mathcal{F})$.
+\end{enumerate}
+
+For example, if $\mathcal{G}$ is a collection of $\mathcal{F}$-analytic sets then $\mathcal{G}\subseteq a(\mathcal{F})$ gives $a(\mathcal{G})\subseteq a(a(\mathcal{F}))=a(\mathcal{F})$ and so all $\mathcal{G}$-analytic sets are also $\mathcal{F}$-analytic. In particular, for a metric space, the analytic sets are the same regardless of whether they are defined with respect to the collection of open, closed or Borel sets.
+
+Properties \ref{1} and \ref{2} follow directly from the definition of analytic sets. We just need to prove \ref{3}. So, for any $A\in a(a(\mathcal{F}))$ we show that $A\in a(\mathcal{F})$. First, there is a \PMlinkname{compact paved space}{PavedSpace} $(K,\mathcal{K})$ and $S\in \left(a(\mathcal{F})\times\mathcal{K}\right)_{\sigma\delta}$ such that $A$ is equal to the projection $\pi_X(S)$.
+Write
+\begin{equation*}
+S=\bigcap_{m=1}^\infty\bigcup_{n=1}^\infty A_{m,n}\times B_{m,n}
+\end{equation*}
+for $A_{m,n}\in a(\mathcal{F})$ and $B_{m,n}\in\mathcal{K}$. It is clear that $A_{m,n}\times B_{m,n}$ is $\mathcal{F}\times\mathcal{K}$-analytic and, as countable unions and intersections of analytic sets are analytic, $S$ is also $\mathcal{F}\times\mathcal{K}$-analytic. Finally, since projections of analytic sets are analytic, $A=\pi_X(S)$ must be $\mathcal{F}$-analytic as required.
+
+%%%%%
+%%%%%
+\end{document}

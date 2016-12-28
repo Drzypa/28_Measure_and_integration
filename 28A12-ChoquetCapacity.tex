@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChoquetCapacity}
+\pmcreated{2013-03-22 18:47:26}
+\pmmodified{2013-03-22 18:47:26}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{Choquet capacity}
+\pmrecord{5}{41587}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+\pmclassification{msc}{28A05}
+\pmsynonym{capacity}{ChoquetCapacity}
+%\pmkeywords{paved space}
+%\pmkeywords{set function}
+\pmdefines{capacitable}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{set function}
+\PMlinkescapeword{collection}
+\PMlinkescapeword{subsets}
+\PMlinkescapeword{increasing}
+\PMlinkescapeword{decreasing}
+\PMlinkescapeword{subadditivity}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{mapping}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{outer}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{application}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{subset}
+
+A \emph{Choquet capacity}, or just \emph{capacity}, on a set $X$ is a kind of set function, mapping the power set $\mathcal{P}(X)$ to the real numbers.
+
+\begin{definition*}
+Let $\mathcal{F}$ be a collection of subsets of $X$. Then, an $\mathcal{F}$-capacity is an increasing set function
+\begin{equation*}
+I\colon\mathcal{P}(X)\rightarrow\mathbb{R}_+
+\end{equation*}
+satisfying the following.
+\begin{enumerate}
+\item If $(A_n)_{n\in\mathbb{N}}$ is an increasing sequence of subsets of $X$ then $I(A_n)\rightarrow I\left(\bigcup_mA_m\right)$ as $n\rightarrow\infty$.
+\item If $(A_n)_{n\in\mathbb{N}}$ is a decreasing sequence of subsets of $X$ such that $A_n\in\mathcal{F}$ for each $n$, then $I(A_n)\rightarrow I\left(\bigcap_mA_m\right)$ as $n\rightarrow\infty$.
+\end{enumerate}
+\end{definition*}
+The condition that $I$ is increasing means that $I(A)\le I(B)$ whenever $A\subseteq B$.
+Note that capacities differ from the concepts of measures and outer measures, as no additivity or subadditivity conditions are imposed. However, for any finite measure, there is a \PMlinkname{corresponding capacity}{CapacityGeneratedByAMeasure}. An important application to the theory of measures and analytic sets is given by the capacitability theorem.
+
+The \emph{$(\mathcal{F},I)$-capacitable} sets are defined as follows. Recall that $\mathcal{F}_\delta$ denotes the collection of countable intersections of sets in the paving $\mathcal{F}$.
+
+\begin{definition*}
+Let $I$ be an $\mathcal{F}$-capacity on a set $X$. Then a subset $A\subseteq X$ is \emph{$(\mathcal{F},I)$-capacitable} if, for each $\epsilon >0$, there exists a $B\in\mathcal{F}_\delta$ such that $B\subseteq A$ and $I(B)\ge I(A)-\epsilon$.
+\end{definition*}
+Alternatively, such sets are called $I$-capacitable or, simply, capacitable.
+
+%%%%%
+%%%%%
+\end{document}

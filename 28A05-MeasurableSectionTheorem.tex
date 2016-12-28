@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeasurableSectionTheorem}
+\pmcreated{2013-03-22 18:48:21}
+\pmmodified{2013-03-22 18:48:21}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{measurable section theorem}
+\pmrecord{7}{41607}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+\pmsynonym{measurable cross section theorem}{MeasurableSectionTheorem}
+%\pmkeywords{universally complete}
+%\pmkeywords{analytic set}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx,float}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{subset}
+\PMlinkescapeword{cross section}
+\PMlinkescapeword{map}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{states}
+\PMlinkescapeword{way}
+\PMlinkescapeword{cross sections}
+\PMlinkescapeword{order}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{application}
+\PMlinkescapeword{force}
+\PMlinkescapeword{basic}
+\PMlinkescapeword{universal}
+\PMlinkescapeword{index set}
+\PMlinkescapeword{real numbers}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{positive}
+\PMlinkescapeword{projection}
+\PMlinkescapeword{equivalence}
+\PMlinkescapeword{theorems}
+\PMlinkescapeword{section}
+\PMlinkescapeword{applications}
+
+Consider a Cartesian product $X\times Y$ with projection map $\pi_X\colon X\times Y\to X$. Then, a \emph{cross section} of a subset $S\subseteq X\times Y$ is a map $\tau\colon\pi_X(S)\to Y$ satisfying $(x,\tau(x))\in S$.
+The following theorem states that such cross sections can be chosen in a \PMlinkname{measurable}{MeasurableFunctions} way. We use the notation $\mathcal{F}\otimes\mathcal{B}$ for the \PMlinkname{product $\sigma$-algebra}{ProductSigmaAlgebra} in order to distinguish it from the product paving $\mathcal{F}\times\mathcal{B}$.
+
+\begin{theorem*}
+Let $(X,\mathcal{F})$ be a universally complete \PMlinkname{measurable space}{MeasurableSpace}, $Y$ be a Polish space with \PMlinkname{Borel $\sigma$-algebra}{BorelSigmaAlgebra} $\mathcal{B}$, and $\pi_X\colon X\times Y\to X$ be the projection map.
+
+For any $\mathcal{F}\otimes\mathcal{B}$-analytic set $S$, then $\pi_X(S)\in \mathcal{F}$ and there is a measurable map $\tau\colon \pi_X(S)\to Y$ such that $(x,\tau(x))\in S$ for all $x\in \pi_X(S)$.
+\end{theorem*}
+
+
+The existence of a map satisfying $(x,\tau(x))\in S$ is no surprise, and indeed must exist by a simple application of the axiom of choice. The main force of the theorem is that $\tau$ may be taken to be measurable, which is not something that could be achieved by such basic use of choice.
+In fact, the result fails to be true if either the universal completeness assumption for $(X,\mathcal{F})$ or the requirement that $Y$ be a Polish space is dropped.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.1]{sectionpic}
+\end{figure}
+
+This result has important applications to continuous-time stochastic processes, where the space $Y$ is taken to be the time index set, usually the set $\mathbb{R}_+$ of nonnegative real numbers.
+
+Consider stochastic processes $(U_t)_{t\in\mathbb{R}_+}$ and $(V_t)_{t\in\mathbb{R}_+}$ defined on a probability space $(\Omega,\mathcal{F},\mathbb{P})$. Suppose that they were not equivalent so that, with positive probability, there is a time $t$ at which they differ. Then the projection $\pi_\Omega(S)$ of the set of times $S=\{(t,\omega)\colon U_t(\omega)\not=V_t(\omega)\}$ has positive probability. Consequently, the measurable section theorem guarantees the existence of a random time $\tau$ for which $U_\tau\not=V_\tau$ with positive probability.
+
+\begin{corollary*}
+Let $(U_t)_{t\in\mathbb{R}_+}$ and $(V_t)_{t\in\mathbb{R}_+}$ be jointly measurable stochastic processes defined on the probability space $(\Omega,\mathcal{F},\mathbb{P})$. If
+\begin{equation*}
+\mathbb{P}(U_\tau=V_\tau)=1
+\end{equation*}
+for all random times $\tau\colon\Omega\to\mathbb{R}_+$, then $U$ and $V$ are equivalent processes.
+\end{corollary*}
+
+So, continuous-time stochastic processes are fully  determined up to equivalence by their values, neglecting zero probability sets, at random times. Note that the condition that $(\Omega,\mathcal{F})$ be universally complete can be dropped from the statement, due to the fact that any random variable $\tau$ on the completion of a probability space can be replaced by a random variable $\tau^\prime$ satisfying $\mathbb{P}(\tau=\tau^\prime)=1$.
+
+More useful statements which apply to adapted processes, and allow $\tau$ to be either a stopping time or a predictable stopping time, are given by the optional and predictable section theorems.
+
+%%%%%
+%%%%%
+\end{document}

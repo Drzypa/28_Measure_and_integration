@@ -1,0 +1,196 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfEstimatingARiemannIntegral}
+\pmcreated{2013-03-22 16:57:48}
+\pmmodified{2013-03-22 16:57:48}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{example of estimating a Riemann integral}
+\pmrecord{32}{39236}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28-00}
+\pmclassification{msc}{41-01}
+\pmclassification{msc}{26A42}
+\pmrelated{LeftHandRule}
+\pmrelated{RightHandRule}
+\pmrelated{MidpointRule}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{amsthm}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+\begin{document}
+The left hand rule, right hand rule, midpoint rule, and composite trapezoidal rule, all with $n=6$, will be used in turn to \PMlinkescapetext{estimate} the Riemann integral $\displaystyle \int\limits_{-1}^2 x^2 \, dx$.
+
+Since $n=6$, $\displaystyle \frac{b-a}{n}=\frac{2-(-1)}{6}=\frac{3}{6}=\frac{1}{2}$.
+
+\begin{itemize}
+\item Left hand rule:
+
+\begin{center}
+\begin{pspicture}(-3,-1)(3,5)
+\psset{unit=0.8cm}
+\pspolygon[fillstyle=solid,fillcolor=red](-1,0)(-1,1)(-0.5,1)(-0.5,0)
+\pspolygon[fillstyle=solid,fillcolor=red](-0.5,0)(-0.5,0.25)(0,0.25)(0,0)
+\pspolygon[fillstyle=solid,fillcolor=red](0.5,0)(0.5,0.25)(1,0.25)(1,0)
+\pspolygon[fillstyle=solid,fillcolor=red](1,0)(1,1)(1.5,1)(1.5,0)
+\pspolygon[fillstyle=solid,fillcolor=red](1.5,0)(1.5,2.25)(2,2.25)(2,0)
+\psaxes{<->}(0,0)(-2.3,-0.5)(2.5,4.5)
+\rput[b](2.5,-0.5){$x$}
+\rput[l](-0.4,5){$y$}
+\parabola{<->}(2.1,4.41)(0,0)
+\psdots(-1,1)(-0.5,0.25)(0,0)(0.5,0.25)(1,1)(1.5,2.25)
+\end{pspicture}
+\end{center}
+
+\begin{center}
+$\begin{array}{rl}
+\displaystyle \sum_{j=1}^n \left(a+(j-1) \left( \frac{b-a}{n} \right) \right)^2 \left( \frac{b-a}{n} \right) & = \displaystyle \frac{1}{2} \sum_{j=1}^6 \left(-1+(j-1) \left( \frac{1}{2} \right) \right)^2 \\
+& \\
+& =\displaystyle \frac{1}{2} \left( (-1)^2+\left( \frac{-1}{2} \right)^2+0^2+\left( \frac{1}{2} \right)^2+1^2+\left( \frac{3}{2} \right)^2 \right) \\
+& \\
+& =\displaystyle \frac{1}{2} \left( 1+\frac{1}{4}+0+\frac{1}{4}+1+\frac{9}{4} \right) \\
+& \\
+& =\displaystyle \frac{1}{2} \cdot \frac{19}{4} \\
+& \\
+& =\displaystyle \frac{19}{8}
+\end{array}$
+\end{center}
+
+\item Right hand rule:
+
+\begin{center}
+\begin{pspicture}(-3,-1)(3,5)
+\psset{unit=0.8cm}
+\pspolygon[fillstyle=solid,fillcolor=red](-1,0)(-1,0.25)(-0.5,0.25)(-0.5,0)
+\pspolygon[fillstyle=solid,fillcolor=red](0,0)(0,0.25)(0.5,0.25)(0.5,0)
+\pspolygon[fillstyle=solid,fillcolor=red](0.5,0)(0.5,1)(1,1)(1,0)
+\pspolygon[fillstyle=solid,fillcolor=red](1,0)(1,2.25)(1.5,2.25)(1.5,0)
+\pspolygon[fillstyle=solid,fillcolor=red](1.5,0)(1.5,4)(2,4)(2,0)
+\psaxes{<->}(0,0)(-2.3,-0.5)(2.5,4.5)
+\rput[b](2.5,-0.5){$x$}
+\rput[l](-0.4,5){$y$}
+\parabola{<->}(2.1,4.41)(0,0)
+\psdots(-0.5,0.25)(0,0)(0.5,0.25)(1,1)(1.5,2.25)(2,4)
+\end{pspicture}
+\end{center}
+
+\begin{center}
+$\begin{array}{rl}
+\displaystyle \sum_{j=1}^n \left(a+j \left( \frac{b-a}{n} \right) \right)^2 \left( \frac{b-a}{n} \right) & =\displaystyle \frac{1}{2} \sum_{j=1}^6 \left(-1+j \left( \frac{1}{2} \right) \right)^2 \\
+& \\
+& =\displaystyle \frac{1}{2} \left( \left( \frac{-1}{2} \right)^2+0^2+\left( \frac{1}{2} \right)^2+1^2+\left( \frac{3}{2} \right)^2+2^2 \right) \\
+& \\
+& =\displaystyle \frac{1}{2} \left( \frac{1}{4}+0+\frac{1}{4}+1+\frac{9}{4}+4 \right) \\
+& \\
+& =\displaystyle \frac{1}{2} \cdot \frac{27}{4} \\
+& \\
+& =\displaystyle \frac{27}{8}
+\end{array}$
+\end{center}
+
+\item Midpoint rule:
+
+\begin{center}
+\begin{pspicture}(-3,-1)(3,5)
+\psset{unit=0.8cm}
+\pspolygon[fillstyle=solid,fillcolor=red](-1,0)(-1,0.5625)(-0.5,0.5625)(-0.5,0)
+\pspolygon[fillstyle=solid,fillcolor=red](-0.5,0)(-0.5,0.0625)(0,0.0625)(0,0)
+\pspolygon[fillstyle=solid,fillcolor=red](0,0)(0,0.0625)(0.5,0.0625)(0.5,0)
+\pspolygon[fillstyle=solid,fillcolor=red](0.5,0)(0.5,0.5625)(1,0.5625)(1,0)
+\pspolygon[fillstyle=solid,fillcolor=red](1,0)(1,1.5625)(1.5,1.5625)(1.5,0)
+\pspolygon[fillstyle=solid,fillcolor=red](1.5,0)(1.5,3.0625)(2,3.0625)(2,0)
+\psaxes{<->}(0,0)(-2.3,-0.5)(2.5,4.5)
+\rput[b](2.5,-0.5){$x$}
+\rput[l](-0.4,5){$y$}
+\parabola{<->}(2.1,4.41)(0,0)
+\psdots(-0.75,0.5625)(-0.25,0.0625)(0.25,0.0625)(0.75,0.5625)(1.25,1.5625)(1.75,3.0625)
+\end{pspicture}
+\end{center}
+
+\begin{center}
+$\begin{array}{rl}
+\displaystyle \sum_{j=1}^n \left( \! a \!+\! \left( \! j \! -\! \frac{1}{2} \! \right) \! \left( \! \frac{b-a}{n} \! \right) \! \right)^2 \left( \frac{b-a}{n} \right) & =\displaystyle \frac{1}{2} \sum_{j=1}^6 \left(-1+\left( j-\frac{1}{2} \right) \left( \frac{1}{2} \right) \right)^2 \\
+& \\
+& =\displaystyle \frac{1}{2} \left( \! \left( \! \frac{-3}{4} \! \right)^2 \!+\! \left( \! \frac{-1}{4} \! \right)^2 \!+\! \left( \frac{1}{4} \right)^2 \!+\! \left( \frac{3}{4} \right)^2 \!+\! \left( \frac{5}{4} \right)^2 \!+\! \left( \frac{7}{4} \right)^2 \right) \\
+& \\
+& =\displaystyle \frac{1}{2} \left( \frac{9}{16}+\frac{1}{16}+\frac{1}{16}+\frac{9}{16}+\frac{25}{16}+\frac{49}{16} \right) \\
+& \\
+& =\displaystyle \frac{1}{2} \cdot \frac{94}{16} \\
+& \\
+& =\displaystyle \frac{47}{16}
+\end{array}$
+\end{center}
+
+\item Composite trapezoidal rule:
+
+\begin{center}
+\begin{pspicture}(-3,-1)(3,5)
+\psset{unit=0.8cm}
+\pspolygon[fillstyle=solid,fillcolor=red](-1,0)(-1,1)(-0.5,0.25)(-0.5,0)
+\pspolygon[fillstyle=solid,fillcolor=red](-0.5,0)(-0.5,0.25)(0,0)
+\pspolygon[fillstyle=solid,fillcolor=red](0,0)(0.5,0.25)(0.5,0)
+\pspolygon[fillstyle=solid,fillcolor=red](0.5,0)(0.5,0.25)(1,1)(1,0)
+\pspolygon[fillstyle=solid,fillcolor=red](1,0)(1,1)(1.5,2.25)(1.5,0)
+\pspolygon[fillstyle=solid,fillcolor=red](1.5,0)(1.5,2.25)(2,4)(2,0)
+\psaxes{<->}(0,0)(-2.3,-0.5)(2.5,4.5)
+\rput[b](2.5,-0.5){$x$}
+\rput[l](-0.4,5){$y$}
+\parabola{<->}(2.1,4.41)(0,0)
+\psdots(-1,1)(-0.5,0.25)(0,0)(0.5,0.25)(1,1)(1.5,2.25)(2,4)
+\end{pspicture}
+\end{center}
+
+\begin{center}
+$\begin{array}{rl}
+\displaystyle \frac{1}{2} \! \left( \! \frac{b-a}{n} \! \right) \! \left( \! a^2 \!+\! 2\sum_{j=1}^{n-1} \! \left( \! a \!+\! j \! \left( \! \frac{b-a}{n} \! \right) \! \right)^2 \hspace{-2mm} +\! b^2 \! \right) \! & \displaystyle \!= \frac{1}{2} \cdot \frac{1}{2} \left( (-1)^2 +2\sum_{j=1}^5 \left( -1+j \left( \frac{1}{2} \right) \right)^2+2^2 \right) \\
+& \\
+& \displaystyle \!=\! \frac{1}{4} \! \left( \! (-1)^2 \!+\! 2 \! \left( \! \frac{-1}{2} \! \right)^2 \hspace{-2mm} +\! 2 \! \cdot \! 0^2 \!+\! 2 \! \left( \frac{1}{2} \right)^2 \hspace{-2mm} +\! 2 \! \cdot \! 1^2 \!+\! 2 \! \left( \frac{3}{2} \right)^2 \hspace{-2mm} +\! 2^2 \! \right) \\
+& \\
+& \displaystyle \!= \frac{1}{4} \left( 1+2 \cdot \frac{1}{4}+2 \cdot 0+2 \cdot \frac{1}{4}+2 \cdot 1+2 \cdot \frac{9}{4}+4 \right) \\
+& \\
+& \displaystyle \!= \frac{1}{4} \cdot \frac{25}{2} \\
+& \\
+& \displaystyle \!= \frac{25}{8}
+\end{array}$
+\end{center}
+
+\end{itemize}
+
+For comparison purposes, the Riemann integral will also be computed:
+
+\begin{center}
+\begin{pspicture}(-3,-1)(3,5)
+\psset{unit=0.8cm}
+\psline(-1,0)(-1,1)
+\psline(2,0)(2,4)
+\psaxes{<->}(0,0)(-2.3,-0.5)(2.5,4.5)
+\rput[b](2.5,-0.5){$x$}
+\rput[l](-0.4,5){$y$}
+\parabola{<->}(2.1,4.41)(0,0)
+\end{pspicture}
+\end{center}
+
+\begin{center}
+$\begin{array}{rl}
+\displaystyle \int\limits_{-1}^2 x^2 \, dx & =\displaystyle \left. \frac{1}{3}x^3 \right|_{-1}^2 \\
+& \\
+& =\displaystyle \frac{1}{3} (2^3-(-1)^3) \\
+& \\
+& =\displaystyle \frac{1}{3} (8-(-1)) \\
+& \\
+& =3
+\end{array}$
+\end{center}
+
+As expected, of the three \PMlinkescapetext{estimates}, the ones obtained from the midpoint rule and the composite trapezoidal rule are closest to the actual \PMlinkescapetext{value} of the Riemann integral.  Their errors are $\displaystyle \frac{1}{16}$ and $\displaystyle \frac{1}{8}$, respectively.  It may seem \PMlinkescapetext{odd} that the midpoint rule should be closer to the actual \PMlinkescapetext{value} of the Riemann integral \PMlinkescapetext{even} though, in the \PMlinkescapetext{graph} for the composite trapezoidal rule, the approximating trapezoids are barely distinguishable from the parabola.  Actually though, this is to be expected, as the \PMlinkname{maximum error for the midpoint rule}{MidpointRule} is half of the \PMlinkname{maximum error for the composite trapezoidal rule}{CompositeTrapezoidalRule}.
+%%%%%
+%%%%%
+\end{document}

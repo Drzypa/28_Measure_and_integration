@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PreservationOfUniformIntegrability}
+\pmcreated{2013-03-22 18:40:20}
+\pmmodified{2013-03-22 18:40:20}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{preservation of uniform integrability}
+\pmrecord{4}{41419}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+%\pmkeywords{measure space}
+%\pmkeywords{Lebesgue integral}
+%\pmkeywords{conditional expectation}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{operations}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{necessary}
+
+Let $(\Omega,\mathcal{F},\mathbb{P})$ be a measure space. Then, a uniformly integrable set $S$ of measurable functions $f\colon\Omega\rightarrow\mathbb{R}$ will remain uniformly integrable if it is enlarged by various operations, such as taking convex combinations and conditional expectations. The following theorem lists some of the operations which preserve uniform integrability.
+
+\begin{theorem*}
+Suppose that $S$ is a bounded and uniformly integrable subset of $L^1$. Let $S^\prime$ be the smallest set containing $S$ such that all of the following conditions are satisfied. Then, $S^\prime$ is also a bounded and uniformly integrable subset of $L^1$.
+\begin{enumerate}
+\item $S^\prime$ is absolutely convex. That is, if $f,g\in S^\prime$ and $a,b\in\mathbb{R}$ are such that $|a|+|b|\le 1$ then $a f+b g\in S^\prime$.
+\item If $f\in S^\prime$ and $|g|\le |f|$ then $g\in S^\prime$.
+\item $S^\prime$ is closed under convergence in measure. That is, if $f_n\in S^\prime$ converge in measure to $f$, then $f\in S^\prime$.
+\item If $f\in S^\prime$ and $\mathcal{G}$ is a sub-$\sigma$-algebra of $\mathcal{F}$ such that $\mu\vert_\mathcal{G}$ is $\sigma$-finite, then the conditional expectation $\mathbb{E}_\mu[f\mid\mathcal{G}]$ is in $S^\prime$.
+\end{enumerate} 
+\end{theorem*}
+
+To prove this we use the condition that the set $S$ is uniformly integrable if and only if there is a convex and symmetric function $\Phi\colon\mathbb{R}\rightarrow[0,\infty)$ such that $\Phi(x)/|x|\rightarrow\infty$ as $|x|\rightarrow\infty$ and
+\begin{equation*}
+\int\Phi(f)\,d\mu
+\end{equation*}
+is bounded over all $f\in S$ (see equivalent conditions for uniform integrability). Suppose that it is bounded by $K>0$. Also, by replacing $\Phi$ by $\Phi(x)+|x|$ if necessary, we may suppose that $\Phi(x)\ge |x|$. Then, let $\bar S$ be
+\begin{equation*}
+\bar S=\left\{ f\in L^1:\int\Phi(f)\,d\mu\le K\right\},
+\end{equation*}
+which is a bounded and uniformly integrable subset of $L^1$ containing $S$. To prove the result, it just needs to be shown that $\bar S$ is closed under each of the operations listed above, as that will imply $S^\prime\subseteq\bar S$.
+
+First, the convexity and symmetry of $\Phi$ gives
+\begin{equation*}
+\int\Phi(a f+b g)\,d\mu \le \int\left(|a|\Phi(f)+|b|\Phi(g)\right)\,d\mu
+=|a|\int\Phi(f)\,d\mu+|b|\int\Phi(g)\,d\mu\le K
+\end{equation*}
+for any $f,g\in\bar{S}$ and $a,b\in\mathbb{R}$ with $|a|+|b|\le 1$. So, $af+bg\in\bar{S}$.
+Similarly, if $|g|\le |f|$ and $f\in\bar{S}$ then $\Phi(g)\le\Phi(f)$ and, $g\in\bar{S}$.
+
+Now suppose that $f_n\in\bar{S}$ converge in measure to $f$. Then Fatou's lemma gives,
+\begin{equation*}
+\int\Phi(f)\,d\mu\le\liminf_{n\rightarrow\infty}\int\Phi(f_n)\,d\mu\le K
+\end{equation*}
+so, $f\in\bar S$.
+
+Finally suppose that $f\in\bar S$ and $g=\mathbb{E}_\mu[f\mid\mathcal{G}]$. Using Jensen's inequality,
+\begin{equation*}
+\int \Phi(g)\,d\mu\le \int \mathbb{E}_\mu[\Phi(f)\mid\mathcal{G}]\,d\mu=\int\Phi(f)\,d\mu\le K,
+\end{equation*}
+so $g\in\bar S$.
+
+%%%%%
+%%%%%
+\end{document}

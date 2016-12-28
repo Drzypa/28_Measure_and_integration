@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClosureAndInteriorOfCantorSet}
+\pmcreated{2013-03-22 15:43:21}
+\pmmodified{2013-03-22 15:43:21}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{closure and interior of Cantor set}
+\pmrecord{4}{37671}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A80}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The Cantor set is closed and its interior is empty.
+
+To prove the first assertion, note that each of the sets $C_0, C_1,
+C_2, \ldots$, being the union of a finite number of closed intervals
+is closed.  Since the Cantor set is the intersection of all these sets
+and intersections of closed sets are closed, it follows that the
+Cantor set is closed.
+
+To prove the second assertion, it suffices to show that given any open
+interval $I$, no matter how small, at least one point of that interval
+will not belong to the Cantor set.  To accomplish this, the ternary
+characterization of the Cantor set is useful.  Because rational
+numbers whose denominators are powers of 3 are dense, there exists a
+rational number $n/3^m$ contained in $I$.  Expressed in base 3, this
+rational number has a finite expansion.  If this expansion contains
+the digit ``1'', then our number does not belong to Cantor set, and we
+are done.  If not, since $I$ is open, there must exist a number $k >
+m$ such that $n/3^m + 1/3^k \in I$.  Now, the last digit of the ternary 
+expansion of this number is ``1'' by construction, so we also find a 
+number not belonging to the interval in this case.
+%%%%%
+%%%%%
+\end{document}

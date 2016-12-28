@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SurfaceIntegrationWithRespectToArea}
+\pmcreated{2013-03-22 14:57:44}
+\pmmodified{2013-03-22 14:57:44}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{surface integration with respect to area}
+\pmrecord{26}{36660}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A75}
+%\pmkeywords{surface integral}
+\pmrelated{GaussGreenTheorem}
+\pmrelated{VectorPotential}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\bf \PMlinkescapetext{This entry is still in the process of being written and, since it is rather lengthy, it may take some time to complete}.}
+
+\section{Introduction}
+
+In pure and applied math, one frequently encounters integrals over surfaces with respect to surface area.  The simplest instance occurs when computing the area of a surface.  More complicated instances occur when one is computing, say the moments of a shell or the total force acting on a surface.  In this entry, methods of computing such integrals together with their theoretical justifications will be discussed.
+
+The material to be found in this entry varies greatly in the level of mathematical sophistication.  At the low end, there are formulas for computing such integrals which can be understood and used profitably by a calculus student.  At the high end, a deeper discussion of this topic requires such relatively advanced mathematical tools as exterior calculus, Riemannian geometry, and measure theory.  On the one hand, because this is an encyclopaedia, the coverage should be as thorough as possible.  On the other hand, discussing the material at a high level of mathematical sophistication would make it inaccessible to many readers who could benefit from it.  As a way out of this dilemma, we have chosen to write this entry in several sections with the level of mathematical sophistication and rigor incerasing from section to section.  In the beginning, we will only assume familiarity with integral calculus and derive formulas using heuristic arguments.  Rigorous proofs will only come in later sections because they require mathematical tools which may not yet be available to the typical calculus student.  Likewise, in the earlier sections we shall treat the three-dimensional case separately from the more general formailsm that applies in any number of dimensions.
+
+\section{Calculus}
+
+\subsection{Basic idea and definition}
+
+Let $S$ be a surface in three-dimensional space ($\mathbb{R}^3$) and let $f$ be a function defined on this surface.  To describe the surface, we will choose a parameterization of the surface by two variables which we shall call $u$ and $v$.  (For instance, if $S$ is a sphere, $u$ and $v$ might be the latitude and longitude.)  In terms of this parameterization, the function $f$ can be expressed as a function of $u$ and $v$.  Then the \emph{integral of $f$ with respect to the surface area} is usually notated as
+ \[\int_S f(u,v) \, d^2 A.\]
+Just as with the ordinary integral, this quantity may be understood as a limit of sums.\footnote{{\bf Note on rigour, or lack thereof:} 
+For our definition of integral to be sound, we need to show that the limit exists and depends only on the surface $S$ and the function $f$ and not on the details of how we choose to subdivide the surface.  Throughout this section, we shall sweep such questions of mathematical propriety under the rug for three reasons:  1)  In this section, our main interest is in deriving practical formulas and procedures which are of use in computing surface integrals that arise in practise.  2)  This section is written for the benefit of beginners who may not be familiar with the techniques necessary to properly justify the manipulations presented here; the more sophisticated reader may skim through the formulas and examples and proceed to the later sections.  3) ``The physicist's excuse'' --- As long as we restrict ourselves to rather familiar and well-behaved surfaces and functions, our intuition should save us from making really serious mistakes.  (Along the same lines, it is worth pointing out that we shall also adopt the naive point of view that differentials like $dx$ represent tiny displacements rather than a more sophisticated interpretation such as differential forms.)}  To form an approximating sum, we subdivide the surface $S$ into a miniscule pieces, multiply the area of each piece by the value of $f$ at a point located inside that piece, sum over all the miniscule pieces into which we have subdivided the surface.   The limiting value of these sums as the size of the pieces shrinks to zero is the integral with respect to surface area.
+
+To compute this quantity, one may use the following formula to convert it to a \PMlinkid{double integral}{11658}:
+ $$\int_S f(u,v) \, d^2 A = \int f(u,v) \sqrt{ \left(  \frac{\partial (x,y)}{\partial (u,v)} \right)^2 +  \left( \frac{\partial (y,z)}{\partial (u,v)} \right)^2 + \left( \frac{\partial (z,x)}{\partial (u,v)} \right)^2 } \> du \, dv.$$
+If the surface is described as the graph of a function $g$, then we may also use the following formula:
+  $$\int_S f(x,y) d^2 A = \int f(x,y)\sqrt{1 + \left( \frac{\partial g}{\partial x} \right)^2 + \left( \frac{\partial g}{\partial y} \right)^2} \> dx \, dy.$$
+
+\subsection{Examples}
+
+To explain the use of these formulae, several worked examples have been presented in the forms of supplements to this entry.  The first four examples illustrate the formula for integrals over parameterized surfaces and the latter four examples deal with surfaces presened as graphs of functions.
+
+\PMlinkid{Example 1.}{6664}  This example shows how integrals over spheres with respect to surface area may be rewriten as integrals with respect to the spherical coordinates.
+
+\PMlinkid{Example 2.}{6665}  This example builds on the previous example by carrying out the computation of an integral over the sphere using the formula derived in example 1.
+
+\PMlinkid{Example 3.}{6666}  This example shows how to re-express integrals over helicoids as integrals over the parameters.
+
+\PMlinkid{Example 4.}{6667}  This example uses the result of example 3 to compute  the area of a portion of a helicoid.
+
+\PMlinkid{Example 5.}{6668}  In this example, we revisit the sphere and consider it as the graph of the function $g(x,y) = \sqrt{x^2 + y^2}$.
+
+\PMlinkid{Example 6.}{6669}  We use the result of example 5 to compute the moment of inertia of a spherical shell.
+
+\PMlinkid{Example 7.}{6672} In this example, we consider integration on the paraboloid described by the equation $z = x^2 + 3 y^2$.
+
+\PMlinkid{Example 8.}{6673}  We use the result of example 7 to compute the area of a portion of the paraboloid.  From a purely technical point of view, this example is the longest and most complicated of the examples.  Evaluating the integral is a long process and the answer involves elliptic integrals.
+
+\subsection{A common mistake}
+
+Before proceeding further, a caveat may be in order.  Beginners are often apt to make the mistake that
+ $$\int_S f(u,v) \, d^2 A = \int_S f(u,v) \, du \, dv.$$
+By a fluke, this may give the right answer in certain cases, but as a general principle, {\bf IT IS WRONG}.  (This is a lot like the fact that in elementary arithmetic, one cannot reduce a fraction to lowest terms by striking out digits that appear in both the numerator and denominator, even if this happens to give the right answer in a few cases.)  Since this mistake is so common and easy to make, it might not be inappropriate if we take out some time to explain why the above formula is wrong.  The reason is that $d^2 A$ refers to the area of a small portion of surface whilst $du \, dv$ refers to the change in $u$ multiplied by the change in $v$.  In general, these two quantity are not equal for two reasons.
+
+First, to compute an area, we need to multiply two lengths, but $u$ and $v$ may not always measure length.  The following example should help clarify this problem.  Suppose that $S$ is a sphere and that the parameters $u$ and $v$ are latitude and longitude, respectively.  Then, as every navigator knows, if we travel due west a degree of longitude starting in Florida ($dv = 1$), we will have travelled a greater distance than if we travel due west a degree of longitude starting in Sweden (also $dv = 1$, but different values for $u$ and $v$).  In fact, to obtain the distance travelled, we must multiply the change in longitude by the cosine of the latitude.  In fact, this is why, as we shall see, on a unit sphere the correct formula is
+ $$d^2 A = \cos u \, du \, dv,$$
+which contains the sine to account for this fact.
+
+Second, even when $u$ and $v$ measure length, they may not be perpendicular.  If so, then the portion of surface which is traced out by letting the one parameter vary between $u$ and $u + du$ and letting the other parameter vary between $v$ and $v + dv$ will look more like a parallelogram than a rectangle.  As every student of plane geometry knows, the product of the length of the sides will not equal the area of the parallelogram except in the special case when it happens to be a rectangle.
+
+\subsection{Derivation of formulas for area integration}
+
+Having discoursed at some length about what not to do, let us now derive a correct formula for $d^2 A$.  We shall show how to do this in two different ways, not only for the sake of completeness, but because one method is better adapted to deriving one formula and the other method is better adapted to deriving the other formula.
+
+Also, it is worth checking explicitly that the answer depends only on the surface $S$ and the function $f$ but not on the choice of parameterization.  This check is a routine application of the chain rule and the rule for change of variables in multiple integrals.
+%%%%%
+%%%%%
+\end{document}

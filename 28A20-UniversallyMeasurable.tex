@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniversallyMeasurable}
+\pmcreated{2013-03-22 18:36:58}
+\pmmodified{2013-03-22 18:36:58}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{universally measurable}
+\pmrecord{8}{41350}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+\pmclassification{msc}{28A05}
+%\pmkeywords{$\sigma$-algebra}
+%\pmkeywords{measurable}
+\pmrelated{CompleteMeasure}
+\pmrelated{AnalyticSet2}
+\pmdefines{universal completion}
+\pmdefines{universally complete}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{term}
+\PMlinkescapeword{definitions}
+\PMlinkescapeword{ranges}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{even}
+\PMlinkescapeword{weaker}
+\PMlinkescapeword{axiom}
+\PMlinkescapeword{measurable set}
+Given a measurable space $(\Omega,\mathcal{F})$, a subset $S\subseteq\Omega$ is said to be \emph{universally measurable} if it lies in the \PMlinkname{completion}{CompleteMeasure} of the $\sigma$-algebra $\mathcal{F}$ with respect to every finite measure $\mu$ on $(\Omega,\mathcal{F})$.
+That is, for every such $\mu$, there exist $A,B\in\mathcal{F}$ such that $A\subseteq S\subseteq B$ and $\mu(B\setminus A)=0$.
+
+If, for any finite measure $\mu$ we denote the completion of $\mathcal{F}$ by $\mathcal{F}^*_\mu$ then, the collection of universally measurable sets is
+\begin{equation*}
+\mathcal{F}^*=\bigcap_\mu\mathcal{F}^*_\mu
+\end{equation*}
+where $\mu$ ranges over the finite measures on $(\Omega,\mathcal{F})$.
+Being an intersection of $\sigma$-algebras, the collection $\mathcal{F}^*$ of universally measurable sets is itself a $\sigma$-algebra, and is called the \emph{universal completion} of $\mathcal{F}$.
+The $\sigma$-algebra $\mathcal{F}$ is called \emph{universally complete} if it contains every set which is universally measurable with respect to $\mathcal{F}$. That is, if $\mathcal{F}^*=\mathcal{F}$. The universal completion of a $\sigma$-algebra is itself universally complete.
+
+A function $f\colon A\rightarrow B$ between measurable spaces $(A,\mathcal{A})$ and $(B,\mathcal{B})$ is said to be universally measurable if it is $\mathcal{A}^*/\mathcal{B}^*$-measurable, so that $f^{-1}(S)\in\mathcal{A}^*$ for all $S\in\mathcal{B}^*$. In fact, this is equivalent to requiring that $f$ be $\mathcal{A}^*/\mathcal{B}$-measurable so, in particular, every measurable function is universally measurable.
+
+As \PMlinkname{any $\sigma$-finite measure is equivalent to a probability measure}{AnySigmaFiniteMeasureIsEquivalentToAProbabilityMeasure}, the term ``finite measure'' may be replaced by ``$\sigma$-finite measure'' in the definitions above.
+In particular, every $\sigma$-finite measure $\mu$ on $(\Omega,\mathcal{F})$ can be uniquely extended to the universal completion of $\mathcal{F}$.
+
+A subset of a topological space $X$ is said to be universally measurable if it is universally measurable with respect to the Borel $\sigma$-algebra on $X$. It can be shown, for example, that the image of any continuous map between Polish spaces is universally measurable.
+
+An important example of the use of universally measurable functions comes from the theory of continuous-time stochastic processes. The first time that a continuous process hits a given value is a universally measurable time, as stated by the d\'ebut theorem. However, it is not always measurable.
+
+It is well known that the axiom of choice is required to construct non-Lebesgue measurable subsets of $\mathbb{R}^n$ and, it can be shown that this statement extends to all universally measurable subsets of $\mathbb{R}^n$. That is, the Zermelo-Fraenkel axioms of set  theory, without the axiom of choice, are consistent with the statement that all subsets of $\mathbb{R}^n$ are universally measurable. This remains true even if we allow a weaker version of the AOC, in the form of the axiom of dependent choice.
+
+As every universally measurable subset of the real numbers is Lebesgue measurable, the proof of Vitali's Theorem gives an example of the use of the axiom of choice to construct a non-universally measurable set. It is also possible to construct \PMlinkname{universally but non-Borel measurable sets}{ALebesgueMeasurableButNonBorelSet} without using the axiom of choice.
+%%%%%
+%%%%%
+\end{document}

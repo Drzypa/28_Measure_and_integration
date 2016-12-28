@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KolmogorovZerooneLaw}
+\pmcreated{2013-03-22 17:07:21}
+\pmmodified{2013-03-22 17:07:21}
+\pmowner{fernsanz}{8869}
+\pmmodifier{fernsanz}{8869}
+\pmtitle{Kolmogorov zero-one law}
+\pmrecord{10}{39425}
+\pmprivacy{1}
+\pmauthor{fernsanz}{8869}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+%\pmkeywords{tail event}
+%\pmkeywords{tail sigma algebra}
+%\pmkeywords{Hewitt-Savage zero-one law}
+%\pmkeywords{sigma algebra induced by random variables}
+\pmrelated{TailEvent}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% define commands here
+\newtheorem*{thm}{Theorem}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\numberwithin{equation}{section}
+\newcommand{\N}{\mathbb N}
+\newcommand{\F}{\mathcal F}
+\begin{document}
+\title{Kolomogorov zero-one law}%
+\author{Fernando Sanz Gamiz}%
+
+\begin{thm}[Kolmogorov]
+Let $\Omega$ be a set, $\F$ a sigma-algebra of subsets of $\Omega$
+and $P$ a probability measure. Given the independent random
+variables $\{X_n, n \in \N\}$, defined on $(\Omega,\F, P)$, it
+happens that $$P(A)=0 \mbox{ or } P(A)=1, A \in \F_{\infty},$$
+i.e.,the probability of any tail event is 0 or 1.
+\end{thm}
+
+\medskip
+
+\begin{proof}
+Define $\F_n = \sigma(X_1,X_2,...,X_n)$. As any event in
+$\sigma(X_{n+1},X_{n+2},...)$ is independent of any event in
+$\sigma(X_1,X_2,...,X_n)$ \footnote{this assertion should be proved
+actually, because independence of random variables is defined for
+every finite number of them and we are dealing with events involving
+an infinite number. By two successive applications of the Monotone
+Class Theorem, one can readily prove this is in fact correct}, any
+event in the tail $\sigma$-algebra $\F_{\infty}$ is independent of
+any event in $\bigcup_{n=1}^{\infty} \F_n$; hence, any event in
+$\F_{\infty}$ is independent of any event in
+$\sigma(\bigcup_{n=1}^{\infty} \F_n)$ \footnote{again by application
+of the Monotone Class Theorem}. But $\F_{\infty} \subset
+\sigma(\bigcup_{n=1}^{\infty} \F_n)$ \footnote{because $\F_{\infty}
+\subset \sigma(X_1,X_2,...)=\sigma(\bigcup_{n=1}^{\infty} \F_n)$,
+this last equality being easily proved}, so any tail event is
+independent of itself, i.e., $P(A)=P(A\cap A)=P(A)P(A)$ which
+implies $P(A)=0$ or $P(A)=1$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

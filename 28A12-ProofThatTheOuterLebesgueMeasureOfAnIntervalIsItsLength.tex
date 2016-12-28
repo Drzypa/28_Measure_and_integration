@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatTheOuterLebesgueMeasureOfAnIntervalIsItsLength}
+\pmcreated{2013-03-22 14:47:04}
+\pmmodified{2013-03-22 14:47:04}
+\pmowner{Simone}{5904}
+\pmmodifier{Simone}{5904}
+\pmtitle{proof that the outer (Lebesgue) measure of an interval is its length}
+\pmrecord{6}{36435}
+\pmprivacy{1}
+\pmauthor{Simone}{5904}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+\pmrelated{LebesgueOuterMeasure}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We begin with the case in which we have a \PMlinkescapetext{closed} bounded interval, say $[a,b]$. Since the open interval $(a-\varepsilon,b+\varepsilon)$
+contains $[a,b]$ for each positive number $\varepsilon$, we have 
+$m^*[a,b]\le b-a+2\varepsilon$. But since this is true for each positive $\varepsilon$, we must have $m^*[a,b]\le b-a$. Thus we only have to show that $m^*[a,b]\ge b-a$; for this it suffices to show that if $\{I_n\}$ is a countable open cover by	intervals of $[a,b]$, then
+\begin{equation*}
+\sum l(I_n)\ge b-a.
+\end{equation*}
+By the Heine-Borel theorem, any collection of open intervals \PMlinkescapetext{covering} $[a,b]$ contains a finite subcollection that also cover $[a,b]$ and since the  sum of the lengths of the finite subcollection is no greater than the sum of  the original one, it suffices to prove the inequality for finite collections $\{I_n\}$ that cover $[a,b]$. Since $a$ is contained in $\bigcup I_n$, there must be one of the $I_n$'s that contains $a$. Let this be the interval $(a_1,b_1)$. We then have $a_1<a<b_1$. If $b_1\le b$, then $b_1\in [a,b]$, and since $b_1\not\in (a_1,b_1)$, there must be an interval $(a_2,b_2)$ in the collection $\{I_n\}$ such that $b_1\in (a_2,b_2)$, that is $a_2<b_1<b_2$. Continuing in this fashion, we obtain a sequence $(a_1,b_1),\dots,(a_k,b_k)$ from the collection $\{I_n\}$ such that $a_i<b_{i-1}<b_i$. Since $\{I_n\}$ is a finite collection our process must terminate with some interval $(a_k,b_k)$. But it terminates only if $b\in (a_k,b_k)$, that is if $a_k<b<b_k$. Thus
+\begin{equation*}
+\begin{aligned}
+\sum l(I_n) &\ge\sum l(a_i,b_i) \\ 
+&= (b_k-a_k)+(b_{k-1}-a_{k-1})+\dots+(b_1-a_1)\\
+&=b_k-(a_k-b_{k-1})-(a_{k-1}-b_{k-2})-\dots-(a_2-b_1)-a_1\\
+&>b_k-a_1,
+\end{aligned}
+\end{equation*}
+since $a_i<b_{i-1}$. But $b_k>b$ and $a_1<a$ and so we have $b_k-a_1>b-a$, whence $\sum l(I_n)>b-a$. This shows that $m^*[a,b]=b-a$.	
+
+If $I$ is any finite interval, then given $\varepsilon>0$, there is a closed interval$ J\subset I$ such that $l(J)>l(I)-\varepsilon$. Hence
+$$
+l(I)-\varepsilon<l(J)=m^*J\le m^*I\le m^*\overline I=l(\overline I)=l(I),
+$$
+where by $\overline I$ we \PMlinkescapetext{mean} the topological closure of $I$.
+Thus for each $\varepsilon>0$, we have $l(I)-\varepsilon<m^*I\le l(I)$,
+and so $m^*I=l(I)$.
+
+If now $I$ is an unbounded interval, then given any real number $\Delta$, there is a closed interval $J\subset I$ with $l(J)=\Delta$. Hence $m^*I\ge m^*J=l(J)=\Delta$. Since $m^*I\ge\Delta$ for each $\Delta$,  it follows $m^*I=\infty=l(I)$.
+
+\begin{thebibliography}
+{}Royden, H. L. \emph{Real analysis. Third edition}. Macmillan Publishing Company, New York, 1988.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

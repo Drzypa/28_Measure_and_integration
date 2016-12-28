@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JordanDecomposition}
+\pmcreated{2013-03-22 13:27:02}
+\pmmodified{2013-03-22 13:27:02}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Jordan decomposition}
+\pmrecord{9}{34015}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+\pmdefines{positive variation}
+\pmdefines{negative variation}
+\pmdefines{total variation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{mathrsfs}
+% define commands here
+\begin{document}
+\PMlinkescapeword{decomposition}
+Let $(\Omega,\mathscr{S},\mu)$ be a signed measure space, and let $(A,B)$ be a Hahn decomposition for $\mu$. We define $\mu^+$ and $\mu^-$ by 
+\[\mu^+(E) = \mu(A\cap E)\quad \mbox{and} \quad \mu^-(E)=-\mu(B\cap E).\]
+This definition is easily shown to be independent of the chosen Hahn decomposition. 
+
+It is clear that $\mu^+$ is a positive measure, and it is called the \emph{positive variation} of $\mu$. On the other hand, $\mu^-$ is a positive finite measure, called the \emph{negative variation} of $\mu$. 
+The measure $|\mu|=\mu^+ + \mu^-$ is called the \emph{total variation} of $\mu$.
+
+Notice that $\mu = \mu^+ - \mu^-$. This decomposition of $\mu$ into its positive and negative parts is called the \emph{Jordan decomposition} of $\mu$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{mathbbLpVsmathbbLq}
+\pmcreated{2013-03-22 15:22:05}
+\pmmodified{2013-03-22 15:22:05}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{$\mathbb{L}^p$ vs $\mathbb{L}^q$}
+\pmrecord{11}{37194}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A25}
+%\pmkeywords{norm}
+%\pmkeywords{L^p space}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\def\L{\mathbb{L}}
+\def\R{\mathbb{R}}
+
+\begin{document}
+\PMlinkescapeword{connection}
+\PMlinkescapeword{right}
+\PMlinkescapeword{side}
+
+Let $(X,\mathcal{A},\mu)$ be a measure space and $1\leq p,q \leq\infty$.
+Generally there is no connection between
+$\L^p(\mu)$ and $\L^q(\mu)$ as sets.
+However, for some special measures,
+there is an interesting relationship between them.
+A few examples:
+\begin{enumerate}
+\item If $\lambda^n$ is the Lebesgue measure on $\R^n$ and $p\neq q$,
+then $\L^p(\lambda^n)\not\subseteq \L^q(\lambda^n)$
+for all $n\in\mathbb{N}^+$.
+Here is an example for $n=1$ and $1\leq p<q<\infty$.
+Let
+\[
+  f(x):=\begin{cases}
+  x^{\frac{-1}{p}},& x>1 \\
+  0,& x \leq 1
+  \end{cases}
+\]
+and
+\[
+  g(x):=\begin{cases}
+  x^{\frac{-1}{q}},& x\in(0,1) \\
+  0,& x\not\in (0,1).
+  \end{cases}
+\]
+This gives $\|f\|_q^q=\frac{p}{q-p}$, $\|g\|_p^p=\frac{q}{q-p}$
+and $\|f\|_p=\|g\|_q=\infty$.
+So $f\in\L^q\setminus\L^p$ and $g\in\L^p\setminus\L^q$.
+For the $\infty$-norm,
+$\chi_\R\in\L^\infty\setminus\L^q$,
+where $\chi$ is the characteristic function,
+and also $f\not\in\L^\infty$. 
+\item If $p<q$ then $l^p\subseteq l^q$.
+This is trivial if $q = \infty$.
+Now let $x=(x_0,x_1,\dots)\in l^p$ and $q<\infty$.
+Then
+\[
+  \|x\|_q^q = \sum_{n=0}^\infty |x_n|^q = \sum_{n=0}^\infty |x_n|^p |x_n|^{q-p} \leq \sum_{n=0}^\infty |x_n|^p \|x\|_\infty^{q-p} = \|x\|_\infty^{q-p} \|x\|_p^p <\infty,
+\]
+so $x\in l^q$.
+\item If $\mu(X)$ is finite and $p<q$,
+then $\L^q \subseteq \L^p$.
+This is easy if $q = \infty$,
+because $|f|\leq\|f\|_\infty$ almost everywhere,
+so $\|f\|_p^p= \int |f|^p d\mu \leq \int \|f\|_\infty^p d\mu
+= \|f\|_\infty^p \mu(X)<\infty$.
+Now let $q<\infty$,
+thus 
+\begin{align*}
+  \|f\|_p^p&=\int |f|^p d\mu \\
+  &=\int_{|f|>1}|f|^p d\mu + \int_{|f|\leq 1}|f|^p d\mu \\
+  &\leq \int_{|f|>1}|f|^q d\mu + \int_{|f|\leq 1}d\mu \\
+  &\leq \|f\|_q^q+\mu(X) \\
+  &<\infty.
+\end{align*}
+\end{enumerate}
+
+Finally, we prove an interesting property for $p$-norms:
+if $X$ is a finite measure space,
+then for any measurable function $f$ on $X$
+the equality $\lim\limits_{p\to\infty}\|f\|_p=\|f\|_\infty$ holds.
+We have already seen that $\|f\|_p\leq\|f\|_\infty\mu(X)^{\frac{1}{p}}$.
+Now for any $\varepsilon\in(0,\|f\|_\infty)$
+define $A_\varepsilon := \{ x \in X : |f(x)|\geq\|f\|_\infty-\varepsilon \}$,
+$\delta_\varepsilon:=\mu(A_\varepsilon)>0$
+and $g:=(\|f\|_\infty-\varepsilon)\chi_{A_\varepsilon}$.
+Since $|g|\leq|f|$,
+we have $\|g\|_p=(\|f\|_\infty-\varepsilon)\delta_\varepsilon^{\frac{1}{p}}\leq\|f\|_p\leq\|f\|_\infty\mu(X)^{\frac{1}{p}}$.
+Now we take $\liminf$ on the left and $\limsup$ on the right side:
+$\|f\|_\infty-\varepsilon \leq \liminf\limits_{p\to\infty}\|f\|_p \leq \limsup\limits_{p\to\infty}\|f\|_p \leq \|f\|_\infty$.
+Taking $\varepsilon\downarrow 0$
+gives $\lim\limits_{p\to\infty}\|f\|_p=\|f\|_\infty$.
+
+%%%%%
+%%%%%
+\end{document}

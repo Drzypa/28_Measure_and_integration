@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CaratheodorysLemma}
+\pmcreated{2013-03-22 18:33:03}
+\pmmodified{2013-03-22 18:33:03}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{Carath\'eodory's lemma}
+\pmrecord{19}{41272}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+%\pmkeywords{measure}
+%\pmkeywords{outer measure}
+%\pmkeywords{sigma algebra}
+\pmrelated{CaratheodorysExtensionTheorem}
+\pmrelated{OuterMeasure2}
+\pmrelated{LebesgueOuterMeasure}
+\pmrelated{ConstructionOfOuterMeasures}
+\pmrelated{ProofOfCaratheodorysLemma}
+\pmrelated{ProofOfCaratheodorysExtensionTheorem}
+\pmdefines{Carath\'eodory measurable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{lemma}{Lemma}
+
+\begin{document}
+\PMlinkescapeword{outer measure}
+In measure theory, Carath\'eodory's lemma is used for constructing measures and, for example, can be applied to the construction of the Lebesgue measure and is used in the proof of Carath\'eodory's extension theorem.
+The idea is that to define a measure on a measurable space $(X,\mathcal{A})$ we would first construct an \PMlinkname{outer measure}{OuterMeasure2}, which is a set function defined on the power set of $X$. Then, this outer measure is restricted to $\mathcal{A}$ and Carath\'eodory's lemma is applied to show that this restriction does in fact result in a measure. For an example of this procedure, see the proof of Carath\'eodory's extension theorem.
+
+Given an outer measure $\mu$ on a set $X$, the result first defines a collection of subsets of $X$ --- the $\mu$-measurable sets.
+A subset $S\subseteq X$ is called $\mu$-measurable (or Carath\'eodory measurable with respect to $\mu$) if the equality
+\begin{equation*}
+\mu(E)=\mu(E\cap S)+\mu(E\cap S^c)
+\end{equation*}
+holds for every $E\subseteq X$. Then, Caratheodory's lemma says that a measure is obtained by restricting $\mu$ to the $\mu$-measurable sets.
+
+\begin{lemma}[Carath\'eodory]
+Let $\mu$ be an outer measure on a set $X$, and $\mathcal{A}$ be the class of $\mu$-measurable sets. Then $\mathcal{A}$ is a \PMlinkname{$\sigma$-algebra}{SigmaAlgebra} and the restriction of $\mu$ to $\mathcal{A}$ is a measure.
+\end{lemma}
+
+It should be noted that for any outer measure $\mu$ and sets $S,E\subseteq X$, subadditivity of $\mu$ implies that the inequality $\mu(E)\le\mu(E\cap S)+\mu(E\cap S^c)$ is always satisfied. So, only the reverse inequality is required and consequently $S$ is $\mu$-measurable if and only if
+\begin{equation*}
+\mu(E)\ge\mu(E\cap S)+\mu(E\cap S^c)
+\end{equation*}
+for every $E\subseteq X$.
+
+\begin{thebibliography}{9}
+\bibitem{williams}
+David Williams, \emph{Probability with martingales},
+Cambridge Mathematical Textbooks, Cambridge University Press, 1991.
+\bibitem{kallenberg}
+Olav Kallenberg, \emph{Foundations of modern probability}, Second edition. Probability and its Applications. Springer-Verlag, 2002.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

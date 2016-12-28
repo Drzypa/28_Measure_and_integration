@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfANonRiemannIntegrableFunction}
+\pmcreated{2013-03-22 15:03:28}
+\pmmodified{2013-03-22 15:03:28}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{example of a non Riemann integrable function}
+\pmrecord{4}{36776}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28-XX}
+\pmclassification{msc}{26-XX}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $[a,b]$ be any closed interval and
+consider the Dirichlet's function $f\colon [a,b]\to\mathbb R$
+\[
+  f(x) = \begin{cases} 1 &\text{if $x$ is rational}\\
+0 &\text{otherwise}.
+\end{cases}
+\]
+
+Then $f$ is not Riemann integrable. In fact given any interval $[x_1,x_2]\subset [a,b]$ with $x_1<x_2$ one has
+\[
+ \sup_{[x_1,x_2]} f(x) = 1,\qquad
+ \inf_{[x_1,x_2]} f(x) = 0
+\]
+because every interval contains both rational and irrational points.
+So all upper Riemann sums are equal to $1$ and all lower Riemann sums are equal to $0$.
+%%%%%
+%%%%%
+\end{document}

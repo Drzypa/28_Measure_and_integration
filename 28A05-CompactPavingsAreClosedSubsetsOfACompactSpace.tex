@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompactPavingsAreClosedSubsetsOfACompactSpace}
+\pmcreated{2013-03-22 18:45:01}
+\pmmodified{2013-03-22 18:45:01}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{compact pavings are closed subsets of a compact space}
+\pmrecord{6}{41527}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+%\pmkeywords{compact paving}
+%\pmkeywords{compact space.}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{compact}
+\PMlinkescapeword{collection}
+\PMlinkescapeword{compact paving}
+\PMlinkescapeword{way}
+\PMlinkescapeword{intersections of sets}
+\PMlinkescapeword{subsets}
+\PMlinkescapeword{closed under}
+\PMlinkescapeword{topology}
+\PMlinkescapeword{compact pavings}
+\PMlinkescapeword{theorem}
+
+Recall that a paving $\mathcal{K}$ is compact if every subcollection satisfying the finite intersection property has nonempty intersection. In particular, a topological space is \PMlinkname{compact}{Compact} if and only if its collection of closed subsets forms a compact paving. Compact paved spaces can therefore be constructed by taking closed subsets of a compact topological space. In fact, all compact pavings arise in this way, as we now show.
+
+Given any compact paving $\mathcal{K}$ the following result says that the collection $\mathcal{K}^\prime$ of all intersections of finite unions of sets in $\mathcal{K}$ is also compact.
+
+\begin{theorem}\label{thm:1}
+Suppose that $(K,\mathcal{K})$ is a compact paved space. Let $\mathcal{K}^\prime$ be the smallest collection of subsets of $X$ such that $\mathcal{K}\subseteq\mathcal{K}^\prime$ and which is closed under arbitrary intersections and finite unions.
+Then, $\mathcal{K}^\prime$ is a compact paving.
+\end{theorem}
+In particular,
+\begin{equation*}
+\mathcal{T}\equiv\left\{K\setminus C\colon C\in\mathcal{K}^\prime\right\}\cup\left\{\emptyset,K\right\}
+\end{equation*}
+is closed under arbitrary unions and finite intersections, and hence is a topology on $K$.
+The collection of closed sets defined with respect to this topology is $\mathcal{K}^\prime\cup\{\emptyset,K\}$ which, by Theorem \ref{thm:1}, is a compact paving. So, the following is obtained.
+\begin{corollary*}
+A paving $(K,\mathcal{K})$ is compact if and only if there exists a topology on $K$ with respect to which $\mathcal{K}$ are closed sets and $K$ is compact.
+\end{corollary*}
+
+%%%%%
+%%%%%
+\end{document}

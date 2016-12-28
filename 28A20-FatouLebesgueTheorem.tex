@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FatouLebesgueTheorem}
+\pmcreated{2013-03-22 13:12:53}
+\pmmodified{2013-03-22 13:12:53}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Fatou-Lebesgue theorem}
+\pmrecord{7}{33679}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+\pmrelated{FatousLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $(X,\mu)$ be a measure space. If $\Phi\colon X\to \mathbb{R}$ is a nonnegative function with $\int \Phi d\mu <\infty$, and if $f_1, f_2,\dots$ is a sequence of measurable functions such that $|f_n|\leq \Phi$ for each $n$, then 
+\[g=\liminf_{n\rightarrow\infty} f_n \;\;\textnormal{and}\; 
+h=\limsup_{n\rightarrow\infty} f_n\]
+are both integrable, and 
+\[-\infty < \int g d\mu\leq \liminf_{n\rightarrow\infty}\int f_nd\mu\leq
+\limsup_{k\rightarrow\infty}\int f_n d\mu\leq \int h d\mu < \infty.\]
+%%%%%
+%%%%%
+\end{document}

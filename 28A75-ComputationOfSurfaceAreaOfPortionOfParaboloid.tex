@@ -1,0 +1,195 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComputationOfSurfaceAreaOfPortionOfParaboloid}
+\pmcreated{2013-03-22 14:58:22}
+\pmmodified{2013-03-22 14:58:22}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{computation of surface area of portion of paraboloid}
+\pmrecord{61}{36673}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A75}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\section{Statement of Problem}
+
+Using the result of the previous example we may, for instance, compute the area of the portion of paraboloid which lies below the plane $z = 5$:
+ $$A = \int d^2 A = \int_{x^2 + 3 y^2 < 5} \sqrt{1 + 4 x^2 + 36 y^2 } \, dx \, dy. $$
+
+\section{Integration over $x$}
+
+Despite its innocuous appearance, this integral is actually rather difficult to compute.  As a first step, we shall rewrite it as a double integral and perform the integration over $x$:
+\begin{eqnarray*}
+A &=& \int_{-\sqrt{5/3}}^{+\sqrt{5/3}} \int_{-\sqrt{5 - 3 y^2}}^{+\sqrt{5 - 3 y^2}} \sqrt{ 1 + 4 x^2 + 36 y^2 } \, dx \, dy \\
+&=& \int_{-\sqrt{5/3}}^{+\sqrt{5/3}} \left[ \frac{x}{2} \sqrt{ 1 + 4 x^2 + 36 y^2 } + 9 y^2 \log \left( 2x + \sqrt{ 1 + 4 x^2 + 36 y^2 } \right) \right]_{-\sqrt{5 - 3 y^2}}^{+\sqrt{5 - 3 y^2}} \, dy \\
+&=& \int_{-\sqrt{5/3}}^{+\sqrt{5/3}} \left\{ \sqrt{ (5 - 3 y^2) (21 + 24 y^2) } + 9 y^2 \log \left( \frac{\sqrt{21 + 24 y^2} + 2 \sqrt{5 - 3 y^2}}{\sqrt{21 + 24 y^2} - 2 \sqrt{5 - 3 y^2}} \right) \right\} \, dy
+\end{eqnarray*}
+ 
+\section{Notes about the multi-valued integrand and branches}
+
+Before proceeding further, it might be worthwhile to dwell on the subtleties involved in the last step of the calculation.  Both the square root and the 
+logarithm function are multiply-valued so we need to make sure we are using the right branch of these functions in order to get a correct answer.  In particular, when substituting the limits of integration into a multiply-valued expression, we need to make sure whether or not we passed from one branch to another along the path of integration.  In this case, it is easy to see that it did not change.  For the branch of a function to change, the argument of the function must pass through a branch point (more generally, if we allow complex arguments, it may also encircle a branch point)  In the case of a square root, the branch point occurs at zero.  Now, the argument of the square root in our expression is $1 + 4 x^2 + 36 y^2$.  It is clear that, as long as $y$ is not equal to zero,  this expression cannot equal zero for any real value of $x$.  Hence, it follows that the branch of the square root to be taken at the upper limit must be the same branch as was taken at the lower limit. (In our case, this is the positive branch.)  This is why the first term works out as it does.
+
+The second term needs a little more discussion because of the logarithm.  Recall that the branch point of the logarithm is also located at zero.  Thus we must ask whether the argument can equal zero along the path of integration.
+Setting it equal to zero, we find
+ $$2x + \sqrt{ 1 + 4 x^2 + 36 y^2 } = 0,\mbox{ or}$$
+ $$4x^2 = 1 + 4 x^2 + 36 y^2.$$
+(It might be worth noting that the choice of sign of square root turns out to be irrelevant here because it is lost in the process of squaring.)
+ $$0 = 1 + 36 y^2$$
+Hence we can only encounter a branch point when $y = \pm 6 i$.  For any other value, we will use the same branch of the logarithm at the upper limit as at the lower limit.   Hence, we arrived at our result for the second term.
+
+\section{A simple change of variables}
+
+We may simplify the appearance of our expression by making the change of variables $y = t \sqrt{5/3}$.
+ $$A = \sqrt{5/3} \int_{-1}^{+1} \left\{ \sqrt{ 105 \left( 1 - t^2 \right) \left( 1 + {40 \over 21} y^2 \right) } + 25 t^2 \log \left( \frac{\sqrt{21 + 40 t^2} + 2 \sqrt{5(1 - t^2)}}{\sqrt{21 + 40 t^2} - 2 \sqrt{5(1 - t^2)}} \right) \right\} \, dt$$
+Furthermore, since the integrand is an even function of $t$, we may fold the range of integration on half:
+ $$A = 2 \sqrt{5/3} \int_0^1 \left\{ \sqrt{ 105 \left( 1 - t^2 \right) \left( 1 + \frac{40}{21} y^2 \right) } + 25 t^2 \log \left( \frac{\sqrt{21 + 40 t^2} + 2 \sqrt{5(1 - t^2)}}{\sqrt{21 + 40 t^2} - 2 \sqrt{5(1 - t^2)}} \right) \right\} \, dt$$
+For convenience of reference, let us write this result as $A = 10 \sqrt{7} \, I_1 + 50 \sqrt{5/3} \, I_2$, where
+ $$I_1 = \int_0^1 \sqrt{ \left( 1 - t^2 \right) \left( 1 + \frac{40}{21} y^2 \right) } \,dt$$
+and
+ $$I_2 = \int_0^1 t^2 \log \left( \frac{\sqrt{21 + 40 t^2} + 2 \sqrt{5(1 - t^2)}}{\sqrt{21 + 40 t^2} - 2 \sqrt{5(1 - t^2)}} \right) \, dt.$$
+
+\section{The integral $I_1$}
+
+Since the argument of the square root is a quartic polynomial, the integral $I_1$ is an elliptic integral.  Since the quartic has distinct roots, it is not possible to evaluate this integral in tems of elementary functions.  The best we can do is to express it in terms of the standard elliptic integrals $E$ and $K$.  To begin, we shall write the square root at the quotient of the square by the root
+$$ I_1 = \int_0^1 \frac{1 + \frac{19}{21} t^2 - \frac{40}{21} t^4}
+{\sqrt{\left( 1 - t^2 \right) \left( 1 + \frac{40}{21} t^2 \right)}} \, dt.$$
+To deal with the $t^4$ in the numerator, we shall use a sneaky trick.  First, we integrate by parts:
+\begin{eqnarray*}
+I_1 &=& \int_0^1 \sqrt{\left( 1 - t^2 \right) \left( 1 + \frac{40}{21} 
+t^2 \right)} \, dt \\
+&=& \left[ t \sqrt{\left( 1 - t^2 \right) \left( 1 + \frac{40}{21} t^2 \right)}
+\right]_0^1 - \int_0^1 t \frac{\frac{38}{21} t - \frac{160}{21} t^3}{2\sqrt{\left( 1 - t^2 \right) \left( 1 + \frac{40}{21} t^2 \right)}} \, dt \\
+ &=& - \frac{19}{21} \int_0^1 \frac{t^2 \, dt}{\sqrt{\left( 1 - t^2 \right) \left( 1 + \frac{40}{21} t^2 \right)}} + 
+\frac{80}{21} \int_0^1 \frac{t^4 \, dt}{\sqrt{\left( 1 - t^2 \right) \left( 1 + \frac{40}{21} t^2 \right)}}.
+\end{eqnarray*}
+Next, we form the linear combination of our two expressions for $I_1$ which is designed to make the term with the $t^4$ in the numerator cancel.
+ $$I_1 = \frac{2}{3} I_1 + \frac {1}{3} I_1 = \int_0^1 \frac{2 + \frac{19}{21} t^2}{3 \sqrt{ \left( 1 - t^2 \right) \left( 1 + \frac{40}{21} t^2 \right)}} \, dt.$$
+It is easy to re-express this in terms of complete elliptic integrals
+\begin{eqnarray*}
+I_1 &=& \int_0^1 \frac{\frac{61}{40} + \frac{19}{40} \left( 1 + \frac{40}{21} t^2 \right)}{3 \sqrt{ \left( 1 - t^2 \right) \left( 1 + \frac{40}{21} t^2 \right)}} \, dt \\
+&=&  \frac{61}{120} \int_0^1 \frac{dt}{\sqrt{\left( 1 - t^2 \right) \left( 1 + \frac{40}{21} t^2 \right)}} + \frac{19}{40} \int_0^1 \sqrt{\frac{1 + \frac{40}{21} t^2}{1 - t^2}} \, dt \\
+&=& \frac{1}{3} \, K \left( \sqrt{-\frac{40}{21}} \right) + \frac{2}{3} \, E \left( \sqrt{-\frac{40}{21}} \right)
+\end{eqnarray*}
+
+\section{The integral $I_2$}
+
+We now turn our attention to the integral $I_2$.  We will start by removing the radicals from the denominator of the argument of the logarithm.
+\begin{eqnarray*}
+&& \frac{\sqrt{21 + 40 t^2} + 2 \sqrt{5(1 - t^2)}}{\sqrt{21 + 40 t^2} - 2 \sqrt{5(1 - t^2)}} \\ 
+&=& \frac{\sqrt{21 + 40 t^2} + 2 \sqrt{5(1 - t^2)}}{\sqrt{21 + 40 t^2} + 2 \sqrt{5(1 - t^2)}} \times \frac{\sqrt{21 + 40 t^2} + 2 \sqrt{5(1 - t^2)}}{\sqrt{21 + 40 t^2} - 2 \sqrt{5(1 - t^2)}} \\
+&=& \frac{41 + 20 t^2 + 8\sqrt{(21 + 40 t^2) (1 - t^2)}}{1 + 60 t^2}
+\end{eqnarray*}
+Substituting this simplified expression back into the integral and using the fact that the logarithm of a quotient equals the difference of logarithms, we obtain the following: 
+\begin{eqnarray*}
+I_2 &=& \int_0^1 y^2 \log\left( \frac{\sqrt{21 + 40 t^2} + 2 \sqrt{6 (1 - t^2)}}{\sqrt{21 + 40 t^2} - 2 \sqrt{5 (1 - t^2)}} \right) \, dt \\
+&=& \int_0^1 t^2 \log \left( 41 + 20 t^2 + 8\sqrt{(21 + 40 t^2) (1 - t^2)} \right) \, dt - \int_0^1 t^2 \log (1 + 60 t^2) \, dt
+\end{eqnarray*}
+For convenience, let us define the notation $I_2 = I_3 - I_4$, where
+ $$I_3 = \int_0^1 t^2 \log \left( 41 + 20 t^2 + 8\sqrt{(21 + 40 t^2) (1 - t^2)}\right) \, dt$$
+and
+ $$I_4 = \int_0^1 t^2 \log (1 + 60 t^2) \, dt.$$
+
+\section{The integral $I_4$}
+
+Since it can be evaluated in terms of elementary functions rather easily, let us now dispose of the integral $I_4$.  Begin by rescaling the variable: 
+ \[I_4 = \int_0^1 t^2 \log (1 + 60 t^2) \, dt  =
+60^{-3/2} \int_0^{\sqrt{60}} t^2 \log (t^2 + 1) \, dt  \]
+We may turn this into the integration of a rational function by integrating by parts.  Then we may make a change of variable $s = t^2$.
+\begin{eqnarray*} \int_0^{\sqrt{60}} t^2 \log (t^2 + 1) \, dt &=& \left[ \frac{1}{3} t^3 \log (t^2 + 1) \right]_0^{\sqrt{60}} - \frac{1}{3} \int_0^{\sqrt{60}} \frac{t^3}{t^2 + 1} \, dt \\ &=& \left[ \frac{1}{3} t^3 \log (t^2 + 1) \right]_0^{\sqrt{60}} - \frac{1}{6} \int_0^{60} \frac{s^2}{s + 1} \, ds \\ &=& \left[ \frac{1}{3} t^3 \log (t^2 + 1) \right]_0^{\sqrt{60}} - \frac{1}{6} \left[ \frac{s^2}{2} - s +\log (s + 1) \right]_0^{60} \\ &=& \frac{1}{3} 60^{3/2} \log 61 - 300 + 10 - \frac{1}{6} \log 61 \end{eqnarray*}
+Hence, we have
+ \[I_4 = \frac{1}{3} \log 61 - \frac{\sqrt{15}}{10800} \log 61 - 290\]
+
+\section{Using integration by parts to eliminate a logarithm}
+
+The integral $I_3$ may be simplified by using integration by parts to get rid of the logarithm in the integrand:
+\begin{eqnarray*}
+I_3 &=& \int_0^1 t^2 \log \left( 41 + 20 t^2 + 8\sqrt{(21 + 40 t^2) (1 - t^2)}\right) \, dt \\ 
+&=& \frac{1}{3} \int_0^1 \log\left( 41 + 20 t^2 + 8\sqrt{(21 + 40 t^2) (1 - t^2)} \right) \, d(t^3) \\
+&=& \frac{1}{3} \left[ t^3 \log\left( 41 + 20 t^2 + 8\sqrt{(21 + 40 t^2) (1 - t^2)} \right) \right]_0^1 - \\ &&
+\frac{1}{3} \int_0^1 t^3 \, \frac{40 t + 4 (38 t - 160 t^3) / \sqrt{(21 + 40 t^2) (1 - t^2)}}{41 + 20 t^2 + 8\sqrt{(21 + 40 t^2) (1 - t^2)}} \, dt \\
+&=& \frac{1}{3} \log 61 - \frac{1}{3} \int_0^1 t^4 \frac{40 + (152 - 640 t^2) / \sqrt{(21 + 40 t^2) (1 - t^2)}}{41 + 20 t^2 + 8\sqrt{(21 + 40 t^2) (1 - t^2)}}  \, dt
+\end{eqnarray*}
+
+\section{Simplifying a fraction}
+
+As we did once earlier, we may simplify the fraction by eliminating the radicals from the denominator.
+\begin{eqnarray*}
+&& \frac{40 + (152 - 640 t^2) / \sqrt{(21 + 40 t^2) (1 - t^2)}}{41 + 20 t^2 + 8\sqrt{(21 + 40 t^2) (1 - t^2)}}  \\
+&=& \frac{1}{\sqrt{(21 + 40 t^2) (1 - t^2)}} \times \frac{152 - 640 t^2 + 40 \sqrt{(21 + 40 t^2) (1 - t^2)}}{41 + 20 t^2 + 8\sqrt{(21 + 40 t^2) (1 - t^2)}} \\
+&=& \frac{1}{\sqrt{(21 + 40 t^2) (1 - t^2)}} \times 
+\frac{152 - 640 t^2 + 40 \sqrt{(21 + 40 t^2) (1 - t^2)}}{41 + 20 t^2 + 8\sqrt{(21 + 40 t^2) (1 - t^2)}} \times \\
+&& \qquad \frac{41 + 20 t^2 - 8\sqrt{(21 + 40 t^2) (1 - t^2)}}{41 + 20 t^2 - 8\sqrt{(21 + 40 t^2) (1 - t^2)}} \\
+&=& \frac{-488 - 29280 t^2 - 1280 t^4 + (-1052 + 5920 t^2)
+\sqrt{(21 + 40 t^2) (1 - t^2)}}{(337 - 1052 t^2 - 2160 t^4) \sqrt{(21 + 40 t^2) (1 - t^2)}}
+\end{eqnarray*}
+This may be split into three terms like so:
+\begin{eqnarray*}
+\frac{-1052 + 5920 t^2}{337 - 1052 t^2 - 2160 t^4} &+& \frac{16}{27 
+\sqrt{(21 + 40 t^2) (1 - t^2)}} \\ &-& \frac{18568 - 773728 t^2}
+{27 (337 - 1052 t^2 - 2160 t^4) \sqrt{(21 + 40 t^2) (1 - t^2)}}
+\end{eqnarray*}
+
+Substituting this back into the integral, we obtain
+\begin{eqnarray*}
+I_3 &=& \frac{1}{3} \log 3 - \frac{1}{3} \int_0^1 \frac{- t^2 + t^2 \sqrt{(1 + 2 t^2) (1 - t^2)}}{\sqrt{(1 + 2 t^2) (1 - t^2)}} \, dt \\
+&=& \frac{1}{3} \log 3 - \frac{1}{3} \int_0^1 t^2 \, dt + \frac{1}{3} \int_0^1 \frac{t^2 \, dt}{\sqrt{(1 + 2 t^2) (1 - t^2)}} 
+\end{eqnarray*}
+As for the first integral, it is elementary.  As for the second integral, we shall express it in terms of standard elliptic integrals just as we did with $I_1$ earlier.
+\begin{eqnarray*}
+I_3 &=& \frac{1}{3} \log 3 - \frac{1}{9} + \frac{1}{3} \int_0^1 \frac{-1/2 + (1 + 2 t^2)/2}{\sqrt{(1 + 2 t^2) (1 - t^2)}} \, dt \\
+&=& \frac{1}{3} \log 3 - \frac{1}{9} - \frac{1}{6} \int_0^1 \frac{dt}{\sqrt{(1 + 2 t^2) (1 - t^2)}} + \frac{1}{6} \int_0^1 \sqrt{\frac{1 + 2 t^2}{1 - t^2}} \, dt \\
+ &=& \frac{1}{3} \log 3 - \frac{1}{9} - \frac{1}{6} K(\sqrt{-2}) + \frac{1}{6} E(\sqrt{-2})
+\end{eqnarray*}
+
+\section{Endgame}
+
+Having done all the work, all that remains is to collect the pieces and arrive at an expression for the area of our paraboloid.  Recall that
+ $$A = 20 \sqrt{5/3} \, I_1 + 30 \sqrt{5/3} \, I_2$$
+where 
+\begin{itemize}
+\item $I_1 =  \frac{1}{3} \, K (\sqrt{-2}) + \frac{2}{3} \, E (\sqrt{-2})$,
+\item $I_2 = I_3 - I_4$,
+\item $I_4 = -\frac{2}{9}$, and, most recently,
+\item $I_3 = \frac{1}{3} \log 3 - \frac{1}{9} - \frac{1}{6} K(\sqrt{-2}) + \frac{1}{6} E(\sqrt{-2})$.
+\end{itemize}
+Combining these equations, we find that
+ $$I_2 = \frac{1}{3} \log 3 + \frac{1}{9} - \frac{1}{6} K(\sqrt{-2}) + \frac{1}{6} E(\sqrt{-2}),$$
+hence
+ $$A = \frac{5}{9} \sqrt{15} \, K (\sqrt{-2}) + \frac{25}{9} \sqrt{15} E (\sqrt{-2}) + \frac{10}{3} \sqrt{15} \log 3 - \frac{10}{9} \sqrt{15}.$$
+
+\section{Closing Remarks}
+
+In many ways, the complexities of the present calculation are typical of what happens when one attempts to compute even the simplest of integrals with respect to area explicitly.  Because of the square root which appears in the fomulae for reducing integrals with respect to surface area, one is faced with the evaluation of a double integral involving a square root.  This can easily lead to elliptic integrals and even more complicated entities such as hyperelliptic integrals.
+
+\PMlinkescapetext{\sl Quick links:}
+
+ \PMlinkid{main entry}{6660}
+\PMlinkid{previous example}{6672}
+%%%%%
+%%%%%
+\end{document}

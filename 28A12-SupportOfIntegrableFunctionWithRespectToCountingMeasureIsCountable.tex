@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SupportOfIntegrableFunctionWithRespectToCountingMeasureIsCountable}
+\pmcreated{2013-03-22 14:59:34}
+\pmmodified{2013-03-22 14:59:34}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{support of integrable function with respect to counting measure is countable}
+\pmrecord{11}{36698}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+\pmrelated{UncountableSumsOfPositiveNumbers}
+\pmrelated{SupportOfIntegrableFunctionIsSigmaFinite}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\def\supp{\operatorname{supp}}
+\def\oo{\infty}
+\begin{document}
+\PMlinkescapeword{countable}
+\PMlinkescapeword{support}
+
+Let $(X,\mathfrak{B},\mu)$ be a measure space with $\mu$ the counting measure. If $f$ is an integrable function, $\displaystyle \int_X f\,d\mu<\infty$, then it has \PMlinkname{countable}{Countable} \PMlinkname{support}{Support6}.
+
+\begin{proof}
+WLOG, we assume that $f$ is real valued and is nonnegative. Let $S_0$ denote the preimage of the interval $[1,\infty)$ and, for every positive integer $n$, let $S_n$ denote the preimage of the interval $\left[\frac{1}{n+1},\frac{1}{n}\right)$. Since the integral of $f$ is bounded, each $S_n$ can be at most finite.  Taking the union of all the $S_n$, we get the support $\displaystyle \supp f = \bigcup_{n=0}^\infty S_n$.  Thus, $\supp f$ is a union of countably many finite sets and hence is countable.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

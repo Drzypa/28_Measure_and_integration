@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BarnsleyFern}
+\pmcreated{2013-03-22 16:05:33}
+\pmmodified{2013-03-22 16:05:33}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{Barnsley fern}
+\pmrecord{7}{38154}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A80}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+The \emph{Barnsley fern} $F$ is the only non-empty compact subset of $\R^2$ satisfying
+the relation
+\[
+  F = \bigcup_{i=1}^4 T_i(F)
+\]
+where $T_i\colon \R^2\to \R^2$ are the following linear mappings:
+\begin{align*}
+T_1(x,y)&=(0.85 x + 0.04 y, -0.04 x + 0.85 y+1.6),\\
+T_2(x,y)&=(0.2 x - 0.26 y, 0.23 x + 0.22 y + 1.6),\\
+T_3(x,y)&=(-0.15 x +0.28 y, 0.26 x+0.24 y +0.44),\\
+T_4(x,y)&=(0,0.16 y).
+\end{align*}
+\begin{figure}
+\includegraphics{felcex}
+\end{figure}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BanachTarskiParadox}
+\pmcreated{2013-03-22 13:45:40}
+\pmmodified{2013-03-22 13:45:40}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{Banach-Tarski paradox}
+\pmrecord{12}{34464}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A99}
+\pmclassification{msc}{03B99}
+\pmrelated{PsuedoparadoxInMeasureTheory}
+\pmrelated{HausdorffParadox}
+\pmrelated{ProofOfHausdorffParadox}
+\pmrelated{DehnsTheorem}
+\pmdefines{decomposable}
+\pmdefines{equi-decomposable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+The $3$-dimensional ball can be split in a finite number of pieces which can be pasted together to give two balls of the same volume as the first!
+
+Let us formulate the theorem formally. 
+We say that a set $A\subset \mathbb R^n$ is \emph{decomposable} in $N$ pieces $A_1,\ldots, A_N$ if there exist some isometries $\theta_1,\ldots,\theta_N$ of $\mathbb R^n$ such that $A=\theta_1(A_1)\cup\ldots\cup \theta_N(A_N)$ while $\theta_1(A_1),\ldots,\theta_N(A_N)$ are all disjoint.
+
+We then say that two sets $A,B\subset \mathbb R^n$ are \emph{equi-decomposable} if both $A$ and $B$ are decomposable in the same pieces $A_1,\ldots,A_N$.
+
+\begin{theorem}[Banach-Tarski]
+The unit ball $\mathbb B^3\subset \mathbb R^3$ is equi-decomposable to the union of two disjoint unit balls.
+\end{theorem}
+
+\section{Comments}
+
+The actual number of pieces needed for this decomposition is not so large. Say that ten pieces are enough.
+
+Also it is not important that the set considered is a ball. Every two set with non empty interior are equi-decomposable in $\mathbb R^3$. Also the ambient space can be chosen larger. The theorem is true in all $\mathbb R^n$ with $n\ge 3$ but it is not true in $\mathbb R^2$ nor in $\mathbb R$.
+
+Where is the paradox? We are saying that a piece of (say) gold can be cut and pasted to obtain two pieces equal to the previous one. And we may divide these two pieces in the same way to obtain four pieces and so on...
+
+We believe that this is not possible since the weight of the piece of gold does not change when I cut it.
+
+A consequence of this theorem is, in fact, that it is not possible to define the volume for all subsets of the $3$-dimensional space. In particular the volume cannot be computed for some of the pieces in which the unit ball is decomposed (some of them are not measurable).
+
+The existence of non-measurable sets is proved more simply and in all dimension by Vitali Theorem. However Banach-Tarski paradox says something more. It says that it is not possible to define a measure on all the subsets of $\mathbb R^3$ even if we drop the countable additivity and replace it with a finite additivity:
+\[
+  \mu(A\cup B) = \mu(A) + \mu (B)\quad \forall A,B\ \mathrm{disjoint}.
+\]
+
+Another point to be noticed is that the proof needs the \PMlinkname{axiom of choice}{AxiomOfChoice}. So some of the pieces in which the ball is divided are not constructable.
+
+See \PMlinkexternal{http://www.math.metu.edu.tr/~berkman/choice/}{http://www.math.metu.edu.tr/~berkman/choice/}
+for more details.
+%%%%%
+%%%%%
+\end{document}

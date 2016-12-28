@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnalyticSet1}
+\pmcreated{2013-03-22 18:44:52}
+\pmmodified{2013-03-22 18:44:52}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{analytic set}
+\pmrecord{9}{41524}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+\pmsynonym{Suslin set}{AnalyticSet1}
+%\pmkeywords{paved space}
+%\pmkeywords{Polish space}
+%\pmkeywords{measurable set}
+\pmrelated{PavedSpace}
+\pmrelated{BorelSigmaAlgebra}
+\pmrelated{UniversallyMeasurable}
+\pmdefines{Suslin set}
+\pmdefines{analytic with respect to}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{float}
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{closed sets}
+\PMlinkescapeword{closed}
+\PMlinkescapeword{borel measurable}
+\PMlinkescapeword{continuous}
+\PMlinkescapeword{even}
+\PMlinkescapeword{order}
+\PMlinkescapeword{implies}
+\PMlinkescapeword{property}
+\PMlinkescapeword{measurable}
+\PMlinkescapeword{stable}
+\PMlinkescapeword{images}
+\PMlinkescapeword{direct images}
+\PMlinkescapeword{analytic}
+\PMlinkescapeword{subset}
+\PMlinkescapeword{image}
+\PMlinkescapeword{clear}
+\PMlinkescapeword{measurable spaces}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{represents}
+\PMlinkescapeword{countable intersections}
+\PMlinkescapeword{difference}
+\PMlinkescapeword{compact paving}
+\PMlinkescapeword{collection}
+\PMlinkescapeword{open}
+\PMlinkescapeword{compact sets}
+
+(Note: this entry concerns analytic sets as used in measure theory. For the definition in analytic spaces see \PMlinkname{analytic set}{AnalyticSet}).
+
+For a continuous map of topological spaces it is known that the preimages of open sets are open, preimages of \PMlinkname{closed}{ClosedSet} sets are closed and preimages of Borel sets are themselves Borel measurable. The situation is more difficult for \PMlinkname{direct images}{DirectImage}. That is if $f\colon X\rightarrow Y$ is continuous then it does not follow that $S\subseteq X$ being open/closed/measurable implies the same property for $f(S)$.
+In fact, $f(X)=\operatorname{Image}(f)$ need not even be measurable.
+One of the few things that can be said, however, is that $f(S)$ is compact whenever $S$ is compact.
+\emph{Analytic sets} are defined in order to be stable under direct images, and their theory relies on the stability of compact sets. This is a fruitful concept because, as it turns out, all measurable sets are analytic and all analytic sets are universally measurable.
+
+A subset $S$ of a Polish space $X$ is said to be analytic (or, a \emph{Suslin set}) if it is the image of a continuous map $f\colon Z\rightarrow X$ from another Polish space $Z$ --- see Cohn. It is then clear that $g(S)$ will again be analytic for any continuous map $g\colon X\rightarrow Y$ between Polish spaces. Indeed, $g(S)$ will be the image of $g\circ f$.
+
+Here, we instead give the following definition which applies to arbitrary paved spaces and, in particular, to all measurable spaces. Furthermore, for Polish spaces, it can be shown to be equivalent to the definition just mentioned above.
+
+Recall that for a paved space $(X,\mathcal{F})$, $\mathcal{F}_{\sigma\delta}$ represents the collection of countable intersections of countable unions of elements of $\mathcal{F}$, and that a paving is compact if every subcollection satisfying the finite intersection property has nonempty intersection.
+
+\begin{definition*}
+Let $(X,\mathcal{F})$ be a paved space. Then a set $A\subseteq X$ is said to be $\mathcal{F}$-\emph{analytic}, or \emph{analytic with respect to} $\mathcal{F}$, if there exists a compact paved space $(K,\mathcal{K})$ and an $S\in(\mathcal{F}\times\mathcal{K})_{\sigma\delta}$ such that
+\begin{equation*}
+A=\pi(S).
+\end{equation*}
+Here, $\mathcal{F}\times\mathcal{K}$ is the product paving and $\pi\colon X\times K\rightarrow X$ is the projection map $\pi(x,y)=x$.
+\end{definition*}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.2]{analyticpic}
+\end{figure}
+
+Writing this out explicitly, there are doubly indexed sequences of sets $A_{m,n}\in\mathcal{F}$ and $K_{m,n}\in\mathcal{K}$ such that
+\begin{equation*}
+S = \bigcap_{n=1}^\infty\bigcup_{m=1}^\infty A_{m,n}\times K_{m,n}.
+\end{equation*}
+and,
+\begin{equation*}
+A=\left\{x\in X\colon (x,y)\in S\text{ for some }y\in K\right\}.
+\end{equation*}
+Although this allows for $\mathcal{K}$ to be any compact paving it can be shown that it makes no difference if it is just taken to be the collection of compact subsets of, for example, the real numbers.
+
+For a measurable space $(X,\mathcal{F})$, a subset of $X$ is simply said to be analytic if it is $\mathcal{F}$-analytic, and a subset of a topological space is said to be analytic if it is analytic with respect to the \PMlinkname{Borel $\sigma$-algebra}{BorelSigmaAlgebra}.
+
+
+\begin{thebibliography}{9}
+\bibitem{bichteler}
+K. Bichteler, \emph{Stochastic integration with jumps}. Encyclopedia of Mathematics and its Applications, 89. Cambridge University Press, 2002.
+\bibitem{cohn}
+Donald L. Cohn, \emph{Measure theory}. Birkh\"auser, 1980.
+\bibitem{dellacherie}
+Claude Dellacherie, Paul-Andr\'e Meyer, \emph{Probabilities and potential}. North-Holland Mathematics Studies, 29. North-Holland Publishing Co., 1978.
+\bibitem{he}
+Sheng-we He, Jia-gang Wang, Jia-an Yan,\emph{Semimartingale theory and stochastic calculus.} Kexue Chubanshe (Science Press), CRC Press, 1992.
+\bibitem{rao}
+M.M. Rao, \emph{Measure theory and integration}. Second edition. Monographs and Textbooks in Pure and Applied Mathematics, 265. Marcel Dekker Inc., 2004.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContinuousAlmostEverywhereVersusEqualToAContinuousFunctionAlmostEverywhere}
+\pmcreated{2013-03-22 15:58:47}
+\pmmodified{2013-03-22 15:58:47}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{continuous almost everywhere versus equal to a continuous function almost everywhere}
+\pmrecord{10}{37996}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+\pmclassification{msc}{60A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The concept of almost everywhere can be somewhat tricky to people who are not familiar with it.  Let $m$ denote Lebesgue measure.  Consider the following two statements about a function $f \colon \mathbb{R} \to \mathbb{R}$:
+
+\begin{itemize}
+\item $f$ is \PMlinkname{continuous}{Continuous} almost everywhere with respect to $m$
+\item $f$ is equal to a continuous function almost everywhere with respect to $m$
+\end{itemize}
+
+Although these two statements seem alike, they have quite different meanings.  In fact, neither one of these statements implies the other.
+
+Consider the function $\chi_{[0, \infty )}(x)=\begin{cases}
+1 & \text{if } x \ge 0 \\
+0 & \text{if } x<0. \end{cases}$
+
+This function is not continuous at $0$, but it is continuous at all other $x \in \mathbb{R}$.  Note that $m(\{0\})=0$. Thus, $\chi_{[0, \infty )}$ is continuous almost everywhere.
+
+Suppose $\chi_{[0, \infty )}$ is equal to a continuous function almost everywhere.  Let $A \subset \mathbb{R}$ be \PMlinkname{Lebesgue measurable}{LebesgueMeasure} with $m(A)=0$ and $g \colon \mathbb{R} \to \mathbb{R}$ such that $\chi_{[0, \infty )}(x)=g(x)$ for all $x \in \mathbb{R} \setminus A$.  Since $\chi_{[0, \infty )}(x)=0$ for all $x<0$ and $m(A \cap (-\infty , 0))=0$, there exists $a<0$ such that $g(a)=0$.  Similarly, there exists $b \ge 0$ such that $g(b)=1$.  Since $g$ is continuous, by the intermediate value theorem, there exists $c \in (a,b)$ with $g(c)=\frac{1}{2}$.  Let $U=(0,1)$.  Since $g$ is continuous, $g^{-1}(U)$ is open.  Recall that $c \in g^{-1}(U)$.  Thus, $g^{-1}(U) \neq \emptyset$.  Since $g^{-1}(U)$ is a nonempty open set, $m(g^{-1}(U))>0$.  On the other hand, $g^{-1}(U) \subseteq A$, yielding that $0<m(g^{-1}(U)) \le m(A)=0$, a contradiction.
+
+Now consider the function $\chi_\mathbb{Q}(x)=\begin{cases}
+1 & \text{if } x \in \mathbb{Q} \\
+0 & \text{if } x \notin \mathbb{Q}. \end{cases}$
+
+Note that $m(\mathbb{Q})=0$.  Thus, $\chi_\mathbb{Q}=0$ almost everywhere.  Since $0$ is continuous, $\chi_\mathbb{Q}$ is equal to a continuous function almost everywhere.  On the other hand, $\chi_\mathbb{Q}$ is not continuous almost everywhere.  Actually, $\chi_\mathbb{Q}$ is not continuous at any $x \in \mathbb{R}$.  Recall that $\mathbb{Q}$ and $\mathbb{R} \setminus \mathbb{Q}$ are both \PMlinkname{dense in}{Dense} $\mathbb{R}$.  Therefore, for every $x \in \mathbb{R}$ and for every $\delta > 0$, there exist $x_1 \in (x-\delta , x+\delta ) \cap \mathbb{Q}$ and $x_2 \in (x-\delta, x+\delta ) \cap (\mathbb{R} \setminus \mathbb{Q})$.  Since $\chi_\mathbb{Q}(x_1)=1$ and $\chi_\mathbb{Q}(x_2)=0$, it follows that $\chi_\mathbb{Q}$ is not continuous at $x$.  (Choose any $\varepsilon \in (0,1)$.)
+%%%%%
+%%%%%
+\end{document}

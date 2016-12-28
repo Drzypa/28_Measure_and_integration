@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TailEvent}
+\pmcreated{2013-03-22 17:07:18}
+\pmmodified{2013-03-22 17:07:18}
+\pmowner{fernsanz}{8869}
+\pmmodifier{fernsanz}{8869}
+\pmtitle{tail event}
+\pmrecord{9}{39424}
+\pmprivacy{1}
+\pmauthor{fernsanz}{8869}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+%\pmkeywords{sigma algebra}
+%\pmkeywords{zero-one law}
+%\pmkeywords{sigma algebra induced by random variables}
+\pmrelated{SigmaAlgebra}
+\pmrelated{KolmogorovZeroOneLaw}
+\pmdefines{tail sigma algebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\numberwithin{equation}{section}
+\newcommand{\N}{\mathbb N}
+\begin{document}
+\title{Tail event}%
+\author{Fernando Sanz Gamiz}%
+
+\begin{defn}
+Let $\Omega$ be a set and $\mathcal F$ a sigma algebra of subsets
+of $\Omega$. Given the random variables $\{X_n, n \in \N\}$, defined
+on the measurable space $(\Omega,\mathcal F)$, the \emph{tail
+events} are the events of the \emph{tail $\sigma$-algebra}
+$$\mathcal F_{\infty}=\bigcap^{\infty}_{n=1}\sigma
+(X_n,X_{n+1},\cdots)$$ where $\sigma (X_n,X_{n+1},\cdots)$ is the
+$\sigma$-algebra induced by $(X_n,X_{n+1},\cdots)$.
+\end{defn}
+
+\medskip
+
+\begin{rem}
+One can intuitively think of tail events as those events whose
+ocurrence or not is not affected by altering any finite number of
+random variables in the sequence. Some examples are $$\{\lim \sup
+X_n <c \}, \sum X_n \mbox{converges }, \lim  X_n \mbox{ exists}$$
+\end{rem}
+
+\medskip
+
+\begin{rem}
+One of the most important theorems in probability theory due to
+Kolomogorv, is the Kolmogorov zero-one law which states that, in the case of independent random variables, the
+probability of any tail event is 0 or 1 (provided there is a
+probability measure defined on $(\Omega,\mathcal F)$)
+\end{rem}
+%%%%%
+%%%%%
+\end{document}

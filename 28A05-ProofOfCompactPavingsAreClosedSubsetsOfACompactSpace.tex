@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCompactPavingsAreClosedSubsetsOfACompactSpace}
+\pmcreated{2013-03-22 18:45:07}
+\pmmodified{2013-03-22 18:45:07}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of compact pavings are closed subsets of a compact space}
+\pmrecord{4}{41529}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+%\pmkeywords{compact paving}
+%\pmkeywords{ultrafilter}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{compact}
+\PMlinkescapeword{compact paving}
+\PMlinkescapeword{closed under}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{paving}
+\PMlinkescapeword{contained}
+\PMlinkescapeword{compactness}
+\PMlinkescapeword{implies}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{ultrafilter}
+\PMlinkescapeword{lemma}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{filter}
+
+Let $(K,\mathcal{K})$ be a \PMlinkname{compact paved space}{paved space}. We use the \PMlinkname{ultrafilter lemma}{EveryFilterIsContainedInAnUltrafilter} to show that there is a compact paving $\mathcal{K}^\prime$ containing $\mathcal{K}$ that is closed under arbitrary intersections and finite unions.
+
+We first show that the paving $\mathcal{K}_1$ consisting of all finite unions of elements of $\mathcal{K}$ is compact.
+Let $\mathcal{F}\subseteq\mathcal{K}_1$ satisfy the finite intersection property. It then follows that the collection of finite intersections of $\mathcal{F}$ is a \PMlinkname{filter}{Filter}. The ultrafilter lemma says that $\mathcal{F}$ is contained in an ultrafilter $\mathcal{U}$.
+
+By definition, the ultrafilter satisfies the finite intersection property. So, the compactness of $\mathcal{K}$ implies that $\mathcal{F}^\prime\equiv\mathcal{U}\cap\mathcal{K}$ has nonempty intersection.
+Also, every element $S$ of $\mathcal{F}$ is a union of finitely many elements of $\mathcal{K}$, one of which must be in $\mathcal{U}$ (see \PMlinkname{alternative characterization of ultrafilter}{AlternativeCharacterizationOfUltrafilter}). In particular, $S$ contains the intersection of $\mathcal{F}^\prime$ and,
+\begin{equation*}
+\bigcap\mathcal{F}\supseteq\bigcap\mathcal{F}^\prime\not=\emptyset.
+\end{equation*}
+Consequently, $\mathcal{K}_1$ is compact.
+
+Finally, we let $\mathcal{K}^\prime$ be the set of arbitrary intersections of $\mathcal{K}_1$. This is closed under all arbitrary intersections and finite unions. Furthermore, if $\mathcal{F}\subseteq\mathcal{K}^\prime$ satisfies the finite intersection property then so does
+\begin{equation*}
+\mathcal{F}^\prime\equiv\left\{A\in \mathcal{K}_1\colon B\subseteq A\text{ for some }B\in\mathcal{F}\right\}.
+\end{equation*}
+The compactness of $\mathcal{K}_1$ gives
+\begin{equation*}
+\bigcap\mathcal{F}=\bigcap\mathcal{F}^\prime\not=\emptyset
+\end{equation*}
+as required.
+
+%%%%%
+%%%%%
+\end{document}

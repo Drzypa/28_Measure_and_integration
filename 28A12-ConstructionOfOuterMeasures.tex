@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConstructionOfOuterMeasures}
+\pmcreated{2013-03-22 18:33:17}
+\pmmodified{2013-03-22 18:33:17}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{construction of outer measures}
+\pmrecord{10}{41277}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+%\pmkeywords{outer measure}
+\pmrelated{OuterMeasure}
+\pmrelated{LebesgueOuterMeasure}
+\pmrelated{CaratheodorysLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem}{Theorem}
+
+\begin{document}
+The following theorem is used in measure theory to construct \PMlinkname{outer measures}{OuterMeasure2} on a set $X$, starting with a non-negative function on a collection of subsets of $X$. For example, if we take $X$ to be the real numbers, $\mathcal{C}$ to be the collection of bounded open intervals of $\mathbb{R}$ and define $p$ by $p((a,b))=b-a$ for real numbers $a<b$, then the Lebesgue outer measure is obtained.
+
+\begin{theorem}
+Let $X$ be a set, $\mathcal{C}$ be a family of subsets of $X$ containing the empty set and $p\colon\mathcal{C}\rightarrow \mathbb{R}\cup\{\infty\}$ be a function satisfying $p(\emptyset)=0$.
+Then the function $\mu^*\colon\mathcal{P}(X)\rightarrow\mathbb{R}\cup\{\infty\}$ defined by
+\begin{equation}\label{eq:1}
+\mu^*(A)=\inf\left\{\sum_{i=1}^\infty p(A_i): A_i\in\mathcal{C},\ A\subseteq\bigcup_{i=1}^\infty A_i\right\}
+\end{equation}
+is an outer measure.
+\end{theorem}
+\begin{proof}
+The definition of $\mu^*$ immediately gives $\mu^*(A)\le\mu^*(B)$ for sets $A\subseteq B$, and if $A=\emptyset$ then we can take $A_i=\emptyset$ in (\ref{eq:1}) to obtain $\mu^*(\emptyset)\le\sum_ip(\emptyset)=0$, giving $\mu^*(\emptyset)=0$. Only the countable subadditivity of $\mu^*$ remains to be shown.
+That is, if $A_i$ is a sequence in $\mathcal{P}(X)$ then
+\begin{equation}\label{eq:2}
+\mu^*\left(\bigcup_i A_i\right)\le\sum_i\mu^*(A_i).
+\end{equation}
+To prove this inequality, we may restrict to the case where $\mu^*(A_i)<\infty$ for each $i$ so that, choosing any $\epsilon>0$, equation (\ref{eq:1}) says that there exists a sequence $A_{i,j}\in \mathcal{C}$ such that $A_i\subseteq\bigcup_j A_{i,j}$ and,
+\begin{equation*}
+\sum_{j=1}^\infty p(A_{i,j})\le\mu^*(A_i)+2^{-i}\epsilon.
+\end{equation*}
+As $\bigcup_iA_i\subseteq\bigcup_{i,j}A_{i,j}$, equation (\ref{eq:1}) defining $\mu^*$ gives
+\begin{equation*}
+\mu^*\left(\bigcup_iA_i\right)\le\sum_{i,j}p(A_{i,j})=\sum_i\sum_jp(A_{i,j})\le\sum_i(\mu^*(A_i)+2^{-i}\epsilon)=\sum_i\mu^*(A_i)+\epsilon.
+\end{equation*}
+As $\epsilon>0$ is arbitrary, this proves subadditivity (\ref{eq:2}).
+\end{proof}
+
+Although this result is rather general, placing few restrictions on the function $p$, there is no guarantee that the outer measure $\mu^*$ will agree with $p$ for the sets in $\mathcal{C}$ nor that $\mathcal{C}$ will consist of \PMlinkname{$\mu^*$-measurable}{CaratheodorysLemma} sets.
+
+For example, if $X=\mathbb{R}$, $\mathcal{C}$ consists of the bounded open intervals, and $p((a,b))=(b-a)^2$ for real numbers $a<b$, then $\mu^*((a,b))=0\not=p((a,b))$.
+
+Alternatively if $p((a,b))=\sqrt{b-a}$ for all $a<b$ then it follows that $\mu^*((a,b))=\sqrt{b-a}$ so
+\begin{equation*}
+\mu^*((0,1))+\mu^*([1,2))=1+1\not=\mu^*((0,2))=\sqrt{2},
+\end{equation*}
+and $(0,1)$ is not $\mu^*$-measurable.
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

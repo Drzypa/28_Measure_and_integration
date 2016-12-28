@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimpsonsRule}
+\pmcreated{2013-03-22 13:40:12}
+\pmmodified{2013-03-22 13:40:12}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{Simpson's rule}
+\pmrecord{9}{34335}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28-00}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{41A55}
+\pmclassification{msc}{65D32}
+\pmrelated{LagrangeInterpolationFormula}
+\pmrelated{NewtonAndCotesFormulas}
+\pmrelated{Prismatoid}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+\emph{Simpson's rule} is a method of (approximate) numerical definite integration (or quadrature).  Simpson's rule is based on a parabolic model of the function to be integrated (in contrast to the trapezoidal model of the trapezoidal rule).  Thus, a minimum of three points and three function values are required. Here we take three equidistant points: $x_0x_2$ the interval endpoints, $x_1=(x_0+x_2)/2$ the midpoint, and let $h=|b-a|/2$ the distance between each. The definite integral is then approximated by:
+\[
+\int_{x_0}^{x_2} f(x) dx \approx I = \frac{h}{3} (f(x_0) + 4f(x_1) + f(x_2))
+\]
+
+We can extend this to greater precision by breaking our target domain into $n$ equal-length fragments.  The quadrature is then the weighted sum of the above formula for every pair of adjacent regions, which works out for even $n$ to
+\[
+ I = \frac{h}{3} (f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \cdots + 4f(x_{n-3}) + 2f(x_{n-2}) + 4f(x_{n-1}) + f(x_n)) 
+\]
+%%%%%
+%%%%%
+\end{document}

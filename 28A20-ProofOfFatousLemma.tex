@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFatousLemma}
+\pmcreated{2013-03-22 13:29:59}
+\pmmodified{2013-03-22 13:29:59}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of Fatou's lemma}
+\pmrecord{4}{34076}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f(x)=\liminf_{n\to\infty} f_n(x)$ and let $g_n(x)=\inf_{k\ge n} f_k(x)$
+so that we have
+\[
+  f(x) = \sup_n g_n(x).
+\]
+
+As $g_n$ is an increasing sequence of measurable nonnegative functions we can apply the monotone convergence Theorem to obtain
+\[
+  \int_X f\, d\mu = \lim_{n\to\infty} \int_X g_n\, d\mu.
+\]
+On the other hand, being $g_n\le f_n$, we conclude by observing
+\[
+  \lim_{n\to\infty} \int_X g_n\, d\mu 
+= \liminf_{n\to\infty}\int_X g_n\, d\mu 
+\le \liminf_{n\to\infty}\int_X f_n\, d\mu.
+\]
+%%%%%
+%%%%%
+\end{document}

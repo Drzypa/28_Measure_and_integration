@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Quasiinvariant}
+\pmcreated{2013-03-22 15:56:00}
+\pmmodified{2013-03-22 15:56:00}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{quasi-invariant}
+\pmrecord{12}{37942}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+\pmrelated{RepresentationsOfLocallyCompactGroupoids}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\begin{document}
+\begin{definition}
+Let $(E, \mathcal{B})$ be a measurable space, and $T : E \to E$ be a measurable map.  A measure $\mu$ on $(E, \mathcal{B})$ is said to be \emph{quasi-invariant} under $T$ if $\mu \circ T^{-1}$ is absolutely continuous with respect to  $\mu$.  That is, for all $A \in \mathcal{B}$ with $\mu(A)=0$, we also have $\mu(T^{-1}(A)) = 0$.  We also say that $T$ leaves $\mu$ quasi-invariant.
+\end{definition}
+
+As a \PMlinkescapetext{simple} example, let $E = \mathbb{R}$ with $\mathcal{B}$ the  \PMlinkname{Borel $\sigma$-algebra}{BorelSigmaAlgebra}, and $\mu$ be Lebesgue measure.  If $T(x) = x + 5$, then $\mu$ is quasi-invariant under $T$.  If $S(x)=0$, then $\mu$ is not quasi-invariant under $S$.  (We have $\mu(\{0\}) = 0$, but $\mu(T^{-1}(\{0\})) = \mu(\mathbb{R}) = \infty$).
+
+To give another example, take $E$ to be the nonnegative integers and
+declare  every subset of $E$ to be  a measurable set. Fix $\lambda > 0$.
+Let $\mu(\{n\}) = \frac{\lambda^n}{n!}$ and extend $\mu$ to all subsets
+by additivity.  Let $T$ be the shift function: $n \to n+1$. Then
+$\mu$ is quasi-invariant under $T$ and not \PMlinkname{invariant}{HaarMeasure}.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PotentialOfHollowBall}
+\pmcreated{2013-03-22 17:16:46}
+\pmmodified{2013-03-22 17:16:46}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{potential of hollow ball}
+\pmrecord{8}{39619}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A25}
+\pmclassification{msc}{26B10}
+\pmclassification{msc}{26B15}
+\pmrelated{JacobiDeterminant}
+\pmrelated{ChangeOfVariablesInIntegralOnMathbbRn}
+\pmrelated{SubstitutionNotation}
+\pmrelated{ModulusOfComplexNumber}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+\PMlinkescapeword{mass}
+
+Let\, $(\xi,\,\eta,\,\zeta)$\, be a point bearing a mass\, $m$\, and\, $(x,\,y,\,z)$\, a \PMlinkescapetext{variable} point.  If the distance of these points is $r$, we can define the {\em potential} of\, $(\xi,\,\eta,\,\zeta)$\, in\, $(x,\,y,\,z)$\, as
+$$\frac{m}{r} = \frac{m}{\sqrt{(x-\xi)^2+(y-\eta)^2+(z-\zeta)^2}}.$$
+The relevance of this concept appears from the fact that its partial derivatives
+$$\frac{\partial}{\partial x}\!\left(\frac{m}{r}\right) = -\frac{m(x-\xi)}{r^3},\quad
+\frac{\partial}{\partial y}\!\left(\frac{m}{r}\right) = -\frac{m(y-\eta)}{r^3},\quad
+\frac{\partial}{\partial z}\!\left(\frac{m}{r}\right) = -\frac{m(z-\zeta)}{r^3}$$
+are the components of the gravitational \PMlinkescapetext{force} with which the material point\, $(\xi,\,\eta,\,\zeta)$\, acts on one mass unit in the point\, $(x,\,y,\,z)$\, (provided that the \PMlinkescapetext{measure units} are chosen suitably).
+
+The potential of a set of points\, $(\xi,\,\eta,\,\zeta)$\, is the sum of the potentials of individual points, i.e. it may lead to an integral.\\
+
+We determine the potential of all points\, $(\xi,\,\eta,\,\zeta)$\, of a hollow ball, where the matter is located between two concentric spheres with radii $R_0$ and $R\, (>R_0)$.  Here the \PMlinkescapetext{density} of mass is assumed to be presented by a continuous function \, $\varrho = \varrho(r)$\, at the distance $r$ from the centre $O$.  Let $a$ be the distance from $O$ of the point $A$, where the potential is to be determined.  We chose $O$ the origin and the ray $OA$ the positive $z$-axis.
+
+For obtaining the potential in $A$ we must integrate over the ball shell where $R_0 \le r \le R$.  We use the spherical coordinates $r$, $\varphi$ and $\psi$ which are tied to the Cartesian coordinates via
+$$x = r\cos\varphi\cos\psi,\quad y = r\cos\varphi\sin\psi,\quad z = r\sin\varphi;$$
+for attaining all points we set
+$$R_0 \le r \le R,\quad -\frac{\pi}{2} \le \varphi \le \frac{\pi}{2},\quad
+0 \le \psi < 2\pi.$$
+The cosines law implies that\, $PA = \sqrt{r^2-2ar\sin\varphi+a^2}$.  Thus the potential is the triple integral
+\begin{align}
+V(a) = 
+\int_{R_0}^R \int_{-\frac{\pi}{2}}^\frac{\pi}{2} \int_0^{2\pi}\!
+\!\frac{\varrho(r)\,r^2\cos\varphi}{\sqrt{r^2-2ar\sin\varphi+a^2}}\,dr\,d\varphi\,d\psi
+= 2\pi\int_{R_0}^R \varrho(r)\,r\,dr\int_{-\frac{\pi}{2}}^\frac{\pi}{2}
+\frac{r\cos\varphi\,d\varphi}{\sqrt{r^2-2ar\sin\varphi+a^2}},
+\end{align}
+where the factor\, $r^2\cos\varphi$\, is the coefficient for the coordinate changing
+$$\left|\frac{\partial(x,\,y,\,z)}{\partial(r,\,\varphi,\,\psi)}\right| =
+\!\mod\!\left|\begin{matrix}
+\cos\varphi\cos\psi & \cos\varphi\sin\psi & \sin\varphi \\
+-r\sin\varphi\cos\psi & -r\sin\varphi\sin\psi & r\cos\varphi \\
+-r\cos\varphi\sin\psi & r\cos\varphi\cos\psi & 0
+\end{matrix}\right|.$$
+
+We get from the latter integral
+\begin{align}
+\int_{-\frac{\pi}{2}}^\frac{\pi}{2}
+\frac{r\cos\varphi\,d\varphi}{\sqrt{r^2-2ar\sin\varphi+a^2}}
+= -\frac{1}{a}\sijoitus{\varphi=-\frac{\pi}{2}}{\quad\frac{\pi}{2}}\sqrt{r^2-2ar\sin\varphi+a^2}
+= \frac{1}{a}[(r+a)-|r-a|].
+\end{align}
+Accordingly we have the two cases:
+
+$1^\circ$.\, The point $A$ is outwards the hollow ball, i.e. $a > R$.\, Then we have\, $|r-a| = a-r$\, for all\, 
+$r\in[R_0,\,R]$.\, The value of the integral (2) is $\frac{2r}{a}$, and (1) gets the form
+$$V(a) = \frac{4\pi}{a}\int_{R_0}^R \varrho(r)\,r^2\,dr = \frac{M}{a},$$
+where $M$ is the mass of the hollow ball.  Thus {\em the potential outwards the hollow ball is exactly the same as in the case that all mass were concentrated to the centre}.  A correspondent statement concerns the attractive \PMlinkescapetext{force}
+                 $$V'(a) = -\frac{M}{a^2}.$$
+
+
+$2^\circ$.\, The point $A$ is in the cavity of the hollow ball, i.e. $a < R_0$ .\, Then\, $|r-a| = r-a$\, on the interval of integration of (2).  The value of (2) is equal to 2, and (1) yields
+           $$V(a) = 4\pi\int_{R_0}^R \varrho(r)\,r\,dr,$$
+which is \PMlinkescapetext{independent} on $a$.  That is, {\em the potential of the hollow ball, when the \PMlinkescapetext{density} of mass depends only on the distance from the centre, has in the cavity a constant value, and the hollow ball influences in no way on a mass inside it}.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset II}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1932).
+\end{thebibliography} 
+
+
+%%%%%
+%%%%%
+\end{document}

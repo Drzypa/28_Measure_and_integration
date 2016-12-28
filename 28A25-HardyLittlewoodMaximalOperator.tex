@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HardyLittlewoodMaximalOperator}
+\pmcreated{2013-03-22 13:27:30}
+\pmmodified{2013-03-22 13:27:30}
+\pmowner{azdbacks4234}{14155}
+\pmmodifier{azdbacks4234}{14155}
+\pmtitle{Hardy-Littlewood maximal operator}
+\pmrecord{8}{34024}
+\pmprivacy{1}
+\pmauthor{azdbacks4234}{14155}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A25}
+\pmclassification{msc}{28A15}
+\pmrelated{HardyLittlewoodMaximalTheorem}
+\pmdefines{Hardy-Littlewood maximal function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{Hardy-Littlewood maximal operator} in $\mathbb{R}^n$ is an operator defined on $L^1_{\textnormal{loc}}(\mathbb{R}^n)$ (the space of locally integrable functions in $\mathbb{R}^n$ with the Lebesgue measure) which maps each locally integrable function $f$ to another function $Mf$, defined for each $x\in \mathbb{R}^n$ by 
+\[Mf(x) = \sup_Q \frac{1}{m(Q)}\int_Q |f(y)|dy,\]
+where the supremum is taken over all cubes $Q$ containing $x$. 
+This function is lower semicontinuous (and hence measurable), and it is called the \emph{Hardy-Littlewood maximal function} of $f$.
+
+The operator $M$ is sublinear, which means that 
+\[M(af + bg) \leq |a|Mf + |b|Mg\]
+for each pair of locally integrable functions $f,g$ and scalars $a,b$.
+%%%%%
+%%%%%
+\end{document}

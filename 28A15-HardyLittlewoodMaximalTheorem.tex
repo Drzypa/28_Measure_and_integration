@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HardyLittlewoodMaximalTheorem}
+\pmcreated{2013-03-22 13:27:33}
+\pmmodified{2013-03-22 13:27:33}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Hardy-Littlewood maximal theorem}
+\pmrecord{4}{34025}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A15}
+\pmclassification{msc}{28A25}
+\pmrelated{HardyLittlewoodMaximalOperator}
+\pmdefines{Hardy-Littlewood theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+There is a constant $K>0$ such that for each Lebesgue integrable function $f\in L^1(\mathbb{R}^n)$, and each $t>0$,
+\[m(\{x:Mf(x)>t\}) \leq \frac{K}{t}\|f\|_1 = \frac{K}{t}\int_{\mathbb{R}^n} |f(x)|dx,\]
+where $Mf$ is the Hardy-Littlewood maximal function of $f$.
+
+\textbf{Remark.} The theorem holds for the constant $K=3^n$.
+%%%%%
+%%%%%
+\end{document}

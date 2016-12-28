@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfEquivalentDefinitionsOfAnalyticSetsForPavedSpaces}
+\pmcreated{2013-03-22 18:48:36}
+\pmmodified{2013-03-22 18:48:36}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of equivalent definitions of analytic sets for paved spaces}
+\pmrecord{4}{41612}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+%\pmkeywords{paved space}
+%\pmkeywords{analytic set}
+%\pmkeywords{Polish space}
+%\pmkeywords{Baire space}
+%\pmkeywords{Cantor space}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{projections}
+\PMlinkescapeword{onto}
+\PMlinkescapeword{compact}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{definitions}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{subset}
+\PMlinkescapeword{projection}
+\PMlinkescapeword{subsets}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{state}
+\PMlinkescapeword{analytic}
+\PMlinkescapeword{collection}
+\PMlinkescapeword{expression}
+\PMlinkescapeword{closed}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{limit}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{compact sets}
+\PMlinkescapeword{scheme}
+\PMlinkescapeword{consequence}
+
+Let $(X,\mathcal{F})$ be a paved space with $\emptyset\in\mathcal{F}$, let $\mathcal{N}$ be Baire space, and let $Y$ be any uncountable Polish space. For a subset $A$ of $X$, we show that the following statements are equivalent.
+\begin{enumerate}
+\item\label{item:1} $A$ is $\mathcal{F}$-\PMlinkname{analytic}{AnalyticSet2}.
+\item\label{item:2} There is a closed subset $S$ of $\mathcal{N}$ and $\theta\colon \mathbb{N}^2\to\mathcal{F}$ such that
+\begin{equation*}
+A=\bigcup_{s\in S}\bigcap_{n=1}^\infty \theta\left(n,s_n\right).
+\end{equation*}
+\item\label{item:3} There is a closed subset $S$ of $\mathcal{N}$ and $\theta\colon \mathbb{N}\to\mathcal{F}$ such that
+\begin{equation*}
+A=\bigcup_{s\in S}\bigcap_{n=1}^\infty \theta\left(s_n\right).
+\end{equation*}
+\item\label{item:4} $A$ is the result of a Souslin scheme on $\mathcal{F}$.
+\item\label{item:5} $A$ is the projection of a set in $(\mathcal{F}\times\mathcal{K})_{\sigma\delta}$ onto $X$, where $\mathcal{K}$ is the collection of compact subsets of $Y$.
+\item\label{item:6} $A$ is the projection of a set in $(\mathcal{F}\times\mathcal{G})_{\sigma\delta}$ onto $X$, where $\mathcal{G}$ is the collection of closed subsets of $Y$.
+\end{enumerate}
+
+\noindent{\bf (\ref{item:1}) implies (\ref{item:2})}:
+As $A$ is analytic, there exists a compact paved space $(K,\mathcal{K})$ and a set $B\in(\mathcal{F}\times\mathcal{K})_{\sigma\delta}$ such that $A=\pi_X(B)$, where $\pi_X\colon X\times K\to X$ is the projection map.
+Write
+\begin{equation*}
+B=\bigcap_{n=1}^\infty\bigcup_{m=1}^\infty A_{n,m}\times K_{n,m}
+\end{equation*}
+for $A_{n,m}\in\mathcal{F}$ and $K_{n,m}\in\mathcal{K}$.
+Rearranging this expression,
+\begin{equation*}
+B=\bigcup_{s\in\mathcal{N}}\bigcap_{n=1}^\infty A_{n,s_n}\times K_{n,s_n}.
+\end{equation*}
+So, defining $S\subseteq\mathcal{N}$ by
+\begin{equation*}
+S=\left\{s\in\mathcal{N}\colon \bigcap_{n=1}^\infty K_{n,s_n}\not=\emptyset\right\}.
+\end{equation*}
+gives
+\begin{equation*}
+A=\pi_X(B)=\bigcup_{s\in S}\bigcap_{n=1}^\infty A_{n,s_n}.
+\end{equation*}
+Setting $\theta(n,m)=A_{n,m}$ gives the required expression, and it only remains to show that $S$ is closed.
+So, let $s^1,s^2,\ldots$ be a sequence in $S$ converging to a limit $s\in\mathcal{N}$. For any $k\ge 0$ then $s^r_n=s_n$ for all $n\le k$ and large enough $r$. Hence,
+\begin{equation*}
+\bigcap_{n\le k}K_{n,s_n}=\bigcap_{n\le k}K_{n,s^r_n}\supseteq \bigcap_{n=1}^\infty K_{n,s_n}\not=\emptyset.
+\end{equation*}
+So, the collection of sets $K_{n,s_n}$ for $n=1,2,\ldots$ satisfies the finite intersection property, and \PMlinkname{compactness}{PavedSpace} of the paving $\mathcal{K}$ gives
+\begin{equation*}
+\bigcap_{n=1}^\infty K_{n,s_n}\not=\emptyset,
+\end{equation*}
+showing that $s\in S$ and that $S$ is indeed closed.
+
+\noindent\textbf{(\ref{item:2}) implies (\ref{item:3})}:
+Supposing that $A$ satisfies the required expression, choose any bijection $\phi\colon \mathbb{N}\to\mathbb{N}^2$. Then define $\tilde\theta\equiv \theta\circ\phi$ and $f\colon\mathcal{N}\to\mathcal{N}$ by $f(s)=t$ where $t_n=\phi^{-1}(n,s_n)$. As $S$ is closed, it follows that $\tilde S=f(S)$ will also be closed and,
+\begin{equation*}
+A=\bigcup_{s\in S}\bigcap_n\theta(n,s_n)
+=\bigcup_{s\in S}\bigcap_n\tilde\theta(\phi^{-1}(n,s_n))
+=\bigcup_{s\in\tilde S}\bigcap_n\tilde\theta(s_n)
+\end{equation*}
+as required.
+
+\noindent\textbf{(\ref{item:3}) implies (\ref{item:4})}:
+Suppose that $A$ satisfies the required expression and define a Souslin scheme $(A_s)$ as follows. For any $n\ge 1$ and $s\in\mathbb{N}^n$ let us set
+\begin{equation*}
+A_s=\begin{cases}
+\theta(s_n),&\textrm{if $s=t|_n$ for some $t\in \mathcal{N}$},\\
+\emptyset,&\textrm{otherwise}.
+\end{cases}
+\end{equation*}
+Then, for $s\in\mathcal{N}$,
+\begin{equation*}
+\bigcap_{n=1}^\infty A_{s|_n}=\begin{cases}
+\bigcap_{n=1}^\infty\theta(s_n),&\textrm{if $s\in S$},\\
+\emptyset,&\textrm{otherwise}.
+\end{cases}
+\end{equation*}
+Here, if $s\not\in S$, we have used the fact that $S$ is closed to deduce that for large $n$, there is no $t\in S$ with $t|_n=s|_n$ and, therefore, $A_{s|_n}=\emptyset$.
+The result of the Souslin scheme $(A_s)$ is then
+\begin{equation*}
+\bigcup_{s\in\mathcal{N}}\bigcap_{n=1}^\infty A_{s|_n}=\bigcup_{s\in S}\bigcap_{n=1}^\infty\theta(s_n) = A
+\end{equation*}
+as required.
+
+\noindent\textbf{(\ref{item:4}) implies (\ref{item:5})}:
+Suppose that $A$ is the result of a Souslin scheme $(A_s)$. Let us first consider the case where $Y$ is Cantor space, $\mathcal{C}=\{0,1\}^\mathbb{N}$, which is a compact Polish space.
+Then, for any $s\in\mathbb{N}^n$, let $K_s$ be the set of $t\in\mathcal{C}$ such that $t_k=1$ if $k=s_1+\cdots+s_m$ for some $m\le n$ and $t_k=0$ for all other $k< s_1+\cdots+s_n$.
+These are closed and, therefore, compact sets.
+
+Given any sequence $s^1\in\mathbb{N}^1,s^2\in\mathbb{N}^2,\ldots$ it is easily seen that $\bigcap_nK_{s^n}$ is nonempty if and only if there is an $s\in\mathcal{N}$ such that $s|_n=s^n$ for all $n$.
+Define the set $B$ in $(\mathcal{F}\times\mathcal{K})_{\sigma\delta}$ by
+\begin{equation*}\begin{split}
+B&=\bigcap_{n=1}^\infty\bigcup_{s\in\mathbb{N}^n}A_s\times K_s\\
+&=\bigcup_{s^1\in\mathbb{N}^1,s^2\in\mathbb{N}^2,\ldots}\bigcap_{n=1}^\infty A_{s^n}\times K_{s^n}\\
+&=\bigcup_{s\in\mathcal{N}}\bigcap_{n=1}^\infty A_{s|_n}\times K_{s|_n}.
+\end{split}\end{equation*}
+The projection of $B$ onto $X$ is then
+\begin{equation*}
+\pi_X(S)=\bigcup_{s\in\mathcal{N}}\bigcap_{n=1}^\infty A_{s|_n},
+\end{equation*}
+which is the result $A$ of the scheme $(A_s)$ as required.
+The result then generalizes to any uncountable Polish space $Y$, as all such spaces \PMlinkname{contain Cantor space}{UncountablePolishSpacesContainCantorSpace}.
+
+\noindent\textbf{(\ref{item:5}) implies (\ref{item:6})}:
+This is trivial, since all compact sets are closed.
+
+\noindent\textbf{(\ref{item:6}) implies (\ref{item:1})}:
+This is a consequence of the result that projections of analytic sets are analytic.
+
+%%%%%
+%%%%%
+\end{document}

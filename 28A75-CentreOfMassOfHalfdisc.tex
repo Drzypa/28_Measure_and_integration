@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CentreOfMassOfHalfdisc}
+\pmcreated{2013-03-22 17:20:57}
+\pmmodified{2013-03-22 17:20:57}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{centre of mass of half-disc}
+\pmrecord{10}{39706}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A75}
+\pmclassification{msc}{26B15}
+\pmsynonym{center of mass of half-disc}{CentreOfMassOfHalfdisc}
+\pmsynonym{centroid of half-disc}{CentreOfMassOfHalfdisc}
+%\pmkeywords{double integral}
+\pmrelated{SubstitutionNotation}
+\pmrelated{CentreOfMassOfPolygon}
+\pmrelated{CenterOfGravityOfCircularSector}
+\pmrelated{AreaOfSphericalZone}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+Let $E$ be the upper half-disc of the disc\, $x^2+y^2 \leqq R$\, in $\mathbb{R}^2$ with a \PMlinkescapetext{constant} surface-density 1.  By the symmetry, its centre of mass lies on its medium radius, and therefore we only have to calculate the ordinate $Y$ of the centre of mass.  For doing that, one can use the double integral
+$$Y \;=\; \frac{1}{\nu(E)}\iint_E y\,dx\,dy,$$
+where\, $\nu(E) = \frac{\pi R^2}{2}$\, is the area of the half-disc.  The region of integration is defined by
+$$E \;=\; \{(x,\,y)\in\mathbb{R}^2\,\vdots\;\; -R\leqq x \leqq R,\; 0 \leqq y \leqq \sqrt{R^2-x^2}\}.$$
+Accordingly we may write
+$$Y \;=\; \frac{2}{\pi R^2}\!\int_{-R}^R\!dx\int_0^{\sqrt{R^2-x^2}}\!y\,dy \;=\; 
+\frac{2}{\pi R^2}\!\int_{-R}^R\frac{R^2\!-\!x^2}{2}\,dx \;=\; 
+\frac{2}{\pi R^2}\sijoitus{x=-R}{\quad R}\left(\frac{R^2x}{2}-\frac{x^3}{6}\right) \;=\; \frac{4R}{3\pi}.$$
+Thus the centre of mass is the point\, $(0,\,\frac{4R}{3\pi})$.
+
+%%%%%
+%%%%%
+\end{document}

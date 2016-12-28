@@ -1,0 +1,194 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfVitaliConvergenceTheorem}
+\pmcreated{2013-03-22 17:31:04}
+\pmmodified{2013-03-22 17:31:04}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{proof of Vitali convergence theorem}
+\pmrecord{5}{39909}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+\usepackage{enumerate}
+
+% Set up the theorem environments
+%\newtheorem{thm}{Theorem}
+\newtheorem*{thm*}{Theorem}
+
+\newcommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\intset}{\mathbb{Z}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\absW}[1]{\left\lvert#1\right\rvert}
+\newcommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\normW}[1]{\left\lVert#1\right\rVert}
+\newcommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+\newcommand{\Le}{\mathbf{L}}
+\newcommand{\indc}{\mathbf{1}}
+\begin{document}
+\PMlinkescapeword{entire}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{argument}
+\PMlinkescapeword{variation}
+\PMlinkescapeword{words}
+
+
+\begin{thm*}
+Let $f_1, f_2, \dotsc$ be $\Le^p$-integrable functions on 
+a measure space $(X, \mu)$, for $1 \leq p < \infty$.
+The following conditions are necessary and sufficient for
+$f_n$ to be a Cauchy sequence in the $\Le^p(X,\mu)$ norm:
+
+\begin{enumerate}[(i)]
+\item
+the sequence $f_n$ is Cauchy in measure;
+\item
+the functions $\{ \abs{f_n}^p \}$ are uniformly integrable; and
+\item
+for each $\epsilon > 0$, there is a set $A$
+of finite measure, with $\norm{f_n \indc(X \setminus A)} < \epsilon$
+for all $n$.
+\end{enumerate}
+\end{thm*}
+
+\begin{proof}
+We abbreviate $\abs{f_n - f_m}$ by $f_{mn}$.
+
+\begin{description}
+\item[Necessity of (i).]
+Fix $t > 0$, and let
+$E_{mn} = \{ f_{mn} \geq t \}$.
+Then
+\[
+\mu(E_{mn})^{1/p} = \frac{1}{t} \norm{ t \, \indc(E_{mn}) }
+\leq \frac{1}{t} \norm{ f_{mn} } \to 0\,,
+\quad
+\text{as $m, n \to \infty$.}
+\]
+
+\item[Necessity of (ii).]
+Select $N$ such that $\norm{f_n - f_N} < \epsilon$ when $n \geq N$.
+The family $\{ \abs{f_1}^p, \dotsc, \abs{f_{N-1}}^p, \abs{f_N}^p \}$
+is uniformly integrable
+because it consists of only \emph{finitely} many integrable functions.
+
+So for every $\epsilon > 0$, 
+there is $\delta > 0$ such that $\mu(E) < \delta$
+implies $\norm{f_n \indc(E)} < \epsilon$ for $n \leq N$.
+On the other hand, for $n > N$,
+\[
+\norm{f_n \indc(E)} \leq \norm{ (f_n - f_N) \indc(E)} + \norm{f_N \indc(E)} < 2\epsilon
+\]
+for the same sets $E$,
+and thus the entire infinite sequence $\{ \abs{f_n}^p \}$ is
+uniformly integrable too.
+
+
+\item[Necessity of (iii).]
+Select $N$ such that $\norm{f_n - f_N} < \epsilon$
+for all $n \geq N$.
+Let $\varphi$ be a simple function approximating $f_N$ in $\Le^p$ norm up to $\epsilon$.
+Then $\norm{f_n - \varphi} < 2\epsilon$ for all $n \geq N$.
+Let $A_N = \{ \varphi \neq 0 \}$ be the support of $\varphi$, which must
+have finite measure.
+It follows that
+\begin{align*}
+\norm{f_n \indc(X \setminus A_N)} = \norm{f_n - f_n \indc(A_N)} 
+&\leq \norm{f_n - \varphi} + \norm{\varphi - f_n \indc(A_N)} \\
+&= \norm{f_n - \varphi} + \norm{(\varphi - f_n) \indc(A_N)} \\
+&< 2\epsilon + 2\epsilon\,.
+\end{align*}
+
+For each $n < N$, we can similarly construct sets $A_n$
+of finite measure, 
+such that $\norm{f_n \indc(X \setminus A_n)} < 4\epsilon$.
+If we set $A = A_1 \cup \dotsb \cup A_{N-1} \cup A_N$, a finite union,
+then $A$ has finite measure, and clearly 
+$\norm{f_n \indc(X \setminus A)} < 4\epsilon$ for any $n$.
+
+\item[Sufficiency.]
+We show $f_{mn}$ 
+to be small for large $m,n$ by a multi-step estimate:
+\begin{align*}
+\norm{f_{mn}} 
+&\leq 
+\norm{f_{mn} \indc(A \setminus E_{mn})} + 
+\norm{f_{mn} \indc(E_{mn})} +
+\norm{f_{mn} \indc(X \setminus A)}\,.
+\end{align*}
+
+Use condition (iii) to choose $A$ of finite measure
+such that $\norm{f_n \indc(X \setminus A)} < \epsilon$
+for every $n$.
+Then $\norm{f_{mn} \indc(X \setminus A)} < 2 \epsilon$.
+
+Let $t = \epsilon/\mu(A)^{1/p} > 0$,
+and $E_{mn} = \{ f_{mn} \geq t \}$.
+By condition (ii) choose $\delta > 0$ so that 
+$\norm{f_n \indc(E)} < \epsilon$ whenever
+$\mu(E) < \delta$.
+By condition (i), take $N$ such that if $m, n \geq N$,
+then
+$\mu(E_{mn}) < \delta$;
+it follows immediately that $\norm{ f_{mn} \indc(E_{mn}) } < 2\epsilon$.
+
+Finally, $\norm{f_{mn} \indc(A \setminus E_{mn})} \leq t \mu(A)^{1/p} = \epsilon$, since $f_{mn} < t$ on the complement of $E_{mn}$.
+Hence $\norm{f_{mn}} < 5\epsilon$ for $m, n \geq N$.
+\qedhere
+\end{description}
+\end{proof}
+
+\noindent
+\emph{Remark.}  In the statement of the theorem, instead 
+of dealing with Cauchy sequences,
+we can directly speak of convergence of $f_n$ to $f$
+in $\Le^p$ and in measure.
+This variation of the theorem
+is easily proved,
+for:
+\begin{itemize}
+\item
+a sequence converges in $\Le^p$ if and only if it is
+Cauchy in $\Le^p$;
+\item
+a sequence that converges in measure is automatically Cauchy in measure;
+\item
+a simple adaptation of the argument
+shows that $f_n \to f$ in $\Le^p$ implies $f_n \to f$ in measure; and
+\item
+the limit in measure is unique.
+\end{itemize}
+
+
+%%%%%
+%%%%%
+\end{document}

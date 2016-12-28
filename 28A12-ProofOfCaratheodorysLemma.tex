@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCaratheodorysLemma}
+\pmcreated{2013-03-22 18:33:25}
+\pmmodified{2013-03-22 18:33:25}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of Carath\'eodory's lemma}
+\pmrecord{5}{41279}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+%\pmkeywords{outer measure}
+\pmrelated{CaratheodorysLemma}
+\pmrelated{OuterMeasure}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A set $S\subseteq X$ is $\mu$-measurable if and only if
+\begin{equation}\label{eq:mu-measurable inequal}
+\mu(E)\ge\mu(E\cap S)+\mu(E\cap S^c)
+\end{equation}
+for every $E\subseteq X$.
+As this inequality is clearly satisfied if $S=\emptyset$ and is unchanged when $S$ is replaced by $S^c$, then $\mathcal{A}$ contains the empty set and is closed under taking complements of sets.
+To show that $\mathcal{A}$ is a $\sigma$-algebra, it only remains to show that it is closed under taking countable unions of sets. Choose any sets $A,B\in\mathcal{A}$ and $E\subseteq X$. Then,
+\begin{equation*}\begin{split}
+\mu(E)&\ge\mu(E\cap A) + \mu(E\cap A^c)\\
+&\ge\mu(E\cap A) + \mu(E\cap A^c\cap B) + \mu(E\cap A^c\cap B^c)\\
+&\ge\mu(E\cap(A\cup B))+\mu(E\cap A^c\cap B^c)
+\end{split}\end{equation*}
+The first two inequalities here follow from applying (\ref{eq:mu-measurable inequal}) with $A$ and then $B$ in place of $S$, and the third uses the subadditivity of $\mu$ together with $A\cup (A^c\cap B) = A\cup B$. So (\ref{eq:mu-measurable inequal}) is satisfied with $A\cup B$ in place of $S$, showing that $\mathcal{A}$ is closed under taking pairwise unions and is therefore an algebra of sets on $X$. If $A,B$ are disjoint sets in $\mathcal{A}$ then replacing $E$ by $E\cap(A\cup B)$ and $S$ by $A$ in (\ref{eq:mu-measurable inequal}) gives $\mu(E\cap(A\cup B))\ge\mu(E\cap A)+\mu(E\cap B)$. As the reverse inequality follows from subadditivity of $\mu$, this implies that
+\begin{equation*}
+\mu(E\cap(A\cup B))=\mu(E\cap A)+\mu(E\cap B).
+\end{equation*}
+So, the map $A\mapsto\mu(E\cap A)$ is an additive set function on $\mathcal{A}$. In particular, taking $E=X$ shows that $\mu$ is additive on $\mathcal{A}$.
+
+Now choose a sequence $A_i\in\mathcal{A}$, and set $B_i\equiv\bigcup_{j=1}^{i}A_j$ which are in the algebra $\mathcal{A}$. To prove that $\mathcal{A}$ is a $\sigma$-algebra it needs to be shown that $A\equiv\bigcup_iA_i=\bigcup_iB_i$ is itself in $\mathcal{A}$.
+First, as $B_i\in\mathcal{A}$ and $A^c\subseteq B_i^c$,
+\begin{equation*}
+\mu(E)\ge\mu(E\cap B_i)+\mu(E\cap B_i^c)\ge\mu(E\cap B_i)+\mu(E\cap A^c).
+\end{equation*}
+As $C_i\equiv B_i\setminus B_{i-1}$ are pairwise disjoint sets in $\mathcal{A}$ satisfying $\bigcup_{j=1}^i C_j=B_i$ the additivity of $C\mapsto\mu(E\cap C)$ on $\mathcal{A}$ gives
+\begin{equation*}
+\mu(E)\ge\sum_{j=1}^i\mu(E\cap C_j)+\mu(E\cap A^c).
+\end{equation*}
+So, letting $i$ increase to infinity, the subadditivity of $\mu$ applied to $\bigcup_j(E\cap C_j)=E\cap A$ gives
+\begin{equation*}
+\mu(E)\ge\sum_j\mu(E\cap C_j)+\mu(E\cap A^c)\ge\mu(E\cap A)+\mu(E\cap A^c).
+\end{equation*}
+This shows that $A$ is $\mu$-measurable and so $\mathcal{A}$ is a $\sigma$-algebra.
+
+It only remains to show that the restriction of $\mu$ to $\mathcal{A}$ is a measure, for which it needs to be shown that $\mu$ is countably additive on $\mathcal{A}$. So, choose any pairwise disjoint sequence $A_i\in\mathcal{A}$ and set $A=\bigcup_iA_i$. The following inequality
+\begin{equation*}
+\sum_{j=1}^i\mu(A_j)=\mu\left(\bigcup_{j=1}^iA_j\right)\le\mu(A)\le\sum_j\mu(A_j)
+\end{equation*}
+follows from the additivity of $\mu$ on $\mathcal{A}$, the requirement that $\mu$ is increasing and from the countable subadditivity of $\mu$. Letting $i$ increase to infinity gives $\mu(A)=\sum_j\mu(A_j)$ and $\mu$ is indeed countably additive on $\mathcal{A}$.
+
+%%%%%
+%%%%%
+\end{document}

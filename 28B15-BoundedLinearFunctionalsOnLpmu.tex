@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundedLinearFunctionalsOnLpmu}
+\pmcreated{2013-03-22 18:32:57}
+\pmmodified{2013-03-22 18:32:57}
+\pmowner{azdbacks4234}{14155}
+\pmmodifier{azdbacks4234}{14155}
+\pmtitle{bounded linear functionals on $L^p(\mu)$}
+\pmrecord{15}{41269}
+\pmprivacy{1}
+\pmauthor{azdbacks4234}{14155}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28B15}
+%\pmkeywords{linear functional}
+%\pmkeywords{dual space}
+%\pmkeywords{conjugate exponent}
+\pmrelated{LpSpace}
+\pmrelated{HolderInequality}
+\pmrelated{ContinuousLinearMapping}
+\pmrelated{BanachSpace}
+\pmrelated{DualSpace}
+\pmrelated{ConjugateIndex}
+\pmrelated{RadonNikodymTheorem}
+\pmrelated{BoundedLinearFunctionalsOnLinftymu}
+\pmrelated{LpNormIsDualToLq}
+
+%packages
+\usepackage{amsmath,mathrsfs,amsfonts,amsthm}
+%theorem environments
+\theoremstyle{plain}
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{lem*}{Lemma}
+\newtheorem*{cor*}{Corollary}
+\newtheorem*{prop*}{Proposition}
+%delimiters
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\medset}[1]{\big\{#1\big\}}
+\newcommand{\bigset}[1]{\bigg\{#1\bigg\}}
+\newcommand{\Bigset}[1]{\Bigg\{#1\Bigg\}}
+\newcommand{\abs}[1]{\vert#1\vert}
+\newcommand{\medabs}[1]{\big\vert#1\big\vert}
+\newcommand{\bigabs}[1]{\bigg\vert#1\bigg\vert}
+\newcommand{\Bigabs}[1]{\Bigg\vert#1\Bigg\vert}
+\newcommand{\norm}[1]{\Vert#1\Vert}
+\newcommand{\mednorm}[1]{\big\Vert#1\big\Vert}
+\newcommand{\bignorm}[1]{\bigg\Vert#1\bigg\Vert}
+\newcommand{\Bignorm}[1]{\Bigg\Vert#1\Bigg\Vert}
+\newcommand{\vbrack}[1]{\langle#1\rangle}
+\newcommand{\medvbrack}[1]{\big\langle#1\big\rangle}
+\newcommand{\bigvbrack}[1]{\bigg\langle#1\bigg\rangle}
+\newcommand{\Bigvbrack}[1]{\Bigg\langle#1\Bigg\rangle}
+\newcommand{\sbrack}[1]{[#1]}
+\newcommand{\medsbrack}[1]{\big[#1\big]}
+\newcommand{\bigsbrack}[1]{\bigg[#1\bigg]}
+\newcommand{\Bigsbrack}[1]{\Bigg[#1\Bigg]}
+%operators
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\vol}{vol}
+
+\begin{document}
+If $\mu$ is a positive measure on a set $X$, $1\leq p\leq\infty$, and $g\in L^q(\mu)$, where $q$ is the H\"{o}lder conjugate of $p$, then H\"{o}lder's inequality implies that the map $f\mapsto\int_Xfgd\mu$ is a bounded linear functional on $L^p(\mu)$. It is therefore natural to ask whether or not all such functionals on $L^p(\mu)$ are of this form for some $g\in L^q(\mu)$. Under fairly mild hypotheses, and excepting the case $p=\infty$, the Radon-Nikodym Theorem answers this question affirmatively.
+\begin{thm*}
+Let $(X,\mathfrak{M},\mu)$ be a $\sigma$-finite measure space, $1\leq p<\infty$, and $q$ the H\"{o}lder conjugate of $p$. If $\Phi$ is a bounded linear functional on $L^p(\mu)$, then there exists a unique $g\in L^q(\mu)$ such that
+\begin{equation}
+\Phi(f)=\int_Xfgd\mu
+\end{equation}
+for all $f\in L^p(\mu)$. Furthermore, $\norm{\Phi}=\norm{g}_q$. Thus, under the stated hypotheses, $L^q(\mu)$ is isometrically isomorphic to the dual space of $L^p(\mu)$.
+\end{thm*}
+If $1<p<\infty$, then the assertion of the theorem remains valid without the assumption that $\mu$ is $\sigma$-finite; however, even with this hypothesis, the result can fail in the case that $p=\infty$. In particular, the bounded linear functionals on $L^\infty(m)$, where $m$ is Lebesgue measure on $[0,1]$, are not all obtained in the above manner via members of $L^1(m)$. An explicit example illustrating this is constructed as follows: the assignment $f\mapsto f(0)$ defines a bounded linear functional on $C([0,1])$, which, by the Hahn-Banach Theorem, may be extended to a bounded linear functional $\Phi$ on $L^\infty(m)$. Assume for the sake of contradiction that there exists $g\in L^1(m)$ such that $\Phi(f)=\int_{[0,1]}fgdm$ for every $f\in L^\infty(m)$, and for $n\in\mathbb{Z}^+$, define $f_n:[0,1]\rightarrow\mathbb{C}$ by $f_n(x)=\max\set{1-nx,0}$. As each $f_n$ is continuous, we have $\Phi(f_n)=\varphi(f_n)=1$ for all $n$; however, because $f_n\rightarrow 0$ almost everywhere and $\abs{f_n}\leq 1$, the Dominated Convergence Theorem, together with our hypothesis on $g$, gives
+\begin{equation*}
+1=\lim_{n\rightarrow\infty}\Phi(f_n)=\lim_{n\rightarrow\infty}\int_{[0,1]}f_ngdm=0\text{,}
+\end{equation*}
+a contradiction. It follows that no such $g$ can exist.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SelfsimilarFractals}
+\pmcreated{2013-03-22 16:05:12}
+\pmmodified{2013-03-22 16:05:12}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{self-similar fractals}
+\pmrecord{11}{38146}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A80}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+Let $(X,d)$ be a metric space and let $T_1,\ldots,T_N$ be a finite number of contractions on $X$ i.e.\ each $T_i\colon X\to X$ enjoys the property
+\[
+  d(T_i(x),T_i(y)) \le \lambda_i d(x,y)
+\]
+($T_i$ is $\lambda_i$-Lipschitz) for some $\lambda_i<1$.
+
+Given a set $A\subset X$ we can define
+\[
+  T(A) = \bigcup_{i=1}^N T_i(A).
+\]
+
+\begin{definition}
+A set $K$ such that $T(K)=K$ (invariant set) is called a \emph{self-similar fractal} with respect to the contractions $\{T_1,\ldots,T_N\}$.
+\end{definition}
+
+The most famous example of self-similar fractal is the Cantor set.
+This is constructed in $X=\R$ with the usual Euclidean metric structure, by
+choosing $N=2$ contractions: $T_1(x)=x/3$, $T_2(x)=1-(1-x)/3$. 
+
+A more interesting example is the Koch curve in $X=\R^2$. In this case we choose 
+$N=4$ similitudes with factor $1/3$.
+
+By choosing other appropriate transformations one can obtain the beautiful example of the Barnsley Fern, which shows how the fractal geometry can successfully describe nature.
+
+An important result is given by the following Theorem.
+\begin{theorem}
+Let $X$ be a complete metric space and let
+$T_1,\ldots, T_N\colon X \to X$ be a given set of contractions. 
+Then there exists one and only one non empty compact set $K\subset X$ such that 
+$T(K)=K$.
+\end{theorem}
+
+Notice that the empty set always satisfies the relation $T(\emptyset)=\emptyset$ 
+and hence is not an interesting case. On the other hand, if at least one of the $T_i$ is surjective (as happens in the examples above), then the whole set $X$ 
+satisfies $T(X)=X$.
+
+
+%%%%%
+%%%%%
+\end{document}

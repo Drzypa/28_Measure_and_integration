@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnIntegrableFunctionThatDoesNotTendToZero}
+\pmcreated{2013-03-22 16:56:09}
+\pmmodified{2013-03-22 16:56:09}
+\pmowner{silverfish}{6603}
+\pmmodifier{silverfish}{6603}
+\pmtitle{an integrable function that does not tend to zero}
+\pmrecord{9}{39202}
+\pmprivacy{1}
+\pmauthor{silverfish}{6603}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28-01}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theo}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem{lem}{Lemma}
+\begin{document}
+\PMlinkescapeword{words}
+
+In this entry, we give an example of a function $f$ such that $f$ is Lebesgue integrable on $[0, \infty)$ but $f(x)$ does not tend to zero as $x \rightarrow \infty$.
+
+First of all, let $g_n$ be the function $\displaystyle \sin (2^n x) \chi _{[0, \frac{\pi}{2^n}]}$, where $\chi _I$ denotes the characteristic function of the interval $I$.  In other words, $\chi$ takes the value $1$ on $I$ and 0 everywhere else.
+
+Let $\mu$ denote Lebesgue measure.  An easy computation shows \begin{equation} \label{g} \int_{\mathbb{R}} g_n \, d\mu= 2^{1-n},\end{equation} and $\displaystyle g_n \left( \frac{\pi}{2^{n+1}} \right) = 1$.  Let $h_n (x) = g_n ( x-n \pi)$, so $h_n$ is just a ``shifted'' version of $g_n$.  Note that \begin{equation} \label{h} h_n \left( n \pi + \frac{\pi}{2^{n+1}} \right) = 1. \end{equation}
+
+We now construct our function $f$ by defining $\displaystyle f = \sum _{r=0} ^\infty h_r $.  There are no convergence problems with this sum since for a given $x \in \mathbb{R}$, at most one $h_r$ takes a non-zero value at $x$.  Also $f(x)$ does not tend to 0 as $x \rightarrow \infty$ as there are arbitrarily large values of $x$ for which $f$ takes the value $1$, by (\ref{h}).
+
+All that is left is to show that $f$ is Lebesgue integrable.  To do this rigorously, we apply the monotone convergence theorem (MCT) with $\displaystyle f_n = \sum _{r=0} ^n h_r$.  We must check the hypotheses of the MCT.  Clearly $f_n \rightarrow f$ as $n \rightarrow \infty$, and the sequence $(f_n)$ is monotone increasing, positive, and integrable.  Furthermore, each $f_n$ is continuous and zero except on a compact interval, so is integrable.  Finally, from (\ref{g}) we see that $\displaystyle \int_{\mathbb{R}} f_n \, d\mu \leq 4$ for all $n$.  Therefore, the MCT applies and $f$ is integrable.
+%%%%%
+%%%%%
+\end{document}

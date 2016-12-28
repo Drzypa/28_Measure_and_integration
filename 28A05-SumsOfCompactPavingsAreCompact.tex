@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SumsOfCompactPavingsAreCompact}
+\pmcreated{2013-03-22 18:45:15}
+\pmmodified{2013-03-22 18:45:15}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{sums of compact pavings are compact}
+\pmrecord{5}{41532}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+\pmsynonym{disjoint unions of compact pavings are compact}{SumsOfCompactPavingsAreCompact}
+%\pmkeywords{compact paving}
+%\pmkeywords{direct sum}
+\pmrelated{ProductsOfCompactPavingsAreCompact}
+\pmdefines{direct sum of pavings}
+\pmdefines{disjoint union of pavings}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{direct sum}
+\PMlinkescapeword{index set}
+\PMlinkescapeword{compact}
+\PMlinkescapeword{compact paving}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{compactness}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{union}
+\PMlinkescapeword{disjoint}
+\PMlinkescapeword{subsets}
+
+Suppose that $(K_i,\mathcal{K}_i)$ is a paved space for each $i$ in an index set $I$. The direct sum, or \PMlinkname{disjoint union}{DisjointUnion}, $\sum_{i\in I}K_i$ is the union of the disjoint sets $K_i\times\{i\}$. The direct sum of the paving $\mathcal{K}_i$ is defined as
+\begin{equation*}
+\sum_{i\in I}\mathcal{K}_i=\left\{\sum_{i\in I}S_i\colon S_i\in\mathcal{K}_i\cup\{\emptyset\}\text{ is empty for all but finitely many }i\right\}.
+\end{equation*}
+
+\begin{theorem*}
+Let $(K_i,\mathcal{K}_i)$ be compact paved spaces for $i\in I$. Then, $\sum_i\mathcal{K}_i$ is a compact paving on $\sum_iK_i$.
+\end{theorem*}
+
+The paving $\mathcal{K}^\prime$ consisting of subsets of $\sum_i\mathcal{K}_i$ of the form $\sum_iS_i$ where $S_i=\emptyset$ for all but a single $i\in I$ is easily shown to be compact.
+Indeed, if $\mathcal{K}^{\prime\prime}\subseteq \mathcal{K}^\prime$ satisfies the finite intersection property then there is an $i\in I$ such that $S\subseteq K_i\times\{i\}$ for every $S\in\mathcal{K}^{\prime\prime}$. Compactness of $\mathcal{K}_i$ gives $\bigcap\mathcal{K}^{\prime\prime}\not=\emptyset$.
+
+Then, as $\sum_i\mathcal{K}_i$ consists of finite unions of sets in $\mathcal{K}^\prime$, it is a compact paving (see compact pavings are closed subsets of a compact space).
+
+%%%%%
+%%%%%
+\end{document}

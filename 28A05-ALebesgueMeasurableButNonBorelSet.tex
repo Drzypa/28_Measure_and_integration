@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ALebesgueMeasurableButNonBorelSet}
+\pmcreated{2013-03-22 18:37:01}
+\pmmodified{2013-03-22 18:37:01}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{a Lebesgue measurable but non-Borel set}
+\pmrecord{6}{41351}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+\pmclassification{msc}{28A20}
+%\pmkeywords{Lebesgue measurable}
+%\pmkeywords{Borel measurable}
+%\pmkeywords{continued fraction}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+ \makeatletter
+\@ifundefined{url}{\newcommand*{\sfrac}{\cfrac}}{\newcommand*{\sfrac}{\frac}}
+\makeatother
+% @ifundefined tests whether LaTeX2HTML or page image mode
+% is used because LaTeX2HTML has a bug, which prevents
+% from rendering \cfrac
+\begin{document}
+\PMlinkescapeword{analytic set}
+\PMlinkescapeword{divides}
+We give an example of a subset of the real numbers which is Lebesgue measurable, but not Borel measurable.
+
+Let $S$ consist of the set of all irrational real numbers with continued fraction of the form
+\begin{equation*}
+x=a_0+\sfrac{1}{a_1+\sfrac{1}{a_2+\sfrac{1}{\ddots}}}
+\end{equation*}
+such that there exists an infinite sequence $0<i_1<i_2<\cdots$ where each $a_{i_k}$  divides $a_{i_{k+1}}$.
+It can be shown that this set is Lebesgue measurable, but not Borel measurable.
+
+In fact, it can be shown that $S$ is an \PMlinkname{analytic set}{AnalyticSet2}, meaning that it is the image of a continuous function $f\colon X\rightarrow\mathbb{R}$ for some Polish space $X$ and, consequently, $S$ is a universally measurable set.
+
+This example is due to Lusin (1927).
+%%%%%
+%%%%%
+\end{document}

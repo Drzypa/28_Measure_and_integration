@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RadonNikodymTheorem}
+\pmcreated{2013-03-22 13:26:15}
+\pmmodified{2013-03-22 13:26:15}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Radon-Nikodym theorem}
+\pmrecord{9}{33998}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A15}
+\pmrelated{AbsolutelyContinuous}
+\pmrelated{BoundedLinearFunctionalsOnLpmu}
+\pmrelated{MartingaleProofOfTheRadonNikodymTheorem}
+\pmrelated{BoundedLinearFunctionalsOnLinftymu}
+\pmdefines{Radon-Nikodym derivative}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{mathrsfs}
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\mu$ and $\nu$ be two $\sigma$-finite measures on the same measurable space $(\Omega, \mathscr{S})$, such that $\nu\ll \mu$ 
+(i.e. $\nu$ is absolutely continuous with respect to $\mu$.) 
+Then there exists a measurable function $f$, which is nonnegative 
+and finite, such that for each $A\in \mathscr{S}$, 
+\[\nu(A)=\int_A fd\mu.\]
+This function is unique (any other function satisfying these
+conditions is equal to $f$ $\mu$-almost everywhere,) and it is called
+the \emph{Radon-Nikodym derivative} of $\nu$ with respect to $\mu$, 
+denoted by $f = \frac{d\nu}{d\mu}$.
+
+\textbf{Remark.} The theorem also holds if $\nu$ is a signed measure. Even if $\nu$ is not $\sigma$-finite the theorem holds, with the exception that $f$ is not necessarely finite.
+
+\textbf{Some properties of the Radon-Nikodym derivative}
+
+Let $\nu$, $\mu$, and $\lambda$ be $\sigma$-finite measures in 
+$(\Omega,\mathscr{S})$. 
+
+\begin{enumerate}
+\item If $\nu \ll \lambda$ and $\mu\ll\lambda$, then
+\[\frac{d(\nu+\mu)}{d\lambda} = 
+\frac{d\nu}{d\lambda}+\frac{d\mu}{d\lambda}\;\; 
+\mu\mbox{-almost everywhere};\]
+
+\item If $\nu\ll\mu\ll\lambda$, then
+\[\frac{d\nu}{d\lambda}=\frac{d\nu}{d\mu}\frac{d\mu}{d\lambda}
+\;\; \mu\mbox{-almost everywhere};\]
+
+\item If $\mu\ll\lambda$ and $g$ is a $\mu$-integrable function, then 
+\[\int_\Omega gd\mu = \int_\Omega g\frac{d\mu}{d\lambda}d\lambda;\]
+
+\item If $\mu\ll\nu$ and $\nu \ll\mu$, then 
+\[\frac{d\mu}{d\nu}=\left(\frac{d\nu}{d\mu}\right)^{-1}.\]
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

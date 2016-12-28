@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ModesOfConvergenceOfSequencesOfMeasurableFunctions}
+\pmcreated{2013-03-22 16:14:05}
+\pmmodified{2013-03-22 16:14:05}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{modes of convergence of sequences of measurable functions}
+\pmrecord{7}{38335}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+\pmrelated{TravelingHumpSequence}
+\pmrelated{VitaliConvergenceTheorem}
+\pmdefines{converges almost everywhere}
+\pmdefines{convergence almost everywhere}
+\pmdefines{converges almost uniformly}
+\pmdefines{almost uniform convergence}
+\pmdefines{converges in measure}
+\pmdefines{convergence in measure}
+\pmdefines{converges in $L^1(\mu)$}
+\pmdefines{$L^1(\mu)$ convergence}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{modes}
+\PMlinkescapeword{converges}
+\PMlinkescapeword{converge}
+
+Let $(X,\mathfrak{B},\mu)$ be a measure space, $f_n \colon X \to [-\infty, \infty]$ be measurable functions for every positive integer $n$, and $f \colon X \to [-\infty, \infty]$ be a measurable function.  The following are modes of convergence of $\{f_n\}$:
+
+\begin{itemize}
+
+\item $\{f_n\}$ \emph{converges almost everywhere} to $f$ if $\displaystyle \mu \left( X-\{x \in X: \lim_{n \to \infty} f_n(x)=f(x)\} \right)=0$
+
+\item $\{f_n\}$ \emph{converges almost uniformly} to $f$ if, for every $\varepsilon >0$, there exists $E_\varepsilon \in \mathfrak{B}$ with $\mu (X-E_\varepsilon) <\varepsilon$ and $\{f_n\}$ converges uniformly to $f$ on $E_\varepsilon$
+
+\item $\{f_n\}$ \emph{converges in measure} to $f$ if, for every $\varepsilon >0$, there exists a positive integer $N$ such that, for every positive integer $n \ge N$, $\displaystyle \mu \left( \{ x \in X:|f_n(x)-f(x)|\ge \varepsilon \} \right)<\varepsilon$.
+
+\item If, in \PMlinkescapetext{addition}, $f$ and each $f_n$ are also Lebesgue integrable, $\{f_n\}$ \emph{converges in $L^1(\mu)$} to $f$ if $\displaystyle \lim_{n \to \infty} \int_X \left| f_n-f \right| \, d\mu =0$.
+
+\end{itemize}
+
+A lot of theorems in \PMlinkname{real analysis}{BibliographyForRealAnalysis} deal with these modes of convergence.  For example, Fatou's lemma, Lebesgue's monotone convergence theorem, and Lebesgue's dominated convergence theorem give conditions on sequences of measurable functions that converge almost everywhere under which they also converge in $L^1(\mu)$.  Also, Egorov's theorem \PMlinkescapetext{states} that, if $\mu(X)<\infty$, then convergence almost everywhere implies almost uniform convergence.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LpnormIsDualToLq}
+\pmcreated{2013-03-22 18:38:13}
+\pmmodified{2013-03-22 18:38:13}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{$L^p$-norm is dual to $L^q$}
+\pmrecord{5}{41377}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A25}
+\pmclassification{msc}{46E30}
+%\pmkeywords{measure space}
+%\pmkeywords{$L^p$-space}
+\pmrelated{LpSpace}
+\pmrelated{HolderInequality}
+\pmrelated{BoundedLinearFunctionalsOnLinftymu}
+\pmrelated{BoundedLinearFunctionalsOnLpmu}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+If $(X,\mathfrak{M},\mu)$ is any measure space and $1\le p,q\le \infty$ are \PMlinkname{H\"older conjugates}{ConjugateIndex} then, for $f\in L^p$, the following linear function can be defined
+\begin{align*}
+&\Phi_f\colon L^q\rightarrow\mathbb{C},\\
+&g\mapsto\Phi_f(g)\equiv\int fg\,d\mu.
+\end{align*}
+The \PMlinkname{H\"older inequality}{HolderInequality} shows that this gives a well defined and bounded linear map. Its operator norm is given by
+\begin{equation*}
+\Vert\Phi_f\Vert=\left\{\Vert fg\Vert_1:g\in L^q, \Vert g\Vert_q=1\right\}.
+\end{equation*}
+The following theorem shows that the operator norm of $\Phi_f$ is equal to the $L^p$-norm of $f$.
+
+\begin{theorem*}
+Let $(X,\mathfrak{M},\mu)$ be a $\sigma$-finite measure space and $p,q$ be H\"older conjugates. Then, any measurable function $f\colon X\rightarrow\mathbb{C}$ has $L^p$-norm
+\begin{equation}\label{eq:1}
+\Vert f\Vert_p=\sup\left\{\Vert fg\Vert_1: g\in L^q, \Vert g\Vert_q=1\right\}.
+\end{equation}
+Furthermore, if either $p<\infty$ and $\Vert f\Vert_p<\infty$ or $p=1$ then $\mu$ is not required to be $\sigma$-finite.
+\end{theorem*}
+
+Note that the $\sigma$-finite condition is required, except in the cases mentioned. For example, if $\mu$ is the measure satisfying $\mu(A)=\infty$ for every nonempty set $A$, then $L^p(\mu)=\{0\}$ for $p<\infty$ and it is easily checked that equality (\ref{eq:1}) fails whenever $f=1$ and $p>1$.
+
+%%%%%
+%%%%%
+\end{document}

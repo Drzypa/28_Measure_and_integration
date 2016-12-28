@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquivalentDefinitionsOfAnalyticSets}
+\pmcreated{2013-03-22 18:48:28}
+\pmmodified{2013-03-22 18:48:28}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{equivalent definitions of analytic sets}
+\pmrecord{6}{41609}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+%\pmkeywords{analytic set}
+%\pmkeywords{Polish space}
+%\pmkeywords{Baire space}
+%\pmkeywords{measurable space}
+%\pmkeywords{paved space}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{projections}
+\PMlinkescapeword{onto}
+\PMlinkescapeword{compact}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{definitions}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{subset}
+\PMlinkescapeword{projection}
+\PMlinkescapeword{subsets}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{state}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{image}
+
+For a paved space $(X,\mathcal{F})$ the $\mathcal{F}$-\PMlinkname{analytic}{AnalyticSet2} sets can be defined as the \PMlinkname{projections}{GeneralizedCartesianProduct} of sets in $(\mathcal{F}\times\mathcal{K})_{\sigma\delta}$ onto $X$, for compact paved spaces $(K,\mathcal{K})$. There are, however, many other equivalent definitions, some of which we list here.
+
+In conditions \ref{item:2} and \ref{item:3} of the following theorem, Baire space $\mathcal{N}=\mathbb{N}^\mathbb{N}$ is the collection of sequences of natural numbers together with the product topology.
+In conditions \ref{item:5} and \ref{item:6}, $Y$ can be any uncountable Polish space. For example, we may take $Y=\mathbb{R}$ with the standard topology.
+
+\begin{theorem*}
+Let $(X,\mathcal{F})$ be a paved space such that $\mathcal{F}$ contains the empty set, and $A$ be a subset of $X$. The following are equivalent.
+\begin{enumerate}
+\item $A$ is $\mathcal{F}$-analytic.
+\item\label{item:2} There is a closed subset $S$ of $\mathcal{N}$ and $\theta\colon \mathbb{N}^2\to\mathcal{F}$ such that
+\begin{equation*}
+A=\bigcup_{s\in S}\bigcap_{n=1}^\infty \theta\left(n,s_n\right).
+\end{equation*}
+\item\label{item:3} There is a closed subset $S$ of $\mathcal{N}$ and $\theta\colon \mathbb{N}\to\mathcal{F}$ such that
+\begin{equation*}
+A=\bigcup_{s\in S}\bigcap_{n=1}^\infty \theta\left(s_n\right).
+\end{equation*}
+\item $A$ is the result of a Souslin scheme on $\mathcal{F}$.
+\item\label{item:5} $A$ is the projection of a set in $(\mathcal{F}\times\mathcal{G})_{\sigma\delta}$ onto $X$, where $\mathcal{G}$ is the collection of closed subsets of $Y$.
+\item\label{item:6} $A$ is the projection of a set in $(\mathcal{F}\times\mathcal{K})_{\sigma\delta}$ onto $X$, where $\mathcal{K}$ is the collection of compact subsets of $Y$.
+\end{enumerate}
+\end{theorem*}
+
+For subsets of a measurable space, the following result gives a simple condition to be analytic. Again, the space $Y$ can be any uncountable Polish space, and its Borel $\sigma$-algebra is denoted by $\mathcal{B}$. In particular, this result shows that a subset of the real numbers is analytic if and only if it is the projection of a Borel set from $\mathbb{R}^2$.
+
+\begin{theorem*}
+Let $(X,\mathcal{F})$ be a measurable space. For a subset $A$ of $X$ the following are equivalent.
+\begin{enumerate}
+\item $A$ is $\mathcal{F}$-analytic.
+\item $A$ is the projection of an $\mathcal{F}\otimes\mathcal{B}$-measurable subset of $X\times Y$ onto $X$.
+\end{enumerate}
+\end{theorem*}
+
+We finally state some equivalent definitions of analytic subsets of a Polish space. Again, $\mathcal{N}$ denotes Baire space and $Y$ is any uncountable Polish space.
+
+\begin{theorem*}
+For a nonempty subset $A$ of a Polish space $X$ the following are equivalent.
+\begin{enumerate}
+\item\label{item:1} $A$ is $\mathcal{F}$-\PMlinkname{analytic}{AnalyticSet2}.
+\item\label{item:2} $A$ is the projection of a closed subset of $X\times\mathcal{N}$ onto $X$.
+\item\label{item:3} $A$ is the projection of a Borel subset of $X\times Y$ onto $X$.
+\item\label{item:4} $A$ is the \PMlinkname{image}{DirectImage} of a continuous function $f\colon Z\to X$ for some Polish space $Z$.
+\item\label{item:5} $A$ is the image of a continuous function $f\colon \mathcal{N}\to X$.
+\item\label{item:6} $A$ is the image of a Borel measurable function $f\colon Y\to X$.
+\end{enumerate}
+\end{theorem*}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MengerSponge}
+\pmcreated{2013-03-22 14:27:05}
+\pmmodified{2013-03-22 14:27:05}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{Menger sponge}
+\pmrecord{23}{35968}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A80}
+%\pmkeywords{fractal}
+\pmrelated{Fractal}
+\pmrelated{CantorSet}
+\pmrelated{SierpinskiGasket}
+\pmdefines{Sierpinski carpet}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\\PMlinkescapeword{divisions}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{unit}
+
+A \emph{Sierpinski carpet} is the set of all points $(x, y)$ such that $x$ or $y$ is in
+the Cantor set.  An equivalent and perhaps simpler definition is:
+
+Let $S_0$ be a unit square.  Let $S_{n+1}$ be $S_n$, with each square divided
+into ninths, by being divided into thirds horizontally and vertically, and the central resulting square removed, and the other resulting squares treated separately in further divisions.  The limit as $n \to \infty$ of $S_n$ is a Sierpinski carpet. An approximation is shown in figure \ref{fig:sierpinski}.
+
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[scale=0.5]{sierpinski_carpet.eps}
+\caption{An approximation of the Sierpinski carpet}\label{fig:sierpinski}
+\end{centering}
+\end{figure}
+
+The \emph{Menger sponge} is a fractal embedded in 3-dimensional space.  It can be seen as a 3-d generalization of the Sierpinski carpet, which is itself a 2-dimensional generalization of the Cantor set.  The Menger sponge is almost always represented as being constructed from Cantor sets using the ``middle third'' rule.
+
+The Menger sponge consists of all points $(x, y, z)$ such that $(x, y)$, $(y,z)$, and $(x,z)$ are all in Sierpinski carpets.  Each ``face'' is a Sierpinski carpet.
+
+Similarily to the Sierpinski carpet the Menger sponge can be constructed in the following way:
+
+Start with a unit cube and split it into 27 smaller cubes of equal size. Remove the central cube and the ones joining a face with it. Then start over with the remaining smaller cubes.
+
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[scale=0.4]{menger.ps}
+\caption{An iteration of the Menger sponge -- created in Blender 2.35.
+(The \PMlinktofile{Blender file}{menger.blend} for this picture.)}\label{fig:menger}
+\end{centering}
+\end{figure}
+%%%%%
+%%%%%
+\end{document}

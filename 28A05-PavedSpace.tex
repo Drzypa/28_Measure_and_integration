@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PavedSpace}
+\pmcreated{2013-03-22 18:44:50}
+\pmmodified{2013-03-22 18:44:50}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{paved space}
+\pmrecord{6}{41523}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+\pmsynonym{paving}{PavedSpace}
+\pmsynonym{paved set}{PavedSpace}
+\pmrelated{F_sigmaSet}
+\pmrelated{G_deltaSet}
+\pmrelated{AnalyticSet2}
+\pmdefines{paving}
+\pmdefines{compact paving}
+\pmdefines{compactly paved by}
+\pmdefines{product paving}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{compact}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{operations}
+\PMlinkescapeword{order}
+\PMlinkescapeword{contain}
+
+A \emph{paving} on a set $X$ is any collection $\mathcal{A}$ of subsets of $X$, and $(X,\mathcal{A})$ is said to be a \emph{paved space}.
+Given any two paved spaces $(X,\mathcal{A})$ and $(Y,\mathcal{B})$, the product paving $\mathcal{A}\times\mathcal{B}$ is defined as
+\begin{equation*}
+\mathcal{A}\times\mathcal{B} = \left\{A\times B\colon A\in\mathcal{A},B\in\mathcal{B}\right\}.
+\end{equation*}
+
+A paved space $(K,\mathcal{K})$ is said to be \emph{compact} if every subcollection of $\mathcal{K}$ satisfying the finite intersection property has nonempty intersection. Equivalently, if any $\mathcal{K}^\prime\subseteq\mathcal{K}$ has empty intersection then there is a finite $\mathcal{K}^{\prime\prime}\subseteq\mathcal{K}^\prime$ with empty intersection. Then, $\mathcal{K}$ is said to be a \emph{compact paving}, and $K$ is \emph{compactly paved} by $\mathcal{K}$.
+An example of compact pavings is given by the collection of all \PMlinkname{compact subsets}{Compact} of a Hausdorff topological space.
+
+For any paving $\mathcal{A}$, the notation $\mathcal{A}_\sigma$ is often used to denote countable unions of elements of $\mathcal{A}$,
+\begin{equation*}
+\mathcal{A}_\sigma\equiv\left\{\bigcup_{n=1}^\infty A_n\colon A_n\in\mathcal{A}\text{ for all }n\in\mathbb{N}\right\}.
+\end{equation*}
+Similarly, $\mathcal{A}_\delta$ denotes the countable intersections of elements of $\mathcal{A}$,
+\begin{equation*}
+\mathcal{A}_\delta\equiv\left\{\bigcap_{n=1}^\infty A_n\colon A_n\in\mathcal{A}\text{ for all }n\in\mathbb{N}\right\}.
+\end{equation*}
+These operations can be combined in any order so that, for example, $\mathcal{A}_{\sigma\delta}=(\mathcal{A}_\sigma)_\delta$ is the collection of countable intersections of countable unions of elements of $\mathcal{A}$.
+
+Note: In the definition of a paved space, some authors additionally require a paving $\mathcal{K}$ to contain the empty set.
+
+\begin{thebibliography}{9}
+\bibitem{bichteler}
+K. Bichteler, \emph{Stochastic integration with jumps}. Encyclopedia of Mathematics and its Applications, 89. Cambridge University Press, 2002.
+\bibitem{dellacherie}
+Claude Dellacherie, Paul-Andr\'e Meyer, \emph{Probabilities and potential}. North-Holland Mathematics Studies, 29. North-Holland Publishing Co., 1978.
+\bibitem{he}
+Sheng-we He, Jia-gang Wang, Jia-an Yan, \emph{Semimartingale theory and stochastic calculus.} Kexue Chubanshe (Science Press), CRC Press, 1992.
+\bibitem{rao}
+M.M. Rao, \emph{Measure theory and integration}. Second edition. Monographs and Textbooks in Pure and Applied Mathematics, 265. Marcel Dekker Inc., 2004.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

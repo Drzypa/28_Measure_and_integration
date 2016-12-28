@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EntropyOfAPartition}
+\pmcreated{2013-03-22 14:31:56}
+\pmmodified{2013-03-22 14:31:56}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{entropy of a partition}
+\pmrecord{6}{36076}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28D20}
+\pmclassification{msc}{37A35}
+\pmrelated{HartleyFunction}
+\pmdefines{entropy of a $\sigma$-algebra}
+\pmdefines{entropy of a sigma-algebra}
+\pmdefines{measurable partition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $(X,\mathscr{B},\mu)$ be a probability space. A measurable partition of $X$ is a partition such that each of its
+elements is a measurable set (i.e. an element of $\mathscr{B}$).
+
+Given a finite measurable partition $\mathcal{P}$,
+its \emph{\PMlinkescapetext{entropy}} is
+\[ H_\mu(\mathcal{P})=\sum_{P\in\mathcal{P}} -\mu(P)\log\mu(P),\]
+where we assume $0\log 0 = 0$ for convenience.
+
+\textbf{Remarks.}
+\begin{enumerate}
+        \item   Entropy can be interpreted as a measure of the \textit{a priori} uncertainity about the
+                outcome of the measurement an experiment, assuming that we are measuring it through the given partition
+                (i.e., we are going to be told in which atom of the partition the result is).
+                Thus, the finer a partition is, the higher the resulting entropy. In particular, the trivial
+                partition $\{X\}$ has entropy $0$, since there is only one possible outcome, so there is no
+                uncertainity at all. On the other hand, the measurement gives no information at all
+                about the ``real'' outcome of the experiment, which reflects the complementary intepretation of entropy:
+                as the information gained from the measurement.
+                This is because of the intuitive fact that more
+                uncertainity about the outcome of the measurement means that more information will be obtained from
+                knowing it about the ``real'' outcome.
+
+
+        \item   Equally intuitive is the fact that among all measurable partitions of $X$ into $n$ atoms, the maximum
+                possible
+                entropy is attained at those in which the atoms are equally likely (i.e., all atoms have equal
+                measure $1/n$).
+                This can be proved by means of standard calculus, and
+                a direct computation shows that the maximum value is $\log n$.
+
+       \item   Since the definition of entropy involves only the measure of atoms of the given partition, two
+                partitions which are equal modulo measure zero have the same entropy.
+       \item There is a natural correspondence between finite measurable partitions and finite sub-$\sigma$-algebras of $\mathscr{B}$. For this reason,
+to each finite sub-$\sigma$-algebra $\mathscr{P}$ we can define its entropy by $H_\mu(\mathcal{P})$ where $\mathcal{P}$ is the (unique) partition which generates $\mathscr{P}$. For short, we denote this entropy by $H_\mu(\mathscr{P})$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

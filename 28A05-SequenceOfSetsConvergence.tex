@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SequenceOfSetsConvergence}
+\pmcreated{2013-03-22 16:15:12}
+\pmmodified{2013-03-22 16:15:12}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{sequence of sets convergence}
+\pmrecord{8}{38358}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\left\{ A_{n}\right\} _{n=1}^{\infty }$ be a sequence of sets,
+and $A$ a set.
+
+The sequence $\left\{ A_{n}\right\} _{n=1}^{\infty }$ is said to \emph{\PMlinkescapetext{converge} from below} to $A$, (shortly, $A_{n}\uparrow A$ or $A_n \nearrow A$), iff \\
+1) $A_{n}\subseteq A_{n+1}$ \ $\forall n\geq 1$ \\
+2) $\displaystyle A=\bigcup_{n=1}^{\infty }A_{n}$
+
+The sequence $\left\{ A_{n}\right\} _{n=1}^{\infty }$ is said to \emph{\PMlinkescapetext{converge} from above} to $A$, (shortly, $A_{n}\downarrow A$ or $A_n \searrow A$), iff \\
+1) $A_{n+1}\subseteq A_{n}$ \ $\forall n\geq 1$ \\
+2) $\displaystyle A=\bigcap_{n=1}^{\infty }A_{n}$
+
+
+In both cases the less accurate notation%
+\[
+A=\lim_{n\longrightarrow \infty }A_{n}
+\]
+
+is also used.
+%%%%%
+%%%%%
+\end{document}

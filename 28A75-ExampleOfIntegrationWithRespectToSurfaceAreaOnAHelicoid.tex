@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfIntegrationWithRespectToSurfaceAreaOnAHelicoid}
+\pmcreated{2013-03-22 14:58:01}
+\pmmodified{2013-03-22 14:58:01}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{example of integration with respect to surface area on a helicoid}
+\pmrecord{7}{36666}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A75}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In this example, we shall consider itegration with respect to surface area on the helicoid.
+
+The helicoid may be parameterized as follows:
+ $$x = u \sin v$$
+ $$y = u \cos v$$
+ $$z = c v$$
+(The constant $c$ may be thought of as the ``pitch of the screw''.)  Computing derivatives and appying trigonometric identities, we obtain
+$$\frac{\partial (x, y)}{\partial (u,v)} =
+\left| \begin{matrix}
+\sin v & u \cos v \\
+\cos v & - u \sin v
+\end{matrix} \right| =
+- u$$
+$$\frac{\partial (y, z)}{\partial (u,v)} =
+\left| \begin{matrix}
+\cos v & - u \sin v \\
+0 & c
+\end{matrix} \right| =
+c \cos v$$
+$$\frac{\partial (z, x)}{\partial (u,v)} =
+\left| \begin{matrix}
+0 & c \\
+\sin v & u \cos v
+\end{matrix} \right| =
+- c \sin v.$$
+From this we have
+ $$\sqrt{ \left(  \frac{\partial (x,y)}{\partial (u,v)} \right)^2 +  \left( \frac{\partial (y,z)}{\partial (u,v)} \right)^2 + \left( \frac{\partial (z,x)}{\partial (u,v)} \right)^2 } =$$
+ $$\sqrt{ u^2 + c^2 \cos^2 v + c^2 \sin^2 v } = \sqrt { u^2 + c^2 }$$
+so we can compute area integrals over helicoids as follows
+ $$\int_S f(u,v) \, d^2 A = \int f(u,v) \sqrt{ c^2 + u^2 } \> du \, dv$$
+
+To return to the main entry \PMlinkid{click here}{6660}
+%%%%%
+%%%%%
+\end{document}

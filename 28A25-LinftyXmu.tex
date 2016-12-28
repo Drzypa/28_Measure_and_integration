@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinftyXmu}
+\pmcreated{2013-03-22 13:59:46}
+\pmmodified{2013-03-22 13:59:46}
+\pmowner{ack}{3732}
+\pmmodifier{ack}{3732}
+\pmtitle{$L^{\infty}(X, \mu)$}
+\pmrecord{11}{34797}
+\pmprivacy{1}
+\pmauthor{ack}{3732}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A25}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\DeclareMathOperator{\esssup}{ess sup}
+\newcommand*{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand*{\abs}[1]{\left\lVert #1\right\rVert}
+\begin{document}
+Let $X$ be a nonempty set and $\mathcal{A}$ be a $\sigma$-algebra on $X$. Also, let $\mu$ be a non-negative measure defined on $\mathcal{A}$. 
+Two complex valued functions $f$ and $g$ are said to be equal almost everywhere on $X$ 
+(denoted as $f = g$ a.e. if $\mu \{x \in X : f(x) \ne g(x) \} = 0.$ The relation of being equal almost everywhere on $X$ defines an equivalence relation. 
+It is a common practice in the integration theory to denote the equivalence class containing $f$ by $f$ itself. 
+It is easy to see that if $f_1,f_2$ are equivalent and $g_1,g_2$ are equivalent, then $f_1 + g_1, f_2+g_2$ are equivalent, and $f_1  g_1, f_2g_2$ are equivalent. 
+This naturally defines addition and multiplication among the equivalent classes of such functions.
+For a measureable 
+$f \colon X \to \mathbb{C}$, we define  
+$$
+  \norm{f}_{\text{ess}} = \operatorname{inf}\{M > 0 \colon \mu \{x : |f(x)| > M\} = 0\},
+$$
+called the essential supremum of $|f|$ on $X$. 
+Now we define, 
+$$
+  L^{\infty}(X,\mu) = \{f : X \to \mathbb{C} : \norm{f}_{\text{ess}} < \infty\}.
+$$ 
+Here the elements of $L^{\infty}(X,\mu)$ are equivalence classes. 
+\subsubsection*{Properties of $L^\infty(X,\mu)$}
+\begin{enumerate}
+\item The space $L^{\infty}(X,\mu)$ is a normed linear space with the 
+   norm $\norm{\cdot}_{\text{ess}}$. Also, the metric defined by 
+   the norm is complete, making $L^{\infty}(X,\mu)$, a Banach space. 
+\item  $L^{\infty}(X,\mu)$ is the dual of $L^1(X,\mu)$ if $X$ is $\sigma$-finite. 
+\item  $L^{\infty}(X,\mu)$ is closed under pointwise multiplication, and
+with this multiplication it becomes an algebra. 
+Further, $L^{\infty}(X,\mu)$ is also a \PMlinkname{$C^*$-algebra}{CAlgebra} with the involution defined by $f^*(x) = \overline{f(x)}$. Since this $C^*$-algebra is also a dual of some Banach space, it is called von Neumann algebra.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

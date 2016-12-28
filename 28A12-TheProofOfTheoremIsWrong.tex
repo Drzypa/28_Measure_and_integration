@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheProofOfTheoremIsWrong}
+\pmcreated{2013-03-22 19:16:05}
+\pmmodified{2013-03-22 19:16:05}
+\pmowner{tomprimozic}{26284}
+\pmmodifier{tomprimozic}{26284}
+\pmtitle{The proof of theorem is wrong}
+\pmrecord{4}{42199}
+\pmprivacy{1}
+\pmauthor{tomprimozic}{26284}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let's create a very simple measurable space: $X=\{a,b\}$, $\mathcal{A}=\{\emptyset, \{a\}, \{b\}, X\}$. 
+
+Let's take the $\pi$-system $P=\{\{a\}\}$ containing only one subset of $X$. 
+
+Let's create two measures $\mu = \delta_a + \delta_b$ and $\nu = \delta_a + 2\delta_b$. Then obviously $\mu$ and $\nu$ agree on $P$ and are finite, but they obviously are not equal on $\mathcal{A}$.
+
+The proof, however, claims that it is sufficient if $\mu$ and $\nu$ are finite. I believe that $\mu(X)=\nu(X)$ is a necessary condition.
+%%%%%
+%%%%%
+\end{document}

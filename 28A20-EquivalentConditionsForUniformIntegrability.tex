@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquivalentConditionsForUniformIntegrability}
+\pmcreated{2013-03-22 18:40:17}
+\pmmodified{2013-03-22 18:40:17}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{equivalent conditions for uniform integrability}
+\pmrecord{7}{41418}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+%\pmkeywords{measure space}
+%\pmkeywords{Lebesgue integral}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{equivalence}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{symmetric}
+
+Let $(\Omega,\mathcal{F},\mu)$ be a measure space and $S$ be a bounded subset of $L^1(\Omega,\mathcal{F},\mu)$. That is, $\int|f|\,d\mu$ is bounded over $f\in S$. Then, the following are equivalent.
+
+\begin{enumerate}
+\item\label{eps delta} For every $\epsilon>0$ there is a $\delta>0$ so that
+\begin{equation*}
+\int_A |f|\,d\mu<\epsilon
+\end{equation*}
+for all $f\in S$ and $\mu(A)<\delta$.
+\item\label{eps K} For every $\epsilon>0$ there is a $K>0$ satisfying
+\begin{equation*}
+\int_{|f|>K} |f|\,d\mu<\epsilon
+\end{equation*}
+for all $f\in S$.
+\item\label{Phi} There is a measurable function $\Phi\colon\mathbb{R}\rightarrow [0,\infty)$ such that $\Phi(x)/|x|\rightarrow\infty$ as $|x|\rightarrow\infty$ and
+\begin{equation*}
+\int \Phi(f)\,d\mu
+\end{equation*}
+is bounded over all $f\in S$. Moreover, the function $\Phi$ can always be chosen to be symmetric and convex.
+\end{enumerate}
+
+So, for bounded subsets of $L^1$, either of the above properties can be used to define uniform integrability. Conversely, when the measure space is finite, then conditions (\ref{eps K}) and (\ref{Phi}) are easily shown to imply that $S$ is bounded in $L^1$.
+
+
+To show the equivalence of these statements, let us suppose that $\int|f|\,d\mu< L$ for $f\in S$.
+
+\vspace{\baselineskip}\noindent{\bf (\ref{eps delta}) implies (\ref{eps K})}
+
+For $\epsilon>0$, property (\ref{eps delta}) gives a $\delta>0$ so that $\int_A|f|\,d\mu<\epsilon$ whenever $f\in S$ and $\mu(A)<\delta$. Choosing $K>L/\delta$, Markov's inequality gives
+\begin{equation*}
+\mu(|f|>K)\le K^{-1}\int|f|\,d\mu\le L/K<\delta
+\end{equation*}
+and, therefore, $\int_{|f|>K}|f|\,d\mu<\epsilon$.
+
+\noindent{\bf (\ref{eps K}) implies (\ref{Phi})}
+
+For each $n=1,2,\ldots$, property (\ref{eps K}) gives a $K_n$ satisfying
+\begin{equation*}
+\int (|f|-K_n)_+\,d\mu\le\int_{|f|>K_n}|f|\,d\mu\le 2^{-n}.
+\end{equation*}
+Without loss of generality, the $K_n$ can be chosen to be increasing to infinity, so we can define $\Phi(x)=\sum_n(|x|-K_n)_+$. Then,
+\begin{equation*}
+\int\Phi(f)\,d\mu=\sum_n\int(|f|-K_n)_+\,d\mu\le\sum_n 2^{-n}=1.
+\end{equation*}
+
+\noindent{\bf (\ref{Phi}) implies (\ref{eps delta})}
+
+First, suppose that $\int\Phi(f)\,d\mu< M$ for $f\in S$.
+For $\epsilon>0$, the condition that $\Phi(x)/|x|\rightarrow\infty$ as $|x|\rightarrow\infty$ gives a $K>0$ such that $\Phi(x)/|x|\ge 2M/\epsilon$ whenever $|x|>K$.
+Setting $\delta=\epsilon/2K$,
+\begin{equation*}\begin{split}
+\int_A|f|\,d\mu
+&\le \int_{|f|>K}|f|\,d\mu +K\mu(A)\\
+&< (\epsilon/2M)\int_{|f|>K}\Phi(f)\,d\mu +K\delta\\
+&< \epsilon/2 +\epsilon/2 =\epsilon.
+\end{split}\end{equation*}
+whenever $\mu(A)<\delta$ and $f\in S$.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMonotoneConvergenceTheorem}
+\pmcreated{2013-03-22 13:29:56}
+\pmmodified{2013-03-22 13:29:56}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of monotone convergence theorem}
+\pmrecord{7}{34075}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+\pmclassification{msc}{26A42}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\begin{document}
+It is enough to prove the following
+
+\begin{theorem}
+Let $(X,\mu)$ be a measurable space and let $f_k\colon X\to {\mathbb R}\cup\{+\infty\}$ 
+be a monotone increasing sequence of positive measurable functions (i.e. $0\le f_1 \le f_2 \le \ldots$). Then $f(x)=\lim_{k\to \infty} f_k(x)$ is measurable and
+\[
+  \lim_{n\to\infty} \int_X f_k\, d\mu = \int_{X} f(x) \, d\mu.
+\]
+\end{theorem}
+
+First of all by the monotonicity of the sequence we have
+\[
+  f(x)= \sup_k f_k(x)
+\]
+hence we know that $f$ is measurable. Moreover being $f_k\le f$ for all $k$, by the monotonicity of the integral, we immediately get
+\[
+  \sup_k \int_X f_k\, d\mu \le \int_X f(x)\, d\mu.
+\]
+
+So take any simple measurable function $s$ such that $0\le s \le f$. Given also $\alpha<1$ define
+\[
+  E_k = \{ x \in X \colon f_k(x) \ge \alpha s(x)\}.
+\]
+The sequence $E_k$ is an increasing sequence of measurable sets. Moreover the union of all $E_k$ is the whole space $X$ since 
+$\lim_{k\to\infty} f_k(x)=f(x) \ge s(x) > \alpha s(x)$. Moreover it holds
+\[
+  \int_X f_k\, d\mu \ge \int_{E_k} f_k\, d\mu \ge \alpha\int_{E_k} s\, d\mu.
+\]
+Since $s$ is a simple measurable function it is easy to check that 
+$E\mapsto \int_E s\, d\mu$ is a measure and hence
+\[
+  \sup_k \int_X f_k\, d\mu \ge \alpha \int_X s\, d\mu.
+\]
+But this last inequality holds for every $\alpha<1$ and for all simple measurable functions $s$ with $s\le f$. Hence by the definition of Lebesgue integral
+\[
+  \sup_k \int_X f_k \, d\mu \ge \int_X f\, d\mu
+\]
+which completes the proof.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatAFiniteCollectionOfSetsWillNotSuffice}
+\pmcreated{2013-03-22 14:38:46}
+\pmmodified{2013-03-22 14:38:46}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof that a finite collection of sets will not suffice}
+\pmrecord{4}{36234}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28E99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Suppose that you cut $[0,1]$ into $A_0,...,A_n$.
+Displacing the parts is simply translating them; you can suppose
+that you leave $A_0$ in place and translate all the others to the
+right. Let $\epsilon$ be the smallest translation length : if after
+translation the union contains $[0,1]$, necessarily $[0,\epsilon]
+\subset A_0$. A contradiction ensues.
+%%%%%
+%%%%%
+\end{document}

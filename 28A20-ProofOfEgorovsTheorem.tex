@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfEgorovsTheorem}
+\pmcreated{2013-03-22 13:47:59}
+\pmmodified{2013-03-22 13:47:59}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{proof of Egorov's theorem}
+\pmrecord{7}{34518}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\renewcommand{\cap}{\bigcap}
+\renewcommand{\cup}{\bigcup}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $E_{i,j} = \{x\in E: |f_j(x) - f(x)|< 1/i\}.$ Since $f_n\to f$ almost everywhere, there is a set $S$ with $\mu(S)=0$ such that, given $i\in \N$ and $x\in E-S$, there is $m\in \N$ such that $j>m$ implies $|f_j(x)-f(x)|<1/i$. This can be expressed by 
+$$E-S\subset \cup_{m\in \N} \cap_{j>m} E_{i,j},$$
+or, in other words,
+$$\cap_{m\in \N}\cup_{j>m} (E-E_{i,j})\subset S.$$
+Since $\{\cup_{j>m} (E-E_{i,j})\}_{m\in \N}$ is a decreasing nested sequence of sets, each of which has finite measure, and such that its intersection has measure $0$, by \PMlinkname{continuity from above}{PropertiesForMeasure} we know that 
+$$\mu(\cup_{j>m}(E-E_{i,j}))\xrightarrow[m\to \infty]{} 0.$$
+Therefore, for each $i\in \N$, we can choose $m_i$ such that 
+$$\mu(\cup_{j>m_i}(E-E_{i,j})) < \frac{\delta}{2^i}.$$
+Let $$E_\delta = \cup_{i\in \N}\cup_{j>m_i}(E-E_{i,j}).$$
+Then $$\mu(E_\delta)\leq \sum_{i=1}^\infty \mu(\cup_{j>m_i}(E-E_{i,j})) < \sum_{i=1}^\infty \frac{\delta}{2^i} = \delta.$$
+We claim that $f_n\to f$ uniformly on $E-E_\delta$. In fact, given $\varepsilon>0$, choose $n$ such that $1/n<\varepsilon$. If $x\in E-E_\delta$, we have $$x\in\cap_{i\in \N}\cap_{j>m_i}E_{i,j},$$
+which in particular implies that, if $j>m_n$, $x\in E_{n,j}$; that is, $|f_j(x) - f(x)|< 1/n < \varepsilon$.
+Hence, for each $\varepsilon>0$ there is $N$ (which is given by $m_n$ above) such that $j>N$ implies $|f_j(x)-f(x)|<\varepsilon$ for each $x\in E-E_\delta$, as required. This \PMlinkescapetext{completes} the proof.
+%%%%%
+%%%%%
+\end{document}

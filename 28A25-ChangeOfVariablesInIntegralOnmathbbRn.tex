@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChangeOfVariablesInIntegralOnmathbbRn}
+\pmcreated{2013-03-22 15:29:32}
+\pmmodified{2013-03-22 15:29:32}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{change of variables in integral on $\mathbb{R}^n$}
+\pmrecord{8}{37349}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A25}
+\pmclassification{msc}{26B15}
+\pmclassification{msc}{26B10}
+\pmsynonym{integral substitution formula}{ChangeOfVariablesInIntegralOnmathbbRn}
+\pmsynonym{integral substitution rule}{ChangeOfVariablesInIntegralOnmathbbRn}
+\pmsynonym{change-of-variables formula}{ChangeOfVariablesInIntegralOnmathbbRn}
+\pmrelated{JacobiDeterminant}
+\pmrelated{LebesgueMeasure}
+\pmrelated{AreaFormula}
+\pmrelated{PotentialOfHollowBall}
+\pmrelated{ExampleOfRiemannTripleIntegral}
+\pmrelated{ExampleOfRiemannDoubleIntegral}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% Set up the theorem environments
+\newtheorem{thm}{Theorem}
+%\newtheorem*{thm*}{Theorem}
+
+\newcommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\real}{\mathbb{R}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\absW}[1]{\left\lvert#1\right\rvert}
+\newcommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\normW}[1]{\left\lVert#1\right\rVert}
+\newcommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+% Inverse functions
+\newcommand{\inv}[1]{{#1}^{-1}}
+
+% Operators and functions occassionally used in my articles
+\DeclareMathOperator{\D}{D}
+
+\begin{document}
+\begin{thm}
+Let $g\colon X \to Y$ be a diffeomorphism between 
+open subsets $X$ and $Y$ of $\real^n$.
+Then for any measurable function $f\colon Y \to \real$, and any measurable 
+set $E \subseteq X$,
+\[
+ \int_E f(g(x)) \, \abs{\det \D g(x) } dx = \int_{g(E)} f(y) \, dy\,.
+\]
+Also, if one of these integrals does not exist, then neither does the other.
+\end{thm}
+
+This theorem is a generalization of the substitution rule 
+for integrals from one-variable calculus.
+
+To go from the left-hand side to the right-hand side or vice versa,
+we can perform the formal substitutions:
+\[
+y = g(x) \,, \quad dy = g(dx) = \abs{ \det \D g(x) } dx\,.
+\]
+The volume scaling factor $\abs{\det \D g(x)}$ is sometimes called
+the \emph{Jacobian} or \emph{Jacobian determinant}.
+
+Theorem 1 is typically applied 
+when integrating over $\real^2$ using polar coordinates,
+or when integrating over $\real^3$ using cylindrical or spherical coordinates.
+
+Intuitively speaking, the image of a small cube centered at $x$,
+under a differentiable map $g$ is approximately
+the parallelogram resulting from the linear mapping $\D g(x)$ 
+applied on that cube. If the volume of the original cube is $dx$,
+then the volume of the image parallelogram is $dy = \abs{\det \D g(x)} dx$.
+The integral formula in Theorem 1 follows for an
+arbitrary set by approximating it by many numbers of small cubes,
+and taking limits.  
+
+\begin{figure}
+\begin{center}
+\includegraphics{jacobian.eps}
+\end{center}
+\caption{Illustration of 
+linear approximation to $g(Q)$ by $x + \D g(x) (Q-x)$.
+{\small \PMlinkexternal{Source program in Python for diagram}{http://aux.planetmath.org/files/objects/7349/jacobian.py}}
+}
+\end{figure}
+
+Proofs of Theorem 1 can be obtained
+by making this procedure rigorous;
+see \cite{Schwartz}, \cite{Flett}, or \cite{Guzman}.
+
+A slightly stronger version of the theorem that does not require 
+$g$ to be a diffeomorphism
+(i.e. that $g$ is a bijection and has non-singular derivative) is:
+
+\begin{thm}
+Let $g\colon X \to \real^n$ be continuously differentiable 
+on an open subset $X$ of $\real^n$.
+Then for any measurable function $f\colon Y \to \real$, and 
+any measurable set $E \subseteq X$,
+\[
+ \int_E f(g(x)) \, \abs{\det \D g(x) } \, dx = 
+ \int_{g(E)} f(y) \, \# g|_E^{-1}(y) \, dy\,,
+\]
+where $\# g|_E^{-1}(y) \in \{ 1, 2, \dotsc, \infty \}$
+counts the number of pre-images in $E$ of $y$.
+\end{thm}
+Observe that Theorem 2 (as well as its proof) includes 
+a special case of Sard's Theorem.
+
+The idea of Theorem 2 is that we may ignore those pieces of the set $E$
+that transform to zero volumes, and if the map $g$ is not one-to-one,
+then some pieces of the image $g(E)$ may be counted multiple times
+in the left-hand integral.
+
+These formulas can also be generalized for 
+\PMlinkname{Hausdorff measures}{AreaFormula} on $\real^n$,
+and non-differentiable, but Lipschitz, functions $g$.  See \cite{Morgan}
+or other geometric measure theory books for details.
+
+\begin{thebibliography}{3}
+\bibitem{Flett}
+T. M. Flett. ``On Transformations in $\real^n$ and a Theorem of Sard''.
+\emph{American Mathematical Monthly}, Vol. 71, No. 6 (Jun--Jul 1964), 
+p. 623--629.
+\bibitem{Folland}
+Gerald B. Folland. 
+\emph{Real Analysis: Modern Techniques and Their Applications}, 
+second ed. Wiley-Interscience, 1999.
+\bibitem{Guzman}
+Miguel De Guzman. ``Change-of-Variables Formula Without Continuity''.
+\emph{American Mathematical Monthly}, Vol. 87, No. 9 (Nov 1980), p. 736--739.
+\bibitem{Morgan}
+Frank Morgan. \emph{Geometric Measure Theory: A Beginner's Guide}, second ed. 
+Academic Press, 1995.
+\bibitem{Munkres}
+James R. Munkres. \emph{Analysis on Manifolds}. Westview Press, 1991.
+\bibitem{Sard}
+Arthur Sard. ``\PMlinkexternal{The Measure of the Critical Values of Differentiable Maps}{http://www.ams.org/bull/1942-48-12/S0002-9904-1942-07812-8/S0002-9904-1942-07812-8.pdf}''.
+\emph{Bulletins of the American Mathematical Society}, Vol. 48 (1942), No. 12, p. 883-890.
+\bibitem{Schwartz}
+J. Schwartz. ``The Formula for Change in Variables in a Multiple Integral''.
+\emph{American Mathematical Monthly}, Vol. 61, No. 2 (Feb 1954), p. 81--95.
+\bibitem{Spivak}
+Michael Spivak. \emph{Calculus on Manifolds}. Perseus Books, 1998.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

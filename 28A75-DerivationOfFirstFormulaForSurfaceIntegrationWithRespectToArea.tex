@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfFirstFormulaForSurfaceIntegrationWithRespectToArea}
+\pmcreated{2013-03-22 15:07:23}
+\pmmodified{2013-03-22 15:07:23}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{derivation of first formula for surface integration with respect to area}
+\pmrecord{6}{36862}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A75}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Since the integral is defined as a limit, we may make life simpler by making approximations as long as the errors incurred in the approximation go zero in the limit of fine sudivisions.  In particular, we have in mind approximating small portions of our surface by planes.  A systematic way of carrying out such an approximation is to approximate the neighborhood of a surface near a point by a portion of the tangent plane to that surface through that point.  Again, one needs to prove that such an approximation is mathematically justified and that the error really does tend to zero, but we are deferring such considerations to a later section.
+
+The approach presented here can be seen as avoiding the pitfalls pointed out in the last section of the main entry to obtain a correct answer.  We pick a sequence of closely spaced values of $u$ and $v$ and draw a grid on our surface.  This subdivides the surface into many small curved quadrilaterals.  If we pick this grid sufficiently fine, then we can approximate these quadrilaterals by plane parallelograms.
+
+Having been warned that $u$ and $v$ may not necessarily measure length, we shall be more careful.  Rather, to measure length, we should employ the rectangular coordinates $x$, $y$, and $z$.  Using the first order Taylor expansion, we see that the components of the vector ${\vec a}$ connecting the point on $S$ parameterized by $(u,v)$ to the point $(u + du, v)$ is
+ $${\vec a} = \left( {\partial x \over \partial u} du, {\partial y \over \partial u} du, {\partial z \over \partial u} du \right)$$
+and, likewise, the vector connecting the point $(u,v)$ to the point $(u, v + dv)$ is
+ $${\vec b} = \left( {\partial x \over \partial v} dv, {\partial y \over \partial v} dv, {\partial z \over \partial v} dv \right).$$
+As we said, the curved portion of quadrilateral may be approximated by a parallelogram having these two vectors as sides.  Recall that the area of a parallelogram spanned by vectors ${\vec a}$ and ${\vec b}$ is given as
+ $$A ({\vec a}, {\vec b}) = |{\vec a}| \> |{\vec b}| \sin \theta_{ab}$$
+where $\theta_{ab}$ is the angle between ${\vec a}$ and ${\vec b}$.  Using the fact that ${\vec a} \cdot {\vec b} = |{\vec a}| \> |{\vec b}| \cos \theta_{ab}$ and the famous trigonometric identity $\sin^2 \theta + \cos^2 \theta = 1$, we can rewrite our expression for the area as follows:
+ $$A ({\vec a}, {\vec b}) = \sqrt{ |{\vec a}|^2 |{\vec b}|^2 - \left( {\vec a} \cdot {\vec b} \right)^2 }$$
+Remembering what the vectors ${\vec a}$ and ${\vec b}$ happen to be for our problem, we obtain 
+ $$d^2 A = \sqrt{ \left( \frac{\partial x}{\partial u} \frac{\partial y}{\partial v} - \frac{\partial y}{\partial u} \frac{\partial x}{\partial v} \right)^2 + \left( \frac{\partial x}{\partial u} \frac{\partial z}{\partial v} - \frac{\partial z}{\partial u} \frac{\partial x}{\partial v} \right)^2 + \left( \frac{\partial y}{\partial u} \frac{\partial z}{\partial v} - \frac{\partial z}{\partial u} \frac{\partial y}{\partial v} \right)^2} \> du \, dv.$$
+Note that the quantities which occur in the parentheses are Jacobi determinants, so we can rewrite this as
+  $$d^2 A = \sqrt{ \left(  \frac{\partial (x,y)}{\partial (u,v)} \right)^2 +  \left( \frac{\partial (y,z)}{\partial (u,v)} \right)^2 + \left( \frac{\partial (z,x)}{\partial (u,v)} \right)^2 }$$
+Hence, we can express our integral as
+ $$\int_S f(u,v) \, d^2 A = \int f(u,v) \sqrt{ \left(  \frac{\partial (x,y)}{\partial (u,v)} \right)^2 +  \left( \frac{\partial (y,z)}{\partial (u,v)} \right)^2 + \left( \frac{\partial (z,x)}{\partial (u,v)} \right)^2 } \> du \, dv.$$
+%%%%%
+%%%%%
+\end{document}

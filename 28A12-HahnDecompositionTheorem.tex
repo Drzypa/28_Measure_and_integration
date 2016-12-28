@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HahnDecompositionTheorem}
+\pmcreated{2013-03-22 13:26:59}
+\pmmodified{2013-03-22 13:26:59}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Hahn decomposition theorem}
+\pmrecord{10}{34014}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+\pmdefines{Hahn decomposition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{mathrsfs}
+% define commands here
+\begin{document}
+\PMlinkescapeword{decomposition}\PMlinkescapeword{decompositions}
+Let $\mu$ be a signed measure in the measurable space $(\Omega,\mathscr{S})$. There are two measurable sets $A$ and $B$ such that:
+\begin{enumerate}
+\item $A\cup B = \Omega$ and $A\cap B = \emptyset$;
+\item $\mu(E)\geq 0$ for each $E\in\mathscr{S}$ such that $E\subset A$;
+\item $\mu(E)\leq 0$ for each $E\in\mathscr{S}$ such that $E\subset B$.
+\end{enumerate}
+
+The pair $(A,B)$ is called a \emph{Hahn decomposition} for $\mu$.
+This decomposition is not unique, but any other such decomposition $(A',B')$ satisfies $\mu(A'\vartriangle A) = \mu(B\vartriangle B') = 0$ (where $\vartriangle$ denotes the symmetric difference), so the two decompositions differ in a set of measure 0.
+%%%%%
+%%%%%
+\end{document}

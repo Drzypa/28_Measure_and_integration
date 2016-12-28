@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RadonMeasure}
+\pmcreated{2013-03-22 15:49:41}
+\pmmodified{2013-03-22 15:49:41}
+\pmowner{ptr}{5636}
+\pmmodifier{ptr}{5636}
+\pmtitle{Radon measure}
+\pmrecord{16}{37797}
+\pmprivacy{1}
+\pmauthor{ptr}{5636}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28C05}
+\pmclassification{msc}{28C15}
+%\pmkeywords{topological measure theory}
+\pmrelated{BorelMeasure}
+\pmrelated{SigmaFiniteBorelMeasureAndRelatedBorelConcepts}
+\pmdefines{Radon space}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ be a Hausdorff space. A Borel measure $\mu$ on $X$ is said to be a \emph{Radon measure} if it is:
+\begin{enumerate}
+\item finite on compact sets, 
+\item inner regular (tight), $\mu(A) = \sup \{\mu (V) \mid \text{compact}\ V \subset A\}$.
+\end{enumerate}
+A finite Radon measure satisfies $\mu(A) = \inf \{\mu(G) \mid \text{open}\ G \supset A\}$.
+
+Radon measures are not necessarily locally finite, although this is the case for locally compact and metric spaces. (Counterexample: spaces where only finite subsets are compact.) 
+
+A \emph{Radon space} is a topological space on which every finite Borel measure is a Radon measure, this is the case, e.g. for Polish spaces or Hausdorff spaces that are continuous images of Polish spaces.
+
+
+Radon measures are the ``most important class of measures on arbitrary Hausdorff topological spaces'' (K\"onig~\cite{koe97}, p.xiv) and formed the base of the development of integration theory by Bourbaki and Schwartz. In particular for locally compact spaces one often \emph{defines} Radon measures as linear functionals $\mu$ on the space $C^c(X)$ of continuous functions with compact support (`Riesz representation definition'). Berg \emph{et al.} give the following summary \cite{ber84}, p. 62\emph{f.}:
+
+Given the finctional $\mu$ one defines \emph{set functions}, in fact Borel measures, the \emph{outer measure} $\mu^*$  and the \emph{essential outer measure} $\mu^\bullet$ given by \begin{alignat}
+\mu^* (G) &= \sup \{\mu(f) | f\in C^c(X), 0 \le f \le 1_G\} \text{ for open }G\subset X\text{ and}\\
+\mu^* (A) &= \inf\{\mu^* (A \cap K) | K \in \mathfrak{K} (X)\} \text{ for }A\subset X,\\
+\mu^\bullet (A) &= \sup \{\mu^*(A \cap K) | K \in \mathfrak{K}(X)\} \text{ for }A\subset X.
+\end{alignat}
+
+$\mu^\bullet$ is a Radon measure in our sense, while $\mu^*$ is not always Radon. For locally compact and $\sigma$-compact spaces, however, both coincide (on the Borel algebra) and are equivalent to our Radon measure. For general Hausdorff spaces, Bourbaki introduces $W^* (A) = \sup \{(W_K)(A\cap K) | K\in \mathfrak{K}(X)\}$, where 
+W, called a \emph{Radon premeasure}, associates a Radon measure $W_K$ to each compact $K \subset X$, with $W_K|L = W_L, L\in\mathfrak{K}$ . This is a Radon measure (on Borel sets), Bourbaki, however, calls it only so if it is in addition locally finite.
+
+Consider now Borel measures $\nu : \mathfrak{B}\mapsto [0, \infty]$ which are
+\begin{itemize}
+\item finite on compact sets, $\nu|\mathfrak{K} <\infty$,
+\item inner regular on the open sets, $\nu(G) = \sup \{\nu(K)|K\subset G\}$ for $G$ open, and $K$ compact,
+\item outer regular, $\nu(B) = \inf \{\nu(G) | B\subset G$ for open $G$ and Borel $B$.
+\end{itemize}
+then the measures $\nu$ correspond bijectively to locally finite Radon measures $\mu$ on $X$. 
+
+
+
+
+
+
+
+
+
+
+
+\begin{thebibliography}{99}
+\bibitem{ber84}    Christian Berg, Jens Peter Reus, Paul Ressel: Harmonic analysis on semigroups. -- Berlin, 1984 (Graduate Texts in Mathematics; 100) 
+\bibitem{koe97}    Heinz K\"onig: Measure and integration~: an advanced course in basic procedures and applications.-- Berlin, 1997. 
+%\PMlinkexternal{ZBl. 0887.28001}
+%{http://www.emis.de:80/cgi-in/zmen/ZMATH/en/command.html?first=1\&maxdocs=3\&type=html\&an=0887.28001\&format=complete}
+\end{thebibliography}
+\PMlinkescapeword{development}
+\PMlinkescapeword{base}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{representation}
+%%%%%
+%%%%%
+\end{document}

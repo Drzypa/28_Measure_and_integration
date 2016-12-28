@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CriterionForInterchangingSummationAndIntegration}
+\pmcreated{2013-03-22 16:20:05}
+\pmmodified{2013-03-22 16:20:05}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{criterion for interchanging summation and integration}
+\pmrecord{9}{38465}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The following criterion for interchanging integration and summation
+is often useful in practise:  Suppose one has a sequence of measurable
+functions $f_k \colon M \to \mathbb{R}$ (The index $k$ runs over 
+non-negative integers.) on some measure space $M$ 
+and can find another sequence of measurable
+functions $g_k \colon M \to \mathbb{R}$ such that $|f_k (x)| \le
+g_k (x)$ for all $k$ and almost all $x$ and $\sum_{k=0}^\infty g_k(x)$ 
+converges for almost all $x \in M$ and $\sum_{k=0}^\infty \int
+g_k(x) \, dx < \infty$.  Then
+ \[\int_M \sum_{k=0}^\infty f_k(x) \, dx = \sum_{k=0}^\infty 
+ \int_M f_k(x) \, dx\]
+
+This criterion is a corollary of the monotone and dominated
+convergence theorems.  Since the $g_k$'s are nonnegative, the
+sequence of partial sums is increasing, hence, by the monotone
+convergence theorem, $\int_M \sum_{k=0}^\infty g_k(x) \, dx < \infty$. 
+Since 
+$\sum_{k=0}^\infty g_k(x)$ converges for almost all $x$, 
+ \[ \left| \sum_{k=0}^n f_k(x) \right |\le  \sum_{k=0}^n |f_k(x)| \le
+ \sum_{k=0}^n g_k(x) \le \sum_{k=0}^\infty g_k(x),\]
+the dominated convergence theorem implies that we may integrate
+the sequence of partial sums term-by-term, which is tantamount to
+saying that we may switch integration and summation.
+
+As an example of this method, consider the following:
+ \[\int_{-\infty}^{+\infty} \sum_{k=1}^\infty {\cos (x/k) \over 
+x^2 + k^4} \, dx\]
+The idea behind the method is to pick our $g$'s as simple as possible
+so that it is easy to integrate them and apply the criterion.  A good
+choice here is $g_k (x) = 1 / (x^2 + k^4)$.  We then have $\int_{-\infty}^{+\infty} g_k (x) \, dx = \pi / k^2$ and, as
+$\sum_{k=1}^\infty k^{-2} < \infty$, we can interchange summation
+and integration:
+ \[\sum_{k=1}^\infty \int_{-\infty}^{+\infty} {\cos (x/k) \over 
+x^2 + k^4} \, dx.\]
+Doing the integrals, we obtain the answer
+ \[\pi \sum_{k=1}^\infty {e^{-k} \over k^2}\]
+%%%%%
+%%%%%
+\end{document}

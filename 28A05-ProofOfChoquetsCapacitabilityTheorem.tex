@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfChoquetsCapacitabilityTheorem}
+\pmcreated{2013-03-22 18:47:51}
+\pmmodified{2013-03-22 18:47:51}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of Choquet's capacitability theorem}
+\pmrecord{4}{41597}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+\pmclassification{msc}{28A12}
+%\pmkeywords{paved space}
+%\pmkeywords{analytic set}
+%\pmkeywords{capacitable}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{states}
+\PMlinkescapeword{collection}
+\PMlinkescapeword{countable}
+\PMlinkescapeword{analytic}
+\PMlinkescapeword{capacitable}
+\PMlinkescapeword{lemma}
+\PMlinkescapeword{compact}
+\PMlinkescapeword{paving}
+\PMlinkescapeword{closure}
+\PMlinkescapeword{onto}
+\PMlinkescapeword{projection}
+\PMlinkescapeword{positive}
+\PMlinkescapeword{integers}
+\PMlinkescapeword{capacity}
+\PMlinkescapeword{infinity}
+\PMlinkescapeword{infinite}
+\PMlinkescapeword{induction}
+\PMlinkescapeword{inequality}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{analytic sets}
+
+Let $(X,\mathcal{F})$ be a paved space such that $\mathcal{F}$ is closed under finite unions and finite intersections, and let $I$ be an $\mathcal{F}$-\PMlinkname{capacity}{ChoquetCapacity}. We prove the capacitability theorem, which states that all $\mathcal{F}$-\PMlinkname{analytic}{AnalyticSet2} sets are $(\mathcal{F},I)$-\PMlinkname{capacitable}{ChoquetCapacity}. The idea is to deduce it from the following special case.
+
+\begin{lemma*}
+With the above notation, every set in $\mathcal{F}_{\sigma\delta}$ is $(\mathcal{F},I)$-capacitable.
+\end{lemma*}
+
+Recall that $\mathcal{F}_{\sigma\delta}$ is the collection of countable intersections of countable unions in $\mathcal{F}$ and, since countable unions and intersections of analytic sets are analytic, all such sets are analytic. According to the capacitability theorem they should then be capacitable, and the lemma is indeed a special case.
+
+Supposing that the lemma is true, then the capacitability theorem can be deduced as follows. For an $\mathcal{F}$-analytic set $A\subseteq X$, there is a \PMlinkname{compact paved space}{PavedSpace} $(K,\mathcal{K})$ and $S\in(\mathcal{F}\times\mathcal{K})_{\sigma\delta}$ such that $A=\pi_X(S)$, where $\pi_X$ is the projection map from $X\times K$ to $X$. Letting $\mathcal{G}$ be the closure under finite unions and finite intersections of the paving $\mathcal{F}\times\mathcal{K}$, then the composition $I\circ\pi_X$ is a $\mathcal{G}$-capacity, and the projection of any $(\mathcal{G},I\circ\pi_X)$-capacitable set onto $X$ is itself $(\mathcal{F},I)$-capacitable (see \PMlinkname{extending a capacity to a Cartesian product}{ExtendingACapacityToACartesianProduct}). In particular, $S\in\mathcal{G}_{\sigma\delta}$ so, by the lemma, is $(\mathcal{G},I\circ\pi_X)$-capacitable. Therefore, $A=\pi_X(S)$ is $(\mathcal{F},I)$-capacitable. It only remains to prove the lemma.
+
+
+\begin{proof}[Proof of lemma]
+If $S\in\mathcal{F}_{\sigma\delta}$ then there exists $S_{m,n}\in\mathcal{F}$ such that
+\begin{equation*}
+S =\bigcap_n\bigcup_mS_{m,n}.
+\end{equation*}
+For any positive integers $m_1,m_2,\ldots,m_k$ let us write
+\begin{equation*}
+S(m_1,m_2,\ldots,m_k)\equiv\left(\bigcap_{n\le k}\bigcup_{m\le m_n}S_{m,n}\right)\bigcap\left(\bigcap_{n>k}\bigcup_mS_{m,n}\right).
+\end{equation*}
+In particular, $S()=S$ and, $I(S())=I(S)$. For any $\epsilon>0$ and $k\in\mathbb{N}$ suppose that we have chosen positive integers $m_1,\dots,m_{k-1}$ such that $I(S(m_1,\ldots,m_{k-1}))>I(S)-\epsilon$. Since $I$ is a capacity and $S(m_1,\ldots,m_k)$ increases to $S(m_1,\ldots,m_{k-1})$ as $m_k$ increases to infinity,
+\begin{equation*}
+I(S(m_1,\ldots,m_{k}))\rightarrow I(S(m_1,\ldots,m_{k-1}))
+\end{equation*}
+as $m_k$ tends to infinity. So, by choosing $m_k$ large enough, we have
+\begin{equation*}
+I(S(m_1,\ldots,m_k))>I(S)-\epsilon.
+\end{equation*}
+Then, by induction, we can find an infinite sequence $m_1,m_2,\ldots$ such that this inequality holds for every $k$.
+Setting
+\begin{align*}
+&A_k\equiv\bigcap_{n\le k}\bigcup_{m\le m_n}S_{m,n}\in\mathcal{F},\\
+&A\equiv\bigcap_n\bigcup_{m\le m_n}S_{m,n}=\bigcap_kA_k\in\mathcal{F}_\delta,
+\end{align*}
+then $A\subseteq S$. Furthermore, $A_k$ contains $S(m_1,\ldots,m_k)$ and decreases to $A$ as $k$ tends to infinity.  As $I$ is an $\mathcal{F}$-capacity this gives
+\begin{equation*}
+I(A)=\lim_{k\rightarrow\infty}I(A_k)\ge\lim_{k\rightarrow\infty}I(S(m_1,\ldots,m_k))\ge I(S)-\epsilon.
+\end{equation*}
+So $S$ is $(\mathcal{F},I)$-capacitable, as required.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectImagesOfAnalyticSetsAreAnalytic}
+\pmcreated{2013-03-22 18:46:33}
+\pmmodified{2013-03-22 18:46:33}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{direct images of analytic sets are analytic}
+\pmrecord{5}{41569}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+%\pmkeywords{measurable function}
+%\pmkeywords{analytic set}
+%\pmkeywords{direct image}
+%\pmkeywords{compact paving}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{separable}
+\PMlinkescapeword{collection}
+\PMlinkescapeword{generates}
+\PMlinkescapeword{analytic}
+\PMlinkescapeword{measurable}
+\PMlinkescapeword{direct image}
+\PMlinkescapeword{class}
+\PMlinkescapeword{preserve}
+\PMlinkescapeword{subsets}
+\PMlinkescapeword{stable}
+\PMlinkescapeword{direct images}
+\PMlinkescapeword{closed under}
+
+For measurable spaces $(X,\mathcal{F})$ and $(Y,\mathcal{G})$, consider a measurable function $f\colon X\rightarrow Y$. By definition, the inverse image $f^{-1}(A)$ will be in $\mathcal{F}$ whenever $A$ is in $\mathcal{G}$.
+However, the situation is more complicated for \PMlinkname{direct images}{DirectImage}, which in general do not preserve measurability. However, as stated by the following theorem, the class of analytic subsets of Polish spaces is closed under direct images.
+
+\begin{theorem*}
+Let $f\colon X\rightarrow Y$ be a Borel measurable function between Polish spaces $X$ and $Y$. Then, the direct image $f(A)$ is analytic whenever $A$ is an analytic subset of $X$.
+\end{theorem*}
+
+%%%%%
+%%%%%
+\end{document}

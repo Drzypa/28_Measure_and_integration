@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PseudoparadoxInMeasureTheory}
+\pmcreated{2013-03-22 14:38:40}
+\pmmodified{2013-03-22 14:38:40}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{pseudoparadox in measure theory}
+\pmrecord{11}{36232}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28E99}
+\pmsynonym{one-dimensional Banach-Tarski paradox}{PseudoparadoxInMeasureTheory}
+\pmrelated{VitalisTheorem}
+\pmrelated{BanachTarskiParadox}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The interval $[0,1)$ can be subdivided into an countably infinite collection of disjoint subsets $A_i, i = 0,1,2,\ldots$ such that, by translating each set one obtains a collection of disjoint sets $B_i$ such that $\bigcup_{i=1}^\infty B_i = [0,2)$
+
+This paradox challenges the naive ``\PMlinkescapetext{cut and paste}'' notion that if one \PMlinkescapetext{cuts} a set into a countable number of pieces and reassembles them, the result will have the same measure as the original set.
+
+The resolution to this and similar paradoxes lies in the fact that the sets $A_i$ were not defined constructively.  To show that they exist, one needs to appeal to the non-constructive axiom of choice.  What the paradox shows is that one can't have one's cake and eat it too --- either one can cling to the naive ``\PMlinkescapetext{cut and paste}'' picture and forego non-constructive techniques as the intuitionist school of mathematics does, or else if, like the majority of mathematicians, one wants to keep the powerful tools provided by non-constructive techniques in set theory, one must give up the naive notion that every set is measurable and limit ``\PMlinkescapetext{cut and paste operations}'' to operations involving measurable sets.
+
+It might be worth mentioning that it is essential that there be an infinite number of sets $A_i$.  As an elegant argument posted by jihema shows, it is not possible to find a finite collection of disjoint subsets of $[0,1)$ such that a union of translations of these subsets equals $[0,2)$.  In higher dimensions, the situation is worse because, as Banach and Tarski showed, it is possible to derive analogous paradoxes involving only a finite number of subsets.
+%%%%%
+%%%%%
+\end{document}

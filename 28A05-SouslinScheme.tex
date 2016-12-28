@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SouslinScheme}
+\pmcreated{2013-03-22 18:48:30}
+\pmmodified{2013-03-22 18:48:30}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{Souslin scheme}
+\pmrecord{5}{41610}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+\pmsynonym{Suslin scheme}{SouslinScheme}
+%\pmkeywords{paved space}
+%\pmkeywords{analytic set}
+\pmdefines{regular scheme}
+\pmdefines{result of a scheme}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{collection}
+\PMlinkescapeword{scheme}
+\PMlinkescapeword{regular}
+\PMlinkescapeword{restriction}
+
+A \emph{Souslin scheme} is a method of representing and defining analytic sets on a paved space $(X,\mathcal{F})$.
+Let $\mathcal{S}$ be the collection of finite sequences of positive integers. That is $\mathcal{S}$ is the disjoint union of $\mathbb{N}^n$ for $n=1,2,\ldots$.
+
+A Souslin scheme on $\mathcal{F}$ is a collection $(A_s)_{s\in\mathcal{S}}$ of sets in $\mathcal{F}$.
+If $\mathcal{N}=\mathbb{N}^\mathbb{N}$ is Baire space then, for any $s\in\mathcal{N}$ and $n\in\mathbb{N}$, we write $s|_n\equiv (s_1,\ldots,s_n)$ for the restriction of $s$ to $\{1,\ldots,n\}$. So, $s|_n\in\mathbb{N}^n$.
+
+The \emph{result} of the Souslin scheme $(A_s)$ is defined to be
+\begin{equation*}
+A=\bigcup_{s\in\mathcal{N}}\bigcap_{n=1}^\infty A_{s|_n}.
+\end{equation*}
+The set $\mathcal{S}$ can be partially ordered as follows. Say that $s\le t$ if $s\in\mathbb{N}^r$ and $t\in\mathbb{N}^s$ for $r\le s$, and $s_k=t_k$ for $k=1,\ldots,r$.
+The scheme $(A_s)$ is said to be \emph{regular} if $A_s\supseteq A_t$ for all $s\le t$.
+
+It can be shown that the result of a Souslin scheme is $\mathcal{F}$-analytic and, conversely, any analytic set is the result of some scheme (see equivalent definitions of analytic sets).
+
+\begin{thebibliography}{9}
+\bibitem{bourgain}
+Jean Bourgain, \emph{A stabilization property and its applications in the theory of sections}. S{\'e}minaire Choquet. Initiation {\`a} l'analyse, 17 no. 1 (1977).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCaratheodorysExtensionTheorem}
+\pmcreated{2013-03-22 18:33:28}
+\pmmodified{2013-03-22 18:33:28}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of Carath\'eodory's extension theorem}
+\pmrecord{4}{41280}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+%\pmkeywords{measure}
+%\pmkeywords{outer measure}
+\pmrelated{CaratheodorysLemma}
+\pmrelated{Measure}
+\pmrelated{OuterMeasure2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{outer measure}
+\PMlinkescapeword{outer measures}
+% \PMlinkescapeword{countably additive}
+
+The first step is to extend the set function $\mu_0$ to the power set $P(X)$. For any subset $S\subseteq X$ the value of $\mu^*(S)$ is defined by taking sequences $S_i$ in $A$ which cover $S$,
+\begin{equation}\label{eq:1}
+\mu^*(S)\equiv\inf\left\{\sum_{i=1}^\infty \mu_0(S_i): S_i\in A,\ S\subseteq\bigcup_{i=1}^\infty S_i\right\}.
+\end{equation}
+We show that this is an \PMlinkname{outer measure}{OuterMeasure2}. First, it is clearly non-negative. Secondly, if $S=\emptyset$ then we can take $S_i=\emptyset$ in (\ref{eq:1}) to obtain $\mu^*(S)\le\sum_i\mu_0(\emptyset)=0$, giving $\mu^*(\emptyset)$=0. It is also clear that $\mu^*$ is increasing, so that if $S\subseteq T$ then $\mu^*(S)\le\mu^*(T)$. The only remaining property to be proven is subadditivity. That is, if $S_i$ is a sequence in $P(X)$ then
+\begin{equation}\label{eq:2}
+\mu^*\left(\bigcup_i S_i\right)\le\sum_i\mu^*(S_i).
+\end{equation}
+To prove this inequality, choose any $\epsilon>0$ and, by the definition (\ref{eq:1}) of $\mu^*$, for each $i$ there exists a sequence $S_{i,j}\in A$ such that $S_i\subseteq\bigcup_j S_{i,j}$ and,
+\begin{equation*}
+\sum_{j=1}^\infty\mu_0(S_{i,j})\le\mu^*(S_i)+2^{-i}\epsilon.
+\end{equation*}
+As $\bigcup_iS_i\subseteq\bigcup_{i,j}S_{i,j}$, equation (\ref{eq:1}) defining $\mu^*$ gives
+\begin{equation*}
+\mu^*\left(\bigcup_iS_i\right)\le\sum_{i,j}\mu_0(S_{i,j})=\sum_i\sum_j\mu_0(S_{i,j})\le\sum_i(\mu^*(S_i)+2^{-i}\epsilon)=\sum_i\mu^*(S_i)+\epsilon.
+\end{equation*}
+As $\epsilon>0$ is arbitrary, this proves subadditivity (\ref{eq:2}). So, $\mu^*$ is indeed an outer measure.
+
+The next step is to show that $\mu^*$ agrees with $\mu_0$ on $A$. So, choose any $S\in A$. The inequality $\mu^*(S)\le\mu_0(S)$ follows from taking $S_1=S$ and $S_i=\emptyset$ in (\ref{eq:1}), and it remains to prove the reverse inequality. So, let $S_i$ be a sequence in $A$ covering $S$, and set
+\begin{equation*}
+S^\prime_i=(S\cap S_i)\setminus\bigcup_{j=1}^{i-1}S_j\in A.
+\end{equation*}
+Then, $S^\prime_i$ are disjoint sets satisfying $\bigcup_{j=1}^iS^\prime_j=S\cap \bigcup_{j=1}^iS_j$ and, therefore, $\bigcup_iS^\prime_i=S$. By the countable additivity of $\mu_0$,
+\begin{equation*}
+\sum_i\mu_0(S_i)=\sum_i(\mu_0(S^\prime_i)+\mu_0(S_i\setminus S^\prime_i))\ge\sum_i\mu_0(S^\prime_i)=\mu_0(S).
+\end{equation*}
+As this inequality hold for any sequence $S_i\in A$ covering $S$, equation (\ref{eq:1}) gives $\mu^*(S)\ge\mu_0(S)$ and, by combining with the reverse inequality, shows that $\mu^*$ does indeed agree with $\mu_0$ on $A$.
+
+We have shown that $\mu_0$ extends to an outer measure $\mu^*$ on the power set of $X$. The final step is to apply Carath\'eodory's lemma on the restriction of outer measures. A set $S\subseteq X$ is said to be $\mu^*$-measurable if the inequality
+\begin{equation}\label{eq:3}
+\mu^*(E)\ge\mu^*(E\cap S)+\mu^*(E\cap S^c)
+\end{equation}
+is satisfied for all subsets $E$ of $X$. Carath\'eodory's lemma then states that the collection $\mathcal{F}$ of $\mu^*$-measurable sets is a \PMlinkname{$\sigma$-algebra}{SigmaAlgebra} and that the restriction of $\mu^*$ to $\mathcal{F}$ is a measure.
+To complete the proof of the theorem it only remains to be shown that every set in $A$ is $\mu^*$-measurable, as it will then follow that $\mathcal{F}$ contains $\mathcal{A}=\sigma(A)$ and the restriction of $\mu^*$ to $\mathcal{A}$ is a measure.
+
+So, choosing any $S\in A$ and $E\subseteq X$, the proof will be complete once it is shown that (\ref{eq:3}) is satisfied.
+Given any $\epsilon>0$, equation (\ref{eq:1}) says that there is a sequence $E_i$ in $A$ such that $E\subseteq\bigcup_iE_i$ and
+\begin{equation*}
+\sum_i\mu_0(E_i)\le\mu^*(E)+\epsilon.
+\end{equation*}
+As $E\cap S\subseteq\bigcup_i(E_i\cap S)$ and $E\cap S^c\subseteq\bigcup_i(E_i\cap S^c)$,
+\begin{equation*}
+\mu^*(E\cap S)+\mu^*(E\cap S^c) \le\sum_i\mu_0(E_i\cap S)+\sum_i\mu_0(E_i\cap S^c)=\sum_i\mu_0(E_i)\le\mu^*(E)+\epsilon.
+\end{equation*}
+Since $\epsilon$ is arbitrary, this shows that (\ref{eq:3}) is satisfied and $S$ is $\mu^*$-measurable.
+
+%%%%%
+%%%%%
+\end{document}

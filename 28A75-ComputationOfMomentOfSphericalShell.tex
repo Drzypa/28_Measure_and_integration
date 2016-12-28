@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComputationOfMomentOfSphericalShell}
+\pmcreated{2013-03-22 14:58:11}
+\pmmodified{2013-03-22 14:58:11}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{computation of moment of spherical shell}
+\pmrecord{13}{36669}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A75}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In using the formula for area integration over a sphere derived in the \PMlinkid{last example}{6668}, we need to keep in mind that to every point in $xy$ plane, there correspond two points on the sphere, which are obtained by taking the two signs of the square root.  The importance of this fact in obtaining a correct answer is illustrated by our next example, the calculation of the moment of inertia of a spherical shell.
+
+The moment of a spherical shell is given by the integral
+ $$I = \int_S x^2 \, d^2 A.$$
+While we could compute this by first converting to spherical coordinates and then using the result of \PMlinkid{example 1}{6664}, we can avoid the trouble of changing coordinates by treating the sphere as a graph.  Using the result of the previous example, our integral becomes
+ $$\int_S x^2 \, d^2 A = 2 \int_{x^2 + y^2 < r^2} \frac{r x^2}{\sqrt{ r^2 - x^2 - y^2 }} \, dx \, dy,$$
+where the factor of 2 takes into account the observation of the preceding paragraph that two points of the sphere correspond to each point of the $xy$ plane.  Computing this integral, we find
+ $$2 \int_{-r}^{+r} \int_{-\sqrt{r^2 - y^2}}^{+\sqrt{r^2 - y^2}} \frac{r x^2}{\sqrt{ r^2 - x^2 - y^2}} \, dx \, dy =$$
+ $$2r \int_{-r}^{+r} \left( \left. -\frac{1}{2} x \sqrt{ r^2 - x^2 - y^2} + \frac{1}{2} (r^2 - y^2) \arcsin \frac{x}{\sqrt{ r^2 - y^2 }} \right) \right|_{-\sqrt{r^2 - y^2}}^{+\sqrt{r^2 - y^2}}  \, dy =$$
+ $$2r \int_{-r}^{+r} \frac{\pi}{2} (r^2 - y^2) \, dy = \frac{4}{3} \pi r^4$$
+
+Quick links:
+\begin{itemize}
+\item \PMlinkid{main entry}{6660}
+\item \PMlinkid{previous example}{6668}
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

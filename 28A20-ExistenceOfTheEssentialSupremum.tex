@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExistenceOfTheEssentialSupremum}
+\pmcreated{2013-03-22 18:39:22}
+\pmmodified{2013-03-22 18:39:22}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{existence of the essential supremum}
+\pmrecord{6}{41399}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+%\pmkeywords{measure space}
+%\pmkeywords{$\sigma$-finite}
+%\pmkeywords{supremum}
+%\pmkeywords{infimum}
+\pmrelated{EssentialSupremum}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+We state the existence of the essential supremum for a set $\mathcal{S}$ of extended real valued functions on a \PMlinkname{$\sigma$-finite}{SigmaFinite} measure space $(\Omega,\mathcal{F},\mu)$.
+
+\begin{theorem*}
+Suppose that the measure space $(\Omega,\mathcal{F},\mu)$ is $\sigma$-finite. Then, the essential supremum of $\mathcal{S}$ exists. Furthermore, if $\mathcal{S}$ is nonempty then there exists a sequence $(f_n)_{n=1,2,\ldots}$ in $\mathcal{S}$ such that
+\begin{equation}\label{eq:1}
+\operatorname{esssup}\mathcal{S}=\sup_n f_n.
+\end{equation}
+\end{theorem*}
+
+Note that, by reversing the inequalities, this result also applies to the essential infimum, except that equation (\ref{eq:1}) is replaced by
+\begin{equation*}
+\operatorname{essinf}\mathcal{S}=\inf_nf_n.
+\end{equation*}
+
+
+%%%%%
+%%%%%
+\end{document}

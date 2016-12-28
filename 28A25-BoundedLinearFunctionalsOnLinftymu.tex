@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundedLinearFunctionalsOnLinftymu}
+\pmcreated{2013-03-22 18:38:08}
+\pmmodified{2013-03-22 18:38:08}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{bounded linear functionals on $L^\infty(\mu)$}
+\pmrecord{5}{41375}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A25}
+\pmrelated{BoundedLinearFunctionalsOnLpmu}
+\pmrelated{RadonNikodymTheorem}
+\pmrelated{LpNormIsDualToLq}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{bounded}
+\PMlinkescapeword{property}
+\PMlinkescapeword{satisfies}
+For any measure space $(X,\mathfrak{M},\mu)$ and $g\in L^1(\mu)$, the following linear map can be defined
+\begin{align*}
+&\Phi_g\colon L^\infty (\mu)\rightarrow\mathbb{R},\\
+&f\mapsto\Phi_g(f)\equiv\int fg\,d\mu.
+\end{align*}
+It is easily shown that $\Phi_g$ is \PMlinkname{bounded}{OperatorNorm}, so is a member of the dual space of $\L^\infty(\mu)$. However, unless the measure space consists of a finite set of atoms, not every element of the dual of $L^\infty(\mu)$ can be written like this. Instead, it is necessary to restrict to linear maps satisfying a bounded convergence property.
+
+\begin{theorem*}
+Let $(X,\mathfrak{M},\mu)$ be a \PMlinkname{$\sigma$-finite}{SigmaFinite} measure space and $V$ be the space of bounded linear maps $\Phi\colon L^\infty(\mu)\rightarrow\mathbb{R}$ satisfying bounded convergence. That is, if $|f_n|\le 1$ are in $L^\infty(\mu)$ and $f_n(x)\rightarrow 0$ for almost every $x\in X$, then $\Phi(f_n)\rightarrow 0$.
+
+Then $g\mapsto\Phi_g$ gives an isometric isomorphism from $L^1(\mu)$ to $V$.
+\end{theorem*}
+\begin{proof}
+First, the operator norm $\Vert\Phi_g\Vert$ is equal to the $L^1$-norm of $g$ (see \PMlinkname{$L^p$-norm is dual to $L^q$}{LpNormIsDualToLq}), so the map $g\mapsto\Phi_g$ gives an isometric embedding from $L^1$ into the dual of $L^\infty$. Furthermore, dominated convergence implies that $\Phi_g$ satisfies bounded convergence so $\Phi_g\in V$. We just need to show that $g\mapsto\Phi_g$ maps onto $V$.
+
+So, suppose that $\Phi\in V$. It needs to be shows that $\Phi=\Phi_g$ for some $g\in L^1$.
+Defining an \PMlinkname{additive set function}{Additive} $\nu\colon\mathfrak{M}\rightarrow\mathbb{R}$ by
+\begin{equation*}
+\nu(A)=\Phi(1_A)
+\end{equation*}
+for every set $A\in\mathfrak{M}$, the bounded convergence property for $\Phi$ implies that $\nu$ is countably additive and is therefore a finite signed measure. So, the Radon-Nikodym theorem gives a $g\in L^1$ such that $\nu(A)=\int_A g\,d\mu$ for every $A\in\mathfrak{M}$.
+Then, the equality
+\begin{equation*}
+\Phi(fh)= \int fg\,d\mu
+\end{equation*}
+is satisfied for $f=1_A$ with any $A\in\mathfrak{M}$ and the functional monotone class theorem extends this to any bounded and measurable $f\colon X\rightarrow\mathbb{C}$, giving $\Phi_g=\Phi$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

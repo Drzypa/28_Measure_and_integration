@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConditionalExpectationsAreUniformlyIntegrable}
+\pmcreated{2013-03-22 18:40:08}
+\pmmodified{2013-03-22 18:40:08}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{conditional expectations are uniformly integrable}
+\pmrecord{5}{41413}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+\pmclassification{msc}{60A10}
+%\pmkeywords{conditional expectation}
+%\pmkeywords{uniformly continuous}
+\pmrelated{ConditionalExpectation}
+\pmrelated{UniformlyIntegrable}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{constant}
+\PMlinkescapeword{collection}
+
+The collection of all conditional expectations of an integrable random variable forms a uniformly integrable set. More generally, we have the following result.
+
+
+\begin{theorem*}
+Let $S$ be a uniformly integrable set of random variables defined on a probability space $(\Omega,\mathcal{F},\mathbb{P})$. Then, the set
+\begin{equation*}
+\left\{\mathbb{E}[X\mid\mathcal{G}]:\textrm{$X\in S$ and $\mathcal{G}$ is a sub-$\sigma$-algebra of $\mathcal{F}$}\right\}
+\end{equation*}
+is also uniformly integrable.
+\end{theorem*}
+
+To prove the result, we first use the fact that uniform integrability implies that $S$ is $L^1$-bounded. That is, there is a constant $L>0$ such that $\mathbb{E}[|X|]\le L$ for every $X\in S$.
+Also, choosing any $\epsilon>0$, there is a $\delta>0$ so that
+\begin{equation*}
+\mathbb{E}[|X|1_A]<\epsilon
+\end{equation*}
+for all $X\in S$ and $A\in\mathcal{F}$ with $\mathbb{P}(A)\le\delta$.
+
+Set $K=L/\delta$. Then, if $Y=\mathbb{E}[X\mid\mathcal{G}]$ for any $X\in S$ and $\mathcal{G}\subseteq\mathcal{F}$, Jensen's inequality gives
+\begin{equation*}
+|Y|\le\mathbb{E}[|X|\mid\mathcal{G}].
+\end{equation*}
+So, applying Markov's inequality,
+\begin{equation*}
+\mathbb{P}(|Y|>K)\le K^{-1}\mathbb{E}[|Y|]\le K^{-1}\mathbb{E}[|X|]\le L/K=\delta
+\end{equation*}
+and, therefore
+\begin{equation*}
+\mathbb{E}[|Y|1_{\{|Y|>K\}}]\le \mathbb{E}[|X|1_{\{|Y|>K\}}]<\epsilon.
+\end{equation*}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfEquivalentDefinitionsOfAnalyticSetsForMeasurableSpaces}
+\pmcreated{2013-03-22 18:48:41}
+\pmmodified{2013-03-22 18:48:41}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of equivalent definitions of analytic sets for measurable spaces}
+\pmrecord{4}{41613}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+%\pmkeywords{measurable space}
+%\pmkeywords{paved space}
+%\pmkeywords{analytic set}
+%\pmkeywords{product sigma algebra}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{subset}
+\PMlinkescapeword{projection}
+\PMlinkescapeword{onto}
+\PMlinkescapeword{contained}
+\PMlinkescapeword{consequence}
+
+Let $(X,\mathcal{F})$ be a measurable space and $A$ be a subset of $X$. For any uncountable Polish space $Y$ with \PMlinkname{Borel $\sigma$-algebra}{BorelSigmaAlgebra} $\mathcal{B}$, we show that the following are equivalent.
+\begin{enumerate}
+\item\label{item:1} $A$ is $\mathcal{F}$-\PMlinkname{analytic}{AnalyticSet2}.
+\item\label{item:2} $A$ is the \PMlinkname{projection}{GeneralizedCartesianProduct} of a set $S\in\mathcal{F}\otimes\mathcal{B}$ onto $X$.
+\end{enumerate}
+Here, $\mathcal{F}\otimes\mathcal{B}$ denotes the \PMlinkname{product $\sigma$-algebra}{ProductSigmaAlgebra} of $\mathcal{F}$ and $\mathcal{B}$.
+
+\noindent\textbf{(\ref{item:1}) implies (\ref{item:2})}:
+Let $\mathcal{G}$ denote the paving consisting of the closed subsets of $Y$. If $A$ is $\mathcal{F}$-analytic then there exists a set $S\in(\mathcal{F}\times\mathcal{G})_{\sigma\delta}$ such that $A=\pi_X(S)$, where $\pi_X\colon X\times Y\to X$ is the projection map (see proof of equivalent definitions of analytic sets for paved spaces).
+In particular, $\mathcal{G}\subseteq\mathcal{B}$ implies that $S$ is contained in the $\sigma$-algebra $\mathcal{F}\otimes\mathcal{B}$.
+
+\noindent\textbf{(\ref{item:2}) implies (\ref{item:1})}:
+This is an immediate consequence of the result that projections of analytic sets are analytic.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegardingTheSetsAnFromTheTravelingHumpSequence}
+\pmcreated{2013-03-22 16:14:28}
+\pmmodified{2013-03-22 16:14:28}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{regarding the sets $A_n$ from the traveling hump sequence}
+\pmrecord{6}{38344}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{equivalent}
+
+In this entry, $\lfloor \cdot \rfloor$ denotes the floor function.
+
+Following is a proof that, for every positive integer $n$, $\displaystyle \left[ \frac{n-2^{\left\lfloor \log_2 n \right\rfloor}}{2^{\left\lfloor \log_2 n \right\rfloor}} , \frac{n-2^{\left\lfloor \log_2 n \right\rfloor}+1}{2^{\left\lfloor \log_2 n \right\rfloor}} \right] \subseteq \left[ 0,1 \right]$.
+
+\begin{proof}
+Note that this is \PMlinkname{equivalent}{Equivalent} to showing that, for every positive integer $n$,
+
+$\displaystyle n-2^{\left\lfloor \log_2 n \right\rfloor} \ge 0$ and $\displaystyle n-2^{\left\lfloor \log_2 n \right\rfloor}+1 \le 2^{\left\lfloor \log_2 n \right\rfloor}$. This in turn is equivalent to showing that, for every positive integer $n$, $\displaystyle 2^{\left\lfloor \log_2 n \right\rfloor} \le n$ and $\displaystyle n+1 \le 2^{\left\lfloor \log_2 n \right\rfloor+1}$.
+
+The first inequality is easy to prove: For every positive integer $n$, $\displaystyle 2^{\left\lfloor \log_2 n \right\rfloor} \le 2^{\log_2 n}=n$.
+
+Now for the second inequality. Let $n$ be a positive integer. Let $k$ be the unique positive integer such that
+
+$2^{k-1} \le n \le 2^k-1$. Then $\displaystyle n+1 \le 2^k=2^{k-1+1}=2^{\left\lfloor k-1 \right\rfloor+1}=2^{\left\lfloor \log_2 2^{k-1} \right\rfloor+1} \le 2^{\left\lfloor \log_2 n \right\rfloor+1}$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

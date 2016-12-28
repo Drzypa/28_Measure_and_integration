@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CentreOfMass}
+\pmcreated{2013-03-22 15:28:09}
+\pmmodified{2013-03-22 15:28:09}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{centre of mass}
+\pmrecord{12}{37322}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A75}
+\pmclassification{msc}{26B15}
+\pmsynonym{center of mass}{CentreOfMass}
+\pmrelated{PappussTheoremForSurfacesOfRevolution}
+\pmdefines{centre of gravity}
+\pmdefines{centroid}
+\pmdefines{center of gravity}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{amsthm}
+\usepackage{enumerate}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vmu}{\boldsymbol{\mu}}
+
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\begin{document}
+Let $\nu$ be a Borel signed measure for some set $E \subseteq \real^n$.
+The \defnterm{centre of mass} of $E$
+(with respect to $\nu$) is a vector in $\real^n$ defined by the following vector-valued integral:
+\[
+\vmu(E; \nu) = \frac{1}{\nu(E)} \int_{\vr \in E} \vr \, d\nu\,, \quad \nu(E) \neq 0, \pm \infty\,,
+\]
+provided the integral exists. Intuitively, the integral is a weighted average
+of all the points of $E$.
+
+Our abstract definition encompasses many situations.
+If $E$ is a $k$-dimensional manifold, then we may take $\nu$ to be its 
+absolute $k$-dimensional volume element ($d\nu = dV$).
+This would give the set $E$ a unit mass density,
+and in this case the centre of mass of $E$
+is also called the \defnterm{centroid} of $E$.  
+
+More generally, if we are given a measurable mass density $\rho\colon E \to \real$,
+then taking $d\nu = \rho dV$, the definition defines the centre of mass for $E$
+with a mass density $\rho$.
+We do not restrict the density $\rho$ (or the measure $\nu$) to be non-negative;
+for this allows our definition to apply even to, for example, electrical charge densities.
+
+If $E$ is not a differentiable manifold, but is a rectifiable set, we can replace 
+$dV$ by the appropriate Hausdorff measure.
+
+The measure $\nu$ could also be discrete.  For example, $E$ could be a finite set of points $\{ x_i \} \subset \real^n$ with masses $m_i = \nu(x_i)$.  In this case, the integral $\vmu(E; \nu)$ 
+reduces to a finite summation.
+
+It is possible to economize the definition so that the set $E$ does not have to be mentioned,
+although the result is somewhat unintuitive:
+the \emph{centre of mass of a finite signed Borel measure} $\nu$ on $\real^n$
+is defined by
+\[
+\vmu(\nu) = \vmu(\real^n; \nu) = \frac{1}{\nu(\real^n)} \int_{\vr \in \real^n} \vr \, d\nu
+\]
+(provided this exists).
+If $\nu_E$ is defined by $\nu_E(S) = \nu(S \cap E)$ for all measurable $S$ and some fixed measurable $E$, then $\vmu(\nu_E) = \vmu(E ; \nu)$.
+
+\medskip
+
+The term \defnterm{centre of gravity} is sometimes
+used loosely as a synonym for the centre of mass, but these are distinct concepts;
+the centre of gravity is supposed to be a single point on which the force of gravity can
+be considered to act upon. If $E$ is three-dimensional and the force of gravity is uniform throughout $E$, then the centre of mass and the centre of gravity coincide.
+
+As shown by the above examples, the centre of mass and its related concepts 
+have applications in mechanics and other areas of physics.
+
+\section*{Symmetry principle}
+If $T \colon \real^n \to \real^n$ is an invertible linear map, then by a straightforward change of variable
+in the integrand, 
+\[
+\vmu(TE; \nu \circ T^{-1}) = T(\vmu (E; \nu) )\,.
+\]
+In particular, take $T$ to be an isometry, and $\nu$ to be a $k$-dimensional volume measure for $E$.
+The corresponding $k$-dimensional volume measure for $TE$
+must be the same as $\nu \circ T^{-1}$, because $T$ is an isometry.
+Then the above equation says that 
+the centroid transforms as expected under isometries. 
+
+For example, it is intuitively obvious that the centre of mass of a disk $D \subset \real^2$ should be the centre of $D$.  (Without loss of generality, assume that $D$ is centered at the origin.)
+Using the property just mentioned, this is easy to prove rigorously too:
+if $T$ is the isometry that reflects across the y-axis, and $\lambda$ is the Lebesgue measure on $\real^2$,
+then 
+\begin{align*}
+T(\vmu (D; \lambda)) &= \vmu(TD; \lambda \circ T^{-1}) \\
+&= \vmu(TD; \lambda) &\text{($\lambda$ is invariant under isometries)} \\
+&= \vmu(D; \lambda)\,, & \text{($TD = D$ by symmetry of the disk)}
+\end{align*}
+which means the x component of $\vmu(D; \lambda)$
+must be zero.  Similarly, by considering reflections across the x-axis, we conclude
+that the y component of $\vmu(D; \lambda)$ must be zero.
+%%%%%
+%%%%%
+\end{document}

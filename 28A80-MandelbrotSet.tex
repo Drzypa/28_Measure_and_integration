@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MandelbrotSet}
+\pmcreated{2013-03-22 16:57:52}
+\pmmodified{2013-03-22 16:57:52}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Mandelbrot set}
+\pmrecord{11}{39237}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A80}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The \emph{Mandelbrot set} is a fractal in the complex plane defined as the collection of $c\in\mathbb{C}$ for which the orbit of $0$ under the quadratic dynamical system $f_c(z)\colon z \mapsto z^2 + c$ is bounded. That is, to test whether $c$ is in the Mandelbrot set, one checks whether the sequence $(f_c(0), f_c(f_c(0)), f_c(f_c(f_c(0))), \ldots)$ tends to infinity or stays in a bounded region. The point $c$ is in the set if the sequence does not tend to infinity.
+ 
+There are deep connections between points in the Mandelbrot set and the corresponding \PMlinkname{Julia sets}{SetDeJulia} $J(f_c)$.  In particular, $c$ is in the Mandelbrot set if and only if the \PMlinkescapetext{Julia set} corresponding to $c$ is connected.
+
+The Mandelbrot set is perhaps the most famous fractal. At every level, it has smaller copies of the overall shape that are connected to the main shape. The higher the resolution, the easier it is to see that the entire Mandelbrot set is simply connected, with no holes. Discovered by Beno\^it Mandelbrot, the first print-out of it was in black and white.
+
+\begin{center}
+\includegraphics{C:TempMandelbrotSetBW}
+\end{center}
+
+Most of the Mandelbrot set lies within the unit disk of the complex plane. The second largest `circle' (to the left of the main `circle' in the standard illustration) is centered at $-1 + 0i$. Points with real part outside the range $-2 < a < 1$ and imaginary part $(1 < |b|)i$ will certainly tend to infinity.
+
+Nowadays, most images of the Mandelbrot set include colors, with the colors for escaping values of $c$ being assigned in some correspondence to how many iterations it took to determine that $c$ escaped.
+
+\begin{thebibliography}{1}
+\bibitem{hl} H. Lauwerier, translated by Sophia Gill-Hoffst\"adt. {\it Fractals: Endlessly Repeated Geometric Figures} Princeton: Princeton University Press (1991): 124 - 151
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

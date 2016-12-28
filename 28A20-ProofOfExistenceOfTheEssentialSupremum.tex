@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfExistenceOfTheEssentialSupremum}
+\pmcreated{2013-03-22 18:39:25}
+\pmmodified{2013-03-22 18:39:25}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of existence of the essential supremum}
+\pmrecord{7}{41400}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+%\pmkeywords{measure space}
+%\pmkeywords{essential supremum}
+%\pmkeywords{$\sigma$-finite}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\esssup}{{\mathrm{ess}\sup}}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{necessary}
+
+Suppose that $(\Omega,\mathcal{F},\mu)$ is a $\sigma$-finite measure space and $\mathcal{S}$ is a collection of measurable functions $f\colon\Omega\rightarrow\mathbb{\bar R}$. We show that the essential supremum of $\mathcal{S}$ exists and furthermore, if it is nonempty then there is a sequence $f_n\in\mathcal{S}$ such that
+\begin{equation*}
+\esssup\,\mathcal{S}=\sup_nf_n.
+\end{equation*}
+
+As \PMlinkname{any $\sigma$-finite measure is equivalent to a probability measure}{AnySigmaFiniteMeasureIsEquivalentToAProbabilityMeasure}, we may suppose without loss of generality that $\mu$ is a probability measure. Also, without loss of generality, suppose that $\mathcal{S}$ is nonempty, and let $\mathcal{S}^\prime$ consist of the collection of maximums of finite sequences of functions in $\mathcal{S}$. Then choose any continuous and strictly increasing $\theta\colon\mathbb{\bar R}\rightarrow\mathbb{R}$. For example, we can take
+\begin{equation*}
+\theta(x)=
+\left\{
+\begin{array}{ll}
+x/(1+|x|),&\textrm{if }|x|<\infty,\\
+1,&\textrm{if }x=\infty,\\
+-1,&\textrm{if }x=-\infty.
+\end{array}
+\right.
+\end{equation*}
+As $\theta(f)$ is a bounded and measurable function for all $f\in\mathcal{S}^\prime$, we can set
+\begin{equation*}
+\alpha=\sup\left\{\int\theta(f)\,d\mu:f\in\mathcal{S}^\prime\right\}.
+\end{equation*}
+Then choose a sequence $g_n$ in $\mathcal{S}^\prime$ such that $\int\theta(g_n)\,d\mu\rightarrow\alpha$. By replacing $g_n$ by the maximum of $g_1,\ldots,g_n$ if necessary, we may assume that $g_{n+1}\ge g_n$ for each $n$. Set
+\begin{equation*}
+f=\sup_n g_n.
+\end{equation*}
+Also, every $g_n$ is the maximum of a finite sequence of functions $g_{n,1},\ldots,g_{n,{m_n}}$ in $\mathcal{S}$. Therefore, there exists a sequence $f_n\in\mathcal{S}$ such that
+\begin{equation*}
+\{f_1,f_2,\ldots\}=\{g_{n,m}:n\ge 1,1\le m\le m_n\}.
+\end{equation*}
+Then,
+\begin{equation*}
+f=\sup_nf_n.
+\end{equation*}
+It only remains to be shown that $f$ is indeed the essential supremum of $\mathcal{S}$.
+First, by continuity of $\theta$ and the dominated convergence theorem,
+\begin{equation*}
+\int\theta(f)\,d\mu=\lim_{n\rightarrow\infty}\int\theta(g_n)\,d\mu=\alpha.
+\end{equation*}
+Similarly, for any $g\in\mathcal{S}$,
+\begin{equation*}
+\int\theta(f\vee g)=\lim_{n\rightarrow\infty}\int\theta(g_n\vee g)\,d\mu\le\alpha.
+\end{equation*}
+It follows that $\theta(f\vee g)-\theta(f)$ is a nonnegative function with nonpositive integral, and so is equal to zero $\mu$-almost everywhere. As $\theta$ is strictly increasing, $f\vee g=f$ and therefore $f\ge g$ $\mu$-almost everywhere.
+
+Finally, suppose that $g\colon \Omega\rightarrow\mathbb{\bar R}$ satisfies $g\ge h$ ($\mu$-a.e.) for all $h\in\mathcal{S}$. Then, $g\ge f_n$ and,
+\begin{equation*}
+g\ge\sup_nf_n=f
+\end{equation*}
+$\mu$-a.e., as required.
+
+%%%%%
+%%%%%
+\end{document}

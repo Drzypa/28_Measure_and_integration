@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfSecondFormulaForSurfaceIntegrationWithRespectToArea}
+\pmcreated{2013-03-22 15:07:26}
+\pmmodified{2013-03-22 15:07:26}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{derivation of second formula for surface integration with respect to area}
+\pmrecord{5}{36863}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A75}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In this entry, we shall consider how to compute area integrals when the surface is given as the graph of a functions and present another derivation of the formula for area integration in this case.
+
+Suppose that $g$ is a function of two variables and that the surface $S$ is the graph of $g$:
+ $$z = g (x,y)$$
+To evaluate $\int_S d^2 A$, we shall begin by subdividing the $xy$ plane into a fine grid.  Corresponding to each of the squares of the grid, we shall have a small portion of the surface.  As before, we shall assume that, by choosing the grid spacing fine enough, we can ensure that these small pieces are approximately flat, and can be approximated by a portion of the tangent plane to the surface.
+
+Let us consider one of these small rectangles into which the $xy$ plane has been subdivided and one of the small portions of surface which lies above it (or rather the portion of tangent plane which approximates it).  Now the area of the rectangle is $dx \, dy$ and the area of the portion of surface is, by definition, $d^2 A$.
+
+Now, we use a fact about projections.  If a figure $F_1$, located in a plane $P_1$ projects down to a figure $F_2$ in a plane $P_2$, then
+ $$\hbox{area} (F_2) = \hbox{area} (F_1) \cos \theta,$$
+where $\theta$ is the dihedral angle between $P_1$ and $P_2$.  In our case, $P_1$ is the tangent plane, $P_2$ is the $xy$ plane, $F_1$ is the bit of tangent plane which approximates the portion of surface, and $F_2$ is the rectangle in the tangent plane, and $\theta$ is the angle between the tangent plane and the $xy$ plane.  Hence, in our case, the formula reads
+ $$dx \, dy = \cos \theta \, d^2 A.$$
+
+To finish this derivation, we need to figure out the cosine of the angle between the tangent plane and the $xy$ plane.  The tangent plane is described by the equation
+ $$z = \frac{\partial g}{\partial x} x + \frac{\partial g}{\partial y} y$$
+and the $xy$ plane is, of course, described by the equation
+ $$z = 0.$$
+Then, the intersection of these two planes is given by the line
+ $$0 = z = \frac{\partial g}{\partial x} x + \frac{\partial g}{\partial y} y.$$
+The plane perpendicular to this line is given by
+ $$\frac{\partial g}{\partial x} y = \frac{\partial g}{\partial y} x.$$
+Since the angle between two planes is defined as the angle between the angle between the lines perpendicular to the intersection of the planes, we will obtain the cosine of the angle by considering the right triangle with vertices at
+ $$\left( 0, 0, 0 \right), \qquad \left( \frac{\partial g}{\partial x}, \frac{\partial g}{\partial y}, 0 \right), \quad\hbox{and}\quad \left( \frac{\partial g}{\partial x}, \frac{\partial g}{\partial y}, \left( \frac{\partial g}{\partial x} \right)^2 + \left( \frac{\partial g}{\partial y} \right)^2 \right).$$
+Dividing adjacent by hypotenuse, we find that
+ $$\cos \theta = \frac{\sqrt{\left( \frac{\partial g}{\partial x} \right)^2 + \left( \frac{\partial g}{\partial y} \right)^2}}{\sqrt{\left( \frac{\partial g}{\partial x} \right)^2 + \left( \frac{\partial g}{\partial y} \right)^2 + \left( \left( \frac{\partial g}{\partial x} \right)^2 + \left( \frac{\partial g}{\partial y} \right)^2 \right)^2}} = \frac{1}{\sqrt{1 + \left( \frac{\partial g}{\partial x} \right)^2 + \left( \frac{\partial g}{\partial y} \right)^2}}.$$
+
+Having computed $\cos \theta$, we may now finish our derivation.  Substituting into the formula for $d^2 A$, we obtain
+ $$d^2 A = \sqrt{1 + \left( \frac{\partial g}{\partial x} \right)^2 + \left( \frac{\partial g}{\partial y} \right)^2} \> dx \, dy$$
+and, hence,
+ $$\int_S f(x,y) d^2 A = \int f(x,y)\sqrt{1 + \left( \frac{\partial g}{\partial x} \right)^2 + \left( \frac{\partial g}{\partial y} \right)^2} \> dx \, dy.$$
+Let us note that this formula is consistent with the formula we derived earlier --- if we set $u = x$, $v = y$, and $z = g(x,y)$, then our previous formula for surface integrals reduces to this one.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfExtendingACapacityToACartesianProduct}
+\pmcreated{2013-03-22 18:47:41}
+\pmmodified{2013-03-22 18:47:41}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of extending a capacity to a Cartesian product}
+\pmrecord{5}{41593}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+\pmclassification{msc}{28A05}
+%\pmkeywords{capacity}
+%\pmkeywords{compact paved space}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{compact}
+\PMlinkescapeword{closure}
+\PMlinkescapeword{paving}
+\PMlinkescapeword{property}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{increasing}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{decreasing}
+\PMlinkescapeword{projection}
+\PMlinkescapeword{compact paving}
+\PMlinkescapeword{inequality}
+\PMlinkescapeword{compactness}
+\PMlinkescapeword{set function}
+
+Let $(X,\mathcal{F})$ be a paved space such that $\mathcal{F}$ is closed under finite unions and finite intersections, and $(K,\mathcal{K})$ be a compact paved space.
+Define $\mathcal{G}$ to be the closure under finite unions and finite intersections of the paving $\mathcal{F}\times\mathcal{K}$ on $X\times K$.
+For an $\mathcal{F}$-capacity $I$, define
+\begin{align*}
+&\tilde I\colon\mathcal{P}(X\times K)\to\mathbb{R},\\
+&\tilde I(S) = I(\pi_X(S)),
+\end{align*}
+where $\pi_X$ is the projection map onto $X$. We show that $\tilde I$ is a $\mathcal{G}$-capacity and that $\pi_X(S)\in\mathcal{F}_\delta$ whenever $S\in\mathcal{G}_\delta$.
+
+Clearly, the property that $\tilde I$ is an increasing set function follows from the fact that $I$ satisfies this property. Furthermore, if $S_n\subseteq X\times K$ is an increasing sequence of sets with $S=\bigcup_nS_n$ then $\pi_X(S_n)$ is an increasing sequence and
+\begin{equation*}
+\tilde I(S)=I(\pi_X(S))=I\left(\bigcup_n\pi_X(S_n)\right)=\lim_{n\rightarrow\infty}I(\pi_X(S_n))=\lim_{n\rightarrow\infty}\tilde I(S_n).
+\end{equation*}
+
+To prove that $\tilde I$ is a $\mathcal{G}$-capacity, it only remains to show that if $S_n$ is a sequence in $\mathcal{G}$ decreasing to $S\subseteq X\times K$ then $\tilde I(S_n)\rightarrow \tilde I(S)$.
+Note that any $S$ in $\mathcal{G}$ can be written as $S=\bigcap_{j=1}^m\bigcup_{k=1}^{n_j}A_{j,k}\times K_{j,k}$ for sets $A_{j,k}\in\mathcal{F}$ and $K_{j,k}\in\mathcal{K}$. The projection onto $X$ is then
+\begin{equation*}
+\pi_X(S)=\bigcup\left\{\bigcap_{j=1}^m A_{j,k_j}\colon k_j\le n_j,\ \bigcap_{j=1}^mK_{j,k_j}\not=\emptyset\right\}
+\end{equation*}
+which, as $\mathcal{F}$ is closed under finite unions and finite intersections, must be in $\mathcal{F}$.
+Furthermore, for any $x\in X$,
+\begin{equation*}
+S_x\equiv\left\{y\in K\colon (x,y)\in S\right\}
+=\bigcap_{j=1}^m\bigcup\left\{K_{j,k}\colon k\le n_j, x\in A_{j,k} \right\}.
+\end{equation*}
+This shows that $S_x$ is in the closure $\mathcal{K}^*$ of $\mathcal{K}$ under finite unions and finite intersections. Furthermore, since \PMlinkname{compact pavings are closed subsets of a compact topological space}{CompactPavingsAreClosedSubsetsOfACompactSpace}, $\mathcal{K}^*$ is itself a compact paving.
+
+Now let $S_n$ be a decreasing sequence of sets in $\mathcal{G}$ and set $S=\bigcap_nS_n$. Then $\pi_X(S)\subseteq\pi_X(S_n)$ for each $n$, giving $\pi_X(S)\subseteq\bigcap_n\pi_X(S_n)$. To prove the reverse inequality, consider $x\in\bigcap_n\pi_X(S_n)$. Then, $(S_n)_x$ is a nonempty set in $\mathcal{K}^*$ for all $n$. By compactness, $S_x=\bigcap_n(S_n)_x$ must also be nonempty and therefore $x\in \pi_X(S)$. This shows that
+\begin{equation*}
+\bigcap_n\pi_X(S_n)=\pi_X(S).
+\end{equation*}
+Furthermore, as we have shown that $\pi_X(S_n)\in\mathcal{F}$ and, as $I$ is an $\mathcal{F}$-capacity,
+\begin{equation*}
+\tilde I(S_n)=I(\pi_X(S_n))\rightarrow I(\pi_X(S))=\tilde I(S).
+\end{equation*}
+So $\tilde I$ is a $\mathcal{G}$-capacity.
+
+We finally show that if $S\in\mathcal{G}_\delta$ then $\pi_X(S)\in \mathcal{F}_\delta$. By definition, there is a sequence $S_n\in\mathcal{G}$ such that $S=\bigcap_nS_n$. Setting $S^\prime_n=\bigcap_{m\le n}S_m$ then, since $\mathcal{G}$ is closed under finite unions and finite intersections, $S^\prime_n\in\mathcal{G}$. Furthermore, $S^\prime_n$ decreases to $S$ so, as shown above, $\pi_X(S^\prime_n)\in\mathcal{F}$ and
+\begin{equation*}
+\pi_X(S)=\bigcap_n\pi_X(S^\prime_n)\in\mathcal{F}_\delta
+\end{equation*}
+as required.
+
+%%%%%
+%%%%%
+\end{document}

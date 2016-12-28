@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDominatedConvergenceTheorem}
+\pmcreated{2013-03-22 13:30:02}
+\pmmodified{2013-03-22 13:30:02}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of dominated convergence theorem}
+\pmrecord{4}{34077}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+\pmrelated{SecondProofOfDominatedConvergenceTheorem}
+\pmrelated{SecondProofOfDominatedConvergenceTheorem2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+It is not difficult to prove that $f$ is measurable. In fact we can write 
+\[
+  f(x)=\sup_n \inf_{k\ge n} f_k(x)
+\]
+and we know that measurable functions are closed under the $\sup$ and $\inf$ operation.
+
+Consider the sequence $g_n(x)=2\Phi(x) - \vert f(x)-f_n(x)\vert$.
+Clearly $g_n$ are nonnegative functions since $f-f_n\le 2\Phi$.
+So, applying Fatou's Lemma, we obtain
+\begin{eqnarray*}
+\lefteqn{\lim_{n\to\infty} \int_X \vert f-f_n\vert\, d\mu 
+\le \limsup_{n\to \infty} \int_X \vert f-f_n\vert\, d\mu}\\
+& = & - \liminf_{n\to\infty} \int_X -\vert f-f_n\vert\, d\mu \\
+& = & \int_X 2\Phi\, d\mu - \liminf_{n\to\infty}\int_X 2\Phi-\vert f-f_n\vert\,d\mu\\
+& \le & \int_X 2\Phi\, d\mu - \int_X 2\Phi - \limsup_{n\to \infty}\vert f-f_n\vert\, d\mu \\
+&= & \int_X 2\Phi\, d\mu - \int_X 2\Phi\, d\mu = 0.
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRadonNikodymTheorem}
+\pmcreated{2013-03-22 18:58:03}
+\pmmodified{2013-03-22 18:58:03}
+\pmowner{Ziosilvio}{18733}
+\pmmodifier{Ziosilvio}{18733}
+\pmtitle{proof of Radon-Nikodym theorem}
+\pmrecord{5}{41827}
+\pmprivacy{1}
+\pmauthor{Ziosilvio}{18733}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A15}
+\pmsynonym{Hilbert spaces proof of Radon-Nikodym's theorem}{ProofOfRadonNikodymTheorem}
+\pmsynonym{measure- theoretic proof of Radon-Nikodym theorem}{ProofOfRadonNikodymTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The following proof of Radon-Nikodym theorem
+is based on the original argument by John von Neumann.
+We suppose that $\mu$ and $\nu$ are real, nonnegative, and finite.
+The extension to the $\sigma$-finite case is a standard exercise,
+as is $\mu$-a.e. uniqueness of Radon-Nikodym derivative.
+Having done this, the thesis also holds for signed and complex-valued measures.
+
+Let $(X,\mathcal{F})$ be a measurable space
+and let $\mu,\nu:\mathcal{F}\to[0,R]$ two finite measures on $X$
+such that $\nu(A)=0$ for every $A\in\mathcal{F}$ such that $\mu(A)=0$.
+Then $\sigma=\mu+\nu$ is a finite measure on $X$
+such that $\sigma(A)=0$ if and only if $\mu(A)=0$.
+
+Consider the linear functional
+\begin{math}
+T:L^2(X,\mathcal{F},\sigma)\to\mathbb{R}
+\end{math}
+defined by
+\begin{equation} \label{eq:T}
+Tu=\int_Xu\;d\mu\;\;\forall u\in L^2(X,\mathcal{F},\sigma)\;.
+\end{equation}
+$T$ is well-defined
+because $\mu$ is finite and dominated by $\sigma$, so that
+\begin{math}
+L^2(X,\mathcal{F},\sigma)
+\subseteq L^2(X,\mathcal{F},\mu)
+\subseteq L^1(X,\mathcal{F},\mu);
+\end{math}
+it is also linear and bounded because
+\begin{math}
+|Tu|\leq\|u\|_{L^2(X,\mathcal{F},\sigma)}\cdot\sqrt{\sigma(X)}.
+\end{math}
+By Riesz representation theorem, there exists $g\in L^2(X,\mathcal{F},\sigma)$ such that
+\begin{equation} \label{eq:g}
+Tu=\int_Xu\;d\mu=\int_Xu\cdot g\,d\sigma
+\end{equation}
+for every $u\in L^2(X,\mathcal{F},\sigma)$.
+Then
+\begin{math}
+\mu(A)=\int_Ag\,d\sigma
+\end{math}
+for every $A\in\mathcal{F}$,
+so that $0<g\leq 1$ $\mu$- and $\sigma$-a.e.
+(Consider the former with $A=\{x\mid g(x)\leq 0\}$ or $A=\{x\mid g(x)>1\}$.)
+Moreover, the second equality in (\ref{eq:q})
+holds when $u=\chi_A$ for $A\in\mathcal{F}$,
+thus also when $u$ is a simple measurable function
+by linearity of integral,
+and finally when $u$ is a ($\mu$- and $\sigma$-a.e.)
+nonnegative $\mathcal{F}$-measurable function
+because of the monotone convergence theorem.
+
+Now, $1/g$ is $\mathcal{F}$-measurable
+and nonnegative $\mu$- and $\sigma$-a.e.;
+moreover, $\dfrac{1}{g}\cdot g=1$ $\sigma$- and $\mu$-a.e.
+Thus, for every $A\in\mathcal{F}$,
+\begin{equation} \label{eq:1/g}
+\int_A\frac{1}{g}\,d\mu
+=\int_Ad\sigma
+=\sigma(A)
+\end{equation}
+Since $\sigma$ is finite, $1/g\in L^1(X,\mathcal{F},\mu)$,
+and so is $f=\dfrac{1}{g}-1$.
+Then for every $A\in\mathcal{F}$
+\begin{displaymath}
+\nu(A)=\sigma(A)-\mu(A)
+=\int_A\left(\frac{1}{g}-1\right)d\mu
+=\int_Af\,d\mu\,.
+\end{displaymath}
+
+%%%%%
+%%%%%
+\end{document}

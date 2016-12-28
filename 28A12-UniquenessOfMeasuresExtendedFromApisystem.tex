@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniquenessOfMeasuresExtendedFromApisystem}
+\pmcreated{2013-03-22 18:33:08}
+\pmmodified{2013-03-22 18:33:08}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{uniqueness of measures extended from a $\pi$-system}
+\pmrecord{8}{41274}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+%\pmkeywords{measure}
+%\pmkeywords{sigma-algebra}
+%\pmkeywords{pi-system}
+\pmrelated{LebesgueMeasure}
+\pmrelated{DynkinsLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{theorem}{Theorem}
+\begin{document}
+The following theorem allows measures to be uniquely defined by specifying their values on a \PMlinkname{$\pi$-system}{PiSystem} instead of having to specify the measure of every possible measurable set. For example, the collection of open intervals $(a,b)\subseteq\mathbb{R}$ forms a $\pi$-system generating the \PMlinkname{Borel $\sigma$-algebra}{BorelSigmaAlgebra} and consequently the Lebesgue measure $\mu$ is uniquely defined by the equality $\mu((a,b))=b-a$.
+
+\begin{theorem}
+Let $\lambda$, $\mu$ be measures on a measurable space $(X,\mathcal{A})$. Suppose that $A$ is a $\pi$-system on $X$ generating $\mathcal{A}$ such that $\lambda=\mu$ on $A$ and that there exists a sequence $S_n\in A$ with $\bigcup_{n=1}^\infty S_n=X$ and $\lambda(S_n)<\infty$. Then, $\lambda=\mu$.
+\end{theorem}
+\begin{proof}
+Choose any $T\in A$ such that $\lambda(T)<\infty$ and set $\mathcal{B}=\{S\in\mathcal{A}:\lambda(S\cap T)=\mu(S\cap T)\}$. For any $S\in A$, $S\cap T\in A$ and the requirement that $\lambda,\mu$ agree on $A$ gives $S\in\mathcal{B}$, so $\mathcal{B}$ contains $A$. We show that $\mathcal{B}$ is a Dynkin system in order to apply Dynkin's lemma.
+It is clear that $X\in\mathcal{B}$. Suppose that $S_1\subseteq S_2$ are in $\mathcal{B}$. Then, the additivity of $\lambda$ and $\mu$ gives
+\begin{equation*}
+\lambda\left((S_2\setminus S_1)\cap T\right) = \lambda(S_2\cap T)-\lambda(S_1\cap T)=\mu(S_2\cap T)-\mu(S_1\cap T) = \mu\left((S_2\setminus S_1)\cap T\right)
+\end{equation*}
+and therefore $S_2\setminus S_1\in\mathcal{B}$.
+Now suppose that $S_n$ is an increasing sequence of sets in $\mathcal{B}$ increasing to $S\subseteq X$. Then, monotone convergence of $\lambda$ and $\mu$ gives
+\begin{equation*}
+\lambda(S\cap T)=\lim_{n\rightarrow\infty}\lambda(S_n\cap T)=\lim_{n\rightarrow\infty}\mu(S_n\cap T)=\lambda(S\cap T),
+\end{equation*}
+so $S\in\mathcal{B}$ and $\mathcal{B}$ is a Dynkin system containing $A$. By Dynkin's lemma this shows that $\mathcal{B}$ contains $\sigma(A)=\mathcal{A}$.
+
+We have shown that $\lambda(S\cap T)=\mu(S\cap T)$ for any $S\in\mathcal{A}$ and $T\in A$ with $\lambda(T)<\infty$. In the particular case where $X\in A$ and $\lambda,\mu$ are finite measures then it follows that $\lambda(S)=\mu(S)$ simply by taking $T=X$.
+More generally, choose a sequence of sets $T_n\in A$ satisfying $\lambda(T_n)<\infty$ and $\bigcup_nT_n=X$. For any $S\in\mathcal{A}$, $S_n\equiv (S\cap T_n)\setminus\bigcup_{m=1}^{n-1}T_m$ is a pairwise disjoint sequence of sets in $\mathcal{A}$ with $S_n\subseteq T_n$ and $\bigcup_nS_n=S$. So, $\lambda(S_n)=\mu(S_n)$ and the countable additivity of $\lambda$ and $\mu$ gives
+\begin{equation*}
+\lambda(S)=\sum_n\lambda(S_n)=\sum_n\mu(S_n)=\mu(S).
+\end{equation*}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

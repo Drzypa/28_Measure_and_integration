@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompleteMeasure}
+\pmcreated{2013-03-22 14:06:56}
+\pmmodified{2013-03-22 14:06:56}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{complete measure}
+\pmrecord{5}{35520}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+\pmrelated{UniversallyMeasurable}
+\pmdefines{completion}
+\pmdefines{complete}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+A measure space $(X,\mathscr{S},\mu)$ is said to be \emph{complete} if every subset of a set of measure $0$ is measurable (and consequently, has measure $0$); i.e. if for all $E\in\mathscr{S}$ such that $\mu(E)=0$ and for all $S\subset E$ we have $\mu(S)=0$. 
+
+If a measure space is not complete, there exists a \PMlinkname{completion}{CompletionOfAMeasureSpace} of it, which is a complete measure space $(X,\overline{\mathscr{S}},\overline{\mu})$ such that $\mathscr{S}\subset\overline{\mathscr{S}}$ and $\overline {\mu}_{|\mathscr{S}} = \mu$, where $\overline{\mathscr{S}}$ is the smallest $\sigma$-algebra containing both $\mathscr{S}$ and all subsets of elements of zero measure of $\mathscr{S}$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocallyIntegrableFunction}
+\pmcreated{2013-03-22 13:44:19}
+\pmmodified{2013-03-22 13:44:19}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{locally integrable function}
+\pmrecord{11}{34430}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28B15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+{\bf Definition} 
+Suppose that $U$ is an open set in $\sR^n$, and 
+$f\colon U\to\sC$ is a Lebesgue measurable function. 
+If the Lebesgue integral
+$$
+   \int_K |f| dx
+$$
+is finite for all compact subsets $K$ in $U$, then $f$ is
+\emph{locally integrable}. The set of all
+such functions is denoted by 
+$L^1_{\scriptsize{\mbox{loc}}}(U)$.
+
+\subsubsection*{Example}
+\begin{enumerate}
+\item $L^1(U)\subset L^1_{\scriptsize{\mbox{loc}}}(U)$, where
+$L^1(U)$ is the set of (globally) integrable functions. 
+\item Continuous functions are locally integrable.
+\item The function $f(x)=1/x$ for $x\neq 0$ and $f(0)=0$ 
+is not locally integrable. 
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

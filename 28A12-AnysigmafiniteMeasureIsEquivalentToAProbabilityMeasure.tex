@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnysigmafiniteMeasureIsEquivalentToAProbabilityMeasure}
+\pmcreated{2013-03-22 18:33:44}
+\pmmodified{2013-03-22 18:33:44}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{any $\sigma$-finite measure is equivalent to a probability measure}
+\pmrecord{6}{41285}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+\pmclassification{msc}{28A10}
+%\pmkeywords{sigma-finite}
+%\pmkeywords{measure}
+\pmrelated{SigmaFinite}
+\pmrelated{Measure}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{equivalent}
+The following theorem states that for any \PMlinkname{$\sigma$-finite}{SigmaFinite} measure $\mu$, there is an equivalent probability measure $\mathbb{P}$ --- that is, the sets $A$ satisfying $\mu(A)=0$ are the same as those satisfying $\mathbb{P}(A)=0$.
+This result allows statements about probability measures to be generalized to arbitrary $\sigma$-finite measures.
+
+\begin{theorem*}
+Any nonzero $\sigma$-finite measure $\mu$ on a measurable space $(X,\mathcal{A})$ is equivalent to a probability measure $\mathbb{P}$ on $(X,\mathcal{A})$. In particular, there is a positive measurable function $f\colon X\rightarrow(0,\infty)$ satisfying $\int f\,d\mu=1$, and $\mathbb{P}(A)=\int_Af\,d\mu$ for all $A\in\mathcal{A}$.
+\end{theorem*}
+\begin{proof}
+Let $A_1,A_2,\ldots$ be a sequence in $\mathcal{A}$ such that $\mu(A_k)<\infty$ and $\bigcup_kA_k=X$. Then it is easily verified that
+\begin{equation*}
+g\equiv\sum_{k=1}^\infty 2^{-k}\frac{1_{A_k}}{1+\mu(A_k)}
+\end{equation*}
+satisfies $1\ge g>0$ and $\int g\,d\mu<\infty$. So, setting $f=g/\int g\,d\mu$, we have $\int f\,d\mu=1$ and therefore $\mathbb{P}(A)\equiv\int_Af\,d\mu$ is a probability measure equivalent to $\mu$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

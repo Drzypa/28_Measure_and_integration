@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExtendedRealNumbers}
+\pmcreated{2013-03-22 13:44:44}
+\pmmodified{2013-03-22 13:44:44}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{extended real numbers}
+\pmrecord{21}{34441}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28-00}
+\pmclassification{msc}{12D99}
+\pmrelated{ImproperLimits}
+\pmrelated{IntermediateValueTheoremForExtendedRealNumbers}
+\pmrelated{ExampleOfNonCompleteLatticeHomomorphism}
+\pmdefines{plus infinity}
+\pmdefines{minus infinity}
+\pmdefines{$\overline{\mathbb{R}}$}
+\pmdefines{infinite}
+\pmdefines{infinity}
+\pmdefines{finite}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{order}
+\PMlinkescapeword{areas}
+
+The \emph{extended real numbers} are the real numbers together with 
+$+\infty$ (or simply $\infty$) and $-\infty$.\, 
+This set is usually denoted by $\overline{\sR}$ or\, $[-\infty,\,\infty]$,\,
+and the elements $+\infty$ and $-\infty$ are called
+\emph{plus} and \emph{minus infinity}, respectively.\, (N.B.,\, ``$\overline{\sR}$'' may sometimes \PMlinkescapetext{mean} the algebraic closure of $\mathbb{R}$; see the special notations in algebra.) 
+
+The real numbers are in certain contexts called {\em finite} as contrast to $\infty$.
+
+\subsubsection{Order on $\overline{\sR}$}
+The \PMlinkname{order}{TotalOrder} relation on $\sR$ extends to $\overline{\sR}$ by
+defining that for any $x\in \sR$, we have
+\begin{eqnarray*}
+-\infty&<& x, \\
+x &<& \infty,
+\end{eqnarray*}
+and that $-\infty < \infty$.\, For\, $a\in\sR$, let us also define intervals 
+\begin{eqnarray*}
+(a,\,\infty{]} &=& \{x\in \sR: x>a \}, \\
+{[}{-\infty},\,a) &=& \{x\in \sR: x<a \}.
+\end{eqnarray*}
+
+\subsubsection{Addition}
+For any real number $x$, we define
+\begin{eqnarray*}
+ x + (\pm\infty) &=& (\pm\infty) + x = \pm\infty,
+\end{eqnarray*}
+and for $+\infty$ and $-\infty$, we define
+\begin{eqnarray*}
+(\pm \infty) + (\pm \infty) &=& \pm \infty.
+\end{eqnarray*}
+It should be pointed out that sums like $(+\infty) + (-\infty)$ 
+are left undefined.\, Thus $\overline{\sR}$ is not an ordered ring
+although $\sR$ is. 
+
+\subsubsection{Multiplication}
+If $x$ is a positive real number, then 
+\begin{eqnarray*}
+ x \cdot (\pm \infty) &=& (\pm\infty)\cdot x  = \pm\infty.
+\end{eqnarray*}
+Similarly, if $x$ is a negative real number, then 
+\begin{eqnarray*}
+ x \cdot (\pm \infty) &=& (\pm \infty)\cdot x = \mp\infty.
+\end{eqnarray*}
+Furthermore, for $\infty$ and $-\infty$, we define
+\begin{eqnarray*}
+(+\infty) \cdot(+\infty) &=& (-\infty)\cdot (-\infty) = +\infty, \\
+(+\infty) \cdot (- \infty) &=& (-\infty)\cdot (+\infty) = -\infty. 
+\end{eqnarray*}
+
+In many areas of mathematics, products like $0\cdot \infty$
+are left undefined.\, However, a special case is 
+measure theory, where it is convenient to define
+\begin{eqnarray*}
+0\cdot (\pm \infty) &=& (\pm \infty) \cdot 0 = 0.
+\end{eqnarray*}
+
+\subsubsection{Absolute value}
+For $\infty$ and $-\infty$, the absolute value is defined as
+$$
+  |\pm \infty| = +\infty.
+$$
+
+\subsubsection{Topology}
+The topology of $\overline{R}$ is given by the usual base of $\sR$
+together with with intervals of type\, $[-\infty,\,a)$,\, $(a,\,\infty]$.\, 
+This makes $\overline{\sR}$ into a compact topological space.
+$\overline{\sR}$ can also be seen to be homeomorphic to the interval\, $[-1,\,1]$, via 
+the map $x \mapsto (2/\pi) \arctan x$.
+Consequently, every 
+continuous function $f\colon \overline{\sR}\to \overline{\sR}$ has
+a minimum and maximum. 
+
+\subsubsection{Examples}
+\begin{enumerate}
+\item By taking\, $x = -1$\, in the \PMlinkescapetext{product rule}, we obtain
+the relations
+\begin{eqnarray*}
+(-1)\cdot (\pm\infty) &=& \mp \infty.
+\end{eqnarray*}
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

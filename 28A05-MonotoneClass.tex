@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MonotoneClass}
+\pmcreated{2013-03-22 17:07:25}
+\pmmodified{2013-03-22 17:07:25}
+\pmowner{fernsanz}{8869}
+\pmmodifier{fernsanz}{8869}
+\pmtitle{monotone class}
+\pmrecord{5}{39426}
+\pmprivacy{1}
+\pmauthor{fernsanz}{8869}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A05}
+%\pmkeywords{Monotone class theorem}
+%\pmkeywords{sigma algebra}
+\pmrelated{SigmaAlgebra}
+\pmrelated{MonotoneClassTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\numberwithin{equation}{section}
+\begin{document}
+\title{Monotone Class}%
+\author{Fernando Sanz GÃ¡miz}%
+
+\begin{defn}
+A collection $\mathcal M$ of subsets of $\Omega$ is a \emph{monotone class}
+if it is closed under increasing and decreasing sequences of sets,
+i.e.
+
+\begin{enumerate}
+\item $A_1 \subseteq A_2 \subseteq A_3 ,...\in \mathcal M \Rightarrow
+\bigcup A_n \in \mathcal M$
+\item $A_1 \supseteq A_2 \supseteq A_3 ,...\in \mathcal M \Rightarrow
+\bigcap A_n \in \mathcal M$
+\end{enumerate}
+
+\end{defn}
+%%%%%
+%%%%%
+\end{document}

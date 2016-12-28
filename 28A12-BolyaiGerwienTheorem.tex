@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BolyaiGerwienTheorem}
+\pmcreated{2013-03-22 16:32:19}
+\pmmodified{2013-03-22 16:32:19}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Bolyai-Gerwien theorem}
+\pmrecord{11}{38720}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+\pmsynonym{Wallace-Bolyai-Gerwien theorem}{BolyaiGerwienTheorem}
+\pmsynonym{Bolyai-Gerwin theorem}{BolyaiGerwienTheorem}
+\pmsynonym{polygonal decomposition}{BolyaiGerwienTheorem}
+\pmdefines{dissection}
+\pmdefines{equidecomposable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm}  [Bolyai-Gerwien Theorem]  Given two polygons with the same area, it is possible to cut up one polygon into a finite number of smaller polygonal pieces and from those pieces assemble into the other polygon. 
+\end{thm}
+
+To cast the theorem in more mathematically rigorous terms, let $P$ be a polygon in a plane (Euclidean plane).  A \emph{dissection} or \emph{polygonal decomposition} of $P$ is a finite set of polygons $P_1,\ldots, P_n$ such that $P=P_1\cup \cdots \cup P_n$ and $P_i\cap P_j$ is either a line segment, a point, or the empty set.  Two polygons $P$ and $Q$ are said to be \emph{equidecomposable} (or \emph{scissor-equivalent}) if there is a dissection $\lbrace P_i\mid i=1,\ldots, n \rbrace$ of $P$ and a finite set of rigid motions $\lbrace m_i\mid i=1,\ldots, n\rbrace$ such that $\lbrace m_i(P_i)\mid i=1,\ldots, n\rbrace$ is a dissection of $Q$.  From this definition, it is easy to see that equidecomposability is an equivalence relation on the set of all polygons in a given plane.  Furthermore, if two polygons are equidecomposable, they have the same area, and the converse of which is the statement of Bolyai-Gerwien Theorem.
+
+One possible proof is to show that any polygon can be broken down into triangles. These triangles can be reassembled into rectangles, which can then be joined into one big rectangle. This big rectangle can then be reassembled into a square.
+
+\textbf{Remarks}.  Farkas Bolyai conjectured this in the 1790s and William Wallace proved it in 1808. Unaware of this, Paul Gerwien proved it again in 1833, and then Bolyai, unaware of both earlier results, gave another proof in 1835.
+
+David Hilbert wondered if the same could be done for any pair of polyhedra of equal volume (see the third of Hilbert's problems).  Dehn proved that this could not be done shortly after (Dehn's Theorem).  However, under some suitable conditions, Hadwiger proved that equidecomposability is still possible.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDominatedConvergenceTheorem1}
+\pmcreated{2013-03-22 14:33:58}
+\pmmodified{2013-03-22 14:33:58}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of dominated convergence theorem}
+\pmrecord{5}{36123}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A20}
+%\pmkeywords{convergence}
+%\pmkeywords{integral}
+\pmrelated{ProofOfDominatedConvergenceTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Define the functions $h_n^+$ and $h_n^-$ as follows:
+ $$h_n^+ (x) = \sup \{f_m (x) \colon m \ge n\}$$
+ $$h_n^- (x) = \inf \{f_m (x) \colon m \ge n\}$$
+These suprema and infima exist because, for every $x$, $|f_n (x)|
+\le g(x)$.  These functions enjoy the following properties:
+
+For every $n$, $|h_n^\pm| \le g$
+
+The sequence $h_n^+$ is decreasing and the sequence $h_n^-$ is increasing.
+
+For every $x$, $\lim_{n \to \infty} h_n^\pm (x) = f(x)$
+
+Each $h_n^\pm$ is measurable.
+
+The first property follows from immediately from the definition of
+supremum.  The second property follows from the fact that the
+supremum or infimum is being taken over a larger set to define
+$h_n^\pm (x)$ than to define $h_m^\pm (x)$ when $n > m$.  The third
+property is a simple consequence of the fact that, for any sequence
+of real numbers, if the sequence converges, then the sequence has an
+upper limit and a lower limit which equal each other and equal the
+limit.  As for the fourth statement, it means that, for every real
+number $y$ and every integer $n$, the sets
+ $$\{x \mid h_n^- (x) \ge y\} \hbox{\hskip 0.5in and \hskip 0.5in}
+ \{x \mid h_n^+ (x) \le y\}$$
+are measurable.  However, by the definition of $h_n^\pm$, these sets
+can be expressed as
+ $$\bigcup_{m \le n} \{x \mid f_n (x) \le y\} \hbox{\hskip 0.5in and
+  \hskip 0.5in} \bigcup_{m \ge n} \{x \mid f_n (x) \le y\}$$
+respectively. Since each $f_n$ is assumed to be measurable, each set
+in either union is measurable.  Since the union of a countable
+number of measurable sets is itself measurable, these unions are
+measurable, and hence the functions $h_n^\pm$ are measurable.
+
+Because of properties 1 and 4 above and the assumption that $g$ is
+integrable, it follows that each $h_n^\pm$ is integrable.  This
+conclusion and property 2 mean that the monotone convergence theorem
+is applicable so one can conclude that $f$ is integrable and that
+ $$\lim_{n \to \infty} \int h_n^\pm (x) \,d\mu(x) = \int \lim_{n \to \infty}
+  h_n^\pm (x) \,d\mu(x)$$
+By property 3, the right hand side equals $\int f(x) \,d\mu(x)$.
+
+By construction, $h_n^- \le f_n \le h_n^+$ and hence
+ $$\int h_n^- \le \int f_n \le \int h_n^+$$
+Because the outer two terms in the above inequality tend towards the
+same limit as $n \to \infty$, the middle term is squeezed into
+converging to the same limit.  Hence
+ $$\lim_{n \to \infty} \int f_n (x) \,d\mu(x) = \int f (x) \,d\mu(x)$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LebesgueDensityTheorem}
+\pmcreated{2013-03-22 13:21:02}
+\pmmodified{2013-03-22 13:21:02}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{Lebesgue density theorem}
+\pmrecord{7}{33869}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A75}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+Let $\mu$ be the Lebesgue measure on $\mathbb{R}^n$, and for a
+measurable set $A\subset \mathbb{R}^n$ define the density of $A$ in
+$\epsilon$-neighborhood of $x\in\mathbb{R}^n$ by
+\begin{equation*}
+d_\epsilon(x)=\frac{\mu(A\cap B_\epsilon(x))}{\mu(B_\epsilon(x))}
+\end{equation*}
+where $B_\epsilon(x)$ denotes the ball of radius $\epsilon$
+centered at $x$.
+
+The Lebesgue density theorem asserts that for almost every point of
+$A$ the density
+\begin{equation*}\label{eq:densdef}
+d(x)=\lim_{\epsilon\to 0} d_{\epsilon}(x)
+\end{equation*}
+exists and is equal to $1$.
+
+In other words, for every measurable set $A$ the density of $A$ is
+$0$ or $1$ almost everywhere. However, it is a curious fact that
+if $\mu(A)>0$ and $\mu(\mathbb{R}^n\setminus A)>0$, then there are
+always points of $\mathbb{R}^n$ where the density is neither $0$
+nor $1$ \cite[Lemma 4]{cite:croft_latticepts}.
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:croft_latticepts}
+Hallard~T. Croft.
+\newblock Three lattice-point problems of {Steinhaus}.
+\newblock {\em Quart. J. Math. Oxford (2)}, 33:71--83, 1982.
+\newblock \PMlinkexternal{Zbl
+  0499.10035}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0499.10035}.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

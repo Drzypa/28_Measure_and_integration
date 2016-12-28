@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SignedMeasure}
+\pmcreated{2013-03-22 13:26:55}
+\pmmodified{2013-03-22 13:26:55}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{signed measure}
+\pmrecord{8}{34013}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+\usepackage{mathrsfs}
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{signed measure} on a measurable space $(\Omega,\mathscr{S})$ is a function $\mu:\mathscr{S}\rightarrow \mathbb{R}\cup\{+\infty\}$ which is \PMlinkname{$\sigma$-additive}{Additive} and such that $\mu(\emptyset)=0$.
+
+\textbf{Remarks.} 
+\begin{enumerate}
+\item The usual (positive) measure is a particular case of signed measure, in which $|\mu| = \mu$ (see Jordan decomposition.)
+
+\item Notice that the value $-\infty$ is not allowed. For some authors, a signed measure can only take finite values (so that $+\infty$ is not allowed either). This is sometimes useful because it turns the space of all signed measures into a normed vector space, with the natural operations, and the norm given by $\|\mu\| = |\mu|(\Omega)$.
+
+\item An important example of signed measures arises from the usual measures in the following way: Let $(\Omega,\mathscr{S},\mu)$ be a measure space, and let $f$ be a (real valued) measurable function such that 
+\[\int_{\{x\in \Omega:f(x)<0\}} |f| d\mu <\infty.\]
+Then a signed measure is defined by
+\[A\mapsto \int_A fd\mu.\]
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

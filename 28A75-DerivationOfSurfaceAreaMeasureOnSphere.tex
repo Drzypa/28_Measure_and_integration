@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfSurfaceAreaMeasureOnSphere}
+\pmcreated{2013-03-22 14:57:55}
+\pmmodified{2013-03-22 14:57:55}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{derivation of  surface area measure on sphere}
+\pmrecord{6}{36664}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A75}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The sphere of radius $r$ can be described parametrically by spherical coordinates (what else ;) ) as follows:
+ $$ x = r \sin u \sin v $$
+ $$ y = r \sin u \cos v $$
+ $$ z = r \cos u $$
+Then, using trigonometric identities to simplify expressions we find that
+ $$\frac{\partial (x, y)}{\partial (u,v)} =
+\left| \begin{matrix}
+r \cos u \sin v & r \sin u \cos v \\
+r \cos u \cos v & -r \sin u \sin v
+\end{matrix} \right| =
+- r^2 \cos u \sin u$$
+$$\frac{\partial (y, z)}{\partial (u,v)} =
+\left| \begin{matrix}
+r \cos u \cos v & -r \sin u \sin v \\
+- r \sin u & 0
+\end{matrix} \right| =
+- r^2 \sin^2 u \sin v$$
+$$\frac{\partial (z, x)}{\partial (u,v)} =
+\left| \begin{matrix}
+- r \sin u & 0 \\
+r \cos u \sin v & r \sin u \cos v
+\end{matrix} \right| =
+r^2 \sin^2 u \cos v$$
+and hence, using more trigonometric identities, we find that
+ $$\sqrt{ \left(  \frac{\partial (x,y)}{\partial (u,v)} \right)^2 +  \left( \frac{\partial (y,z)}{\partial (u,v)} \right)^2 + \left( \frac{\partial (z,x)}{\partial (u,v)} \right)^2 } =$$
+ $$\sqrt{ r^4 \cos^2 u \sin^2 u + r^4 \sin^4 u \sin^2 v + r^4 \sin^4 u \cos^2 v } = r^2 \sin u.$$
+This means that, on a sphere
+ $$d^2 A = r^2 \sin u \> du \, dv.$$
+Note that in the case of a unit sphere, ($r = 1$) this agrees with the formula presented in the second paragraph of subsection 2 of the main entry.
+
+To return to the main entry \PMlinkid{click here}{6660}
+%%%%%
+%%%%%
+\end{document}

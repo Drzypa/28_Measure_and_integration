@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegrationWithRespectToSurfaceAreaOnAHelicoid}
+\pmcreated{2013-03-22 14:58:04}
+\pmmodified{2013-03-22 14:58:04}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{integration with respect to surface area on a helicoid}
+\pmrecord{14}{36667}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A75}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+To illustrate the result derived in \PMlinkid{example 3}{6666}, let us compute the area of a portion of helicoid of height $h$ and radius $r$. (This calculation will tell us how much material is needed to make an \PMlinkescapetext{Archimedean screw}.)  The integral we need to compute in this case is
+ $$A = \int d^2 A = \int_0^{h/c} \int_0^r \sqrt{ c^2 + u^2 } \> du \, dv = $$
+ $$\int_0^{h/c} \left( {1 \over 2} r \sqrt{ c^2 + r^2} + {c^2 \over 2} \log \left\{ \frac{r}{c} + \sqrt{ 1 + \left( \frac{r}{c} \right)^2 } \right\} \right) \> dv =$$
+ $$\frac{rh}{2} \sqrt{ 1 + \left( \frac{r}{c} \right)^2 } + {ch \over 2} \log \left\{ \frac{r}{c} + \sqrt{ 1 + \left( \frac{r}{c} \right)^2 } \right\}$$
+
+As a second illustration, let us compute the second moment of a helicoid about the axis of rotation.  In mechanics, this would be called the moment of inertia of the helicoid and determines how much energy is needed to make the screw rotate.  This is determined as follows:
+ \begin{eqnarray*}
+\int (x^2 + y^2) d^2 A = &\int_0^{h/c} \int_0^r u^2 \sqrt{ c^2 + u^2 } \> du \, dv = \\
+&\int_0^{h/c} \left( \frac{r (2 r^2 + c^2)}{8} \sqrt{ c^2 + r^2 } - \frac{c^4}{8} \log \left\{ \frac{r}{c} + \sqrt{ 1 + \left( \frac{r}{c} \right)^2 } \right\} \right) \, dv = \\
+& \frac{r h (2 r^2 + c^2)}{8} \sqrt{ 1 + \left( \frac{r}{c} \right)^2 } - \frac{h c^3}{8} \log \left\{ \frac{r}{c} + \sqrt{ 1 + \left( \frac{r}{c} \right)^2 } \right\}
+ \end{eqnarray*}
+
+\PMlinkescapetext{\sl Quick links:}
+
+\PMlinkid{main entry}{6660}
+\PMlinkid{previous example}{6666}
+\PMlinkid{next example}{6668}
+%%%%%
+%%%%%
+\end{document}

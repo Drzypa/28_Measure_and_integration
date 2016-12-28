@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticJuliaSet}
+\pmcreated{2013-03-22 17:14:40}
+\pmmodified{2013-03-22 17:14:40}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{quadratic Julia set}
+\pmrecord{9}{39574}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A80}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+For each complex number $c$, there is an associated quadratic map
+$f_c\colon\mathbb{C}\to\mathbb{C}$ defined by $f_c(z) = z^2 + c$.
+Since polynomials are analytic, it follows that $f_c$ has a Julia set
+$J(f_c)$, which we call the \emph{quadratic Julia set} associated to
+$c$ and denote by $J_c$.
+
+The function can also be viewed as having $\mathbb{R}^2$ as its domain
+and codomain.  If $c = a + ib$, then
+\[
+  f_c(x, y) = (x^2 - y^2 + a, 2xy + b).
+\]
+The characterization of the Julia set $J_c$ as all points $z$ for which the
+collection of iterates $\{f^n\colon n\in\mathbb{N}\}$ is not a normal
+family can be roughly interpreted as saying that the Julia set
+includes only those points exhibiting chaotic behavior.  In
+particular, points whose orbit under $f$ goes to infinity are omitted
+from $J_c$, as well as points whose orbit converges to a point.
+
+Sometimes for aesthetic purposes a Julia set is displayed with points
+of the latter type included.  However, the chaoticity of the true Julia
+set can be exploited to plot an approximation very quickly.  Given a
+single point $z$ known to be in the quadratic Julia set $J_c$, its inverses 
+under $f$, that is, the square roots of $z - c$, are also in $J_c$.  Moreover,
+by the chaoticity condition the ``backwards orbit'' of $z$ (selecting just one 
+square root at each step) will be distributed fairly evenly
+over $J_c$, so this gives a computationally inexpensive method to plot
+Julia sets.
+
+Before the advent of computers, the French mathematician Gaston Julia
+proved under what conditions a Julia set is connected or not
+connected.  After computers became available, it became possible to
+make pictures displaying some of the complexity of these Julia sets,
+and the Mandelbrot set, a kind of index into connected quadratic Julia
+sets, was discovered.
+
+In the same way that some people see recognizable shapes in clouds,
+some people see recognizable shapes in Julia sets, and some of them
+have been named accordingly. To give two examples: the San Marco
+dragon at $\frac{-3}{4} + 0i$ and the Douady rabbit at $\frac{-1}{8} +
+\frac{745}{1000}i$ (the coordinates can be varied by small values and
+still give very similar shapes).
+
+% not sure what to do with this sentence
+Julia sets can be generalized to other iterated holomorphic functions
+on the complex plane or in a 3-dimensional space.
+
+\begin{thebibliography}{1}
+\bibitem{hl} H. Lauwerier, translated by Sophia Gill-Hoffst\"adt. {\it Fractals: Endlessly Repeated Geometric Figures} Princeton: Princeton University Press (1991): 124 - 151
+\end{thebibliography}
+
+\PMlinkescapeword{index}
+\PMlinkescapeword{similar}
+\PMlinkescapeword{type}
+%%%%%
+%%%%%
+\end{document}

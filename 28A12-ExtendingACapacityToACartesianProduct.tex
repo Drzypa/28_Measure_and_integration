@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExtendingACapacityToACartesianProduct}
+\pmcreated{2013-03-22 18:47:38}
+\pmmodified{2013-03-22 18:47:38}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{extending a capacity to a Cartesian product}
+\pmrecord{6}{41592}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+\pmclassification{msc}{28A05}
+%\pmkeywords{capacity}
+%\pmkeywords{compact paved space}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{set function}
+\PMlinkescapeword{subset}
+\PMlinkescapeword{onto}
+\PMlinkescapeword{finite unions}
+\PMlinkescapeword{compact}
+\PMlinkescapeword{paving}
+\PMlinkescapeword{projections}
+\PMlinkescapeword{property}
+\PMlinkescapeword{set functions}
+\PMlinkescapeword{closure}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{consequence}
+
+A capacity on a set $X$ can be extended to a set function on a Cartesian product $X\times K$ simply by projecting any subset onto $X$, and then applying the original capacity.
+
+\begin{theorem*}
+Suppose that $(X,\mathcal{F})$ is a paved space such that $\mathcal{F}$ is closed under finite unions and finite intersections, and that $(K,\mathcal{K})$ is a compact paved space.
+Define $\mathcal{G}$ to be the closure under finite unions and finite intersections of the paving $\mathcal{F}\times\mathcal{K}$ on $X\times K$.
+
+If $I$ is an $\mathcal{F}$-capacity and $\pi_X\colon X\times K\to X$ is the projection map, we can form the composition
+\begin{align*}
+&I\circ\pi_X\colon\mathcal{P}(X\times K)\to\mathbb{R},\\
+&I\circ\pi_X(S) = I(\pi_X(S)).
+\end{align*}
+Then $\pi_X(S)\in \mathcal{F}_\delta$ for any $S\in\mathcal{G}_\delta$, and $I\circ\pi_X$ is a $\mathcal{G}$-capacity.
+\end{theorem*}
+
+This result justifies looking at capacities when considering projections from the Cartesian product $X\times K$ onto $X$. We see that the property of being a capacity is preserved under composing with such projections. However, additivity of set functions is not preserved, so the corresponding result would not be true if  ``capacity'' was replaced by ``measure'' or ``outer measure''.
+
+Recall that if $S\subseteq X\times K$ is $(\mathcal{G},I\circ\pi_X)$-capacitable then, for any $\epsilon>0$, there is an $A\in\mathcal{G}_\delta$ such that $A\subseteq S$ and $I\circ\pi_X(A)>I\circ\pi_X(S)-\epsilon$. However, $\pi_X(A)\subseteq\pi_X(S)$ and, by the above theorem, $\pi_X(A)\in\mathcal{F}_\delta$. This has the following consequence.
+\begin{lemma*}
+Let $S\subseteq X\times K$ be $(\mathcal{G},I\circ\pi_X)$-capacitable. Then, $\pi_X(S)$ is $(\mathcal{F},I)$-capacitable.
+\end{lemma*}
+
+%%%%%
+%%%%%
+\end{document}

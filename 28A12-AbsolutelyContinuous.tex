@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbsolutelyContinuous}
+\pmcreated{2013-03-22 13:26:12}
+\pmmodified{2013-03-22 13:26:12}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{absolutely continuous}
+\pmrecord{10}{33997}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{28A12}
+\pmrelated{RadonNikodymTheorem}
+\pmrelated{AbsolutelyContinuousFunction2}
+\pmdefines{absolute continuity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+% there are many more packages, add them here as you need them
+\usepackage{mathrsfs}
+
+% define commands here
+\begin{document}
+Let $\mu$ and $\nu$ be signed measures or complex measures on the same measurable space
+$(\Omega, \mathscr{S})$. We say that $\nu$ is \emph{absolutely continuous}
+with respect to $\mu$ if, for each $A\in \mathscr{S}$ such that $|\mu|(A)=0$,
+it holds that $\nu(A)=0$. This is usually denoted by $\nu \ll \mu$.
+
+\textbf{Remarks.}
+
+If $\mu$ and $\nu$ are signed measures and $(\nu^+, \nu^-)$ is the Jordan decomposition of $\nu$, the following \PMlinkescapetext{propositions} are equivalent:
+\begin{enumerate}
+\item $\nu\ll\mu$;
+\item $\nu^+\ll\mu$ and $\nu^-\ll\mu$;
+\item $|\nu|\ll|\mu|$.
+\end{enumerate}
+
+If $\nu$ is a finite signed or complex measure and $\nu\ll\mu$, the following useful property holds: for each $\varepsilon>0$, there is a $\delta>0$ such that 
+$|\nu|(E)<\varepsilon$ whenever $|\mu|(E)<\delta$.
+%%%%%
+%%%%%
+\end{document}
