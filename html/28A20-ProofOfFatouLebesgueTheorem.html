@@ -1,0 +1,142 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Fatou-Lebesgue theorem</title>
+<!--Generated on Fri Feb  9 20:08:16 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Fatou-Lebesgue theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Since <math id="p1.m1" class="ltx_Math" alttext="\displaystyle\left|\int g\,d\mu\right|\leq\int|g|\,d\mu\leq\int\Phi\,d\mu&lt;\infty" display="inline"><mrow><mrow><mo>|</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle><mo>|</mo></mrow><mo>≤</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>g</mi><mo rspace="4.2pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle><mo>≤</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi mathvariant="normal">Φ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>, we have that <math id="p1.m2" class="ltx_Math" alttext="\displaystyle\int g\,d\mu&gt;-\infty" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle><mo>&gt;</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>. Similarly, <math id="p1.m3" class="ltx_Math" alttext="\displaystyle\int h\,d\mu&lt;\infty" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>h</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The inequality <math id="p2.m1" class="ltx_Math" alttext="\displaystyle\liminf_{n\to\infty}\int f_{n}\,d\mu\leq\limsup_{n\to\infty}\int f%
+_{n}\,d\mu" display="inline"><mrow><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msub><mi>f</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow><mo>≤</mo><mrow><munder><mo movablelimits="false">lim sup</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msub><mi>f</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></mrow></math> is obvious by definition of <math id="p2.m2" class="ltx_Math" alttext="\liminf" display="inline"><mo>lim inf</mo></math> and <math id="p2.m3" class="ltx_Math" alttext="\limsup" display="inline"><mo>lim sup</mo></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Define a sequence of functions <math id="p3.m1" class="ltx_Math" alttext="k_{n}\colon X\to\mathbb{R}" display="inline"><mrow><msub><mi>k</mi><mi>n</mi></msub><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> by <math id="p3.m2" class="ltx_Math" alttext="k_{n}(x)=f_{n}(x)+\Phi(x)" display="inline"><mrow><mrow><msub><mi>k</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. Then each <math id="p3.m3" class="ltx_Math" alttext="k_{n}" display="inline"><msub><mi>k</mi><mi>n</mi></msub></math> is nonnegative (since <math id="p3.m4" class="ltx_Math" alttext="-f_{n}\leq|f_{n}|\leq\Phi" display="inline"><mrow><mrow><mo>-</mo><msub><mi>f</mi><mi>n</mi></msub></mrow><mo>≤</mo><mrow><mo stretchy="false">|</mo><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi mathvariant="normal">Φ</mi></mrow></math>) and integrable (since <math id="p3.m5" class="ltx_Math" alttext="k_{n}\leq|f_{n}|+\Phi\leq 2\Phi" display="inline"><mrow><msub><mi>k</mi><mi>n</mi></msub><mo>≤</mo><mrow><mrow><mo stretchy="false">|</mo><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>+</mo><mi mathvariant="normal">Φ</mi></mrow><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Φ</mi></mrow></mrow></math>), as is <math id="p3.m6" class="ltx_Math" alttext="\displaystyle k:=\liminf_{n\to\infty}k_{n}" display="inline"><mrow><mi>k</mi><mo>:=</mo><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msub><mi>k</mi><mi>n</mi></msub></mrow></mrow></math>. Fatou’s lemma yields that <math id="p3.m7" class="ltx_Math" alttext="\displaystyle\int k\,d\mu\leq\liminf_{n\to\infty}\int k_{n}\,d\mu" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>k</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle><mo>≤</mo><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msub><mi>k</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></mrow></math>. Thus:</p>
+</div>
+<div id="p4" class="ltx_para ltx_centering">
+<p class="ltx_p"><math id="p4.m1" class="ltx_Math" alttext="\begin{array}[]{ll}\displaystyle\int g\,d\mu+\int\Phi\,d\mu&amp;\displaystyle=\int%
+(g+\Phi)\,d\mu\\
+\\
+&amp;\displaystyle=\int k\,d\mu\\
+\\
+&amp;\displaystyle\leq\liminf_{n\to\infty}\int k_{n}\,d\mu\\
+\\
+&amp;\displaystyle=\liminf_{n\to\infty}\int(f_{n}+\Phi)\,d\mu\\
+\\
+&amp;\displaystyle=\liminf_{n\to\infty}\left(\int f_{n}\,d\mu+\int\Phi\,d\mu\right%
+)\\
+\\
+&amp;\displaystyle=\liminf_{n\to\infty}\int f_{n}\,d\mu+\liminf_{n\to\infty}\int%
+\Phi\,d\mu\\
+\\
+&amp;\displaystyle=\liminf_{n\to\infty}\int f_{n}\,d\mu+\int\Phi\,d\mu\end{array}" display="inline"><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle><mo>+</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi mathvariant="normal">Φ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>+</mo><mi mathvariant="normal">Φ</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>k</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>≤</mo><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msub><mi>k</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>+</mo><mi mathvariant="normal">Φ</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msub><mi>f</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle><mo>+</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi mathvariant="normal">Φ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow><mo>)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msub><mi>f</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow><mo>+</mo><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi mathvariant="normal">Φ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msub><mi>f</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow><mo>+</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi mathvariant="normal">Φ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></mrow></mtd></mtr></mtable></math></p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Since <math id="p5.m1" class="ltx_Math" alttext="\displaystyle\int\Phi\,d\mu&lt;\infty" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi mathvariant="normal">Φ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>, it follows that <math id="p5.m2" class="ltx_Math" alttext="\displaystyle\int g\,d\mu\leq\liminf_{n\to\infty}\int f_{n}\,d\mu" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle><mo>≤</mo><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msub><mi>f</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Note that <math id="p6.m1" class="ltx_Math" alttext="|-f_{n}|=|f_{n}|\leq\Phi" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mo>-</mo><msub><mi>f</mi><mi>n</mi></msub></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi mathvariant="normal">Φ</mi></mrow></math>. Thus,</p>
+</div>
+<div id="p7" class="ltx_para ltx_centering">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="p7.m1" class="ltx_Math" alttext="\displaystyle-\int h\,d\mu" display="inline"><mrow><mo>-</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>h</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="p7.m2" class="ltx_Math" alttext="\displaystyle=\int-h\,d\mu" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mo largeop="true" symmetric="true">∫</mo></mstyle><mo>-</mo><mrow><mpadded width="+1.7pt"><mi>h</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>μ</mi></mrow></mrow></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><math id="p7.m3" class="ltx_Math" alttext="\displaystyle=\int-\limsup_{n\to\infty}f_{n}\,d\mu" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mo largeop="true" symmetric="true">∫</mo></mstyle><mo>-</mo><mrow><munder><mo movablelimits="false">lim sup</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mpadded width="+1.7pt"><msub><mi>f</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>μ</mi></mrow></mrow></mrow></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><math id="p7.m4" class="ltx_Math" alttext="\displaystyle=\int\liminf_{n\to\infty}\left(-f_{n}\right)\,d\mu" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mrow><mo>(</mo><mrow><mo>-</mo><msub><mi>f</mi><mi>n</mi></msub></mrow><mo rspace="4.2pt">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left">
+<math id="p7.m5" class="ltx_Math" alttext="\displaystyle\leq\liminf_{n\to\infty}\int-f_{n}\,d\mu" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mo largeop="true" symmetric="true">∫</mo></mstyle></mrow><mo>-</mo><mrow><mpadded width="+1.7pt"><msub><mi>f</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>μ</mi></mrow></mrow></mrow></math> by a previous ,</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><math id="p7.m6" class="ltx_Math" alttext="\displaystyle=\liminf_{n\to\infty}\left(-\int f_{n}\,d\mu\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mo>(</mo><mrow><mo>-</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msub><mi>f</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_left"><math id="p7.m7" class="ltx_Math" alttext="\displaystyle=-\limsup_{n\to\infty}\int f_{n}\,d\mu." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mrow><munder><mo movablelimits="false">lim sup</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msub><mi>f</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Hence, <math id="p8.m1" class="ltx_Math" alttext="\displaystyle\limsup_{n\to\infty}\int f_{n}\,d\mu\leq\int h\,d\mu" display="inline"><mrow><mrow><munder><mo movablelimits="false">lim sup</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msub><mi>f</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow><mo>≤</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>h</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow></math>. It follows that <math id="p8.m2" class="ltx_Math" alttext="\displaystyle-\infty&lt;\int g\,d\mu\leq\liminf_{n\to\infty}\int f_{n}\,d\mu\leq%
+\limsup_{n\to\infty}\int f_{n}\,d\mu\leq\int h\,d\mu&lt;\infty" display="inline"><mrow><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>&lt;</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle><mo>≤</mo><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msub><mi>f</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow><mo>≤</mo><mrow><munder><mo movablelimits="false">lim sup</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msub><mi>f</mi><mi>n</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle></mrow><mo>≤</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>h</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mstyle><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>. <math id="p8.m3" class="ltx_Math" alttext="\qed" display="inline"><mrow><mi></mi><mo mathvariant="italic" separator="true">∎</mo></mrow></math></p>
+</div>
+<div id="p9" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Fatou-Lebesgue theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfFatouLebesgueTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:58:50</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:58:50</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 28A20</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:08:16 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

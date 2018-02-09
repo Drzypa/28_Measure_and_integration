@@ -1,0 +1,215 @@
+<!DOCTYPE html><html>
+<head>
+<title>centre of mass</title>
+<!--Generated on Fri Feb  9 20:09:39 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">centre of mass</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> be a Borel signed measure for some set <math id="p1.m2" class="ltx_Math" alttext="E\subseteq\mathbb{R}^{n}" display="inline"><mrow><mi>E</mi><mo>⊆</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>.
+The <em class="ltx_emph ltx_font_italic">centre of mass</em> of <math id="p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>
+(with respect to <math id="p1.m4" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math>) is a vector in <math id="p1.m5" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> defined by the following vector-valued integral:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\boldsymbol{\mu}(E;\nu)=\frac{1}{\nu(E)}\int_{\mathbf{r}\in E}\mathbf{r}\,d\nu%
+\,,\quad\nu(E)\neq 0,\pm\infty\,," display="block"><mrow><mrow><mrow><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>;</mo><mi>ν</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>𝐫</mi><mo>∈</mo><mi>E</mi></mrow></msub><mrow><mpadded width="+1.7pt"><mi>𝐫</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>ν</mi></mpadded></mrow></mrow></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mn>0</mn><mo>,</mo><mrow><mo>±</mo><mpadded width="+1.7pt"><mi mathvariant="normal">∞</mi></mpadded></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">provided the integral exists. Intuitively, the integral is a weighted average
+of all the points of <math id="p1.m6" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Our abstract definition encompasses many situations.
+If <math id="p2.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is a <math id="p2.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-dimensional manifold, then we may take <math id="p2.m3" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> to be its
+absolute <math id="p2.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-dimensional volume element (<math id="p2.m5" class="ltx_Math" alttext="d\nu=dV" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ν</mi></mrow><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mi>V</mi></mrow></mrow></math>).
+This would give the set <math id="p2.m6" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> a unit mass density,
+and in this case the centre of mass of <math id="p2.m7" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>
+is also called the <em class="ltx_emph ltx_font_italic">centroid</em> of <math id="p2.m8" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">More generally, if we are given a measurable mass density <math id="p3.m1" class="ltx_Math" alttext="\rho\colon E\to\mathbb{R}" display="inline"><mrow><mi>ρ</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>,
+then taking <math id="p3.m2" class="ltx_Math" alttext="d\nu=\rho dV" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ν</mi></mrow><mo>=</mo><mrow><mi>ρ</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>V</mi></mrow></mrow></math>, the definition defines the centre of mass for <math id="p3.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>
+with a mass density <math id="p3.m4" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>.
+We do not restrict the density <math id="p3.m5" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> (or the measure <math id="p3.m6" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math>) to be non-negative;
+for this allows our definition to apply even to, for example, electrical charge densities.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">If <math id="p4.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is not a differentiable manifold, but is a rectifiable set, we can replace
+<math id="p4.m2" class="ltx_Math" alttext="dV" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>V</mi></mrow></math> by the appropriate Hausdorff measure.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The measure <math id="p5.m1" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> could also be discrete. For example, <math id="p5.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> could be a finite set of points <math id="p5.m3" class="ltx_Math" alttext="\{x_{i}\}\subset\mathbb{R}^{n}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mo>⊂</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math> with masses <math id="p5.m4" class="ltx_Math" alttext="m_{i}=\nu(x_{i})" display="inline"><mrow><msub><mi>m</mi><mi>i</mi></msub><mo>=</mo><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. In this case, the integral <math id="p5.m5" class="ltx_Math" alttext="\boldsymbol{\mu}(E;\nu)" display="inline"><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>;</mo><mi>ν</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+reduces to a finite summation.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">It is possible to economize the definition so that the set <math id="p6.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> does not have to be mentioned,
+although the result is somewhat unintuitive:
+the <em class="ltx_emph ltx_font_italic">centre of mass of a finite signed Borel measure</em> <math id="p6.m2" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> on <math id="p6.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>
+is defined by</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\boldsymbol{\mu}(\nu)=\boldsymbol{\mu}(\mathbb{R}^{n};\nu)=\frac{1}{\nu(%
+\mathbb{R}^{n})}\int_{\mathbf{r}\in\mathbb{R}^{n}}\mathbf{r}\,d\nu" display="block"><mrow><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ν</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>;</mo><mi>ν</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>𝐫</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></msub><mrow><mpadded width="+1.7pt"><mi>𝐫</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ν</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(provided this exists).
+If <math id="p6.m4" class="ltx_Math" alttext="\nu_{E}" display="inline"><msub><mi>ν</mi><mi>E</mi></msub></math> is defined by <math id="p6.m5" class="ltx_Math" alttext="\nu_{E}(S)=\nu(S\cap E)" display="inline"><mrow><mrow><msub><mi>ν</mi><mi>E</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>∩</mo><mi>E</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all measurable <math id="p6.m6" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> and some fixed measurable <math id="p6.m7" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>, then <math id="p6.m8" class="ltx_Math" alttext="\boldsymbol{\mu}(\nu_{E})=\boldsymbol{\mu}(E;\nu)" display="inline"><mrow><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ν</mi><mi>E</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>;</mo><mi>ν</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">The term <em class="ltx_emph ltx_font_italic">centre of gravity</em> is sometimes
+used loosely as a synonym for the centre of mass, but these are distinct concepts;
+the centre of gravity is supposed to be a single point on which the force of gravity can
+be considered to act upon. If <math id="p7.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is three-dimensional and the force of gravity is uniform throughout <math id="p7.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>, then the centre of mass and the centre of gravity coincide.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">As shown by the above examples, the centre of mass and its related concepts
+have applications in mechanics and other areas of physics.</p>
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Symmetry principle</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="Sx1.p1.m1" class="ltx_Math" alttext="T\colon\mathbb{R}^{n}\to\mathbb{R}^{n}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> is an invertible linear map, then by a straightforward change of variable
+in the integrand,</p>
+<table id="Sx1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex3.m1" class="ltx_Math" alttext="\boldsymbol{\mu}(TE;\nu\circ T^{-1})=T(\boldsymbol{\mu}(E;\nu))\,." display="block"><mrow><mrow><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>⁢</mo><mi>E</mi></mrow><mo>;</mo><mrow><mi>ν</mi><mo>∘</mo><msup><mi>T</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>;</mo><mi>ν</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In particular, take <math id="Sx1.p1.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> to be an isometry, and <math id="Sx1.p1.m3" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> to be a <math id="Sx1.p1.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-dimensional volume measure for <math id="Sx1.p1.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>.
+The corresponding <math id="Sx1.p1.m6" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-dimensional volume measure for <math id="Sx1.p1.m7" class="ltx_Math" alttext="TE" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mi>E</mi></mrow></math>
+must be the same as <math id="Sx1.p1.m8" class="ltx_Math" alttext="\nu\circ T^{-1}" display="inline"><mrow><mi>ν</mi><mo>∘</mo><msup><mi>T</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>, because <math id="Sx1.p1.m9" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is an isometry.
+Then the above equation says that
+the centroid transforms as expected under isometries.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">For example, it is intuitively obvious that the centre of mass of a disk <math id="Sx1.p2.m1" class="ltx_Math" alttext="D\subset\mathbb{R}^{2}" display="inline"><mrow><mi>D</mi><mo>⊂</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> should be the centre of <math id="Sx1.p2.m2" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>. (Without loss of generality, assume that <math id="Sx1.p2.m3" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is centered at the origin.)
+Using the property just mentioned, this is easy to prove rigorously too:
+if <math id="Sx1.p2.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is the isometry that reflects across the y-axis, and <math id="Sx1.p2.m5" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> is the Lebesgue measure on <math id="Sx1.p2.m6" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>,
+then</p>
+<table id="Sx1.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx1.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx1.Ex4.m1" class="ltx_Math" alttext="\displaystyle T(\boldsymbol{\mu}(D;\lambda))" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mo>;</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.Ex4.m2" class="ltx_Math" alttext="\displaystyle=\boldsymbol{\mu}(TD;\lambda\circ T^{-1})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>⁢</mo><mi>D</mi></mrow><mo>;</mo><mrow><mi>λ</mi><mo>∘</mo><msup><mi>T</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx1.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.Ex5.m2" class="ltx_Math" alttext="\displaystyle=\boldsymbol{\mu}(TD;\lambda)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>⁢</mo><mi>D</mi></mrow><mo>;</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">(<math id="Sx1.Ex5.m3.m1" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> is invariant under isometries)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx1.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.Ex6.m2" class="ltx_Math" alttext="\displaystyle=\boldsymbol{\mu}(D;\lambda)\,," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mo>;</mo><mi>λ</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">(<math id="Sx1.Ex6.m3.m1" class="ltx_Math" alttext="TD=D" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mi>D</mi></mrow><mo>=</mo><mi>D</mi></mrow></math> by symmetry of the disk)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which means the x component of <math id="Sx1.p2.m7" class="ltx_Math" alttext="\boldsymbol{\mu}(D;\lambda)" display="inline"><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mo>;</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+must be zero. Similarly, by considering reflections across the x-axis, we conclude
+that the y component of <math id="Sx1.p2.m8" class="ltx_Math" alttext="\boldsymbol{\mu}(D;\lambda)" display="inline"><mrow><mi>𝝁</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mo>;</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math> must be zero.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">centre of mass</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CentreOfMass</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:28:09</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:28:09</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 28A75</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26B15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">center of mass</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PappussTheoremForSurfacesOfRevolution</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">centre of gravity</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">centroid</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">center of gravity</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:09:39 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

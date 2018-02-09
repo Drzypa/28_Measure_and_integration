@@ -1,0 +1,228 @@
+<!DOCTYPE html><html>
+<head>
+<title>σ-algebra</title>
+<!--Generated on Fri Feb  9 20:09:36 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">
+<math id="m1" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Introduction</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">When defining a measure for a set <math id="Sx1.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>
+we usually cannot hope to make every subset of <math id="Sx1.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> measurable.
+Instead we must usually restrict our attention
+to a specific collection of subsets of <math id="Sx1.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>,
+requiring that this collection be closed under operations
+that we would expect to preserve measurability.
+A <math id="Sx1.p1.m4" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra is such a collection.
+</p>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Definition</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">Given a set <math id="Sx2.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>, a <em class="ltx_emph ltx_font_italic"><math id="Sx2.p1.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra</em> in <math id="Sx2.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>
+is a collection <math id="Sx2.p1.m4" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> of subsets of <math id="Sx2.p1.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> such that:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\varnothing\in\mathcal{F}" display="inline"><mrow><mi mathvariant="normal">∅</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Any union of countably many elements of <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>
+is an element of <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">The complement of any element of <math id="I1.i3.p1.m1" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> in <math id="I1.i3.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>
+is an element of <math id="I1.i3.p1.m3" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Notes</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">It follows from the definition that any <math id="Sx3.p1.m1" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra <math id="Sx3.p1.m2" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> in <math id="Sx3.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>
+also satisfies the properties:</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="E\in\mathcal{F}" display="inline"><mrow><mi>E</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Any intersection of countably many elements of <math id="I2.i2.p1.m1" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>
+is an element of <math id="I2.i2.p1.m2" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx3.p2" class="ltx_para">
+<p class="ltx_p">Note that a <math id="Sx3.p2.m1" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra is a field of sets
+that is closed under countable unions and countable intersections
+(rather than just finite unions and finite intersections).</p>
+</div>
+<div id="Sx3.p3" class="ltx_para">
+<p class="ltx_p">Given any collection <math id="Sx3.p3.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> of subsets of <math id="Sx3.p3.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>,
+the <math id="Sx3.p3.m3" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra <math id="Sx3.p3.m4" class="ltx_Math" alttext="\sigma(C)" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></math> <em class="ltx_emph ltx_font_italic">generated by</em> <math id="Sx3.p3.m5" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>
+is defined to be the smallest <math id="Sx3.p3.m6" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra in <math id="Sx3.p3.m7" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>
+such that <math id="Sx3.p3.m8" class="ltx_Math" alttext="C\subseteq\sigma(C)" display="inline"><mrow><mi>C</mi><mo>⊆</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+This is well-defined,
+as the intersection of any non-empty collection of <math id="Sx3.p3.m9" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebras in <math id="Sx3.p3.m10" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>
+is also a <math id="Sx3.p3.m11" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra in <math id="Sx3.p3.m12" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>.</p>
+</div>
+</section>
+<section id="Sx4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Examples</h2>
+
+<div id="Sx4.p1" class="ltx_para">
+<p class="ltx_p">For any set <math id="Sx4.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>,
+the power set <math id="Sx4.p1.m2" class="ltx_Math" alttext="\mathcal{P}(E)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a <math id="Sx4.p1.m3" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra in <math id="Sx4.p1.m4" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>,
+as is the set <math id="Sx4.p1.m5" class="ltx_Math" alttext="\{\varnothing,E\}" display="inline"><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mi>E</mi><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+<div id="Sx4.p2" class="ltx_para">
+<p class="ltx_p">A more interesting example is the
+Borel <math id="Sx4.p2.m1" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/BorelSigmaAlgebra</span>) in <math id="Sx4.p2.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>,
+which is the <math id="Sx4.p2.m3" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra generated by the open subsets of <math id="Sx4.p2.m4" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>,
+or, equivalently,
+the <math id="Sx4.p2.m5" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra generated by the compact subsets of <math id="Sx4.p2.m6" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<math id="Sx4.p2.m7" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">sigmaalgebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:00:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:00:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">yark (2760)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">yark (2760)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">16</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">yark (2760)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 28A60</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">sigma-algebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">sigma algebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">
+<math id="Sx4.p2.m8" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> algebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Borel structure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">
+<math id="Sx4.p2.m9" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-field</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">sigma-field</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">sigma field</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">
+<math id="Sx4.p2.m10" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> field</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algebra2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">BorelSigmaAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">MathcalFMeasurableFunction</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RingOfSets</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">generated by</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:09:36 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

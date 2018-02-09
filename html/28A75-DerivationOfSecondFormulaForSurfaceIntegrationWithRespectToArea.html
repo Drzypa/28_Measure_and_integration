@@ -1,0 +1,197 @@
+<!DOCTYPE html><html>
+<head>
+<title>derivation of second formula for surface integration with respect to area</title>
+<!--Generated on Fri Feb  9 20:10:05 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">derivation of second formula for surface integration with respect to area</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">In this entry, we shall consider how to compute area integrals when the surface is given as the graph of a functions and present another derivation of the formula for area integration in this case.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="p2.m1" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is a function of two variables and that the surface <math id="p2.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is the graph of <math id="p2.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="z=g(x,y)" display="block"><mrow><mi>z</mi><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">To evaluate <math id="p2.m4" class="ltx_Math" alttext="\int_{S}d^{2}A" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi></mrow></mrow></math>, we shall begin by subdividing the <math id="p2.m5" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> plane into a fine grid. Corresponding to each of the squares of the grid, we shall have a small portion of the surface. As before, we shall assume that, by choosing the grid spacing fine enough, we can ensure that these small pieces are approximately flat, and can be approximated by a portion of the tangent plane to the surface.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Let us consider one of these small rectangles into which the <math id="p3.m1" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> plane has been subdivided and one of the small portions of surface which lies above it (or rather the portion of tangent plane which approximates it). Now the area of the rectangle is <math id="p3.m2" class="ltx_Math" alttext="dx\,dy" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></math> and the area of the portion of surface is, by definition, <math id="p3.m3" class="ltx_Math" alttext="d^{2}A" display="inline"><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Now, we use a fact about projections. If a figure <math id="p4.m1" class="ltx_Math" alttext="F_{1}" display="inline"><msub><mi>F</mi><mn>1</mn></msub></math>, located in a plane <math id="p4.m2" class="ltx_Math" alttext="P_{1}" display="inline"><msub><mi>P</mi><mn>1</mn></msub></math> projects down to a figure <math id="p4.m3" class="ltx_Math" alttext="F_{2}" display="inline"><msub><mi>F</mi><mn>2</mn></msub></math> in a plane <math id="p4.m4" class="ltx_Math" alttext="P_{2}" display="inline"><msub><mi>P</mi><mn>2</mn></msub></math>, then</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\hbox{area}(F_{2})=\hbox{area}(F_{1})\cos\theta," display="block"><mrow><mrow><mrow><mtext>area</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>F</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mtext>area</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>F</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p4.m5" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is the dihedral angle between <math id="p4.m6" class="ltx_Math" alttext="P_{1}" display="inline"><msub><mi>P</mi><mn>1</mn></msub></math> and <math id="p4.m7" class="ltx_Math" alttext="P_{2}" display="inline"><msub><mi>P</mi><mn>2</mn></msub></math>. In our case, <math id="p4.m8" class="ltx_Math" alttext="P_{1}" display="inline"><msub><mi>P</mi><mn>1</mn></msub></math> is the tangent plane, <math id="p4.m9" class="ltx_Math" alttext="P_{2}" display="inline"><msub><mi>P</mi><mn>2</mn></msub></math> is the <math id="p4.m10" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> plane, <math id="p4.m11" class="ltx_Math" alttext="F_{1}" display="inline"><msub><mi>F</mi><mn>1</mn></msub></math> is the bit of tangent plane which approximates the portion of surface, and <math id="p4.m12" class="ltx_Math" alttext="F_{2}" display="inline"><msub><mi>F</mi><mn>2</mn></msub></math> is the rectangle in the tangent plane, and <math id="p4.m13" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is the angle between the tangent plane and the <math id="p4.m14" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> plane. Hence, in our case, the formula reads</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="dx\,dy=\cos\theta\,d^{2}A." display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>θ</mi></mpadded><mo>⁢</mo><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">To finish this derivation, we need to figure out the cosine of the angle between the tangent plane and the <math id="p5.m1" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> plane. The tangent plane is described by the equation</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="z=\frac{\partial g}{\partial x}x+\frac{\partial g}{\partial y}y" display="block"><mrow><mi>z</mi><mo>=</mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the <math id="p5.m2" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> plane is, of course, described by the equation</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="z=0." display="block"><mrow><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then, the intersection of these two planes is given by the line</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="0=z=\frac{\partial g}{\partial x}x+\frac{\partial g}{\partial y}y." display="block"><mrow><mrow><mn>0</mn><mo>=</mo><mi>z</mi><mo>=</mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The plane perpendicular to this line is given by</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\frac{\partial g}{\partial x}y=\frac{\partial g}{\partial y}x." display="block"><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since the angle between two planes is defined as the angle between the angle between the lines perpendicular to the intersection of the planes, we will obtain the cosine of the angle by considering the right triangle with vertices at</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\left(0,0,0\right),\qquad\left(\frac{\partial g}{\partial x},\frac{\partial g}%
+{\partial y},0\right),\quad\hbox{and}\quad\left(\frac{\partial g}{\partial x},%
+\frac{\partial g}{\partial y},\left(\frac{\partial g}{\partial x}\right)^{2}+%
+\left(\frac{\partial g}{\partial y}\right)^{2}\right)." display="block"><mrow><mrow><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>)</mo></mrow><mo rspace="22.5pt">,</mo><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>,</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>,</mo><mn>0</mn><mo>)</mo></mrow><mo rspace="12.5pt">,</mo><mtext>and</mtext><mo mathvariant="italic" separator="true"> </mo><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>,</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>,</mo><mrow><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Dividing adjacent by hypotenuse, we find that</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\cos\theta=\frac{\sqrt{\left(\frac{\partial g}{\partial x}\right)^{2}+\left(%
+\frac{\partial g}{\partial y}\right)^{2}}}{\sqrt{\left(\frac{\partial g}{%
+\partial x}\right)^{2}+\left(\frac{\partial g}{\partial y}\right)^{2}+\left(%
+\left(\frac{\partial g}{\partial x}\right)^{2}+\left(\frac{\partial g}{%
+\partial y}\right)^{2}\right)^{2}}}=\frac{1}{\sqrt{1+\left(\frac{\partial g}{%
+\partial x}\right)^{2}+\left(\frac{\partial g}{\partial y}\right)^{2}}}." display="block"><mrow><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow><mo>=</mo><mfrac><msqrt><mrow><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt><msqrt><mrow><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mrow><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mfrac><mo>=</mo><mfrac><mn>1</mn><msqrt><mrow><mn>1</mn><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Having computed <math id="p6.m1" class="ltx_Math" alttext="\cos\theta" display="inline"><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></math>, we may now finish our derivation. Substituting into the formula for <math id="p6.m2" class="ltx_Math" alttext="d^{2}A" display="inline"><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi></mrow></math>, we obtain</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="d^{2}A=\sqrt{1+\left(\frac{\partial g}{\partial x}\right)^{2}+\left(\frac{%
+\partial g}{\partial y}\right)^{2}}\&gt;dx\,dy" display="block"><mrow><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi></mrow><mo>=</mo><mrow><mpadded width="+2.2pt"><msqrt><mrow><mn>1</mn><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and, hence,</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\int_{S}f(x,y)d^{2}A=\int f(x,y)\sqrt{1+\left(\frac{\partial g}{\partial x}%
+\right)^{2}+\left(\frac{\partial g}{\partial y}\right)^{2}}\&gt;dx\,dy." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+2.2pt"><msqrt><mrow><mn>1</mn><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let us note that this formula is consistent with the formula we derived earlier — if we set <math id="p6.m3" class="ltx_Math" alttext="u=x" display="inline"><mrow><mi>u</mi><mo>=</mo><mi>x</mi></mrow></math>, <math id="p6.m4" class="ltx_Math" alttext="v=y" display="inline"><mrow><mi>v</mi><mo>=</mo><mi>y</mi></mrow></math>, and <math id="p6.m5" class="ltx_Math" alttext="z=g(x,y)" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then our previous formula for surface integrals reduces to this one.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">derivation of second formula for surface integration with respect to area</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DerivationOfSecondFormulaForSurfaceIntegrationWithRespectToArea</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:07:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:07:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 28A75</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:10:05 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

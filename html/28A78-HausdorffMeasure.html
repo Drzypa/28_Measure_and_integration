@@ -1,0 +1,159 @@
+<!DOCTYPE html><html>
+<head>
+<title>Hausdorff measure</title>
+<!--Generated on Fri Feb  9 20:10:32 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Hausdorff measure</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Introduction</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">Given a real number <math id="Sx1.p1.m1" class="ltx_Math" alttext="\alpha\geq 0" display="inline"><mrow><mi>α</mi><mo>≥</mo><mn>0</mn></mrow></math> we are going to define a Borel external measure <math id="Sx1.p1.m2" class="ltx_Math" alttext="\mathcal{H}^{\alpha}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>α</mi></msup></math> on <math id="Sx1.p1.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> with values in <math id="Sx1.p1.m4" class="ltx_Math" alttext="[0,+\infty]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">]</mo></mrow></math> which will comprehend and generalize the concepts of length (for <math id="Sx1.p1.m5" class="ltx_Math" alttext="\alpha=1" display="inline"><mrow><mi>α</mi><mo>=</mo><mn>1</mn></mrow></math>), area (<math id="Sx1.p1.m6" class="ltx_Math" alttext="\alpha=2" display="inline"><mrow><mi>α</mi><mo>=</mo><mn>2</mn></mrow></math>) and volume (<math id="Sx1.p1.m7" class="ltx_Math" alttext="\alpha=3" display="inline"><mrow><mi>α</mi><mo>=</mo><mn>3</mn></mrow></math>) of sets in <math id="Sx1.p1.m8" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>.
+In particular if <math id="Sx1.p1.m9" class="ltx_Math" alttext="M\subset\mathbb{R}^{n}" display="inline"><mrow><mi>M</mi><mo>⊂</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math> is an <math id="Sx1.p1.m10" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-dimensional regular surface then one will show that
+<math id="Sx1.p1.m11" class="ltx_Math" alttext="\mathcal{H}^{m}(M)" display="inline"><mrow><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>m</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the <math id="Sx1.p1.m12" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-dimensional area of <math id="Sx1.p1.m13" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.
+However, being an external measure, <math id="Sx1.p1.m14" class="ltx_Math" alttext="\mathcal{H}^{m}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>m</mi></msup></math> is defined not only on regular surfaces but on every subset of <math id="Sx1.p1.m15" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> thus generalizing the concepts of length, area and volume. In particular, for <math id="Sx1.p1.m16" class="ltx_Math" alttext="m=n" display="inline"><mrow><mi>m</mi><mo>=</mo><mi>n</mi></mrow></math>, it turns out that the Hausdorff measure <math id="Sx1.p1.m17" class="ltx_Math" alttext="\mathcal{H}^{n}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>n</mi></msup></math> is nothing else than the Lebesgue measure of <math id="Sx1.p1.m18" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">Given any fixed set <math id="Sx1.p2.m1" class="ltx_Math" alttext="E\subset\mathbb{R}^{n}" display="inline"><mrow><mi>E</mi><mo>⊂</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math> one can consider the measures <math id="Sx1.p2.m2" class="ltx_Math" alttext="\mathcal{H}^{\alpha}(E)" display="inline"><mrow><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>α</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> with <math id="Sx1.p2.m3" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> varying in <math id="Sx1.p2.m4" class="ltx_Math" alttext="[0,+\infty)" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">)</mo></mrow></math>. We will see that for a fixed set <math id="Sx1.p2.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> there exists at most one value <math id="Sx1.p2.m6" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> such that <math id="Sx1.p2.m7" class="ltx_Math" alttext="\mathcal{H}^{\alpha}(E)" display="inline"><mrow><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>α</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> is finite and positive; while for every other value <math id="Sx1.p2.m8" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> one will have <math id="Sx1.p2.m9" class="ltx_Math" alttext="\mathcal{H}^{\beta}(E)=0" display="inline"><mrow><mrow><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>β</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> if <math id="Sx1.p2.m10" class="ltx_Math" alttext="\beta&gt;\alpha" display="inline"><mrow><mi>β</mi><mo>&gt;</mo><mi>α</mi></mrow></math> and <math id="Sx1.p2.m11" class="ltx_Math" alttext="\mathcal{H}^{\beta}(E)=+\infty" display="inline"><mrow><mrow><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>β</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> if <math id="Sx1.p2.m12" class="ltx_Math" alttext="\beta&lt;\alpha" display="inline"><mrow><mi>β</mi><mo>&lt;</mo><mi>α</mi></mrow></math>.
+For example, if <math id="Sx1.p2.m13" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is a regular <math id="Sx1.p2.m14" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>-dimensional surface then only <math id="Sx1.p2.m15" class="ltx_Math" alttext="\mathcal{H}^{2}(E)" display="inline"><mrow><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> (which is the area of the surface) may possibly be finite and different from <math id="Sx1.p2.m16" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> while, for example, the volume of <math id="Sx1.p2.m17" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> will be <math id="Sx1.p2.m18" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> and the length of <math id="Sx1.p2.m19" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> will be infinite.</p>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">This can be used to define the dimension of a set <math id="Sx1.p3.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> (this is called the Hausdorff dimension). A very interesting fact is the existence of sets with dimension <math id="Sx1.p3.m2" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> which is not integer, as happens for most <em class="ltx_emph ltx_font_italic">fractals</em>.</p>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">Also, the measure <math id="Sx1.p4.m1" class="ltx_Math" alttext="\mathcal{H}^{\alpha}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>α</mi></msup></math> is naturally defined on every metric space <math id="Sx1.p4.m2" class="ltx_Math" alttext="(X,d)" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></math>, not only on <math id="Sx1.p4.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>.</p>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Definition</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Sx2.p1.m1" class="ltx_Math" alttext="(X,d)" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></math> be a metric space.
+Given <math id="Sx2.p1.m2" class="ltx_Math" alttext="E\subset X" display="inline"><mrow><mi>E</mi><mo>⊂</mo><mi>X</mi></mrow></math> we define the diameter of <math id="Sx2.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> as</p>
+<table id="Sx2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex1.m1" class="ltx_Math" alttext="\mathrm{diam}(E):=\sup_{x,y\in E}d(x,y)." display="block"><mrow><mrow><mrow><mi>diam</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>E</mi></mrow></munder><mo>⁡</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Given a real number <math id="Sx2.p1.m4" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> we consider the conventional constant</p>
+<table id="Sx2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex2.m1" class="ltx_Math" alttext="\omega_{\alpha}=\frac{\pi^{\alpha/2}}{\Gamma(\alpha/2+1)}" display="block"><mrow><msub><mi>ω</mi><mi>α</mi></msub><mo>=</mo><mfrac><msup><mi>π</mi><mrow><mi>α</mi><mo>/</mo><mn>2</mn></mrow></msup><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>α</mi><mo>/</mo><mn>2</mn></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Sx2.p1.m5" class="ltx_Math" alttext="\Gamma(x)" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the gamma function.</p>
+</div>
+<div id="Sx2.p2" class="ltx_para">
+<p class="ltx_p">For all <math id="Sx2.p2.m1" class="ltx_Math" alttext="\delta&gt;0" display="inline"><mrow><mi>δ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, <math id="Sx2.p2.m2" class="ltx_Math" alttext="\alpha\geq 0" display="inline"><mrow><mi>α</mi><mo>≥</mo><mn>0</mn></mrow></math> and <math id="Sx2.p2.m3" class="ltx_Math" alttext="E\subset X" display="inline"><mrow><mi>E</mi><mo>⊂</mo><mi>X</mi></mrow></math> let us define</p>
+<table id="Sx2.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.E1.m1" class="ltx_Math" alttext="\mathcal{H}^{\alpha}_{\delta}(E):=\inf\left\{\sum_{j=0}^{\infty}\omega_{\alpha%
+}\left(\frac{\mathrm{diam}(B_{j})}{2}\right)^{\alpha}\colon B_{j}\subset X,\ %
+\bigcup_{j=0}^{\infty}B_{j}\supset E,\ \mathrm{diam}(B_{j})\leq\delta\ \forall
+j%
+=0,1,\ldots\right\}." display="block"><mrow><mrow><mrow><msubsup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>δ</mi><mi>α</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo movablelimits="false">inf</mo><mo>⁡</mo><mrow><mo>{</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>ω</mi><mi>α</mi></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mrow><mi>diam</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac><mo>)</mo></mrow><mi>α</mi></msup></mrow></mrow><mo>:</mo><mrow><mrow><mrow><msub><mi>B</mi><mi>j</mi></msub><mo>⊂</mo><mi>X</mi></mrow><mo rspace="7.5pt">,</mo><mrow><mrow><mrow><munderover><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><msub><mi>B</mi><mi>j</mi></msub></mrow><mo>⊃</mo><mi>E</mi></mrow><mo rspace="7.5pt">,</mo><mrow><mrow><mi>diam</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mpadded width="+5pt"><mi>δ</mi></mpadded><mo>⁢</mo><mrow><mo>∀</mo><mi>j</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></mrow></mrow><mo>,</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">infimum</em> is taken over all possible enumerable families of sets <math id="Sx2.p2.m4" class="ltx_Math" alttext="B_{0},B_{1},\ldots,B_{j},\ldots" display="inline"><mrow><msub><mi>B</mi><mn>0</mn></msub><mo>,</mo><msub><mi>B</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>B</mi><mi>j</mi></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> which are sufficiently small (<math id="Sx2.p2.m5" class="ltx_Math" alttext="\mathrm{diam}B_{j}\leq\delta" display="inline"><mrow><mrow><mi>diam</mi><mo>⁢</mo><msub><mi>B</mi><mi>j</mi></msub></mrow><mo>≤</mo><mi>δ</mi></mrow></math>) and which cover <math id="Sx2.p2.m6" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>.</p>
+</div>
+<div id="Sx2.p3" class="ltx_para">
+<p class="ltx_p">Notice that the function <math id="Sx2.p3.m1" class="ltx_Math" alttext="\mathcal{H}^{\alpha}_{\delta}(E)" display="inline"><mrow><msubsup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>δ</mi><mi>α</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> is decreasing in <math id="Sx2.p3.m2" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math>. In fact given <math id="Sx2.p3.m3" class="ltx_Math" alttext="\delta^{\prime}&gt;\delta" display="inline"><mrow><msup><mi>δ</mi><mo>′</mo></msup><mo>&gt;</mo><mi>δ</mi></mrow></math> the family of sequences <math id="Sx2.p3.m4" class="ltx_Math" alttext="B_{j}" display="inline"><msub><mi>B</mi><mi>j</mi></msub></math> considered in the definition of <math id="Sx2.p3.m5" class="ltx_Math" alttext="\mathcal{H}^{\alpha}_{\delta^{\prime}}" display="inline"><msubsup><mi class="ltx_font_mathcaligraphic">ℋ</mi><msup><mi>δ</mi><mo>′</mo></msup><mi>α</mi></msubsup></math> contains the family of sequences considered in the definition of <math id="Sx2.p3.m6" class="ltx_Math" alttext="\mathcal{H}^{\alpha}_{\delta}" display="inline"><msubsup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>δ</mi><mi>α</mi></msubsup></math> and hence the infimum is smaller.
+So the limit in the following definition exists:</p>
+<table id="Sx2.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.E2.m1" class="ltx_Math" alttext="\mathcal{H}^{\alpha}(E):=\lim_{\delta\to 0^{+}}\mathcal{H}^{\alpha}_{\delta}(E)." display="block"><mrow><mrow><mrow><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>α</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>δ</mi><mo>→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow></munder><mo>⁡</mo><mrow><msubsup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>δ</mi><mi>α</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The number <math id="Sx2.p3.m7" class="ltx_Math" alttext="\mathcal{H}^{\alpha}(E)\in[0,+\infty]" display="inline"><mrow><mrow><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mi>α</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">]</mo></mrow></mrow></math> is called <em class="ltx_emph ltx_font_italic"><math id="Sx2.p3.m8" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>-dimensional Hausdorff measure</em> of the set <math id="Sx2.p3.m9" class="ltx_Math" alttext="E\subset X" display="inline"><mrow><mi>E</mi><mo>⊂</mo><mi>X</mi></mrow></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Hausdorff measure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">HausdorffMeasure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:27:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:27:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">paolini (1187)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">paolini (1187)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">paolini (1187)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 28A78</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">HausdorffDimension</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">LebesgueMeasure</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:10:32 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

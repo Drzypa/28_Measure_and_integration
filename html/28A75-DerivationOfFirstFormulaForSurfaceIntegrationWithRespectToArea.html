@@ -1,0 +1,154 @@
+<!DOCTYPE html><html>
+<head>
+<title>derivation of first formula for surface integration with respect to area</title>
+<!--Generated on Fri Feb  9 20:10:02 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">derivation of first formula for surface integration with respect to area</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Since the integral is defined as a limit, we may make life simpler by making approximations as long as the errors incurred in the approximation go zero in the limit of fine sudivisions. In particular, we have in mind approximating small portions of our surface by planes. A systematic way of carrying out such an approximation is to approximate the neighborhood of a surface near a point by a portion of the tangent plane to that surface through that point. Again, one needs to prove that such an approximation is mathematically justified and that the error really does tend to zero, but we are deferring such considerations to a later section.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The approach presented here can be seen as avoiding the pitfalls pointed out in the last section of the main entry to obtain a correct answer. We pick a sequence of closely spaced values of <math id="p2.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="p2.m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> and draw a grid on our surface. This subdivides the surface into many small curved quadrilaterals. If we pick this grid sufficiently fine, then we can approximate these quadrilaterals by plane parallelograms.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Having been warned that <math id="p3.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="p3.m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> may not necessarily measure length, we shall be more careful. Rather, to measure length, we should employ the rectangular coordinates <math id="p3.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="p3.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, and <math id="p3.m5" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. Using the first order Taylor expansion, we see that the components of the vector <math id="p3.m6" class="ltx_Math" alttext="{\vec{a}}" display="inline"><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover></math> connecting the point on <math id="p3.m7" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> parameterized by <math id="p3.m8" class="ltx_Math" alttext="(u,v)" display="inline"><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></math> to the point <math id="p3.m9" class="ltx_Math" alttext="(u+du,v)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow></mrow><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></math> is</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="{\vec{a}}=\left({\partial x\over\partial u}du,{\partial y\over\partial u}du,{%
+\partial z\over\partial u}du\right)" display="block"><mrow><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>(</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>,</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>,</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and, likewise, the vector connecting the point <math id="p3.m10" class="ltx_Math" alttext="(u,v)" display="inline"><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></math> to the point <math id="p3.m11" class="ltx_Math" alttext="(u,v+dv)" display="inline"><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mrow><mi>v</mi><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math> is</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="{\vec{b}}=\left({\partial x\over\partial v}dv,{\partial y\over\partial v}dv,{%
+\partial z\over\partial v}dv\right)." display="block"><mrow><mrow><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>(</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mo>,</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mo>,</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mo>)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As we said, the curved portion of quadrilateral may be approximated by a parallelogram having these two vectors as sides. Recall that the area of a parallelogram spanned by vectors <math id="p3.m12" class="ltx_Math" alttext="{\vec{a}}" display="inline"><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover></math> and <math id="p3.m13" class="ltx_Math" alttext="{\vec{b}}" display="inline"><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></math> is given as</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="A({\vec{a}},{\vec{b}})=|{\vec{a}}|\&gt;|{\vec{b}}|\sin\theta_{ab}" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mo rspace="4.7pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><msub><mi>θ</mi><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p3.m14" class="ltx_Math" alttext="\theta_{ab}" display="inline"><msub><mi>θ</mi><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></msub></math> is the angle between <math id="p3.m15" class="ltx_Math" alttext="{\vec{a}}" display="inline"><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover></math> and <math id="p3.m16" class="ltx_Math" alttext="{\vec{b}}" display="inline"><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></math>. Using the fact that <math id="p3.m17" class="ltx_Math" alttext="{\vec{a}}\cdot{\vec{b}}=|{\vec{a}}|\&gt;|{\vec{b}}|\cos\theta_{ab}" display="inline"><mrow><mrow><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mo>⋅</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mo rspace="4.7pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><msub><mi>θ</mi><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></msub></mrow></mrow></mrow></math> and the famous trigonometric identity <math id="p3.m18" class="ltx_Math" alttext="\sin^{2}\theta+\cos^{2}\theta=1" display="inline"><mrow><mrow><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mi>θ</mi></mrow><mo>+</mo><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mi>θ</mi></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>, we can rewrite our expression for the area as follows:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="A({\vec{a}},{\vec{b}})=\sqrt{|{\vec{a}}|^{2}|{\vec{b}}|^{2}-\left({\vec{a}}%
+\cdot{\vec{b}}\right)^{2}}" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msqrt><mrow><mrow><msup><mrow><mo stretchy="false">|</mo><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mo>-</mo><msup><mrow><mo>(</mo><mrow><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mo>⋅</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Remembering what the vectors <math id="p3.m19" class="ltx_Math" alttext="{\vec{a}}" display="inline"><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover></math> and <math id="p3.m20" class="ltx_Math" alttext="{\vec{b}}" display="inline"><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></math> happen to be for our problem, we obtain</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="d^{2}A=\sqrt{\left(\frac{\partial x}{\partial u}\frac{\partial y}{\partial v}-%
+\frac{\partial y}{\partial u}\frac{\partial x}{\partial v}\right)^{2}+\left(%
+\frac{\partial x}{\partial u}\frac{\partial z}{\partial v}-\frac{\partial z}{%
+\partial u}\frac{\partial x}{\partial v}\right)^{2}+\left(\frac{\partial y}{%
+\partial u}\frac{\partial z}{\partial v}-\frac{\partial z}{\partial u}\frac{%
+\partial y}{\partial v}\right)^{2}}\&gt;du\,dv." display="block"><mrow><mrow><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi></mrow><mo>=</mo><mrow><mpadded width="+2.2pt"><msqrt><mrow><msup><mrow><mo>(</mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mrow><mo>-</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mrow><mo>-</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mrow><mo>-</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>u</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that the quantities which occur in the parentheses are Jacobi determinants, so we can rewrite this as</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="d^{2}A=\sqrt{\left(\frac{\partial(x,y)}{\partial(u,v)}\right)^{2}+\left(\frac{%
+\partial(y,z)}{\partial(u,v)}\right)^{2}+\left(\frac{\partial(z,x)}{\partial(u%
+,v)}\right)^{2}}" display="block"><mrow><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi></mrow><mo>=</mo><msqrt><mrow><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence, we can express our integral as</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\int_{S}f(u,v)\,d^{2}A=\int f(u,v)\sqrt{\left(\frac{\partial(x,y)}{\partial(u,%
+v)}\right)^{2}+\left(\frac{\partial(y,z)}{\partial(u,v)}\right)^{2}+\left(%
+\frac{\partial(z,x)}{\partial(u,v)}\right)^{2}}\&gt;du\,dv." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+2.2pt"><msqrt><mrow><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>u</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>v</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">derivation of first formula for surface integration with respect to area</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DerivationOfFirstFormulaForSurfaceIntegrationWithRespectToArea</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:07:23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:07:23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 28A75</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:10:02 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

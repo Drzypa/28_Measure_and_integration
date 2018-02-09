@@ -1,0 +1,198 @@
+<!DOCTYPE html><html>
+<head>
+<title>Radon measure</title>
+<!--Generated on Fri Feb  9 20:11:25 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Radon measure</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a Hausdorff space. A Borel measure <math id="p1.m2" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> on <math id="p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is said to be a <em class="ltx_emph ltx_font_italic">Radon measure</em> if it is:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">finite on compact sets,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">inner regular (tight), <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\mu(A)=\sup\{\mu(V)\mid\text{compact}\ V\subset A\}" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>sup</mo><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∣</mo><mrow><mrow><mpadded width="+5pt"><mtext>compact</mtext></mpadded><mo>⁢</mo><mi>V</mi></mrow><mo>⊂</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">A finite Radon measure satisfies <math id="p1.m4" class="ltx_Math" alttext="\mu(A)=\inf\{\mu(G)\mid\text{open}\ G\supset A\}" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>inf</mo><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∣</mo><mrow><mrow><mpadded width="+5pt"><mtext>open</mtext></mpadded><mo>⁢</mo><mi>G</mi></mrow><mo>⊃</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Radon measures are not necessarily locally finite, although this is the case for locally compact and metric spaces. (Counterexample: spaces where only finite subsets are compact.)</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">Radon space</em> is a topological space on which every finite Borel measure is a Radon measure, this is the case, e.g. for Polish spaces or Hausdorff spaces that are continuous images of Polish spaces.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Radon measures are the “most important class of measures on arbitrary Hausdorff topological spaces” (König <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>, p.xiv) and formed the base of the development of integration theory by Bourbaki and Schwartz. In particular for locally compact spaces one often <em class="ltx_emph ltx_font_italic">defines</em> Radon measures as linear functionals <math id="p4.m1" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> on the space <math id="p4.m2" class="ltx_Math" alttext="C^{c}(X)" display="inline"><mrow><msup><mi>C</mi><mi>c</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> of continuous functions with compact support (‘Riesz representation definition’). Berg <em class="ltx_emph ltx_font_italic">et al.</em> give the following summary <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>, p. 62<em class="ltx_emph ltx_font_italic">f.</em>:</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Given the finctional <math id="p5.m1" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> one defines <em class="ltx_emph ltx_font_italic">set functions</em>, in fact Borel measures, the <em class="ltx_emph ltx_font_italic">outer measure</em> <math id="p5.m2" class="ltx_Math" alttext="\mu^{*}" display="inline"><msup><mi>μ</mi><mo>*</mo></msup></math> and the <em class="ltx_emph ltx_font_italic">essential outer measure</em> <math id="p5.m3" class="ltx_Math" alttext="\mu^{\bullet}" display="inline"><msup><mi>μ</mi><mo>∙</mo></msup></math> given by</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="{}^{*}(G)" display="inline"><mmultiscripts><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow><mprescripts></mprescripts><none></none><mo>*</mo></mmultiscripts></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E1.m2" class="ltx_Math" alttext="\displaystyle=\sup\{\mu(f)|f\in C^{c}(X),0\leq f\leq 1_{G}\}\text{ for open }G%
+\subset X\text{ and}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo movablelimits="false">sup</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo><mrow><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi>c</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo><mrow><mn>0</mn><mo>≤</mo><mi>f</mi><mo>≤</mo><msub><mn>1</mn><mi>G</mi></msub></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>⁢</mo><mtext> for open </mtext><mo>⁢</mo><mi>G</mi></mrow></mrow><mo>⊂</mo><mrow><mi>X</mi><mo>⁢</mo><mtext> and</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle\mu^{*}(A)" display="inline"><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E2.m2" class="ltx_Math" alttext="\displaystyle=\inf\{\mu^{*}(A\cap K)|K\in\mathfrak{K}(X)\}\text{ for }A\subset
+X," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo movablelimits="false">inf</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mi>K</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo><mrow><mi>K</mi><mo>∈</mo><mrow><mi>𝔎</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>⁢</mo><mtext> for </mtext><mo>⁢</mo><mi>A</mi></mrow></mrow><mo>⊂</mo><mi>X</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle\mu^{\bullet}(A)" display="inline"><mrow><msup><mi>μ</mi><mo>∙</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E3.m2" class="ltx_Math" alttext="\displaystyle=\sup\{\mu^{*}(A\cap K)|K\in\mathfrak{K}(X)\}\text{ for }A\subset
+X." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo movablelimits="false">sup</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mi>K</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo><mrow><mi>K</mi><mo>∈</mo><mrow><mi>𝔎</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>⁢</mo><mtext> for </mtext><mo>⁢</mo><mi>A</mi></mrow></mrow><mo>⊂</mo><mi>X</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><math id="p6.m1" class="ltx_Math" alttext="\mu^{\bullet}" display="inline"><msup><mi>μ</mi><mo>∙</mo></msup></math> is a Radon measure in our sense, while <math id="p6.m2" class="ltx_Math" alttext="\mu^{*}" display="inline"><msup><mi>μ</mi><mo>*</mo></msup></math> is not always Radon. For locally compact and <math id="p6.m3" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-compact spaces, however, both coincide (on the Borel algebra) and are equivalent to our Radon measure. For general Hausdorff spaces, Bourbaki introduces <math id="p6.m4" class="ltx_Math" alttext="W^{*}(A)=\sup\{(W_{K})(A\cap K)|K\in\mathfrak{K}(X)\}" display="inline"><mrow><mrow><msup><mi>W</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>sup</mo><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><msub><mi>W</mi><mi>K</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mi>K</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo><mrow><mi>K</mi><mo>∈</mo><mrow><mi>𝔎</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, where
+W, called a <em class="ltx_emph ltx_font_italic">Radon premeasure</em>, associates a Radon measure <math id="p6.m5" class="ltx_Math" alttext="W_{K}" display="inline"><msub><mi>W</mi><mi>K</mi></msub></math> to each compact <math id="p6.m6" class="ltx_Math" alttext="K\subset X" display="inline"><mrow><mi>K</mi><mo>⊂</mo><mi>X</mi></mrow></math>, with <math id="p6.m7" class="ltx_Math" alttext="W_{K}|L=W_{L},L\in\mathfrak{K}" display="inline"><mrow><msub><mi>W</mi><mi>K</mi></msub><mo stretchy="false">|</mo><mi>L</mi><mo>=</mo><msub><mi>W</mi><mi>L</mi></msub><mo>,</mo><mi>L</mi><mo>∈</mo><mi>𝔎</mi></mrow></math> . This is a Radon measure (on Borel sets), Bourbaki, however, calls it only so if it is in addition locally finite.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Consider now Borel measures <math id="p7.m1" class="ltx_Math" alttext="\nu:\mathfrak{B}\mapsto[0,\infty]" display="inline"><mrow><mi>ν</mi><mo>:</mo><mrow><mi>𝔅</mi><mo>↦</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> which are</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">finite on compact sets, <math id="I2.i1.p1.m1" class="ltx_Math" alttext="\nu|\mathfrak{K}&lt;\infty" display="inline"><mrow><mi>ν</mi><mo stretchy="false">|</mo><mi>𝔎</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>,</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">inner regular on the open sets, <math id="I2.i2.p1.m1" class="ltx_Math" alttext="\nu(G)=\sup\{\nu(K)|K\subset G\}" display="inline"><mrow><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>sup</mo><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo><mrow><mi>K</mi><mo>⊂</mo><mi>G</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math> for <math id="I2.i2.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> open, and <math id="I2.i2.p1.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> compact,</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">outer regular, <math id="I2.i3.p1.m1" class="ltx_Math" alttext="\nu(B)=\inf\{\nu(G)|B\subset G" display="inline"><mrow><mi>ν</mi><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo>inf</mo><mrow><mo stretchy="false">{</mo><mi>ν</mi><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">|</mo><mi>B</mi><mo>⊂</mo><mi>G</mi></mrow></mrow></math> for open <math id="I2.i3.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and Borel <math id="I2.i3.p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">then the measures <math id="p7.m2" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> correspond bijectively to locally finite Radon measures <math id="p7.m3" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> on <math id="p7.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.
+</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> Christian Berg, Jens Peter Reus, Paul Ressel: Harmonic analysis on semigroups. – Berlin, 1984 (Graduate Texts in Mathematics; 100)
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"> Heinz König: Measure and integration : an advanced course in basic procedures and applications.– Berlin, 1997.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p8" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Radon measure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RadonMeasure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:49:41</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:49:41</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ptr (5636)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ptr (5636)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">16</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ptr (5636)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 28C05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 28C15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">BorelMeasure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SigmaFiniteBorelMeasureAndRelatedBorelConcepts</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Radon space</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:11:25 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

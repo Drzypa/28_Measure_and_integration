@@ -1,0 +1,313 @@
+<!DOCTYPE html><html>
+<head>
+<title>change of variables in integral on ℝ^n</title>
+<!--Generated on Fri Feb  9 20:08:43 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">change of variables in integral on <math id="m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>
+</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="g\colon X\to Y" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">→</mo><mi>Y</mi></mrow></mrow></math> be a diffeomorphism between
+open subsets <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> of <math id="Thmthm1.p1.m4" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></math>.
+Then for any measurable function <math id="Thmthm1.p1.m5" class="ltx_Math" alttext="f\colon Y\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>Y</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></mrow></math>, and any measurable
+set <math id="Thmthm1.p1.m6" class="ltx_Math" alttext="E\subseteq X" display="inline"><mrow><mi>E</mi><mo mathvariant="normal">⊆</mo><mi>X</mi></mrow></math>,</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\int_{E}f(g(x))\,\lvert\det\operatorname{D}g(x)\rvert dx=\int_{g(E)}f(y)\,dy\,." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>E</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo fence="true" stretchy="false">|</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>g</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>y</mi></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Also, if one of these integrals does not exist, then neither does the other.</span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">This theorem is a generalization of the substitution rule
+for integrals from one-variable calculus.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">To go from the left-hand side to the right-hand side or vice versa,
+we can perform the formal substitutions:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="y=g(x)\,,\quad dy=g(dx)=\lvert\det\operatorname{D}g(x)\rvert dx\,." display="block"><mrow><mrow><mrow><mi>y</mi><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo fence="true" stretchy="false">|</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>g</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">|</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The volume scaling factor <math id="p3.m1" class="ltx_Math" alttext="\lvert\det\operatorname{D}g(x)\rvert" display="inline"><mrow><mo fence="true" stretchy="false">|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>g</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">|</mo></mrow></math> is sometimes called
+the <em class="ltx_emph ltx_font_italic">Jacobian</em> or <em class="ltx_emph ltx_font_italic">Jacobian determinant</em>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Theorem 1 is typically applied
+when integrating over <math id="p4.m1" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> using polar coordinates,
+or when integrating over <math id="p4.m2" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math> using cylindrical or spherical coordinates.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Intuitively speaking, the image of a small cube centered at <math id="p5.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>,
+under a differentiable map <math id="p5.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is approximately
+the parallelogram resulting from the linear mapping <math id="p5.m3" class="ltx_Math" alttext="\operatorname{D}g(x)" display="inline"><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>g</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+applied on that cube. If the volume of the original cube is <math id="p5.m4" class="ltx_Math" alttext="dx" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></math>,
+then the volume of the image parallelogram is <math id="p5.m5" class="ltx_Math" alttext="dy=\lvert\det\operatorname{D}g(x)\rvert dx" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mrow><mrow><mo fence="true" stretchy="false">|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>g</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">|</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math>.
+The integral formula in Theorem 1 follows for an
+arbitrary set by approximating it by many numbers of small cubes,
+and taking limits.</p>
+</div>
+<figure id="S0.F1" class="ltx_figure"><img src="jacobian.eps" id="S0.F1.g1" class="ltx_graphics ltx_centering" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>Illustration of
+linear approximation to <math id="S0.F1.m3" class="ltx_Math" alttext="g(Q)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></math> by <math id="S0.F1.m4" class="ltx_Math" alttext="x+\operatorname{D}g(x)(Q-x)" display="inline"><mrow><mi>x</mi><mo>+</mo><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>g</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Q</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+<span class="ltx_text ltx_font_typewriter" style="font-size:90%;">http://aux.planetmath.org/files/objects/7349/jacobian.py<span class="ltx_text ltx_font_serif">Source program in Python for diagram</span></span>
+</figcaption>
+</figure>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Proofs of Theorem 1 can be obtained
+by making this procedure rigorous;
+see <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="" class="ltx_ref">7</a>]</cite>, <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>, or <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">A slightly stronger version of the theorem that does not require
+<math id="p7.m1" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> to be a diffeomorphism
+(i.e. that <math id="p7.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is a bijection and has non-singular derivative) is:</p>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm2.p1.m1" class="ltx_Math" alttext="g\colon X\to\mathbb{R}^{n}" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">→</mo><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></mrow></mrow></math> be continuously differentiable
+on an open subset <math id="Thmthm2.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> of <math id="Thmthm2.p1.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></math>.
+Then for any measurable function <math id="Thmthm2.p1.m4" class="ltx_Math" alttext="f\colon Y\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>Y</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></mrow></math>, and
+any measurable set <math id="Thmthm2.p1.m5" class="ltx_Math" alttext="E\subseteq X" display="inline"><mrow><mi>E</mi><mo mathvariant="normal">⊆</mo><mi>X</mi></mrow></math>,</span></p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\int_{E}f(g(x))\,\lvert\det\operatorname{D}g(x)\rvert\,dx=\int_{g(E)}f(y)\,\#g%
+|_{E}^{-1}(y)\,dy\,," display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>E</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo fence="true" stretchy="false">|</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>g</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" rspace="4.2pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><msubsup><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">#</mi><mo>⁢</mo><mi>g</mi></mrow></mrow><mo fence="true" stretchy="false">|</mo></mrow><mi>E</mi><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>y</mi></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where <math id="Thmthm2.p1.m6" class="ltx_Math" alttext="\#g|_{E}^{-1}(y)\in\{1,2,\ldots,\infty\}" display="inline"><mrow><mrow><msubsup><mrow><mrow><mi mathvariant="normal">#</mi><mo mathvariant="italic">⁢</mo><mi>g</mi></mrow><mo fence="true" mathvariant="normal" stretchy="false">|</mo></mrow><mi>E</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msubsup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>y</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">∈</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">2</mn><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">∞</mi><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></math>
+counts the number of pre-images in <math id="Thmthm2.p1.m7" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> of <math id="Thmthm2.p1.m8" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.</span></p>
+</div>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Observe that Theorem 2 (as well as its proof) includes
+a special case of Sard’s Theorem.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">The idea of Theorem 2 is that we may ignore those pieces of the set <math id="p9.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>
+that transform to zero volumes, and if the map <math id="p9.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is not one-to-one,
+then some pieces of the image <math id="p9.m3" class="ltx_Math" alttext="g(E)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> may be counted multiple times
+in the left-hand integral.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">These formulas can also be generalized for
+Hausdorff measures (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/AreaFormula</span>) on <math id="p10.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>,
+and non-differentiable, but Lipschitz, functions <math id="p10.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>. See <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="" class="ltx_ref">4</a>]</cite>
+or other geometric measure theory books for details.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+T. M. Flett. “On Transformations in <math id="bib.bib1.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> and a Theorem of Sard”.
+<em class="ltx_emph ltx_font_italic">American Mathematical Monthly</em>, Vol. 71, No. 6 (Jun–Jul 1964),
+p. 623–629.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Gerald B. Folland.
+<em class="ltx_emph ltx_font_italic">Real Analysis: Modern Techniques and Their Applications</em>,
+second ed. Wiley-Interscience, 1999.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+Miguel De Guzman. “Change-of-Variables Formula Without Continuity”.
+<em class="ltx_emph ltx_font_italic">American Mathematical Monthly</em>, Vol. 87, No. 9 (Nov 1980), p. 736–739.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+Frank Morgan. <em class="ltx_emph ltx_font_italic">Geometric Measure Theory: A Beginner’s Guide</em>, second ed.
+Academic Press, 1995.
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock">
+James R. Munkres. <em class="ltx_emph ltx_font_italic">Analysis on Manifolds</em>. Westview Press, 1991.
+
+</span>
+      </li>
+      
+<li id="bib.bib6" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">6</span>
+        
+<span class="ltx_bibblock">
+Arthur Sard. “<span class="ltx_text ltx_font_typewriter">http://www.ams.org/bull/1942-48-12/S0002-9904-1942-07812-8/S0002-9904-1942-07812-8.pdf</span>The Measure of the Critical Values of Differentiable Maps”.
+<em class="ltx_emph ltx_font_italic">Bulletins of the American Mathematical Society</em>, Vol. 48 (1942), No. 12, p. 883-890.
+
+</span>
+      </li>
+      
+<li id="bib.bib7" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">7</span>
+        
+<span class="ltx_bibblock">
+J. Schwartz. “The Formula for Change in Variables in a Multiple Integral”.
+<em class="ltx_emph ltx_font_italic">American Mathematical Monthly</em>, Vol. 61, No. 2 (Feb 1954), p. 81–95.
+
+</span>
+      </li>
+      
+<li id="bib.bib8" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">8</span>
+        
+<span class="ltx_bibblock">
+Michael Spivak. <em class="ltx_emph ltx_font_italic">Calculus on Manifolds</em>. Perseus Books, 1998.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p11" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">change of variables in integral on <math id="p11.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ChangeOfVariablesInIntegralOnmathbbRn</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:29:32</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:29:32</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 28A25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26B15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26B10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">integral substitution formula</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">integral substitution rule</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">change-of-variables formula</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">JacobiDeterminant</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LebesgueMeasure</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AreaFormula</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PotentialOfHollowBall</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfRiemannTripleIntegral</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ExampleOfRiemannDoubleIntegral</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:08:43 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
